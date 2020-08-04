@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <title>src/js/sources/ibm/common/modules/localeselector.js - IBM v18 (Northstar) common Javascript documentation</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" href="http://www.ibm.com/favicon.ico">
+    <script>
+        digitalData = {
+            page: {
+                pageInfo: {
+                    effectiveDate: '2017-02-25',
+                    expiryDate: '2020-02-25',
+                    language: 'en-US',
+                    publishDate: '2017-02-25',
+                    publisher: 'IBM Corporation',
+                    ibm: {
+                        contentDelivery: 'yuidoc via grunt',
+                        contentProducer: 'Michael Santelia',
+                        country: 'US',
+                        owner: 'Michael Santelia'
+                    }
+                }
+            }
+        };
+    </script>
+
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+
+    <script>
+
+		var lastUpdate = new Date(document.lastModified),
+			updatedMonth = lastUpdate.getMonth(),
+			updatedDate = lastUpdate.getDate(),
+			updatedYear = lastUpdate.getFullYear(),
+			today = new Date(),
+			todayMonth = today.getMonth(),
+			todayDate = today.getDate(),
+			todayYear = today.getFullYear(),
+			monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"],
+			lastUpdatedText = "",
+			daysAgo = Math.floor((today - lastUpdate) / (1000*60*60*24));
+
+		updatedMonthName = monthNames[updatedMonth];
+
+		switch (daysAgo) {
+
+			case 1: 
+				lastUpdatedText = "Updated yesterday";
+				break;
+				
+			case 0: 
+				lastUpdatedText = "Updated today";
+				break;
+				
+			default: 
+				lastUpdatedText = "Updated " + daysAgo + " days ago";
+				break;
+		}
+
+		if (daysAgo > 4) {
+			lastUpdatedText = "Updated: " + updatedMonthName + " " + updatedDate + ", " + updatedYear;
+		}
+
+    </script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-1-2">
+            <div style="background: url(http://1.www.s81c.com/i/v17/t/ibm-logo.png) no-repeat scroll 0px 0px transparent; width: 105px; height: 45px; margin: 0.85em 0px;text-indent:-9999px;">IBM v18 (Northstar) common Javascript documentation</div>
+        </div>
+        <div class="yui3-u-1-2 version">
+            <em>Javascript documentation for: IBM v18 (Northstar)<br />
+            	<span style="font-size: 0.6em; position: absolute; right: 35px;"><script>document.writeln(lastUpdatedText)</script></span></em>
+        </div>
+    </div>
+    
+    <p><a href="../assets../../v18-js-source-documentation.zip" style="margin-left: 10px; padding-left: 15px; background: url(http://1.www.s81c.com/i/v17/icons/ibm_sprite_transactional_blue_ON.png) no-repeat 0 -202px;">Download a copy of this documentation (ZIP).</a></p>
+    
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4" style="float: left;width:25%;">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/IBMCore.common.module.backtotop.html">IBMCore.common.module.backtotop</a></li>
+                                <li><a href="../classes/IBMCore.common.module.canadanotice.html">IBMCore.common.module.canadanotice</a></li>
+                                <li><a href="../classes/IBMCore.common.module.contactmodule.html">IBMCore.common.module.contactmodule</a></li>
+                                <li><a href="../classes/IBMCore.common.module.footer.html">IBMCore.common.module.footer</a></li>
+                                <li><a href="../classes/IBMCore.common.module.footermenu.html">IBMCore.common.module.footermenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.leftnav.html">IBMCore.common.module.leftnav</a></li>
+                                <li><a href="../classes/IBMCore.common.module.liveperson.html">IBMCore.common.module.liveperson</a></li>
+                                <li><a href="../classes/IBMCore.common.module.localeselector.html">IBMCore.common.module.localeselector</a></li>
+                                <li><a href="../classes/IBMCore.common.module.localpagenotification.html">IBMCore.common.module.localpagenotification</a></li>
+                                <li><a href="../classes/IBMCore.common.module.masthead.html">IBMCore.common.module.masthead</a></li>
+                                <li><a href="../classes/IBMCore.common.module.masthead.sticky.html">IBMCore.common.module.masthead.sticky</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mastheadbanner.html">IBMCore.common.module.mastheadbanner</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mastheadsearch.html">IBMCore.common.module.mastheadsearch</a></li>
+                                <li><a href="../classes/IBMCore.common.module.merchandising.html">IBMCore.common.module.merchandising</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mobilemenu.html">IBMCore.common.module.mobilemenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sharethiscontent.html">IBMCore.common.module.sharethiscontent</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sharethispage.html">IBMCore.common.module.sharethispage</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sitenavmenu.html">IBMCore.common.module.sitenavmenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.urx.html">IBMCore.common.module.urx</a></li>
+                                <li><a href="../classes/IBMCore.common.translations.html">IBMCore.common.translations</a></li>
+                                <li><a href="../classes/IBMCore.common.util.a11y.html">IBMCore.common.util.a11y</a></li>
+                                <li><a href="../classes/IBMCore.common.util.addCssRule.html">IBMCore.common.util.addCssRule</a></li>
+                                <li><a href="../classes/IBMCore.common.util.anchorlinkAdjustment.html">IBMCore.common.util.anchorlinkAdjustment</a></li>
+                                <li><a href="../classes/IBMCore.common.util.bitly.html">IBMCore.common.util.bitly</a></li>
+                                <li><a href="../classes/IBMCore.common.util.color.html">IBMCore.common.util.color</a></li>
+                                <li><a href="../classes/IBMCore.common.util.config.html">IBMCore.common.util.config</a></li>
+                                <li><a href="../classes/IBMCore.common.util.convertSecondsToHMS.html">IBMCore.common.util.convertSecondsToHMS</a></li>
+                                <li><a href="../classes/IBMCore.common.util.cookie.html">IBMCore.common.util.cookie</a></li>
+                                <li><a href="../classes/IBMCore.common.util.coreservices.html">IBMCore.common.util.coreservices</a></li>
+                                <li><a href="../classes/IBMCore.common.util.data.html">IBMCore.common.util.data</a></li>
+                                <li><a href="../classes/IBMCore.common.util.debug.html">IBMCore.common.util.debug</a></li>
+                                <li><a href="../classes/IBMCore.common.util.eventCoordinator.html">IBMCore.common.util.eventCoordinator</a></li>
+                                <li><a href="../classes/IBMCore.common.util.freezeScrollbars.html">IBMCore.common.util.freezeScrollbars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.gatekeeper.html">IBMCore.common.util.gatekeeper</a></li>
+                                <li><a href="../classes/IBMCore.common.util.generateId.html">IBMCore.common.util.generateId</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getCurrentGridSize.html">IBMCore.common.util.getCurrentGridSize</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getDataAttributes.html">IBMCore.common.util.getDataAttributes</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getScrollbarWidth.html">IBMCore.common.util.getScrollbarWidth</a></li>
+                                <li><a href="../classes/IBMCore.common.util.has12grid.html">IBMCore.common.util.has12grid</a></li>
+                                <li><a href="../classes/IBMCore.common.util.hasScrollbars.html">IBMCore.common.util.hasScrollbars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.meta.html">IBMCore.common.util.meta</a></li>
+                                <li><a href="../classes/IBMCore.common.util.perf.html">IBMCore.common.util.perf</a></li>
+                                <li><a href="../classes/IBMCore.common.util.queue.html">IBMCore.common.util.queue</a></li>
+                                <li><a href="../classes/IBMCore.common.util.scrolledintoview.html">IBMCore.common.util.scrolledintoview</a></li>
+                                <li><a href="../classes/IBMCore.common.util.scrolltracker.html">IBMCore.common.util.scrolltracker</a></li>
+                                <li><a href="../classes/IBMCore.common.util.setIpcCookie.html">IBMCore.common.util.setIpcCookie</a></li>
+                                <li><a href="../classes/IBMCore.common.util.statshelper.html">IBMCore.common.util.statshelper</a></li>
+                                <li><a href="../classes/IBMCore.common.util.storage.html">IBMCore.common.util.storage</a></li>
+                                <li><a href="../classes/IBMCore.common.util.string.htmlspecialchars.html">IBMCore.common.util.string.htmlspecialchars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.url.html">IBMCore.common.util.url</a></li>
+                                <li><a href="../classes/IBMCore.common.util.user.html">IBMCore.common.util.user</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.carousel.html">IBMCore.common.widget.carousel</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.ccfintercept.html">IBMCore.common.widget.ccfintercept</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.datatable.html">IBMCore.common.widget.datatable</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.datepicker.html">IBMCore.common.widget.datepicker</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.dyntabs.html">IBMCore.common.widget.dyntabs</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.fileinput.html">IBMCore.common.widget.fileinput</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.forms.html">IBMCore.common.widget.forms</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.formvalidator.html">IBMCore.common.widget.formvalidator</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.leavingibm.html">IBMCore.common.widget.leavingibm</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.manager.html">IBMCore.common.widget.manager</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.masonry.html">IBMCore.common.widget.masonry</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.overlay.html">IBMCore.common.widget.overlay</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.parallaxscroll.html">IBMCore.common.widget.parallaxscroll</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.rssdisplay.html">IBMCore.common.widget.rssdisplay</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.scrollable.html">IBMCore.common.widget.scrollable</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.selectlist.html">IBMCore.common.widget.selectlist</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.selectlistnav.html">IBMCore.common.widget.selectlistnav</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.setsameheight.html">IBMCore.common.widget.setsameheight</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.showhide.html">IBMCore.common.widget.showhide</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.stepindicator.html">IBMCore.common.widget.stepindicator</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.stickytabs.html">IBMCore.common.widget.stickytabs</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.syntaxhighlighter.html">IBMCore.common.widget.syntaxhighlighter</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.tablerowselector.html">IBMCore.common.widget.tablerowselector</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.tooltip.html">IBMCore.common.widget.tooltip</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.twisty.html">IBMCore.common.widget.twisty</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videolooper.html">IBMCore.common.widget.videolooper</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.html">IBMCore.common.widget.videoplayer</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.kaltura.html">IBMCore.common.widget.videoplayer.kaltura</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.ustream.html">IBMCore.common.widget.videoplayer.ustream</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.youtube.html">IBMCore.common.widget.videoplayer.youtube</a></li>
+                                <li><a href="../classes/IBMCore.namespace.html">IBMCore.namespace</a></li>
+                                <li><a href="../classes/IBMCore.www.module.dynamiccontactmodule.html">IBMCore.www.module.dynamiccontactmodule</a></li>
+                                <li><a href="../classes/IBMCore.www.module.truste.html">IBMCore.www.module.truste</a></li>
+                                <li><a href="../classes/jQuery.browser.html">jQuery.browser</a></li>
+                                <li><a href="../classes/jQuery.fn.dataTable.html">jQuery.fn.dataTable</a></li>
+                                <li><a href="../classes/jQuery.fn.slick.html">jQuery.fn.slick</a></li>
+                                <li><a href="../classes/jQuery.layout.html">jQuery.layout</a></li>
+                                <li><a href="../classes/jQuery.os.html">jQuery.os</a></li>
+                                <li><a href="../classes/jQuery:focusable.html">jQuery:focusable</a></li>
+                                <li><a href="../classes/Masonry.html">Masonry</a></li>
+                                <li><a href="../classes/Modernizr.html">Modernizr</a></li>
+                                <li><a href="../classes/Mustache.html">Mustache</a></li>
+                                <li><a href="../classes/NanoScroll.html">NanoScroll</a></li>
+                                <li><a href="../classes/Other IBM - Canada notice loader.html">Other IBM - Canada notice loader</a></li>
+                                <li><a href="../classes/Other IBM - common init.html">Other IBM - common init</a></li>
+                                <li><a href="../classes/Other IBM - common v18 page tracker.html">Other IBM - common v18 page tracker</a></li>
+                                <li><a href="../classes/Other IBM - errorchecking.html">Other IBM - errorchecking</a></li>
+                                <li><a href="../classes/Other IBM - footer feedback link.html">Other IBM - footer feedback link</a></li>
+                                <li><a href="../classes/Other IBM - grid change.html">Other IBM - grid change</a></li>
+                                <li><a href="../classes/Other IBM - jstimer-end.html">Other IBM - jstimer-end</a></li>
+                                <li><a href="../classes/Other IBM - jstimer-start.html">Other IBM - jstimer-start</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/IBMCore.html">IBMCore</a></li>
+                                <li><a href="../modules/jQuery.browser.html">jQuery.browser</a></li>
+                                <li><a href="../modules/jQuery.dataTable.html">jQuery.dataTable</a></li>
+                                <li><a href="../modules/jQuery.slick.html">jQuery.slick</a></li>
+                                <li><a href="../modules/Masonry.html">Masonry</a></li>
+                                <li><a href="../modules/Modernizr.html">Modernizr</a></li>
+                                <li><a href="../modules/Mustache.html">Mustache</a></li>
+                                <li><a href="../modules/Nanoscroller.html">Nanoscroller</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4"style="float: left;width:75%;">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected" checked>
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private" checked>
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated" checked>
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src/js/sources/ibm/common/modules/localeselector.js</h1>
+                        
+                        <div class="file">
+                            <pre class="code prettyprint linenums">
+                        /**
+                        
+                        	TODO: Santelia: This needs general refactoring and clean up:
+                        
+                        	- Remove the DOM injection placement logic from this file and put it in the footer and footer menu ones. 
+                        		Since they generate the elements, they know where it should go.
+                        	- It should simply be a module that does nothing except generate a DOM element in a var that others can pickup.
+                        	- You subscribe to ready event, and when ready you inject it where you want/need it.
+                        		Ex: 
+                        			Footermenu subscribes and injects in there.
+                        			Footer (alternate) subscribes and injects in there.
+                        
+                        
+                        **/
+                        
+                        /** 
+                        
+                        	Locale selector
+                        	&lt;br /&gt;
+                        	&lt;br /&gt;This is the locale selectlist navigator in the footer. It allows the user to goto a different locale corporate portal home page.
+                        	&lt;br /&gt;This replaces the need for a separate standalone &quot;Select a country&quot; page by putting the same select list from that page in the footer of every page.
+                        	&lt;br /&gt;It also allows the page owner to specify that they have translated versions of the page using the Google standard alternate hreflang tagging. So you get bonus points for SEO with this.
+                        	&lt;br /&gt;View the standards page, or: http://nsdev.somerslab.ibm.com/v18/test/accesstest/locale-selector.php for information how to code your page to also use this as your &quot;translated versions of this page&quot; selector.
+                        
+                        	@class IBMCore.common.module.localeselector
+                        
+                        **/
+                        
+                        (function($, IBM) {
+                          /**
+                        		Publishes this event after footer locale selector has been injected.
+                        
+                        		@event ready
+                        	**/
+                          /**
+                        		Publishes this event if we can&#x27;t get footer locale selector translations.
+                        
+                        		@event error
+                        	**/
+                          var me = IBM.namespace(IBM, &#x27;common.module.localeselector&#x27;),
+                            myEvents = IBM.common.util.eventCoordinator(me, &#x27;localeselector&#x27;, [
+                              &#x27;ready&#x27;,
+                              &#x27;error&#x27;,
+                            ]),
+                            selectorData = IBM.common.util.storage.getItem(&#x27;v18lsdata&#x27;) || {},
+                            selectorHtml = &#x27;&#x27;,
+                            footerSubscription = false;
+                        
+                          /**
+                        		Automated callback from subscription to meta &#x27;dataReady&#x27; event publisher. 
+                        		
+                        		@method autoInit
+                        	**/
+                          me.autoInit = function() {
+                            if (
+                              !IBM.common.util.config.isEnabled(&#x27;localeselector&#x27;) ||
+                              IBM.common.util.config.get(&#x27;masthead.type&#x27;) === &#x27;popup&#x27;
+                            ) {
+                              myEvents.publish(&#x27;ready&#x27;);
+                              return;
+                            }
+                        
+                            if (
+                              IBM.common.util.config.isEnabled(&#x27;footer&#x27;) ||
+                              IBM.common.util.config.isEnabled(&#x27;footermenu&#x27;)
+                            ) {
+                              me.init();
+                            }
+                          };
+                        
+                          /**
+                        		Called by autoInit.
+                        		&lt;br /&gt;Request the country list if we don&#x27;t have it already and subscribe to the footer
+                        		to create the locale selector when the footer is ready.
+                        		
+                        		@method init
+                        	**/
+                          me.init = function() {
+                            // Santelia: Dec. 2 per Marc/Kevin: FORCE US/EN ALWAYS until we get 1 file output with each locale in IT&#x27;S OWN LANGUAGE.
+                            // If we don&#x27;t have the selector data already, get it.
+                            // Else, add subscription to translations (if we don&#x27;t have it alraedy) and wait to create.
+                            if (!selectorData.translations) {
+                              $.ajax({
+                                url:
+                                  &#x27;https://1.www.s81c.com/common/js/dynamicnav/www/countrylist/usen-utf8.js&#x27;,
+                                dataType: &#x27;script&#x27;,
+                                cache: true,
+                              }).fail(function(message) {
+                                window.console.error(
+                                  &#x27;v18: Error while loading locale selector data file&#x27;,
+                                  message
+                                );
+                                myEvents.publish(&#x27;error&#x27;);
+                              });
+                            } else {
+                              subscribeToFooter();
+                            }
+                          };
+                        
+                          /**
+                        		Subscribe to the footer if we don&#x27;t already have a subscription to it (in cases of change page locale).
+                        		&lt;br&gt;Then creates the locale selector when the footer fires &quot;ready&quot; event.
+                        
+                        		@method subscribeToFooter
+                        		@private
+                        	**/
+                          function subscribeToFooter() {
+                            if (!footerSubscription) {
+                              if (IBM.common.util.config.get(&#x27;footer.type&#x27;) !== &#x27;alternate&#x27;) {
+                                IBM.common.module.footermenu
+                                  .subscribe(&#x27;ready&#x27;, &#x27;localeselect&#x27;, createSelector)
+                                  .runAsap(createSelector);
+                              } else {
+                                IBM.common.module.footer
+                                  .subscribe(&#x27;ready&#x27;, &#x27;localeselect&#x27;, createSelector)
+                                  .runAsap(createSelector);
+                              }
+                              footerSubscription = true;
+                            }
+                          }
+                        
+                          /**
+                        		This runs after we get the v17 country list. This will get updated after we make a new v18 one.
+                        		Now that we have the country list, wait for footer to be ready so we know where to put the selector.
+                        
+                        		@method dataCallback
+                        		@param serviceData {Object} JSON object with data from the service call. 
+                        	**/
+                          me.dataCallback = dataCallback;
+                          function dataCallback(serviceData) {
+                            var allowedTtl = IBMCore.www.module.truste.getUiAllowedStorageTtl(
+                              24 * 3600
+                            );
+                        
+                            // Cache translations locally for case of meta change page locale.
+                            selectorData = serviceData;
+                        
+                            // Store in global data in case page wants to use it.
+                            IBM.common.util.data.provide(&#x27;localeSelector&#x27;, serviceData);
+                        
+                            // Cache in local storage for 24 hours for subsequent page views.
+                            IBM.common.util.storage.setItem(&#x27;v18lsdata&#x27;, selectorData, allowedTtl);
+                        
+                            subscribeToFooter();
+                          }
+                        
+                          /**
+                        		This does the magic. Creates the locale selector HTML and sets up the custom link URLs that the
+                        		 page can override with &amp;lt;link&gt; elements.
+                        
+                        		@method createSelector
+                        	**/
+                          function createSelector() {
+                            selectorHtml = createLocaleSelectorHtml();
+                            setupLocaleSelector();
+                          }
+                        
+                          /** 
+                        		Parse the country data from translations and build the select list HTML then returns it.
+                        
+                        		@method createLocaleSelectorHtml
+                        		@private
+                        		@return {String} The select list HTML.
+                        	**/
+                          function createLocaleSelectorHtml() {
+                            var opts = &#x27;&#x27;,
+                              cc = &#x27;&#x27;,
+                              lc = &#x27;&#x27;;
+                        
+                            // Data is broken into regions, so flatten it and build a select list.
+                            $.each(selectorData.regionList, function() {
+                              $.each(this.countryList, function() {
+                                var cname = this.name;
+                        
+                                $.each(this.locale, function() {
+                                  lc = this[0].substr(0, 2);
+                                  cc = this[0].substr(3);
+                        
+                                  if (cc === &#x27;gb&#x27;) {
+                                    cc = &#x27;uk&#x27;;
+                                  }
+                                  opts +=
+                                    &#x27;&lt;option data-localecode=&quot;&#x27; +
+                                    lc +
+                                    &#x27;-&#x27; +
+                                    cc +
+                                    &#x27;&quot; value=&quot;http://www.ibm.com/&#x27; +
+                                    cc +
+                                    &#x27;-&#x27; +
+                                    lc +
+                                    &#x27;/?lnk=fcc&quot;&gt;&#x27; +
+                                    cname +
+                                    &#x27; - &#x27; +
+                                    this[1] +
+                                    &#x27;&lt;/option&gt;&#x27;;
+                                });
+                              });
+                            });
+                        
+                            return (
+                              &#x27;&lt;select class=&quot;ibm-fullwidth&quot; aria-labelledby=&quot;ibm-footer-locale-selector-label&quot;&gt;&#x27; +
+                              opts +
+                              &#x27;&lt;/select&gt;&#x27;
+                            );
+                          }
+                        
+                          /** 
+                        		Setup the locale selector with some magicness. Called after footer is injected into DOM, 
+                        		 via setTimeout so we don&#x27;t block important rendering.
+                        		&lt;br /&gt;Sorts it, selects the page&#x27;s current locale, and swaps out any links for any corresponding local 
+                        		 alternate links found in &amp;lt;link rel=&quot;alternate&quot; hreflang=&quot;__&quot;&gt; elements.
+                        		&lt;br /&gt;For information on this element: &lt;a href=&quot;http://moz.com/learn/seo/hreflang-tag&quot; target=&quot;_blank&quot;&gt;http://moz.com/learn/seo/hreflang-tag&lt;/a&gt;
+                        
+                        		@method setupLocaleSelector
+                        	**/
+                          me.setupLocaleSelector = setupLocaleSelector;
+                          function setupLocaleSelector() {
+                            var $localeSelectlist = $(
+                                document.getElementById(&#x27;ibm-footer-locale-selector&#x27;)
+                              ),
+                              opts,
+                              localeOption,
+                              $altLangTags = $(
+                                &quot;link[rel=&#x27;alternate&#x27;][hreflang][href]:not([data-exclude=&#x27;true&#x27;])&quot;
+                              ),
+                              columnWrapperClass = !IBM.common.util.has12grid()
+                                ? &#x27;ibm-columns&#x27;
+                                : &#x27;ibm-fluid&#x27;,
+                              columnSpanClass = !IBM.common.util.has12grid()
+                                ? &#x27;ibm-col-4-1 ibm-col-medium-4-2&#x27;
+                                : &#x27;ibm-col-12-3 ibm-col-medium-12-6 ibm-col-8-2 ibm-col-medium-8-4&#x27;,
+                              localVersionsHeading =
+                                IBM.common.util.config.get(&#x27;localeselector.localVersionsHeading&#x27;) ||
+                                IBM.common.translations.data.v18main.localeSelector.localVersions,
+                              selectorHeading =
+                                IBM.common.translations.data.v18main.misc.selectCountry ||
+                                selectorData.translations.select;
+                        
+                            // If there is no existing one we created, inject the placeholder into the proper place on the page,
+                            //   then inject the select list and set it up.
+                            // Else if there is one, destroy one that was there for cases of meta locale changes.
+                            if (!$localeSelectlist[0]) {
+                              // If it&#x27;s the default footer with menu, inject it after the first row of columns.
+                              // else if it&#x27;s the default footer with menu but no links (and thus not generated),
+                              //  or is alternate footer, inject into corp. bottom footer.
+                              if (
+                                IBM.common.util.config.get(&#x27;footer.type&#x27;) !== &#x27;alternate&#x27; &amp;&amp;
+                                IBM.common.translations.data.v18main.footerMenu[0].links.length &gt; 0
+                              ) {
+                                $(
+                                  &#x27;&lt;div class=&quot;ibm-footer-locale-columns &#x27; +
+                                    columnWrapperClass +
+                                    &#x27;&quot;&gt;&lt;div id=&quot;ibm-footer-locale-selector&quot; class=&quot;&#x27; +
+                                    columnSpanClass +
+                                    &#x27; ibm-fright&quot;&gt;&lt;/div&gt;&lt;/div&gt;&#x27;
+                                ).insertAfter(&#x27;#ibm-footer-module-links&#x27;);
+                              } else {
+                                $(document.getElementById(&#x27;ibm-footer&#x27;)).addClass(&#x27;ibm-alternate&#x27;);
+                                $(&#x27;&lt;div id=&quot;ibm-footer-locale-selector&quot;&gt;&lt;/div&gt;&#x27;).insertAfter(
+                                  &#x27;.ibm-footer-corporate-links&#x27;
+                                );
+                              }
+                            } else if (
+                              $localeSelectlist.find(&#x27;select&#x27;)[0] &amp;&amp;
+                              $localeSelectlist.find(&#x27;select&#x27;).select2
+                            ) {
+                              $localeSelectlist.find(&#x27;select&#x27;).select2(&#x27;destroy&#x27;);
+                            }
+                        
+                            // Initial inject of locale selector then caching the select list for further ops.
+                            $localeSelectlist = $(document.getElementById(&#x27;ibm-footer-locale-selector&#x27;))
+                              .html(
+                                &#x27;&lt;h3 id=&quot;ibm-footer-locale-selector-label&quot; class=&quot;ibm-bold&quot;&gt;&#x27; +
+                                  selectorHeading +
+                                  &#x27;&lt;/h3&gt;&#x27; +
+                                  selectorHtml
+                              )
+                              .children(&#x27;select&#x27;);
+                        
+                            opts = $localeSelectlist.find(&#x27;option&#x27;);
+                        
+                            // Sort and bind select list.
+                            opts.sort(function(a, b) {
+                              if (a.text &gt; b.text) {
+                                return 1;
+                              }
+                        
+                              if (a.text &lt; b.text) {
+                                return -1;
+                              }
+                        
+                              return 0;
+                            });
+                        
+                            $localeSelectlist
+                              .html(opts)
+                              .on(&#x27;change.setCookie&#x27;, function() {
+                                // Set cookie separately becuase page can off-bind the default action event.
+                                var localeData = me.$el.find(&#x27;:selected&#x27;).data(&#x27;localecode&#x27;);
+                        
+                                // Locale codes are lc-cc.
+                                localeData = localeData.split(&#x27;-&#x27;);
+                                if (localeData) {
+                                  IBM.common.util.setIpcCookie(localeData[1], localeData[0]);
+                                }
+                              })
+                              .on(&#x27;change.defaultAction&#x27;, function() {
+                                // Allows a page to define a custom onchange event by turning this change off and defining their own.
+                                // Then they can decide to run the goto selction or not.
+                                me.defaultOnchangeAction();
+                              });
+                        
+                            // Loop thru any alternate locale links set by the page dev and swap them into the locale select list so those
+                            //  locale options goto the local page URL instead of corp. home page for it.
+                            if ($altLangTags.length &gt; 0) {
+                              opts = [];
+                        
+                              // Pre-sort the altlang elements so generic lang-only are processed first.
+                              // This way we can parse once; allowing generics to be set, then any locale-specific ones get set.
+                              $altLangTags.sort(function(a, b) {
+                                var aLang = a.getAttribute(&#x27;hreflang&#x27;),
+                                  bLang = b.getAttribute(&#x27;hreflang&#x27;);
+                        
+                                return aLang.length - bLang.length;
+                              });
+                        
+                              $altLangTags.each(function() {
+                                var thisLocaleCode = this.getAttribute(&#x27;hreflang&#x27;),
+                                  thisUrl = this.getAttribute(&#x27;href&#x27;),
+                                  thisLabel = this.getAttribute(&#x27;data-label&#x27;), //IE10 support, for now.
+                                  $foundSelectorOption = null;
+                        
+                                if (thisLocaleCode === &#x27;en-gb&#x27;) {
+                                  thisLocaleCode = &#x27;en-uk&#x27;;
+                                }
+                        
+                                $foundSelectorOption = $localeSelectlist.find(
+                                  &quot;option[data-localecode=&#x27;&quot; + thisLocaleCode + &quot;&#x27;]&quot;
+                                );
+                        
+                                // If the custom &lt;link&gt; has a label:
+                                //   It means it should be ADDED and may or may not already exist in the official IBM locale list.
+                                //   So we add it and then remove the existing one if it exists.
+                                // Else if the code is &gt; 2, it&#x27;s inferred it&#x27;s got full lc-cc, so we replace the SINGLE matching item URL.
+                                // Else if the code is exactly 2, it means language first, so replace ALL items with that language code&#x27;s URL.
+                                if (thisLabel) {
+                                  opts.push(
+                                    $(
+                                      &#x27;&lt;option data-localecode=&quot;&#x27; +
+                                        thisLocaleCode +
+                                        &#x27;&quot; value=&quot;&#x27; +
+                                        thisUrl +
+                                        &#x27;&quot;&gt;&#x27; +
+                                        thisLabel +
+                                        &#x27;&lt;/option&gt;&#x27;
+                                    )
+                                  );
+                                  $foundSelectorOption.remove();
+                                } else if (thisLocaleCode.length === 5) {
+                                  if ($foundSelectorOption[0]) {
+                                    opts.push($foundSelectorOption.attr(&#x27;value&#x27;, thisUrl));
+                                  }
+                                } else if (thisLocaleCode.length === 2) {
+                                  $localeSelectlist
+                                    .find(&quot;option[data-localecode^=&#x27;&quot; + thisLocaleCode + &quot;&#x27;]&quot;)
+                                    .each(function() {
+                                      opts.push($(this).attr(&#x27;value&#x27;, thisUrl));
+                                    });
+                                }
+                              });
+                        
+                              // Now take the locales that have URL for this page&#x27;s version (we pushed them into an array above),
+                              //  sort them, then put them at the top of the list.
+                              opts.sort(function(a, b) {
+                                if (a[0].text &gt; b[0].text) {
+                                  return 1;
+                                } else if (a[0].text &lt; b[0].text) {
+                                  return -1;
+                                } else {
+                                  return 0;
+                                }
+                              });
+                        
+                              // Wrap the options in a group with a label, acts as the section heading.
+                              $localeSelectlist
+                                .wrapInner(
+                                  &#x27;&lt;optgroup label=&quot;&#x27; +
+                                    IBM.common.translations.data.v18main.localeSelector.homepages +
+                                    &#x27;&quot;&gt;&lt;/optgroup&gt;&#x27;
+                                )
+                                .prepend(
+                                  $(&#x27;&lt;optgroup label=&quot;&#x27; + localVersionsHeading + &#x27;&quot;&gt;&lt;/optgroup&gt;&#x27;).html(
+                                    opts
+                                  )
+                                );
+                            } else {
+                              $localeSelectlist.wrapInner(
+                                &#x27;&lt;optgroup label=&quot;&#x27; +
+                                  IBM.common.translations.data.v18main.localeSelector.homepages +
+                                  &#x27;&quot;&gt;&lt;/optgroup&gt;&#x27;
+                              );
+                            }
+                        
+                            // NOTE: THIS MUST BE LAST. If you change the order of the options, the selected item gets messed up.
+                            // You have to do all your &lt;option&gt; shuffling and lastly pick one to be selected.
+                            // Auto-select the one that matches the page&#x27;s currently set locale (from meta data).
+                            localeOption = $localeSelectlist
+                              .find(
+                                &quot;option[data-localecode=&#x27;&quot; +
+                                  IBM.common.util.meta.getPageLc() +
+                                  &#x27;-&#x27; +
+                                  IBM.common.util.meta.getPageCc() +
+                                  &quot;&#x27;]&quot;
+                              )
+                              .prop(&#x27;selected&#x27;, true);
+                        
+                            // Take the selected locale item and move it to the top of the first option group found.
+                            $localeSelectlist.find(&#x27;optgroup:first&#x27;).prepend(localeOption);
+                        
+                            IBM.common.widget.selectlist.init($localeSelectlist, {
+                              width: &#x27;100%&#x27;,
+                            });
+                        
+                            me.$el = $localeSelectlist;
+                        
+                            myEvents.publish(&#x27;ready&#x27;);
+                          }
+                        
+                          /**
+                        		Callback for locale select list &#x27;change&#x27; event binding. Can be disabled by page.
+                        		
+                        		@method defaultOnchangeAction
+                        	**/
+                          me.defaultOnchangeAction = function() {
+                            var evtData = {
+                              ibmEV: &#x27;widget&#x27;,
+                              ibmEvAction: &#x27;locale selector&#x27;,
+                              ibmEvGroup:
+                                IBM.common.util.meta.getPageLc() +
+                                &#x27;-&#x27; +
+                                IBM.common.util.meta.getPageCc(),
+                              ibmEvModule: me.$el.find(&#x27;:selected&#x27;).data(&#x27;localecode&#x27;),
+                              ibmEvLinkTitle: me.$el.find(&#x27;:selected&#x27;).text(),
+                              ibmEvLinkTarget: me.$el.find(&#x27;:selected&#x27;).val(),
+                            };
+                        
+                            if (this.value !== &#x27;&#x27;) {
+                              IBM.common.util.statshelper.fireEvent(evtData);
+                        
+                              setTimeout(function() {
+                                window.location.href = me.$el.val();
+                              }, 150);
+                            }
+                          };
+                        
+                          // TODO: Santelia: Generate new ECM output for v18 for these files.
+                          // Temp fix:  Alias this shit until we get the new ECM output files setup.
+                          window.ibmweb = window.ibmweb || {};
+                          IBM.namespace(window.ibmweb, &#x27;dynnav.localeselector.dataCallback&#x27;);
+                          window.ibmweb.dynnav.localeselector.dataCallback = me.dataCallback;
+                        
+                          /* Wait for events to happen.
+                           **********************************************************************************************/
+                        
+                          // META is a requirement. Listen for Meta to be finished, then get the translations.
+                          IBM.common.meta
+                            .subscribe(&#x27;dataReady&#x27;, &#x27;localeselector&#x27;, me.autoInit)
+                            .runAsap(me.autoInit);
+                          me.subscribe(&#x27;ready&#x27;, &#x27;self&#x27;, function() {});
+                        })(jQuery, IBMCore);
+                        
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

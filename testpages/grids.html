@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en-BE">
+
+    <head>
+        <meta charset="UTF-8" />
+
+        <!-- Add meta tag to consistently detect the width on an iPad at 768px -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="SHORTCUT ICON" href="//www.ibm.com/favicon.ico">
+        <link rel="canonical" href="http://www.ibm.com/REPLACEME">
+
+        <meta name="robots" content="index,follow">
+        <meta name="description" content="REPLACE ME">
+        <meta name="keywords" content="REPLACE ME">
+
+        <meta name="geo.country" content="be">
+        <meta name="dcterms.date" content="2014-07-23">
+        <meta name="dcterms.rights" content="© Copyright IBM Corp. 2014">
+
+        <!-- JSON meta data objects for customer experience W3C spec-->
+        <script>
+            digitalData = {
+                page: {
+                    category: {
+                        primaryCategory: 'SB03'
+                    },
+                    pageInfo: {
+                        effectiveDate: '2014-04-18',
+                        expiryDate: '2017-12-18',
+                        language: 'en-US',
+                        publishDate: '2013-12-19',
+                        publisher: 'IBM Corporation',
+                        version: 'v18',
+                        ibm: {
+                            contentDelivery: 'ECM/Filegen',
+                            contentProducer: 'ECM/IConS Adopter ## - XXXXXXXXXXXX - <autogend by ECM>',
+                            country: 'US',
+                            ibmDynamicCm: false,
+                            industry: 'ZZ',
+                            owner: 'Someone/Somewhere/IBM',
+                            siteID: 'IBMTEST',
+                            subject: 'IBM000',
+                            type: 'CT052'
+                        }
+                    }
+                }
+            };
+        </script>
+
+        <style>
+            article {
+                margin-bottom: 100px;
+            }
+
+            article [class*="ibm-col-"]:not(.ignore) p {
+                background: #f5f5f5;
+                border: 1px solid #ccc;
+                text-align: center;
+                box-sizing: border-box;
+                overflow: hidden;
+                white-space: nowrap;
+                padding: 0 5px;
+                margin-bottom: 10px;
+            }
+
+            article [class*="ibm-col-"] p {
+                padding: 0;
+            }
+        </style>
+
+        <!-- This should be a REVERSE breadcrumb. Start at specific and get more general category. -->
+        <title>v18 Grid Examples- IBM</title>
+
+        <!-- REQUIRED JS/CSS. Coremetrics stats JS is FIRST! -->
+        <!-- NOTE: These are local versions. They are not the versions that should be used anywhere else but this page. -->
+
+        <script src="//1.www.s81c.com/common/stats/ida_stats.js"></script>
+        <script src="../js/www.js"></script>
+        <link href="../css/www.css" rel="stylesheet" type="text/css" />
+        <link href="../css/grid-fluid.css" rel="stylesheet" type="text/css" />
+        
+        <script>
+            IBMCore.common.util.config.set({
+                masthead: {
+                    type: "alternate"
+                },
+                footer: {
+                    type: "alternate"
+                }
+            });
+        </script>
+
+    </head>
+
+    <body id="ibm-com" class="ibm-type">
+
+        <div id="ibm-top" class="ibm-landing-page">
+
+            <!-- MASTHEAD_BEGIN -->
+            <div id="ibm-masthead" role="banner" aria-label="IBM">
+                <div id="ibm-mast-options">
+                    <ul role="toolbar" aria-labelledby="ibm-masthead">
+                        <li id="ibm-geo" role="presentation"><a href="http://www.ibm.com/planetwide/select/selector.html" role="button" aria-label="United states selected - Choose a country">United States</a></li>
+                    </ul>
+                </div>
+                <div id="ibm-universal-nav">
+                    <nav role="navigation" aria-label="IBM">
+                        <div id="ibm-home"><a href="http://www.ibm.com/us/en/">IBM®</a></div>
+                        <ul id="ibm-menu-links" role="toolbar" aria-label="Site map">
+                            <li><a href="http://www.ibm.com/sitemap/us/en/">Site map</a></li>
+                        </ul>
+                    </nav>
+
+                    <div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead">
+                        <form id="ibm-search-form" action="http://www.ibm.com/Search/" method="get">
+                            <p>
+                                <label for="q">IBM</label>
+                                <input type="text" maxlength="100" value="" placeholder="Search" name="q" id="q" aria-label="Search" />
+                                <input type="hidden" value="18" name="v" />
+                                <input type="hidden" value="utf" name="en" />
+                                <input type="hidden" value="en" name="lang" />
+                                <input type="hidden" value="us" name="cc" />
+                                <input type="submit" id="ibm-search" class="ibm-btn-search" value="Submit" />
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- MASTHEAD_END -->
+            <!-- MAIN PAGE WRAPPER AROUND LEADSPACE, MAIN CONTENT SIDENAV AND RELATED CONTENT -->
+            <div id="ibm-content-wrapper">
+
+                <!-- CONTENT_NAV_BEGIN -->
+
+                <main role="main" aria-labelledby="ibm-pagetitle-h1">
+                    <div id="ibm-pcon">
+                        <div id="ibm-content">
+                            <div id="ibm-content-body">
+
+                                <div id="ibm-content-main">
+
+                                    <section>
+                                        <div class="ibm-fluid">
+                                            <div class='ibm-col-12-12'>
+                                                <h2 class="ibm-h2 ibm-bold">
+                                                    Fluid Responsive Example
+                                                </h2>
+                                                <div class="ibm-rule">
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <article>
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-8 ibm-col-xlarge-12-6'>
+                                                    <p>.ibm-col-xlarge-12-6<br />.ibm-col-12-8</p>
+                                                </div>
+                                                <div class='ibm-col-12-4 ibm-col-xlarge-12-6'>
+                                                    <p>.ibm-col-xlarge-12-6<br />.ibm-col-12-4</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-8 ibm-col-large-12-6'>
+                                                    <p>.ibm-col-large-12-6<br />.ibm-col-12-8</p>
+                                                </div>
+                                                <div class='ibm-col-12-4 ibm-col-large-12-6'>
+                                                    <p>.ibm-col-large-12-6<br />.ibm-col-12-4</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-8 ibm-col-medium-12-6'>
+                                                    <p>.ibm-col-medium-12-6<br />.ibm-col-12-8</p>
+                                                </div>
+                                                <div class='ibm-col-12-4 ibm-col-medium-12-6'>
+                                                    <p>.ibm-col-medium-12-6<br />.ibm-col-12-4</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-8'>
+                                                    <p>.ibm-col-12-8</p>
+                                                </div>
+                                                <div class='ibm-col-12-4'>
+                                                    <p>.ibm-col-12-4</p>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </section>
+
+                                    <section>
+                                        <div class="ibm-fluid">
+                                            <div class='ibm-col-12-12'>
+                                                <h2 class="ibm-h2 ibm-bold">
+                                                    Adaptive Responsive Example
+                                                </h2>
+                                                <div class="ibm-rule">
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <article>
+
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-6-4 ibm-col-xlarge-6-3'>
+                                                    <p>.ibm-col-xlarge-6-3<br />.ibm-col-6-4</p>
+                                                </div>
+                                                <div class='ibm-col-6-2 ibm-col-xlarge-6-3'>
+                                                    <p>.ibm-col-xlarge-6-3<br />.ibm-col-6-2</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-6-4 ibm-col-large-6-3'>
+                                                    <p>.ibm-col-large-6-3<br />.ibm-col-6-4</p>
+                                                </div>
+                                                <div class='ibm-col-6-2 ibm-col-large-6-3'>
+                                                    <p>.ibm-col-large-6-3<br />.ibm-col-6-2</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-6-4 ibm-col-medium-6-3'>
+                                                    <p>.ibm-col-medium-6-3<br />.ibm-col-6-4</p>
+                                                </div>
+                                                <div class='ibm-col-6-2 ibm-col-medium-6-3'>
+                                                    <p>.ibm-col-medium-6-3<br />.ibm-col-6-2</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-6-4'>
+                                                    <p>.ibm-col-6-4</p>
+                                                </div>
+                                                <div class='ibm-col-6-2'>
+                                                    <p>.ibm-col-6-2</p>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </section>
+
+                                    <section>
+                                        <div class="ibm-fluid">
+                                            <div class='ibm-col-12-12'>
+                                                <h2 class="ibm-h2 ibm-bold">
+                                                    Fluid 12 Columns
+                                                </h2>
+                                                <div class="ibm-rule">
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <article>
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-1'>
+                                                    <p>.ibm-col-12-1</p>
+                                                </div>
+                                                <div class='ibm-col-12-1'>
+                                                    <p>.ibm-col-12-1</p>
+                                                </div>
+                                                <div class='ibm-col-12-1'>
+                                                    <p>.ibm-col-12-1</p>
+                                                </div>
+                                                <div class='ibm-col-12-1'>
+                                                    <p>.ibm-col-12-1</p>
+                                                </div>
+                                                <div class='ibm-col-12-1'>
+                                                    <p>.ibm-col-12-1</p>
+                                                </div>
+                                                <div class='ibm-col-12-1'>
+                                                    <p>.ibm-col-12-1</p>
+                                                </div>
+                                                <div class='ibm-col-12-1'>
+                                                    <p>.ibm-col-12-1</p>
+                                                </div>
+                                                <div class='ibm-col-12-1'>
+                                                    <p>.ibm-col-12-1</p>
+                                                </div>
+                                                <div class='ibm-col-12-1'>
+                                                    <p>.ibm-col-12-1</p>
+                                                </div>
+                                                <div class='ibm-col-12-1'>
+                                                    <p>.ibm-col-12-1</p>
+                                                </div>
+                                                <div class='ibm-col-12-1'>
+                                                    <p>.ibm-col-12-1</p>
+                                                </div>
+                                                <div class='ibm-col-12-1'>
+                                                    <p>.ibm-col-12-1</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-2'>
+                                                    <p>.ibm-col-12-2</p>
+                                                </div>
+                                                <div class='ibm-col-12-2'>
+                                                    <p>.ibm-col-12-2</p>
+                                                </div>
+                                                <div class='ibm-col-12-2'>
+                                                    <p>.ibm-col-12-2</p>
+                                                </div>
+                                                <div class='ibm-col-12-2'>
+                                                    <p>.ibm-col-12-2</p>
+                                                </div>
+                                                <div class='ibm-col-12-2'>
+                                                    <p>.ibm-col-12-2</p>
+                                                </div>
+                                                <div class='ibm-col-12-2'>
+                                                    <p>.ibm-col-12-2</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-3'>
+                                                    <p>.ibm-col-12-3</p>
+                                                </div>
+                                                <div class='ibm-col-12-3'>
+                                                    <p>.ibm-col-12-3</p>
+                                                </div>
+                                                <div class='ibm-col-12-3'>
+                                                    <p>.ibm-col-12-3</p>
+                                                </div>
+                                                <div class='ibm-col-12-3'>
+                                                    <p>.ibm-col-12-3</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-4'>
+                                                    <p>.ibm-col-12-4</p>
+                                                </div>
+                                                <div class='ibm-col-12-4'>
+                                                    <p>.ibm-col-12-4</p>
+                                                </div>
+                                                <div class='ibm-col-12-4'>
+                                                    <p>.ibm-col-12-4</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-5'>
+                                                    <p>.ibm-col-12-5</p>
+                                                </div>
+                                                <div class='ibm-col-12-5'>
+                                                    <p>.ibm-col-12-5</p>
+                                                </div>
+                                                <div class='ibm-col-12-2'>
+                                                    <p>.ibm-col-12-2</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-6'>
+                                                    <p>.ibm-col-12-6</p>
+                                                </div>
+                                                <div class='ibm-col-12-6'>
+                                                    <p>.ibm-col-12-6</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-7'>
+                                                    <p>.ibm-col-12-7</p>
+                                                </div>
+                                                <div class='ibm-col-12-5'>
+                                                    <p>.ibm-col-12-5</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-8'>
+                                                    <p>.ibm-col-12-8</p>
+                                                </div>
+                                                <div class='ibm-col-12-4'>
+                                                    <p>.ibm-col-12-4</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-9'>
+                                                    <p>.ibm-col-12-9</p>
+                                                </div>
+                                                <div class='ibm-col-12-3'>
+                                                    <p>.ibm-col-12-3</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-10'>
+                                                    <p>.ibm-col-12-10</p>
+                                                </div>
+                                                <div class='ibm-col-12-2'>
+                                                    <p>.ibm-col-12-2</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-11'>
+                                                    <p>.ibm-col-12-11</p>
+                                                </div>
+                                                <div class='ibm-col-12-1'>
+                                                    <p>.ibm-col-12-1</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-12'>
+                                                    <p>.ibm-col-12-12</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-fluid">
+                                                <div class='ibm-col-12-12 ignore'>
+                                                    <p>To use the 12 column grid add the optional grid-fluid CSS file to your page.</p>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </section>
+
+                                    <section>
+                                        <div class="ibm-columns">
+                                            <div class='ibm-col-1-1'>
+                                                <h2 class="ibm-h2 ibm-bold">
+                                                    Adaptive 6 Columns
+                                                </h2>
+                                                <div class="ibm-rule">
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <article>
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-6-1'>
+                                                    <p>.ibm-col-6-1</p>
+                                                </div>
+                                                <div class='ibm-col-6-1'>
+                                                    <p>.ibm-col-6-1</p>
+                                                </div>
+                                                <div class='ibm-col-6-1'>
+                                                    <p>.ibm-col-6-1</p>
+                                                </div>
+                                                <div class='ibm-col-6-1'>
+                                                    <p>.ibm-col-6-1</p>
+                                                </div>
+                                                <div class='ibm-col-6-1'>
+                                                    <p>.ibm-col-6-1</p>
+                                                </div>
+                                                <div class='ibm-col-6-1'>
+                                                    <p>.ibm-col-6-1</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-6-2'>
+                                                    <p>.ibm-col-6-2</p>
+                                                </div>
+                                                <div class='ibm-col-6-2'>
+                                                    <p>.ibm-col-6-2</p>
+                                                </div>
+                                                <div class='ibm-col-6-2'>
+                                                    <p>.ibm-col-6-2</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-6-3'>
+                                                    <p>.ibm-col-6-3</p>
+                                                </div>
+                                                <div class='ibm-col-6-3'>
+                                                    <p>.ibm-col-6-3</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-6-4'>
+                                                    <p>.ibm-col-6-4</p>
+                                                </div>
+                                                <div class='ibm-col-6-2'>
+                                                    <p>.ibm-col-6-2</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-6-5'>
+                                                    <p>.ibm-col-6-5</p>
+                                                </div>
+                                                <div class='ibm-col-6-1'>
+                                                    <p>.ibm-col-6-1</p>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </section>
+
+                                    <section>
+                                        <div class="ibm-columns">
+                                            <div class='ibm-col-1-1'>
+                                                <h2 class="ibm-h2 ibm-bold">
+                                                    Adaptive 5 Columns
+                                                </h2>
+                                                <div class="ibm-rule">
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <article>
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-5-1'>
+                                                    <p>.ibm-col-5-1</p>
+                                                </div>
+                                                <div class='ibm-col-5-1'>
+                                                    <p>.ibm-col-5-1</p>
+                                                </div>
+                                                <div class='ibm-col-5-1'>
+                                                    <p>.ibm-col-5-1</p>
+                                                </div>
+                                                <div class='ibm-col-5-1'>
+                                                    <p>.ibm-col-5-1</p>
+                                                </div>
+                                                <div class='ibm-col-5-1'>
+                                                    <p>.ibm-col-5-1</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-5-2'>
+                                                    <p>.ibm-col-5-2</p>
+                                                </div>
+                                                <div class='ibm-col-5-2'>
+                                                    <p>.ibm-col-5-2</p>
+                                                </div>
+                                                <div class='ibm-col-5-1'>
+                                                    <p>.ibm-col-5-1</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-5-3'>
+                                                    <p>.ibm-col-5-3</p>
+                                                </div>
+                                                <div class='ibm-col-5-2'>
+                                                    <p>.ibm-col-5-2</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-5-4'>
+                                                    <p>.ibm-col-5-4</p>
+                                                </div>
+                                                <div class='ibm-col-5-1'>
+                                                    <p>.ibm-col-5-1</p>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </section>
+
+                                    <section>
+                                        <div class="ibm-columns">
+                                            <div class='ibm-col-1-1'>
+                                                <h2 class="ibm-h2 ibm-bold">
+                                                    Adaptive 4 Columns
+                                                </h2>
+                                                <div class="ibm-rule">
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <article>
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-4-1'>
+                                                    <p>.ibm-col-4-1</p>
+                                                </div>
+                                                <div class='ibm-col-4-1'>
+                                                    <p>.ibm-col-4-1</p>
+                                                </div>
+                                                <div class='ibm-col-4-1'>
+                                                    <p>.ibm-col-4-1</p>
+                                                </div>
+                                                <div class='ibm-col-4-1'>
+                                                    <p>.ibm-col-4-1</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-4-2'>
+                                                    <p>.ibm-col-4-2</p>
+                                                </div>
+                                                <div class='ibm-col-4-2'>
+                                                    <p>.ibm-col-4-2</p>
+                                                </div>
+                                            </div>
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-4-3'>
+                                                    <p>.ibm-col-4-3</p>
+                                                </div>
+                                                <div class='ibm-col-4-1'>
+                                                    <p>.ibm-col-4-1</p>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </section>
+
+                                    <section>
+                                        <div class="ibm-columns">
+                                            <div class='ibm-col-1-1'>
+                                                <h2 class="ibm-h2 ibm-bold">
+                                                    Adaptive 2 Columns
+                                                </h2>
+                                                <div class="ibm-rule">
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <article>
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-2-1'>
+                                                    <p>.ibm-col-2-1</p>
+                                                </div>
+                                                <div class='ibm-col-2-1'>
+                                                    <p>.ibm-col-2-1</p>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </section>
+
+                                    <section>
+                                        <div class="ibm-columns">
+                                            <div class='ibm-col-1-1'>
+                                                <h2 class="ibm-h2 ibm-bold">
+                                                    Adaptive 1 Columns
+                                                </h2>
+                                                <div class="ibm-rule">
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <article>
+                                            <div class="ibm-columns">
+                                                <div class='ibm-col-1-1'>
+                                                    <p>.ibm-col-1-1</p>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </main>
+        </div>
+        <footer role="contentinfo" aria-label="IBM">
+            <div id="ibm-footer">
+                <ul>
+                    <li><a href="http://www.ibm.com/contact/us/en/">Contact</a></li>
+                    <li><a href="http://www.ibm.com/privacy/us/en/">Privacy</a></li>
+                    <li><a href="http://www.ibm.com/legal/us/en/">Terms of use</a></li>
+                    <li><a href="http://www.ibm.com/accessibility/us/en/">Accessibility</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+
+</html>

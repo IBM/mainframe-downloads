@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <title>src/js/sources/ibm/common/lib/masonry.js - IBM v18 (Northstar) common Javascript documentation</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" href="http://www.ibm.com/favicon.ico">
+    <script>
+        digitalData = {
+            page: {
+                pageInfo: {
+                    effectiveDate: '2017-02-25',
+                    expiryDate: '2020-02-25',
+                    language: 'en-US',
+                    publishDate: '2017-02-25',
+                    publisher: 'IBM Corporation',
+                    ibm: {
+                        contentDelivery: 'yuidoc via grunt',
+                        contentProducer: 'Michael Santelia',
+                        country: 'US',
+                        owner: 'Michael Santelia'
+                    }
+                }
+            }
+        };
+    </script>
+
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+
+    <script>
+
+		var lastUpdate = new Date(document.lastModified),
+			updatedMonth = lastUpdate.getMonth(),
+			updatedDate = lastUpdate.getDate(),
+			updatedYear = lastUpdate.getFullYear(),
+			today = new Date(),
+			todayMonth = today.getMonth(),
+			todayDate = today.getDate(),
+			todayYear = today.getFullYear(),
+			monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"],
+			lastUpdatedText = "",
+			daysAgo = Math.floor((today - lastUpdate) / (1000*60*60*24));
+
+		updatedMonthName = monthNames[updatedMonth];
+
+		switch (daysAgo) {
+
+			case 1: 
+				lastUpdatedText = "Updated yesterday";
+				break;
+				
+			case 0: 
+				lastUpdatedText = "Updated today";
+				break;
+				
+			default: 
+				lastUpdatedText = "Updated " + daysAgo + " days ago";
+				break;
+		}
+
+		if (daysAgo > 4) {
+			lastUpdatedText = "Updated: " + updatedMonthName + " " + updatedDate + ", " + updatedYear;
+		}
+
+    </script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-1-2">
+            <div style="background: url(http://1.www.s81c.com/i/v17/t/ibm-logo.png) no-repeat scroll 0px 0px transparent; width: 105px; height: 45px; margin: 0.85em 0px;text-indent:-9999px;">IBM v18 (Northstar) common Javascript documentation</div>
+        </div>
+        <div class="yui3-u-1-2 version">
+            <em>Javascript documentation for: IBM v18 (Northstar)<br />
+            	<span style="font-size: 0.6em; position: absolute; right: 35px;"><script>document.writeln(lastUpdatedText)</script></span></em>
+        </div>
+    </div>
+    
+    <p><a href="../assets../../v18-js-source-documentation.zip" style="margin-left: 10px; padding-left: 15px; background: url(http://1.www.s81c.com/i/v17/icons/ibm_sprite_transactional_blue_ON.png) no-repeat 0 -202px;">Download a copy of this documentation (ZIP).</a></p>
+    
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4" style="float: left;width:25%;">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/IBMCore.common.module.backtotop.html">IBMCore.common.module.backtotop</a></li>
+                                <li><a href="../classes/IBMCore.common.module.canadanotice.html">IBMCore.common.module.canadanotice</a></li>
+                                <li><a href="../classes/IBMCore.common.module.contactmodule.html">IBMCore.common.module.contactmodule</a></li>
+                                <li><a href="../classes/IBMCore.common.module.footer.html">IBMCore.common.module.footer</a></li>
+                                <li><a href="../classes/IBMCore.common.module.footermenu.html">IBMCore.common.module.footermenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.leftnav.html">IBMCore.common.module.leftnav</a></li>
+                                <li><a href="../classes/IBMCore.common.module.liveperson.html">IBMCore.common.module.liveperson</a></li>
+                                <li><a href="../classes/IBMCore.common.module.localeselector.html">IBMCore.common.module.localeselector</a></li>
+                                <li><a href="../classes/IBMCore.common.module.localpagenotification.html">IBMCore.common.module.localpagenotification</a></li>
+                                <li><a href="../classes/IBMCore.common.module.masthead.html">IBMCore.common.module.masthead</a></li>
+                                <li><a href="../classes/IBMCore.common.module.masthead.sticky.html">IBMCore.common.module.masthead.sticky</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mastheadbanner.html">IBMCore.common.module.mastheadbanner</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mastheadsearch.html">IBMCore.common.module.mastheadsearch</a></li>
+                                <li><a href="../classes/IBMCore.common.module.merchandising.html">IBMCore.common.module.merchandising</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mobilemenu.html">IBMCore.common.module.mobilemenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sharethiscontent.html">IBMCore.common.module.sharethiscontent</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sharethispage.html">IBMCore.common.module.sharethispage</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sitenavmenu.html">IBMCore.common.module.sitenavmenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.urx.html">IBMCore.common.module.urx</a></li>
+                                <li><a href="../classes/IBMCore.common.translations.html">IBMCore.common.translations</a></li>
+                                <li><a href="../classes/IBMCore.common.util.a11y.html">IBMCore.common.util.a11y</a></li>
+                                <li><a href="../classes/IBMCore.common.util.addCssRule.html">IBMCore.common.util.addCssRule</a></li>
+                                <li><a href="../classes/IBMCore.common.util.anchorlinkAdjustment.html">IBMCore.common.util.anchorlinkAdjustment</a></li>
+                                <li><a href="../classes/IBMCore.common.util.bitly.html">IBMCore.common.util.bitly</a></li>
+                                <li><a href="../classes/IBMCore.common.util.color.html">IBMCore.common.util.color</a></li>
+                                <li><a href="../classes/IBMCore.common.util.config.html">IBMCore.common.util.config</a></li>
+                                <li><a href="../classes/IBMCore.common.util.convertSecondsToHMS.html">IBMCore.common.util.convertSecondsToHMS</a></li>
+                                <li><a href="../classes/IBMCore.common.util.cookie.html">IBMCore.common.util.cookie</a></li>
+                                <li><a href="../classes/IBMCore.common.util.coreservices.html">IBMCore.common.util.coreservices</a></li>
+                                <li><a href="../classes/IBMCore.common.util.data.html">IBMCore.common.util.data</a></li>
+                                <li><a href="../classes/IBMCore.common.util.debug.html">IBMCore.common.util.debug</a></li>
+                                <li><a href="../classes/IBMCore.common.util.eventCoordinator.html">IBMCore.common.util.eventCoordinator</a></li>
+                                <li><a href="../classes/IBMCore.common.util.freezeScrollbars.html">IBMCore.common.util.freezeScrollbars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.gatekeeper.html">IBMCore.common.util.gatekeeper</a></li>
+                                <li><a href="../classes/IBMCore.common.util.generateId.html">IBMCore.common.util.generateId</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getCurrentGridSize.html">IBMCore.common.util.getCurrentGridSize</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getDataAttributes.html">IBMCore.common.util.getDataAttributes</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getScrollbarWidth.html">IBMCore.common.util.getScrollbarWidth</a></li>
+                                <li><a href="../classes/IBMCore.common.util.has12grid.html">IBMCore.common.util.has12grid</a></li>
+                                <li><a href="../classes/IBMCore.common.util.hasScrollbars.html">IBMCore.common.util.hasScrollbars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.meta.html">IBMCore.common.util.meta</a></li>
+                                <li><a href="../classes/IBMCore.common.util.perf.html">IBMCore.common.util.perf</a></li>
+                                <li><a href="../classes/IBMCore.common.util.queue.html">IBMCore.common.util.queue</a></li>
+                                <li><a href="../classes/IBMCore.common.util.scrolledintoview.html">IBMCore.common.util.scrolledintoview</a></li>
+                                <li><a href="../classes/IBMCore.common.util.scrolltracker.html">IBMCore.common.util.scrolltracker</a></li>
+                                <li><a href="../classes/IBMCore.common.util.setIpcCookie.html">IBMCore.common.util.setIpcCookie</a></li>
+                                <li><a href="../classes/IBMCore.common.util.statshelper.html">IBMCore.common.util.statshelper</a></li>
+                                <li><a href="../classes/IBMCore.common.util.storage.html">IBMCore.common.util.storage</a></li>
+                                <li><a href="../classes/IBMCore.common.util.string.htmlspecialchars.html">IBMCore.common.util.string.htmlspecialchars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.url.html">IBMCore.common.util.url</a></li>
+                                <li><a href="../classes/IBMCore.common.util.user.html">IBMCore.common.util.user</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.carousel.html">IBMCore.common.widget.carousel</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.ccfintercept.html">IBMCore.common.widget.ccfintercept</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.datatable.html">IBMCore.common.widget.datatable</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.datepicker.html">IBMCore.common.widget.datepicker</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.dyntabs.html">IBMCore.common.widget.dyntabs</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.fileinput.html">IBMCore.common.widget.fileinput</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.forms.html">IBMCore.common.widget.forms</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.formvalidator.html">IBMCore.common.widget.formvalidator</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.leavingibm.html">IBMCore.common.widget.leavingibm</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.manager.html">IBMCore.common.widget.manager</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.masonry.html">IBMCore.common.widget.masonry</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.overlay.html">IBMCore.common.widget.overlay</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.parallaxscroll.html">IBMCore.common.widget.parallaxscroll</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.rssdisplay.html">IBMCore.common.widget.rssdisplay</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.scrollable.html">IBMCore.common.widget.scrollable</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.selectlist.html">IBMCore.common.widget.selectlist</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.selectlistnav.html">IBMCore.common.widget.selectlistnav</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.setsameheight.html">IBMCore.common.widget.setsameheight</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.showhide.html">IBMCore.common.widget.showhide</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.stepindicator.html">IBMCore.common.widget.stepindicator</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.stickytabs.html">IBMCore.common.widget.stickytabs</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.syntaxhighlighter.html">IBMCore.common.widget.syntaxhighlighter</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.tablerowselector.html">IBMCore.common.widget.tablerowselector</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.tooltip.html">IBMCore.common.widget.tooltip</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.twisty.html">IBMCore.common.widget.twisty</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videolooper.html">IBMCore.common.widget.videolooper</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.html">IBMCore.common.widget.videoplayer</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.kaltura.html">IBMCore.common.widget.videoplayer.kaltura</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.ustream.html">IBMCore.common.widget.videoplayer.ustream</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.youtube.html">IBMCore.common.widget.videoplayer.youtube</a></li>
+                                <li><a href="../classes/IBMCore.namespace.html">IBMCore.namespace</a></li>
+                                <li><a href="../classes/IBMCore.www.module.dynamiccontactmodule.html">IBMCore.www.module.dynamiccontactmodule</a></li>
+                                <li><a href="../classes/IBMCore.www.module.truste.html">IBMCore.www.module.truste</a></li>
+                                <li><a href="../classes/jQuery.browser.html">jQuery.browser</a></li>
+                                <li><a href="../classes/jQuery.fn.dataTable.html">jQuery.fn.dataTable</a></li>
+                                <li><a href="../classes/jQuery.fn.slick.html">jQuery.fn.slick</a></li>
+                                <li><a href="../classes/jQuery.layout.html">jQuery.layout</a></li>
+                                <li><a href="../classes/jQuery.os.html">jQuery.os</a></li>
+                                <li><a href="../classes/jQuery:focusable.html">jQuery:focusable</a></li>
+                                <li><a href="../classes/Masonry.html">Masonry</a></li>
+                                <li><a href="../classes/Modernizr.html">Modernizr</a></li>
+                                <li><a href="../classes/Mustache.html">Mustache</a></li>
+                                <li><a href="../classes/NanoScroll.html">NanoScroll</a></li>
+                                <li><a href="../classes/Other IBM - Canada notice loader.html">Other IBM - Canada notice loader</a></li>
+                                <li><a href="../classes/Other IBM - common init.html">Other IBM - common init</a></li>
+                                <li><a href="../classes/Other IBM - common v18 page tracker.html">Other IBM - common v18 page tracker</a></li>
+                                <li><a href="../classes/Other IBM - errorchecking.html">Other IBM - errorchecking</a></li>
+                                <li><a href="../classes/Other IBM - footer feedback link.html">Other IBM - footer feedback link</a></li>
+                                <li><a href="../classes/Other IBM - grid change.html">Other IBM - grid change</a></li>
+                                <li><a href="../classes/Other IBM - jstimer-end.html">Other IBM - jstimer-end</a></li>
+                                <li><a href="../classes/Other IBM - jstimer-start.html">Other IBM - jstimer-start</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/IBMCore.html">IBMCore</a></li>
+                                <li><a href="../modules/jQuery.browser.html">jQuery.browser</a></li>
+                                <li><a href="../modules/jQuery.dataTable.html">jQuery.dataTable</a></li>
+                                <li><a href="../modules/jQuery.slick.html">jQuery.slick</a></li>
+                                <li><a href="../modules/Masonry.html">Masonry</a></li>
+                                <li><a href="../modules/Modernizr.html">Modernizr</a></li>
+                                <li><a href="../modules/Mustache.html">Mustache</a></li>
+                                <li><a href="../modules/Nanoscroller.html">Nanoscroller</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4"style="float: left;width:75%;">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected" checked>
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private" checked>
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated" checked>
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src/js/sources/ibm/common/lib/masonry.js</h1>
+                        
+                        <div class="file">
+                            <pre class="code prettyprint linenums">
+                        /**
+                            Masonry plug-in. A cascading grid layout library. It works by placing elements in optimal position based on available vertical space, sort of like a mason fitting stones in a wall.
+                            &lt;br /&gt;Official documenation at &lt;a href=&quot;http://masonry.desandro.com/&quot; target=&quot;_blank&quot;&gt;http://masonry.desandro.com/&lt;/a&gt;.
+                        
+                            @module Masonry
+                            @main Masonry
+                            @class Masonry
+                        
+                        **/
+                        /*!
+                         * Masonry PACKAGED v4.1.1
+                         * Cascading grid layout library
+                         * http://masonry.desandro.com
+                         * MIT License
+                         * by David DeSandro
+                         */
+                        
+                        !function(t,e){&quot;function&quot;==typeof define&amp;&amp;define.amd?define(&quot;jquery-bridget/jquery-bridget&quot;,[&quot;jquery&quot;],function(i){return e(t,i)}):&quot;object&quot;==typeof module&amp;&amp;module.exports?module.exports=e(t,require(&quot;jquery&quot;)):t.jQueryBridget=e(t,t.jQuery)}(window,function(t,e){&quot;use strict&quot;;function i(i,r,a){function h(t,e,n){var o,r=&quot;$().&quot;+i+&#x27;(&quot;&#x27;+e+&#x27;&quot;)&#x27;;return t.each(function(t,h){var u=a.data(h,i);if(!u)return void s(i+&quot; not initialized. Cannot call methods, i.e. &quot;+r);var d=u[e];if(!d||&quot;_&quot;==e.charAt(0))return void s(r+&quot; is not a valid method&quot;);var l=d.apply(u,n);o=void 0===o?l:o}),void 0!==o?o:t}function u(t,e){t.each(function(t,n){var o=a.data(n,i);o?(o.option(e),o._init()):(o=new r(n,e),a.data(n,i,o))})}a=a||e||t.jQuery,a&amp;&amp;(r.prototype.option||(r.prototype.option=function(t){a.isPlainObject(t)&amp;&amp;(this.options=a.extend(!0,this.options,t))}),a.fn[i]=function(t){if(&quot;string&quot;==typeof t){var e=o.call(arguments,1);return h(this,t,e)}return u(this,t),this},n(a))}function n(t){!t||t&amp;&amp;t.bridget||(t.bridget=i)}var o=Array.prototype.slice,r=t.console,s=&quot;undefined&quot;==typeof r?function(){}:function(t){r.error(t)};return n(e||t.jQuery),i}),function(t,e){&quot;function&quot;==typeof define&amp;&amp;define.amd?define(&quot;ev-emitter/ev-emitter&quot;,e):&quot;object&quot;==typeof module&amp;&amp;module.exports?module.exports=e():t.EvEmitter=e()}(&quot;undefined&quot;!=typeof window?window:this,function(){function t(){}var e=t.prototype;return e.on=function(t,e){if(t&amp;&amp;e){var i=this._events=this._events||{},n=i[t]=i[t]||[];return-1==n.indexOf(e)&amp;&amp;n.push(e),this}},e.once=function(t,e){if(t&amp;&amp;e){this.on(t,e);var i=this._onceEvents=this._onceEvents||{},n=i[t]=i[t]||{};return n[e]=!0,this}},e.off=function(t,e){var i=this._events&amp;&amp;this._events[t];if(i&amp;&amp;i.length){var n=i.indexOf(e);return-1!=n&amp;&amp;i.splice(n,1),this}},e.emitEvent=function(t,e){var i=this._events&amp;&amp;this._events[t];if(i&amp;&amp;i.length){var n=0,o=i[n];e=e||[];for(var r=this._onceEvents&amp;&amp;this._onceEvents[t];o;){var s=r&amp;&amp;r[o];s&amp;&amp;(this.off(t,o),delete r[o]),o.apply(this,e),n+=s?0:1,o=i[n]}return this}},t}),function(t,e){&quot;use strict&quot;;&quot;function&quot;==typeof define&amp;&amp;define.amd?define(&quot;get-size/get-size&quot;,[],function(){return e()}):&quot;object&quot;==typeof module&amp;&amp;module.exports?module.exports=e():t.getSize=e()}(window,function(){&quot;use strict&quot;;function t(t){var e=parseFloat(t),i=-1==t.indexOf(&quot;%&quot;)&amp;&amp;!isNaN(e);return i&amp;&amp;e}function e(){}function i(){for(var t={width:0,height:0,innerWidth:0,innerHeight:0,outerWidth:0,outerHeight:0},e=0;u&gt;e;e++){var i=h[e];t[i]=0}return t}function n(t){var e=getComputedStyle(t);return e||a(&quot;Style returned &quot;+e+&quot;. Are you running this code in a hidden iframe on Firefox? See http://bit.ly/getsizebug1&quot;),e}function o(){if(!d){d=!0;var e=document.createElement(&quot;div&quot;);e.style.width=&quot;200px&quot;,e.style.padding=&quot;1px 2px 3px 4px&quot;,e.style.borderStyle=&quot;solid&quot;,e.style.borderWidth=&quot;1px 2px 3px 4px&quot;,e.style.boxSizing=&quot;border-box&quot;;var i=document.body||document.documentElement;i.appendChild(e);var o=n(e);r.isBoxSizeOuter=s=200==t(o.width),i.removeChild(e)}}function r(e){if(o(),&quot;string&quot;==typeof e&amp;&amp;(e=document.querySelector(e)),e&amp;&amp;&quot;object&quot;==typeof e&amp;&amp;e.nodeType){var r=n(e);if(&quot;none&quot;==r.display)return i();var a={};a.width=e.offsetWidth,a.height=e.offsetHeight;for(var d=a.isBorderBox=&quot;border-box&quot;==r.boxSizing,l=0;u&gt;l;l++){var c=h[l],f=r[c],m=parseFloat(f);a[c]=isNaN(m)?0:m}var p=a.paddingLeft+a.paddingRight,g=a.paddingTop+a.paddingBottom,y=a.marginLeft+a.marginRight,v=a.marginTop+a.marginBottom,_=a.borderLeftWidth+a.borderRightWidth,E=a.borderTopWidth+a.borderBottomWidth,z=d&amp;&amp;s,b=t(r.width);b!==!1&amp;&amp;(a.width=b+(z?0:p+_));var x=t(r.height);return x!==!1&amp;&amp;(a.height=x+(z?0:g+E)),a.innerWidth=a.width-(p+_),a.innerHeight=a.height-(g+E),a.outerWidth=a.width+y,a.outerHeight=a.height+v,a}}var s,a=&quot;undefined&quot;==typeof console?e:function(t){console.error(t)},h=[&quot;paddingLeft&quot;,&quot;paddingRight&quot;,&quot;paddingTop&quot;,&quot;paddingBottom&quot;,&quot;marginLeft&quot;,&quot;marginRight&quot;,&quot;marginTop&quot;,&quot;marginBottom&quot;,&quot;borderLeftWidth&quot;,&quot;borderRightWidth&quot;,&quot;borderTopWidth&quot;,&quot;borderBottomWidth&quot;],u=h.length,d=!1;return r}),function(t,e){&quot;use strict&quot;;&quot;function&quot;==typeof define&amp;&amp;define.amd?define(&quot;desandro-matches-selector/matches-selector&quot;,e):&quot;object&quot;==typeof module&amp;&amp;module.exports?module.exports=e():t.matchesSelector=e()}(window,function(){&quot;use strict&quot;;var t=function(){var t=Element.prototype;if(t.matches)return&quot;matches&quot;;if(t.matchesSelector)return&quot;matchesSelector&quot;;for(var e=[&quot;webkit&quot;,&quot;moz&quot;,&quot;ms&quot;,&quot;o&quot;],i=0;i&lt;e.length;i++){var n=e[i],o=n+&quot;MatchesSelector&quot;;if(t[o])return o}}();return function(e,i){return e[t](i)}}),function(t,e){&quot;function&quot;==typeof define&amp;&amp;define.amd?define(&quot;fizzy-ui-utils/utils&quot;,[&quot;desandro-matches-selector/matches-selector&quot;],function(i){return e(t,i)}):&quot;object&quot;==typeof module&amp;&amp;module.exports?module.exports=e(t,require(&quot;desandro-matches-selector&quot;)):t.fizzyUIUtils=e(t,t.matchesSelector)}(window,function(t,e){var i={};i.extend=function(t,e){for(var i in e)t[i]=e[i];return t},i.modulo=function(t,e){return(t%e+e)%e},i.makeArray=function(t){var e=[];if(Array.isArray(t))e=t;else if(t&amp;&amp;&quot;number&quot;==typeof t.length)for(var i=0;i&lt;t.length;i++)e.push(t[i]);else e.push(t);return e},i.removeFrom=function(t,e){var i=t.indexOf(e);-1!=i&amp;&amp;t.splice(i,1)},i.getParent=function(t,i){for(;t!=document.body;)if(t=t.parentNode,e(t,i))return t},i.getQueryElement=function(t){return&quot;string&quot;==typeof t?document.querySelector(t):t},i.handleEvent=function(t){var e=&quot;on&quot;+t.type;this[e]&amp;&amp;this[e](t)},i.filterFindElements=function(t,n){t=i.makeArray(t);var o=[];return t.forEach(function(t){if(t instanceof HTMLElement){if(!n)return void o.push(t);e(t,n)&amp;&amp;o.push(t);for(var i=t.querySelectorAll(n),r=0;r&lt;i.length;r++)o.push(i[r])}}),o},i.debounceMethod=function(t,e,i){var n=t.prototype[e],o=e+&quot;Timeout&quot;;t.prototype[e]=function(){var t=this[o];t&amp;&amp;clearTimeout(t);var e=arguments,r=this;this[o]=setTimeout(function(){n.apply(r,e),delete r[o]},i||100)}},i.docReady=function(t){var e=document.readyState;&quot;complete&quot;==e||&quot;interactive&quot;==e?t():document.addEventListener(&quot;DOMContentLoaded&quot;,t)},i.toDashed=function(t){return t.replace(/(.)([A-Z])/g,function(t,e,i){return e+&quot;-&quot;+i}).toLowerCase()};var n=t.console;return i.htmlInit=function(e,o){i.docReady(function(){var r=i.toDashed(o),s=&quot;data-&quot;+r,a=document.querySelectorAll(&quot;[&quot;+s+&quot;]&quot;),h=document.querySelectorAll(&quot;.js-&quot;+r),u=i.makeArray(a).concat(i.makeArray(h)),d=s+&quot;-options&quot;,l=t.jQuery;u.forEach(function(t){var i,r=t.getAttribute(s)||t.getAttribute(d);try{i=r&amp;&amp;JSON.parse(r)}catch(a){return void(n&amp;&amp;n.error(&quot;Error parsing &quot;+s+&quot; on &quot;+t.className+&quot;: &quot;+a))}var h=new e(t,i);l&amp;&amp;l.data(t,o,h)})})},i}),function(t,e){&quot;function&quot;==typeof define&amp;&amp;define.amd?define(&quot;outlayer/item&quot;,[&quot;ev-emitter/ev-emitter&quot;,&quot;get-size/get-size&quot;],e):&quot;object&quot;==typeof module&amp;&amp;module.exports?module.exports=e(require(&quot;ev-emitter&quot;),require(&quot;get-size&quot;)):(t.Outlayer={},t.Outlayer.Item=e(t.EvEmitter,t.getSize))}(window,function(t,e){&quot;use strict&quot;;function i(t){for(var e in t)return!1;return e=null,!0}function n(t,e){t&amp;&amp;(this.element=t,this.layout=e,this.position={x:0,y:0},this._create())}function o(t){return t.replace(/([A-Z])/g,function(t){return&quot;-&quot;+t.toLowerCase()})}var r=document.documentElement.style,s=&quot;string&quot;==typeof r.transition?&quot;transition&quot;:&quot;WebkitTransition&quot;,a=&quot;string&quot;==typeof r.transform?&quot;transform&quot;:&quot;WebkitTransform&quot;,h={WebkitTransition:&quot;webkitTransitionEnd&quot;,transition:&quot;transitionend&quot;}[s],u={transform:a,transition:s,transitionDuration:s+&quot;Duration&quot;,transitionProperty:s+&quot;Property&quot;,transitionDelay:s+&quot;Delay&quot;},d=n.prototype=Object.create(t.prototype);d.constructor=n,d._create=function(){this._transn={ingProperties:{},clean:{},onEnd:{}},this.css({position:&quot;absolute&quot;})},d.handleEvent=function(t){var e=&quot;on&quot;+t.type;this[e]&amp;&amp;this[e](t)},d.getSize=function(){this.size=e(this.element)},d.css=function(t){var e=this.element.style;for(var i in t){var n=u[i]||i;e[n]=t[i]}},d.getPosition=function(){var t=getComputedStyle(this.element),e=this.layout._getOption(&quot;originLeft&quot;),i=this.layout._getOption(&quot;originTop&quot;),n=t[e?&quot;left&quot;:&quot;right&quot;],o=t[i?&quot;top&quot;:&quot;bottom&quot;],r=this.layout.size,s=-1!=n.indexOf(&quot;%&quot;)?parseFloat(n)/100*r.width:parseInt(n,10),a=-1!=o.indexOf(&quot;%&quot;)?parseFloat(o)/100*r.height:parseInt(o,10);s=isNaN(s)?0:s,a=isNaN(a)?0:a,s-=e?r.paddingLeft:r.paddingRight,a-=i?r.paddingTop:r.paddingBottom,this.position.x=s,this.position.y=a},d.layoutPosition=function(){var t=this.layout.size,e={},i=this.layout._getOption(&quot;originLeft&quot;),n=this.layout._getOption(&quot;originTop&quot;),o=i?&quot;paddingLeft&quot;:&quot;paddingRight&quot;,r=i?&quot;left&quot;:&quot;right&quot;,s=i?&quot;right&quot;:&quot;left&quot;,a=this.position.x+t[o];e[r]=this.getXValue(a),e[s]=&quot;&quot;;var h=n?&quot;paddingTop&quot;:&quot;paddingBottom&quot;,u=n?&quot;top&quot;:&quot;bottom&quot;,d=n?&quot;bottom&quot;:&quot;top&quot;,l=this.position.y+t[h];e[u]=this.getYValue(l),e[d]=&quot;&quot;,this.css(e),this.emitEvent(&quot;layout&quot;,[this])},d.getXValue=function(t){var e=this.layout._getOption(&quot;horizontal&quot;);return this.layout.options.percentPosition&amp;&amp;!e?t/this.layout.size.width*100+&quot;%&quot;:t+&quot;px&quot;},d.getYValue=function(t){var e=this.layout._getOption(&quot;horizontal&quot;);return this.layout.options.percentPosition&amp;&amp;e?t/this.layout.size.height*100+&quot;%&quot;:t+&quot;px&quot;},d._transitionTo=function(t,e){this.getPosition();var i=this.position.x,n=this.position.y,o=parseInt(t,10),r=parseInt(e,10),s=o===this.position.x&amp;&amp;r===this.position.y;if(this.setPosition(t,e),s&amp;&amp;!this.isTransitioning)return void this.layoutPosition();var a=t-i,h=e-n,u={};u.transform=this.getTranslate(a,h),this.transition({to:u,onTransitionEnd:{transform:this.layoutPosition},isCleaning:!0})},d.getTranslate=function(t,e){var i=this.layout._getOption(&quot;originLeft&quot;),n=this.layout._getOption(&quot;originTop&quot;);return t=i?t:-t,e=n?e:-e,&quot;translate3d(&quot;+t+&quot;px, &quot;+e+&quot;px, 0)&quot;},d.goTo=function(t,e){this.setPosition(t,e),this.layoutPosition()},d.moveTo=d._transitionTo,d.setPosition=function(t,e){this.position.x=parseInt(t,10),this.position.y=parseInt(e,10)},d._nonTransition=function(t){this.css(t.to),t.isCleaning&amp;&amp;this._removeStyles(t.to);for(var e in t.onTransitionEnd)t.onTransitionEnd[e].call(this)},d.transition=function(t){if(!parseFloat(this.layout.options.transitionDuration))return void this._nonTransition(t);var e=this._transn;for(var i in t.onTransitionEnd)e.onEnd[i]=t.onTransitionEnd[i];for(i in t.to)e.ingProperties[i]=!0,t.isCleaning&amp;&amp;(e.clean[i]=!0);if(t.from){this.css(t.from);var n=this.element.offsetHeight;n=null}this.enableTransition(t.to),this.css(t.to),this.isTransitioning=!0};var l=&quot;opacity,&quot;+o(a);d.enableTransition=function(){if(!this.isTransitioning){var t=this.layout.options.transitionDuration;t=&quot;number&quot;==typeof t?t+&quot;ms&quot;:t,this.css({transitionProperty:l,transitionDuration:t,transitionDelay:this.staggerDelay||0}),this.element.addEventListener(h,this,!1)}},d.onwebkitTransitionEnd=function(t){this.ontransitionend(t)},d.onotransitionend=function(t){this.ontransitionend(t)};var c={&quot;-webkit-transform&quot;:&quot;transform&quot;};d.ontransitionend=function(t){if(t.target===this.element){var e=this._transn,n=c[t.propertyName]||t.propertyName;if(delete e.ingProperties[n],i(e.ingProperties)&amp;&amp;this.disableTransition(),n in e.clean&amp;&amp;(this.element.style[t.propertyName]=&quot;&quot;,delete e.clean[n]),n in e.onEnd){var o=e.onEnd[n];o.call(this),delete e.onEnd[n]}this.emitEvent(&quot;transitionEnd&quot;,[this])}},d.disableTransition=function(){this.removeTransitionStyles(),this.element.removeEventListener(h,this,!1),this.isTransitioning=!1},d._removeStyles=function(t){var e={};for(var i in t)e[i]=&quot;&quot;;this.css(e)};var f={transitionProperty:&quot;&quot;,transitionDuration:&quot;&quot;,transitionDelay:&quot;&quot;};return d.removeTransitionStyles=function(){this.css(f)},d.stagger=function(t){t=isNaN(t)?0:t,this.staggerDelay=t+&quot;ms&quot;},d.removeElem=function(){this.element.parentNode.removeChild(this.element),this.css({display:&quot;&quot;}),this.emitEvent(&quot;remove&quot;,[this])},d.remove=function(){return s&amp;&amp;parseFloat(this.layout.options.transitionDuration)?(this.once(&quot;transitionEnd&quot;,function(){this.removeElem()}),void this.hide()):void this.removeElem()},d.reveal=function(){delete this.isHidden,this.css({display:&quot;&quot;});var t=this.layout.options,e={},i=this.getHideRevealTransitionEndProperty(&quot;visibleStyle&quot;);e[i]=this.onRevealTransitionEnd,this.transition({from:t.hiddenStyle,to:t.visibleStyle,isCleaning:!0,onTransitionEnd:e})},d.onRevealTransitionEnd=function(){this.isHidden||this.emitEvent(&quot;reveal&quot;)},d.getHideRevealTransitionEndProperty=function(t){var e=this.layout.options[t];if(e.opacity)return&quot;opacity&quot;;for(var i in e)return i},d.hide=function(){this.isHidden=!0,this.css({display:&quot;&quot;});var t=this.layout.options,e={},i=this.getHideRevealTransitionEndProperty(&quot;hiddenStyle&quot;);e[i]=this.onHideTransitionEnd,this.transition({from:t.visibleStyle,to:t.hiddenStyle,isCleaning:!0,onTransitionEnd:e})},d.onHideTransitionEnd=function(){this.isHidden&amp;&amp;(this.css({display:&quot;none&quot;}),this.emitEvent(&quot;hide&quot;))},d.destroy=function(){this.css({position:&quot;&quot;,left:&quot;&quot;,right:&quot;&quot;,top:&quot;&quot;,bottom:&quot;&quot;,transition:&quot;&quot;,transform:&quot;&quot;})},n}),function(t,e){&quot;use strict&quot;;&quot;function&quot;==typeof define&amp;&amp;define.amd?define(&quot;outlayer/outlayer&quot;,[&quot;ev-emitter/ev-emitter&quot;,&quot;get-size/get-size&quot;,&quot;fizzy-ui-utils/utils&quot;,&quot;./item&quot;],function(i,n,o,r){return e(t,i,n,o,r)}):&quot;object&quot;==typeof module&amp;&amp;module.exports?module.exports=e(t,require(&quot;ev-emitter&quot;),require(&quot;get-size&quot;),require(&quot;fizzy-ui-utils&quot;),require(&quot;./item&quot;)):t.Outlayer=e(t,t.EvEmitter,t.getSize,t.fizzyUIUtils,t.Outlayer.Item)}(window,function(t,e,i,n,o){&quot;use strict&quot;;function r(t,e){var i=n.getQueryElement(t);if(!i)return void(h&amp;&amp;h.error(&quot;Bad element for &quot;+this.constructor.namespace+&quot;: &quot;+(i||t)));this.element=i,u&amp;&amp;(this.$element=u(this.element)),this.options=n.extend({},this.constructor.defaults),this.option(e);var o=++l;this.element.outlayerGUID=o,c[o]=this,this._create();var r=this._getOption(&quot;initLayout&quot;);r&amp;&amp;this.layout()}function s(t){function e(){t.apply(this,arguments)}return e.prototype=Object.create(t.prototype),e.prototype.constructor=e,e}function a(t){if(&quot;number&quot;==typeof t)return t;var e=t.match(/(^\d*\.?\d*)(\w*)/),i=e&amp;&amp;e[1],n=e&amp;&amp;e[2];if(!i.length)return 0;i=parseFloat(i);var o=m[n]||1;return i*o}var h=t.console,u=t.jQuery,d=function(){},l=0,c={};r.namespace=&quot;outlayer&quot;,r.Item=o,r.defaults={containerStyle:{position:&quot;relative&quot;},initLayout:!0,originLeft:!0,originTop:!0,resize:!0,resizeContainer:!0,transitionDuration:&quot;0.4s&quot;,hiddenStyle:{opacity:0,transform:&quot;scale(0.001)&quot;},visibleStyle:{opacity:1,transform:&quot;scale(1)&quot;}};var f=r.prototype;n.extend(f,e.prototype),f.option=function(t){n.extend(this.options,t)},f._getOption=function(t){var e=this.constructor.compatOptions[t];return e&amp;&amp;void 0!==this.options[e]?this.options[e]:this.options[t]},r.compatOptions={initLayout:&quot;isInitLayout&quot;,horizontal:&quot;isHorizontal&quot;,layoutInstant:&quot;isLayoutInstant&quot;,originLeft:&quot;isOriginLeft&quot;,originTop:&quot;isOriginTop&quot;,resize:&quot;isResizeBound&quot;,resizeContainer:&quot;isResizingContainer&quot;},f._create=function(){this.reloadItems(),this.stamps=[],this.stamp(this.options.stamp),n.extend(this.element.style,this.options.containerStyle);var t=this._getOption(&quot;resize&quot;);t&amp;&amp;this.bindResize()},f.reloadItems=function(){this.items=this._itemize(this.element.children)},f._itemize=function(t){for(var e=this._filterFindItemElements(t),i=this.constructor.Item,n=[],o=0;o&lt;e.length;o++){var r=e[o],s=new i(r,this);n.push(s)}return n},f._filterFindItemElements=function(t){return n.filterFindElements(t,this.options.itemSelector)},f.getItemElements=function(){return this.items.map(function(t){return t.element})},f.layout=function(){this._resetLayout(),this._manageStamps();var t=this._getOption(&quot;layoutInstant&quot;),e=void 0!==t?t:!this._isLayoutInited;this.layoutItems(this.items,e),this._isLayoutInited=!0},f._init=f.layout,f._resetLayout=function(){this.getSize()},f.getSize=function(){this.size=i(this.element)},f._getMeasurement=function(t,e){var n,o=this.options[t];o?(&quot;string&quot;==typeof o?n=this.element.querySelector(o):o instanceof HTMLElement&amp;&amp;(n=o),this[t]=n?i(n)[e]:o):this[t]=0},f.layoutItems=function(t,e){t=this._getItemsForLayout(t),this._layoutItems(t,e),this._postLayout()},f._getItemsForLayout=function(t){return t.filter(function(t){return!t.isIgnored})},f._layoutItems=function(t,e){if(this._emitCompleteOnItems(&quot;layout&quot;,t),t&amp;&amp;t.length){var i=[];t.forEach(function(t){var n=this._getItemLayoutPosition(t);n.item=t,n.isInstant=e||t.isLayoutInstant,i.push(n)},this),this._processLayoutQueue(i)}},f._getItemLayoutPosition=function(){return{x:0,y:0}},f._processLayoutQueue=function(t){this.updateStagger(),t.forEach(function(t,e){this._positionItem(t.item,t.x,t.y,t.isInstant,e)},this)},f.updateStagger=function(){var t=this.options.stagger;return null===t||void 0===t?void(this.stagger=0):(this.stagger=a(t),this.stagger)},f._positionItem=function(t,e,i,n,o){n?t.goTo(e,i):(t.stagger(o*this.stagger),t.moveTo(e,i))},f._postLayout=function(){this.resizeContainer()},f.resizeContainer=function(){var t=this._getOption(&quot;resizeContainer&quot;);if(t){var e=this._getContainerSize();e&amp;&amp;(this._setContainerMeasure(e.width,!0),this._setContainerMeasure(e.height,!1))}},f._getContainerSize=d,f._setContainerMeasure=function(t,e){if(void 0!==t){var i=this.size;i.isBorderBox&amp;&amp;(t+=e?i.paddingLeft+i.paddingRight+i.borderLeftWidth+i.borderRightWidth:i.paddingBottom+i.paddingTop+i.borderTopWidth+i.borderBottomWidth),t=Math.max(t,0),this.element.style[e?&quot;width&quot;:&quot;height&quot;]=t+&quot;px&quot;}},f._emitCompleteOnItems=function(t,e){function i(){o.dispatchEvent(t+&quot;Complete&quot;,null,[e])}function n(){s++,s==r&amp;&amp;i()}var o=this,r=e.length;if(!e||!r)return void i();var s=0;e.forEach(function(e){e.once(t,n)})},f.dispatchEvent=function(t,e,i){var n=e?[e].concat(i):i;if(this.emitEvent(t,n),u)if(this.$element=this.$element||u(this.element),e){var o=u.Event(e);o.type=t,this.$element.trigger(o,i)}else this.$element.trigger(t,i)},f.ignore=function(t){var e=this.getItem(t);e&amp;&amp;(e.isIgnored=!0)},f.unignore=function(t){var e=this.getItem(t);e&amp;&amp;delete e.isIgnored},f.stamp=function(t){t=this._find(t),t&amp;&amp;(this.stamps=this.stamps.concat(t),t.forEach(this.ignore,this))},f.unstamp=function(t){t=this._find(t),t&amp;&amp;t.forEach(function(t){n.removeFrom(this.stamps,t),this.unignore(t)},this)},f._find=function(t){return t?(&quot;string&quot;==typeof t&amp;&amp;(t=this.element.querySelectorAll(t)),t=n.makeArray(t)):void 0},f._manageStamps=function(){this.stamps&amp;&amp;this.stamps.length&amp;&amp;(this._getBoundingRect(),this.stamps.forEach(this._manageStamp,this))},f._getBoundingRect=function(){var t=this.element.getBoundingClientRect(),e=this.size;this._boundingRect={left:t.left+e.paddingLeft+e.borderLeftWidth,top:t.top+e.paddingTop+e.borderTopWidth,right:t.right-(e.paddingRight+e.borderRightWidth),bottom:t.bottom-(e.paddingBottom+e.borderBottomWidth)}},f._manageStamp=d,f._getElementOffset=function(t){var e=t.getBoundingClientRect(),n=this._boundingRect,o=i(t),r={left:e.left-n.left-o.marginLeft,top:e.top-n.top-o.marginTop,right:n.right-e.right-o.marginRight,bottom:n.bottom-e.bottom-o.marginBottom};return r},f.handleEvent=n.handleEvent,f.bindResize=function(){t.addEventListener(&quot;resize&quot;,this),this.isResizeBound=!0},f.unbindResize=function(){t.removeEventListener(&quot;resize&quot;,this),this.isResizeBound=!1},f.onresize=function(){this.resize()},n.debounceMethod(r,&quot;onresize&quot;,100),f.resize=function(){this.isResizeBound&amp;&amp;this.needsResizeLayout()&amp;&amp;this.layout()},f.needsResizeLayout=function(){var t=i(this.element),e=this.size&amp;&amp;t;return e&amp;&amp;t.innerWidth!==this.size.innerWidth},f.addItems=function(t){var e=this._itemize(t);return e.length&amp;&amp;(this.items=this.items.concat(e)),e},f.appended=function(t){var e=this.addItems(t);e.length&amp;&amp;(this.layoutItems(e,!0),this.reveal(e))},f.prepended=function(t){var e=this._itemize(t);if(e.length){var i=this.items.slice(0);this.items=e.concat(i),this._resetLayout(),this._manageStamps(),this.layoutItems(e,!0),this.reveal(e),this.layoutItems(i)}},f.reveal=function(t){if(this._emitCompleteOnItems(&quot;reveal&quot;,t),t&amp;&amp;t.length){var e=this.updateStagger();t.forEach(function(t,i){t.stagger(i*e),t.reveal()})}},f.hide=function(t){if(this._emitCompleteOnItems(&quot;hide&quot;,t),t&amp;&amp;t.length){var e=this.updateStagger();t.forEach(function(t,i){t.stagger(i*e),t.hide()})}},f.revealItemElements=function(t){var e=this.getItems(t);this.reveal(e)},f.hideItemElements=function(t){var e=this.getItems(t);this.hide(e)},f.getItem=function(t){for(var e=0;e&lt;this.items.length;e++){var i=this.items[e];if(i.element==t)return i}},f.getItems=function(t){t=n.makeArray(t);var e=[];return t.forEach(function(t){var i=this.getItem(t);i&amp;&amp;e.push(i)},this),e},f.remove=function(t){var e=this.getItems(t);this._emitCompleteOnItems(&quot;remove&quot;,e),e&amp;&amp;e.length&amp;&amp;e.forEach(function(t){t.remove(),n.removeFrom(this.items,t)},this)},f.destroy=function(){var t=this.element.style;t.height=&quot;&quot;,t.position=&quot;&quot;,t.width=&quot;&quot;,this.items.forEach(function(t){t.destroy()}),this.unbindResize();var e=this.element.outlayerGUID;delete c[e],delete this.element.outlayerGUID,u&amp;&amp;u.removeData(this.element,this.constructor.namespace)},r.data=function(t){t=n.getQueryElement(t);var e=t&amp;&amp;t.outlayerGUID;return e&amp;&amp;c[e]},r.create=function(t,e){var i=s(r);return i.defaults=n.extend({},r.defaults),n.extend(i.defaults,e),i.compatOptions=n.extend({},r.compatOptions),i.namespace=t,i.data=r.data,i.Item=s(o),n.htmlInit(i,t),u&amp;&amp;u.bridget&amp;&amp;u.bridget(t,i),i};var m={ms:1,s:1e3};return r.Item=o,r}),function(t,e){&quot;function&quot;==typeof define&amp;&amp;define.amd?define([&quot;outlayer/outlayer&quot;,&quot;get-size/get-size&quot;],e):&quot;object&quot;==typeof module&amp;&amp;module.exports?module.exports=e(require(&quot;outlayer&quot;),require(&quot;get-size&quot;)):t.Masonry=e(t.Outlayer,t.getSize)}(window,function(t,e){var i=t.create(&quot;masonry&quot;);return i.compatOptions.fitWidth=&quot;isFitWidth&quot;,i.prototype._resetLayout=function(){this.getSize(),this._getMeasurement(&quot;columnWidth&quot;,&quot;outerWidth&quot;),this._getMeasurement(&quot;gutter&quot;,&quot;outerWidth&quot;),this.measureColumns(),this.colYs=[];for(var t=0;t&lt;this.cols;t++)this.colYs.push(0);this.maxY=0},i.prototype.measureColumns=function(){if(this.getContainerWidth(),!this.columnWidth){var t=this.items[0],i=t&amp;&amp;t.element;this.columnWidth=i&amp;&amp;e(i).outerWidth||this.containerWidth}var n=this.columnWidth+=this.gutter,o=this.containerWidth+this.gutter,r=o/n,s=n-o%n,a=s&amp;&amp;1&gt;s?&quot;round&quot;:&quot;floor&quot;;r=Math[a](r),this.cols=Math.max(r,1)},i.prototype.getContainerWidth=function(){var t=this._getOption(&quot;fitWidth&quot;),i=t?this.element.parentNode:this.element,n=e(i);this.containerWidth=n&amp;&amp;n.innerWidth},i.prototype._getItemLayoutPosition=function(t){t.getSize();var e=t.size.outerWidth%this.columnWidth,i=e&amp;&amp;1&gt;e?&quot;round&quot;:&quot;ceil&quot;,n=Math[i](t.size.outerWidth/this.columnWidth);n=Math.min(n,this.cols);for(var o=this._getColGroup(n),r=Math.min.apply(Math,o),s=o.indexOf(r),a={x:this.columnWidth*s,y:r},h=r+t.size.outerHeight,u=this.cols+1-o.length,d=0;u&gt;d;d++)this.colYs[s+d]=h;return a},i.prototype._getColGroup=function(t){if(2&gt;t)return this.colYs;for(var e=[],i=this.cols+1-t,n=0;i&gt;n;n++){var o=this.colYs.slice(n,n+t);e[n]=Math.max.apply(Math,o)}return e},i.prototype._manageStamp=function(t){var i=e(t),n=this._getElementOffset(t),o=this._getOption(&quot;originLeft&quot;),r=o?n.left:n.right,s=r+i.outerWidth,a=Math.floor(r/this.columnWidth);a=Math.max(0,a);var h=Math.floor(s/this.columnWidth);h-=s%this.columnWidth?0:1,h=Math.min(this.cols-1,h);for(var u=this._getOption(&quot;originTop&quot;),d=(u?n.top:n.bottom)+i.outerHeight,l=a;h&gt;=l;l++)this.colYs[l]=Math.max(d,this.colYs[l])},i.prototype._getContainerSize=function(){this.maxY=Math.max.apply(Math,this.colYs);var t={height:this.maxY};return this._getOption(&quot;fitWidth&quot;)&amp;&amp;(t.width=this._getContainerFitWidth()),t},i.prototype._getContainerFitWidth=function(){for(var t=0,e=this.cols;--e&amp;&amp;0===this.colYs[e];)t++;return(this.cols-t)*this.columnWidth-this.gutter},i.prototype.needsResizeLayout=function(){var t=this.containerWidth;return this.getContainerWidth(),t!=this.containerWidth},i});
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

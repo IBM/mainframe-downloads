@@ -1,0 +1,488 @@
+{
+  "unav": {
+    "title": "Discover IBM",
+    "links": [
+      {
+        "title": "Products",
+        "url": "https://www.ibm.com/products/en/us/?lnk=hmpr"
+      },
+      {
+        "title": "Services",
+        "url": "https://www.ibm.com/services/en-us/?lnk=hmse"
+      },
+      {
+        "title": "Industries",
+        "url": "https://www.ibm.com/industries/en-us/?lnk=hmin"
+      },
+      { "title": "Careers", "url": "https://www.ibm.com/employment/?lnk=hmem" },
+      {
+        "title": "Partners",
+        "url": "https://www.ibm.com/partnerworld/?lnk=hmpw"
+      },
+      {
+        "title": "Support",
+        "url": "https://www.ibm.com/support/en/us/?lnk=hmsu"
+      }
+    ]
+  },
+  "catnav": {
+    "title": "Featured categories",
+    "links": [
+      {
+        "id": "item1",
+        "title": "Analytics",
+        "url": "https://www.ibm.com/analytics/us/en/?lnk=hmbua",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Analytics",
+            "description": "Advanced analytics fuel cognitive business.",
+            "link1": {
+              "title": "Explore Analytics",
+              "url": "https://www.ibm.com/analytics/us/en/?lnk=buam"
+            }
+          },
+          "col2": {
+            "heading": "Featured industry",
+            "title": "Telecommunications",
+            "description": "Use analytics to retain customers and increase revenue.",
+            "link1": {
+              "title": "Behavior-based customer insight",
+              "url": "https://www.ibm.com/analytics/us/en/industry/telecommunications/customer-insight.html?lnk=buam"
+            },
+            "link2": {
+              "title": "Customer proactive care",
+              "url": "https://www.ibm.com/analytics/us/en/industry/telecommunications/proactive-care.html?lnk=buam"
+            }
+          },
+          "col3": {
+            "heading": "Perspectives on analytics",
+            "imageUrl": "https://www.ibm.com/images/portal/V905851J06840Y67/customer_analytics_telco_380x170.jpg",
+            "linkTitle": "IBM leads customer analytics for telcos. Download the report.",
+            "linkUrl": "https://www.ibm.com/marketing/iwm/dre/signup?source=ibm-analytics&S_PKG=ov42681"
+          }
+        }
+      },
+      {
+        "id": "item2",
+        "title": "Cloud",
+        "url": "https://www.ibm.com/cloud/?lnk=hmbucl",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Cloud",
+            "description": "Innovate with the cloud built for cognitive business.",
+            "link1": {
+              "title": "Explore Cloud",
+              "url": "https://www.ibm.com/cloud-computing/us/en/?lnk=buclm"
+            },
+            "link2": {
+              "title": "Try and buy Cloud",
+              "url": "https://www.ibm.com/marketplace/cloud/us/en-us/?lnk=buclm"
+            }
+          },
+          "col2": {
+            "heading": "Featured product",
+            "title": "developerWorks Premium",
+            "description": "An all-access pass to the powerful tools, resources and support you need to quickly develop and deploy successful cloud projects.",
+            "link1": {
+              "title": "Sign up",
+              "url": "https://www.ibm.com/marketplace/cloud/developerworks/us/en-us?lnk=buclmfp"
+            },
+            "link2": {
+              "title": "Learn more",
+              "url": "https://www.ibm.com/developerworks/premium/?lnk=buclm#target"
+            }
+          },
+          "col3": {
+            "heading": "InterConnect 2016",
+            "imageUrl": "https://1.www.s81c.com/common/v18/i/megamenu/cloud-interconnect.jpg",
+            "linkTitle": "The Premier Cloud & Mobile Conference | February 21 -25 | Las Vegas, NV | Register today!",
+            "linkUrl": "https://www.ibm.com/cloud-computing/us/en/interconnect/?lnk=buclm"
+          }
+        }
+      },
+      {
+        "id": "item3",
+        "title": "Commerce",
+        "url": "https://www.ibm.com/commerce/us/en/?lnk=hmbuco",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Commerce",
+            "description": "Unleash the power of cognitive commerce to build a predictive value chain and create customer engagements that inspire advocacy.",
+            "link1": {
+              "title": "Explore Commerce",
+              "url": "https://www.ibm.com/commerce/us-en/?lnk=com_button"
+            }
+          },
+          "col2": {
+            "heading": "Featured product",
+            "title": "Procurement analytics",
+            "description": "Learn how top-performing procurement leaders are using analytics to drive competitive advantage.",
+            "link1": {
+              "title": "Learn about procurement analytics",
+              "url": "https://www.ibm.com/commerce/us-en/campaigns/procurement-analytics/?lnk=com_free_app"
+            },
+            "link2": {
+              "title": "Explore more Commerce solutions",
+              "url": "https://www.ibm.com/commerce/us-en/?lnk=com_explore"
+            }
+          },
+          "col3": {
+            "heading": "Perspectives on Commerce",
+            "imageUrl": "https://1.www.s81c.com/common/v18/i/megamenu/commerceinsights.jpg",
+            "linkTitle": "See how companies are using cognitive commerce to put customers at the center of their business.",
+            "linkUrl": "https://www.ibm.com/commerce/us-en/customer-stories/?lnk=com_engage"
+          }
+        }
+      },
+      {
+        "id": "item4",
+        "title": "IT Infrastructure",
+        "url": "https://www.ibm.com/it-infrastructure/us-en/?lnk=hmbuit",
+        "megamenuContent": {
+          "col1": {
+            "heading": "IT Infrastructure",
+            "description": "Become a better service provider by evolving your IT infrastructure to master hybrid cloud.",
+            "link1": {
+              "title": "Explore IT Infrastructure",
+              "url": "https://www.ibm.com/it-infrastructure/us-en/?lnk=buitm"
+            }
+          },
+          "col2": {
+            "heading": "Featured product",
+            "title": "IBM API Management",
+            "description": "Fuel innovation and reach new audiences. IBM API Management allows you to quickly design, secure, publish and manage your APIs.",
+            "link1": {
+              "title": "Try now for free",
+              "url": "https://apps.admin.ibmcloud.com/manage/trial/apim.html?lnk=buitm"
+            },
+            "link2": {
+              "title": "Explore more IT Infrastructure products",
+              "url": "https://www.ibm.com/it-infrastructure/us-en/?lnk=buitm"
+            }
+          },
+          "col3": {
+            "heading": "The IT infrastructure conversation",
+            "imageUrl": "https://1.www.s81c.com/common/v18/i/megamenu/itinfrastructure.jpg",
+            "linkTitle": "See how a strong infrastructure can lead to a competitive advantage in these IBV studies.",
+            "linkUrl": "https://www.ibm.com/it-infrastructure/us-en/it-infrastructure-report/?lnk=buitm"
+          }
+        }
+      },
+      {
+        "id": "item5",
+        "title": "MobileFirst",
+        "url": "https://www.ibm.com/mobilefirst/?lnk=hmbumf",
+        "megamenuContent": {
+          "col1": {
+            "heading": "IBM MobileFirst",
+            "description": "MobileFirst delivers apps, infrastructure and ways to engage that are designed exclusively for mobile users — personalized with data, security-rich and convenient.",
+            "link1": {
+              "title": "Explore MobileFirst",
+              "url": "https://www.ibm.com/mobilefirst/us/en/?lnk=bumf"
+            }
+          },
+          "col2": {
+            "heading": "Featured trial",
+            "title": "Mobile security: better manage your devices, apps and content",
+            "description": "Manage mobile from start to finish for maximum productivity and security",
+            "link1": {
+              "title": "Download no-charge trial",
+              "url": "https://trials.maas360.com/forms/register_service_m.php?id=306&A=MobileFirst&O=IBM"
+            },
+            "link2": {
+              "title": "Learn more about MobileFirst",
+              "url": "https://www.ibm.com/mobilefirst/us/en/mobile-security.html?lnk=bumf"
+            }
+          },
+          "col3": {
+            "heading": "Perspectives on Mobile",
+            "imageUrl": "https://www.ibm.com/images/portal/C764842R25053E50/01262016_minimenu_perspectives_mobilefirst_14104_380x170.jpg",
+            "linkTitle": "Mobileaphobia: 8 Most Common Mobile Fears of the CISO",
+            "linkUrl": "https://www.ibm.com/marketing/iwm/dre/signup?source=comm-mobile&S_PKG=ov39192&S_TACT=C381002W&dynform=20486"
+          }
+        }
+      },
+      {
+        "id": "item6",
+        "title": "Security",
+        "url": "https://www.ibm.com/security/?lnk=hmbuse",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Security",
+            "description": "Stop advanced threats, protect critical assets and optimize your security practices with IBM's integrated portfolio of products and services.",
+            "link1": {
+              "title": "Explore Security",
+              "url": "https://www.ibm.com/security/?lnk=busem"
+            }
+          },
+          "col2": {
+            "heading": "Featured product",
+            "title": "IBM MaaS360",
+            "description": "Secure and manage your mobile devices, apps and content.",
+            "link1": {
+              "title": "Explore IBM MaaS360",
+              "url": "https://www.ibm.com/security/mobile/maas360.html?lnk=busem"
+            },
+            "link2": {
+              "title": "Schedule a demo",
+              "url": "https://www.maas360.com/zf/689?lnk=busem"
+            }
+          },
+          "col3": {
+            "heading": "Perspectives on Security",
+            "imageUrl": "https://www.ibm.com/images/portal/I088856N12494S71/02022016_minimenu_security-gartner-report_380x170.png",
+            "linkTitle": "Protect your data with a portfolio of security products tailored to your company's needs. Learn why Gartner ranks IBM as a leader in managed security services.",
+            "linkUrl": "https://www.ibm.com/marketing/iwm/dre/signup?source=ibm-WW_Security_Services&S_PKG=ov43750&S_TACT=000000NJ&S_OFF_CD=10000255&lnk=busem"
+          }
+        }
+      },
+      {
+        "id": "item7",
+        "title": "Social",
+        "url": "https://www.ibm.com/social-business/us-en/?lnk=hmbuso",
+        "megamenuContent": {
+          "col1": {
+            "heading": "",
+            "description": "",
+            "link1": { "title": "", "url": "" }
+          },
+          "col2": {
+            "heading": "",
+            "title": "",
+            "description": "",
+            "link1": { "title": "", "url": "" }
+          },
+          "col3": {
+            "heading": "",
+            "imageUrl": "",
+            "linkTitle": "",
+            "linkUrl": ""
+          }
+        }
+      },
+      {
+        "id": "item8",
+        "title": "Watson",
+        "url": "https://www.ibm.com/watson/?lnk=hmbuwa",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Watson",
+            "description": "Meet IBM Watson, a cognitive system that enables a new partnership between people and computers that enhances, scales and accelerates human expertise.",
+            "link1": {
+              "title": "Explore Watson",
+              "url": "https://www.ibm.com/smarterplanet/us/en/ibmwatson/?lnk=buwam"
+            }
+          },
+          "col2": {
+            "heading": "Featured product",
+            "title": "Watson IoT",
+            "description": "Transform your industry by learning from the connected world",
+            "link1": {
+              "title": "Learn more",
+              "url": "https://www.ibm.com/internet-of-things/?lnk=buwam"
+            },
+            "link2": {
+              "title": "View all Watson products",
+              "url": "https://www.ibm.com/smarterplanet/us/en/ibmwatson/?lnk=buwam"
+            }
+          },
+          "col3": {
+            "heading": "Perspectives on Watson",
+            "imageUrl": "https://1.www.s81c.com/common/v18/i/megamenu/watson.jpg",
+            "linkTitle": "See how Watson IoT will benefit business and society",
+            "linkUrl": "https://ibm.com/iot?lnk=buwam"
+          }
+        }
+      }
+    ]
+  },
+  "mastheadNav": {
+    "links": []
+  },
+  "profileMenu": {
+    "signedout": [
+      { "title": "My IBM", "url": "https://www.ibm.com/account/us/en/?lnk=mmi" }
+    ],
+    "signedin": [
+      {
+        "title": "My IBM Account",
+        "url": "https://www.ibm.com/myibm/?lnk=mmi"
+      },
+      {
+        "title": "Profile",
+        "url": "https://www.ibm.com/myibm/profile/?lnk=mmi"
+      },
+      {
+        "title": "Products and services",
+        "url": "https://www.ibm.com/myibm/products-services/?lnk=mmi"
+      },
+      {
+        "title": "Sign out",
+        "url": "https://www.ibm.com/account/us/en/signout.html?lnk=mmi"
+      }
+    ]
+  },
+  "marketplace": {
+    "title": "Products",
+    "url": "https://www.ibm.com/marketplace/cloud/us/en-us"
+  },
+  "footerMenu": [
+    {
+      "title": "Discover",
+      "links": [
+        {
+          "title": "Products",
+          "url": "https://www.ibm.com/marketplace/cloud/us/en-us?lnk=fdi-zzen"
+        },
+        {
+          "title": "Products",
+          "url": "https://www.ibm.com/products/en/us/?lnk=fdi"
+        },
+        {
+          "title": "Services",
+          "url": "https://www.ibm.com/services/en-us/?lnk=fdi"
+        },
+        {
+          "title": "Industries",
+          "url": "https://www.ibm.com/industries/en-us/?lnk=fdi"
+        },
+        {
+          "title": "Case studies",
+          "url": "https://www.ibm.com/software/businesscasestudies/us/en/corp/?lnk=fdi"
+        }
+      ]
+    },
+    {
+      "title": "Information for...",
+      "links": [
+        {
+          "title": "Developers",
+          "url": "https://www.ibm.com/developerworks/?lnk=fif"
+        },
+        {
+          "title": "Business Partners",
+          "url": "https://www.ibm.com/partnerworld?lnk=fif"
+        },
+        {
+          "title": "Federal and state government",
+          "url": "https://www.ibm.com/shop/americas/content/home/en_US/government-contracts.html?lnk=fif"
+        }
+      ]
+    },
+    {
+      "title": "Connect with us",
+      "links": [
+        {
+          "title": "Support",
+          "url": "https://www.ibm.com/support/en/us/?lnk=fcw"
+        },
+        {
+          "title": "Find a Business Partner",
+          "url": "https://www.ibm.com/partnerworld/wps/bplocator/search.jsp?lnk=fcw"
+        }
+      ]
+    },
+    {
+      "title": "About IBM",
+      "links": [
+        {
+          "title": "Careers",
+          "url": "https://www.ibm.com/employment/?lnk=fab"
+        },
+        {
+          "title": "Latest news",
+          "url": "https://www.ibm.com/press/us/en/index.wss?lnk=fab"
+        },
+        {
+          "title": "Investor relations",
+          "url": "https://www.ibm.com/investor/?lnk=fab"
+        },
+        {
+          "title": "Corporate responsibility",
+          "url": "https://www.ibm.com/ibm/responsibility/?lnk=fab"
+        },
+        {
+          "title": "About IBM",
+          "url": "https://www.ibm.com/ibm/us/en/?lnk=fab"
+        }
+      ]
+    }
+  ],
+  "footerThin": [
+    {
+      "title": "Contact",
+      "url": "https://www.ibm.com/contact/us/en/?lnk=flg-cont-usen"
+    },
+    {
+      "title": "Privacy",
+      "url": "https://www.ibm.com/privacy/us/en/?lnk=flg-priv-usen"
+    },
+    {
+      "title": "Terms of use",
+      "url": "https://www.ibm.com/zz-en/legal?lnk=flg-tous-zzen"
+    },
+    {
+      "title": "Accessibility",
+      "url": "https://www.ibm.com/accessibility/us/en/?lnk=flg-acce-usen"
+    }
+  ],
+  "localeSelector": {
+    "localVersions": "Translated versions of this page",
+    "homepages": "Worldwide ibm.com home pages"
+  },
+  "socialFollow": {
+    "title": "Follow IBM",
+    "links": [
+      {
+        "linkClass": "ibm-twitter-encircled-link",
+        "title": "Twitter",
+        "url": "https://www.twitter.com/ibm"
+      },
+      {
+        "linkClass": "ibm-linkedin-encircled-link",
+        "title": "Linkedin",
+        "url": "https://www.linkedin.com/company/ibm"
+      },
+      {
+        "linkClass": "ibm-facebook-encircled-link",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/ibm"
+      },
+      {
+        "linkClass": "ibm-youtube-encircled-link",
+        "title": "Youtube",
+        "url": "https://www.youtube.com/ibm"
+      }
+    ]
+  },
+  "socialSharing": [],
+  "leaving": {
+    "LEAVING001": "Leaving the IBM Web site",
+    "LEAVING002": "You are now leaving the IBM Web site. IBM makes no representations or warranties about sites you may access through this one.",
+    "LEAVING003": "The link you requested or were directed to is",
+    "LEAVING004": "Notice"
+  },
+  "misc": {
+    "backtotop": "Back to top",
+    "cancelText": "Cancel",
+    "close": "Close",
+    "cookiePrefs": "Cookie preferences",
+    "continueText": "Continue",
+    "editProfile": "Edit profile",
+    "emailThisPage": "",
+    "feedback": "Feedback",
+    "mpScopedSearh": "In Products",
+    "withinMp": "Products",
+    "next": "Next",
+    "noresults": "No results found",
+    "prev": "Previous",
+    "resultsNav": "Use down and up arrow keys to navigate through the results.",
+    "search": "Search",
+    "selectCountry": "Select a country/region",
+    "sharePage": "Share this page",
+    "signin": "Sign in",
+    "signout": "Sign out",
+    "sitenav": "Site navigation",
+    "welcomeback": "Welcome back"
+  }
+}

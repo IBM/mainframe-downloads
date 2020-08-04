@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <title>src/js/sources/ibm/common/vendor/survey-ccfintercept.js - IBM v18 (Northstar) common Javascript documentation</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" href="http://www.ibm.com/favicon.ico">
+    <script>
+        digitalData = {
+            page: {
+                pageInfo: {
+                    effectiveDate: '2017-02-25',
+                    expiryDate: '2020-02-25',
+                    language: 'en-US',
+                    publishDate: '2017-02-25',
+                    publisher: 'IBM Corporation',
+                    ibm: {
+                        contentDelivery: 'yuidoc via grunt',
+                        contentProducer: 'Michael Santelia',
+                        country: 'US',
+                        owner: 'Michael Santelia'
+                    }
+                }
+            }
+        };
+    </script>
+
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+
+    <script>
+
+		var lastUpdate = new Date(document.lastModified),
+			updatedMonth = lastUpdate.getMonth(),
+			updatedDate = lastUpdate.getDate(),
+			updatedYear = lastUpdate.getFullYear(),
+			today = new Date(),
+			todayMonth = today.getMonth(),
+			todayDate = today.getDate(),
+			todayYear = today.getFullYear(),
+			monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"],
+			lastUpdatedText = "",
+			daysAgo = Math.floor((today - lastUpdate) / (1000*60*60*24));
+
+		updatedMonthName = monthNames[updatedMonth];
+
+		switch (daysAgo) {
+
+			case 1: 
+				lastUpdatedText = "Updated yesterday";
+				break;
+				
+			case 0: 
+				lastUpdatedText = "Updated today";
+				break;
+				
+			default: 
+				lastUpdatedText = "Updated " + daysAgo + " days ago";
+				break;
+		}
+
+		if (daysAgo > 4) {
+			lastUpdatedText = "Updated: " + updatedMonthName + " " + updatedDate + ", " + updatedYear;
+		}
+
+    </script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-1-2">
+            <div style="background: url(http://1.www.s81c.com/i/v17/t/ibm-logo.png) no-repeat scroll 0px 0px transparent; width: 105px; height: 45px; margin: 0.85em 0px;text-indent:-9999px;">IBM v18 (Northstar) common Javascript documentation</div>
+        </div>
+        <div class="yui3-u-1-2 version">
+            <em>Javascript documentation for: IBM v18 (Northstar)<br />
+            	<span style="font-size: 0.6em; position: absolute; right: 35px;"><script>document.writeln(lastUpdatedText)</script></span></em>
+        </div>
+    </div>
+    
+    <p><a href="../assets../../v18-js-source-documentation.zip" style="margin-left: 10px; padding-left: 15px; background: url(http://1.www.s81c.com/i/v17/icons/ibm_sprite_transactional_blue_ON.png) no-repeat 0 -202px;">Download a copy of this documentation (ZIP).</a></p>
+    
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4" style="float: left;width:25%;">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/IBMCore.common.module.backtotop.html">IBMCore.common.module.backtotop</a></li>
+                                <li><a href="../classes/IBMCore.common.module.canadanotice.html">IBMCore.common.module.canadanotice</a></li>
+                                <li><a href="../classes/IBMCore.common.module.contactmodule.html">IBMCore.common.module.contactmodule</a></li>
+                                <li><a href="../classes/IBMCore.common.module.footer.html">IBMCore.common.module.footer</a></li>
+                                <li><a href="../classes/IBMCore.common.module.footermenu.html">IBMCore.common.module.footermenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.leftnav.html">IBMCore.common.module.leftnav</a></li>
+                                <li><a href="../classes/IBMCore.common.module.liveperson.html">IBMCore.common.module.liveperson</a></li>
+                                <li><a href="../classes/IBMCore.common.module.localeselector.html">IBMCore.common.module.localeselector</a></li>
+                                <li><a href="../classes/IBMCore.common.module.localpagenotification.html">IBMCore.common.module.localpagenotification</a></li>
+                                <li><a href="../classes/IBMCore.common.module.masthead.html">IBMCore.common.module.masthead</a></li>
+                                <li><a href="../classes/IBMCore.common.module.masthead.sticky.html">IBMCore.common.module.masthead.sticky</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mastheadbanner.html">IBMCore.common.module.mastheadbanner</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mastheadsearch.html">IBMCore.common.module.mastheadsearch</a></li>
+                                <li><a href="../classes/IBMCore.common.module.merchandising.html">IBMCore.common.module.merchandising</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mobilemenu.html">IBMCore.common.module.mobilemenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sharethiscontent.html">IBMCore.common.module.sharethiscontent</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sharethispage.html">IBMCore.common.module.sharethispage</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sitenavmenu.html">IBMCore.common.module.sitenavmenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.urx.html">IBMCore.common.module.urx</a></li>
+                                <li><a href="../classes/IBMCore.common.translations.html">IBMCore.common.translations</a></li>
+                                <li><a href="../classes/IBMCore.common.util.a11y.html">IBMCore.common.util.a11y</a></li>
+                                <li><a href="../classes/IBMCore.common.util.addCssRule.html">IBMCore.common.util.addCssRule</a></li>
+                                <li><a href="../classes/IBMCore.common.util.anchorlinkAdjustment.html">IBMCore.common.util.anchorlinkAdjustment</a></li>
+                                <li><a href="../classes/IBMCore.common.util.bitly.html">IBMCore.common.util.bitly</a></li>
+                                <li><a href="../classes/IBMCore.common.util.color.html">IBMCore.common.util.color</a></li>
+                                <li><a href="../classes/IBMCore.common.util.config.html">IBMCore.common.util.config</a></li>
+                                <li><a href="../classes/IBMCore.common.util.convertSecondsToHMS.html">IBMCore.common.util.convertSecondsToHMS</a></li>
+                                <li><a href="../classes/IBMCore.common.util.cookie.html">IBMCore.common.util.cookie</a></li>
+                                <li><a href="../classes/IBMCore.common.util.coreservices.html">IBMCore.common.util.coreservices</a></li>
+                                <li><a href="../classes/IBMCore.common.util.data.html">IBMCore.common.util.data</a></li>
+                                <li><a href="../classes/IBMCore.common.util.debug.html">IBMCore.common.util.debug</a></li>
+                                <li><a href="../classes/IBMCore.common.util.eventCoordinator.html">IBMCore.common.util.eventCoordinator</a></li>
+                                <li><a href="../classes/IBMCore.common.util.freezeScrollbars.html">IBMCore.common.util.freezeScrollbars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.gatekeeper.html">IBMCore.common.util.gatekeeper</a></li>
+                                <li><a href="../classes/IBMCore.common.util.generateId.html">IBMCore.common.util.generateId</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getCurrentGridSize.html">IBMCore.common.util.getCurrentGridSize</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getDataAttributes.html">IBMCore.common.util.getDataAttributes</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getScrollbarWidth.html">IBMCore.common.util.getScrollbarWidth</a></li>
+                                <li><a href="../classes/IBMCore.common.util.has12grid.html">IBMCore.common.util.has12grid</a></li>
+                                <li><a href="../classes/IBMCore.common.util.hasScrollbars.html">IBMCore.common.util.hasScrollbars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.meta.html">IBMCore.common.util.meta</a></li>
+                                <li><a href="../classes/IBMCore.common.util.perf.html">IBMCore.common.util.perf</a></li>
+                                <li><a href="../classes/IBMCore.common.util.queue.html">IBMCore.common.util.queue</a></li>
+                                <li><a href="../classes/IBMCore.common.util.scrolledintoview.html">IBMCore.common.util.scrolledintoview</a></li>
+                                <li><a href="../classes/IBMCore.common.util.scrolltracker.html">IBMCore.common.util.scrolltracker</a></li>
+                                <li><a href="../classes/IBMCore.common.util.setIpcCookie.html">IBMCore.common.util.setIpcCookie</a></li>
+                                <li><a href="../classes/IBMCore.common.util.statshelper.html">IBMCore.common.util.statshelper</a></li>
+                                <li><a href="../classes/IBMCore.common.util.storage.html">IBMCore.common.util.storage</a></li>
+                                <li><a href="../classes/IBMCore.common.util.string.htmlspecialchars.html">IBMCore.common.util.string.htmlspecialchars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.url.html">IBMCore.common.util.url</a></li>
+                                <li><a href="../classes/IBMCore.common.util.user.html">IBMCore.common.util.user</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.carousel.html">IBMCore.common.widget.carousel</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.ccfintercept.html">IBMCore.common.widget.ccfintercept</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.datatable.html">IBMCore.common.widget.datatable</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.datepicker.html">IBMCore.common.widget.datepicker</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.dyntabs.html">IBMCore.common.widget.dyntabs</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.fileinput.html">IBMCore.common.widget.fileinput</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.forms.html">IBMCore.common.widget.forms</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.formvalidator.html">IBMCore.common.widget.formvalidator</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.leavingibm.html">IBMCore.common.widget.leavingibm</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.manager.html">IBMCore.common.widget.manager</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.masonry.html">IBMCore.common.widget.masonry</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.overlay.html">IBMCore.common.widget.overlay</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.parallaxscroll.html">IBMCore.common.widget.parallaxscroll</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.rssdisplay.html">IBMCore.common.widget.rssdisplay</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.scrollable.html">IBMCore.common.widget.scrollable</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.selectlist.html">IBMCore.common.widget.selectlist</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.selectlistnav.html">IBMCore.common.widget.selectlistnav</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.setsameheight.html">IBMCore.common.widget.setsameheight</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.showhide.html">IBMCore.common.widget.showhide</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.stepindicator.html">IBMCore.common.widget.stepindicator</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.stickytabs.html">IBMCore.common.widget.stickytabs</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.syntaxhighlighter.html">IBMCore.common.widget.syntaxhighlighter</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.tablerowselector.html">IBMCore.common.widget.tablerowselector</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.tooltip.html">IBMCore.common.widget.tooltip</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.twisty.html">IBMCore.common.widget.twisty</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videolooper.html">IBMCore.common.widget.videolooper</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.html">IBMCore.common.widget.videoplayer</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.kaltura.html">IBMCore.common.widget.videoplayer.kaltura</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.ustream.html">IBMCore.common.widget.videoplayer.ustream</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.youtube.html">IBMCore.common.widget.videoplayer.youtube</a></li>
+                                <li><a href="../classes/IBMCore.namespace.html">IBMCore.namespace</a></li>
+                                <li><a href="../classes/IBMCore.www.module.dynamiccontactmodule.html">IBMCore.www.module.dynamiccontactmodule</a></li>
+                                <li><a href="../classes/IBMCore.www.module.truste.html">IBMCore.www.module.truste</a></li>
+                                <li><a href="../classes/jQuery.browser.html">jQuery.browser</a></li>
+                                <li><a href="../classes/jQuery.fn.dataTable.html">jQuery.fn.dataTable</a></li>
+                                <li><a href="../classes/jQuery.fn.slick.html">jQuery.fn.slick</a></li>
+                                <li><a href="../classes/jQuery.layout.html">jQuery.layout</a></li>
+                                <li><a href="../classes/jQuery.os.html">jQuery.os</a></li>
+                                <li><a href="../classes/jQuery:focusable.html">jQuery:focusable</a></li>
+                                <li><a href="../classes/Masonry.html">Masonry</a></li>
+                                <li><a href="../classes/Modernizr.html">Modernizr</a></li>
+                                <li><a href="../classes/Mustache.html">Mustache</a></li>
+                                <li><a href="../classes/NanoScroll.html">NanoScroll</a></li>
+                                <li><a href="../classes/Other IBM - Canada notice loader.html">Other IBM - Canada notice loader</a></li>
+                                <li><a href="../classes/Other IBM - common init.html">Other IBM - common init</a></li>
+                                <li><a href="../classes/Other IBM - common v18 page tracker.html">Other IBM - common v18 page tracker</a></li>
+                                <li><a href="../classes/Other IBM - errorchecking.html">Other IBM - errorchecking</a></li>
+                                <li><a href="../classes/Other IBM - footer feedback link.html">Other IBM - footer feedback link</a></li>
+                                <li><a href="../classes/Other IBM - grid change.html">Other IBM - grid change</a></li>
+                                <li><a href="../classes/Other IBM - jstimer-end.html">Other IBM - jstimer-end</a></li>
+                                <li><a href="../classes/Other IBM - jstimer-start.html">Other IBM - jstimer-start</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/IBMCore.html">IBMCore</a></li>
+                                <li><a href="../modules/jQuery.browser.html">jQuery.browser</a></li>
+                                <li><a href="../modules/jQuery.dataTable.html">jQuery.dataTable</a></li>
+                                <li><a href="../modules/jQuery.slick.html">jQuery.slick</a></li>
+                                <li><a href="../modules/Masonry.html">Masonry</a></li>
+                                <li><a href="../modules/Modernizr.html">Modernizr</a></li>
+                                <li><a href="../modules/Mustache.html">Mustache</a></li>
+                                <li><a href="../modules/Nanoscroller.html">Nanoscroller</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4"style="float: left;width:75%;">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected" checked>
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private" checked>
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated" checked>
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src/js/sources/ibm/common/vendor/survey-ccfintercept.js</h1>
+                        
+                        <div class="file">
+                            <pre class="code prettyprint linenums">
+                        /**
+                        
+                        	Surveys widget.
+                        	&lt;br /&gt;
+                        	&lt;br /&gt;An intercept pops up a small window inviting users to participate in a single or multi-page survey,
+                        	 or to answer the one or two questions presented in the overlay (known as a &quot;quick poll&quot;).
+                        	&lt;br /&gt;Intercepts can be used externally (www) to target users around the world and show on page load.
+                        	&lt;br /&gt;This survey widget also includes feedback system for Northstar sites allow the use of survey that can be
+                        	 triggers/show on click of a link, or programatically via the &quot;initFeedback&quot; API/method.
+                        	&lt;br /&gt;
+                        	&lt;br /&gt;Official survey documentation: http://www.ibm.com/standards/web/research/feedback-survey.
+                        
+                        	&lt;br /&gt;Usage:
+                        
+                        	// JS config setting sample.
+                        
+                        	IBMCore.common.util.config.set({
+                        		survey: {
+                        			enabled: true,
+                        			intercept: {
+                        				percent: 90,
+                        				start: &quot;Apr 01 2015&quot;,
+                        				stop: &quot;Apr 31 2015&quot;,
+                        				invitation: {
+                        					title: &quot;Tell IBM what you think&quot;,
+                        					content: &quot;Would you like to take 1 minute to test this survey?&quot;,
+                        					yes_label: &quot;Yes&quot;,
+                        					no_label: &quot;No Thanks&quot;
+                        				},
+                        				survey: {
+                        					type: &quot;medallia&quot;,
+                        					id: &quot;web-exp&quot;,
+                        					width: 700,
+                        					height: 700
+                        				}
+                        			}
+                        		}
+                        	});
+                        
+                        	@class IBMCore.common.widget.ccfintercept
+                        
+                        **/
+                        
+                        /**
+                        
+                        	How survey configs are determined which one to use:
+                        
+                        	Logic is split into 2 groups for ease of maintenance and sanity. There&#x27;s no point in trying to figure out what gate the user
+                        	  should go to for a flight if they don&#x27;t even have a ticket to get past security.
+                        
+                        	Combining entry % with the other &#x27;active/seen it&#x27; logic is just nuts and would make it too complex.
+                        	So...
+                        
+                        		First: Figure out the entry # and if user is even allowed past security. No point in doing any more logic if
+                        			the don&#x27;t even have a ticket.
+                        
+                        		Second: They are in, now figure out what config to show them based on the # + 3 other properties.
+                        
+                        
+                        
+                        	IN ORDER OF SIMPLICITY, NOT IN ORDER OF LOGIC REQUIRED TO DETERMINE PROPER CONFIG TO USE.
+                        	Below are cases assuming traffic % match has been met. In other words, the user qualified for a survey
+                        	(basic % threshhold has been met) here are the cases on what happens next in logic scheme.
+                        
+                        	Each config has three states that determine the logic rules:
+                        	 - Is still active.
+                        	 - Has already been seen.
+                        	 - Replaces default (survey A) or is survey B.
+                        
+                        	EXISTING FUNCTIONALITY SINCE INCEPTION:
+                        
+                        		No custom intercept config exists (uses default survey A):
+                        
+                        			Case 1: Nothing is set on the page (95% of pages).
+                        			Expect: Global default config used, with global default entry % (5).
+                        
+                        			Case 2: ONLY global_percent is set (means page wants more/less traffic to default intercept)
+                        			Expect: Global default config used, but replace default {intercept.percent} with PAGE global_percent.
+                        
+                        			Case 3: Global % is set to 0 AND NO CUSTOM &quot;INTERCEPT&quot; CONFIG EXISTS (nor new alterante).
+                        			Expect: Stop, do nothing. Page doesn&#x27;t want any intercept survey.
+                        
+                        			Case 4: Global default already seen default (cookie exists)
+                        			Expect: Stop, do nothing. User has already seen this one.
+                        
+                        
+                        		Custom intercept config set (replacement for survey A):
+                        
+                        		Case 5: Custom intercept config is setup (standard usage).
+                        		Expect: Custom {intercept.percent} is used for traffic % match. Custom intercept config used.
+                        
+                        		Case 6: Custom intercept config is setup, is active, but already seen (cookie exists).
+                        		Expect: Stop, do nothing. User has already seen this one.
+                        
+                        		Case 7: Custom intercept config is setup, but inactive (disabled or not within start/stop date range.)
+                        		Expect: Custom config is ignored as if it were never set, fall back to defaults, case 1|2.
+                        
+                        		Case 8: Custom intercept config is setup, but inactive AND default has already seen.
+                        		Expect: Stop, do nothing. No active custom config and default has already been seen.
+                        
+                        
+                        	NEW FEATURE CASES:
+                        
+                        		Custom intercept ALTERNATE config ONLY (standard usage, uses &quot;default&quot; global as other option). This is a &quot;survey B&quot; not a replacement for &quot;survey A&quot;:
+                        
+                        			Case 9: Custom ALTERNATE config is setup.
+                        			Expect: entry_percent is total traffic entry %, then broken down in settings of:
+                        					Global percent or page global_percent setting is % to use default config.
+                        					+
+                        					Alternate config.percent is % to use alternate config.
+                        					AKA: global_percent + alternate_intercept.percent = entry_percent.
+                        
+                        			Case 10: Custom ALTERNATE config is setup, but already seen OR inactive.
+                        			Expect: No splitting. Custom alternate config is ignored as if it were never set fall back to defaults, case 1|2.
+                        
+                        			Case 11: Custom ALTERNATE config is setup, but DEFAULT already seen (opposite of above).
+                        			Expect: No splitting. Send all entry traffic to use alternate config.
+                        
+                        			Case 12: Custom ALTERNATE config is setup, but already seen or inactive AND default already seen.
+                        			Expect: Stop, do nothing. No valid custom config and default has already been seen.
+                        
+                        
+                        
+                        		Custom intercept AND alternate config set (special usage). Traffic is only ever split if BOTH configs are valid.
+                        		Otherwise assumes as if the valid one was the only one that existed (ex: all cases above ^):
+                        		Think of this as simply dynamically choosing the custom intercept config to be used in the above cases.
+                        
+                        			Case 13: Custom intercept and alternate config are setup.
+                        			Expect: entry_percent is total traffic entry %, then broken down in settings of:
+                        					intercept.percent.
+                        					+
+                        					intercept_alternate.percent is % to use alternate config.
+                        					AKA: intercept.percent + alternate_intercept.percent = entry_percent.
+                        
+                        			Case 14: intercept_alternate config has been seen or inactive.
+                        			Expect: intercept_alternate config is ignored as if it were never set. Send all entry traffic to custom intercept config.
+                        
+                        			Case 15: intercept config has been seen or inactive (opposite of above).
+                        			Expect: intercept config is ignored. Assume as if it were never set. Send all entry traffic to intercept_alternate config.
+                        
+                        			Case 16: intercept AND intercept_alternate config have each been seen.
+                        			Expect: Stop, do nothing. Both configs are still active, just both been seen.
+                        
+                        			Case 17: intercept AND intercept_alternate config are both inactive.
+                        			Expect: No valid custom config, ignore as if they were never set. Fall back to original default case 1|2 option.
+                        
+                        **/
+                        
+                        (function($, IBM) {
+                          var me = IBM.namespace(IBM, &#x27;common.widget.surveyccfintercept&#x27;),
+                            defaults = {
+                              global_minimum_wait: 30,
+                              interceptDisp: &#x27;pageLoad&#x27;,
+                              surveyDisp: &#x27;immediate&#x27;,
+                              anon: &#x27;true&#x27;,
+                              anonData: {
+                                userName: &#x27;&#x27;,
+                                userEmail: &#x27;&#x27;,
+                                emailInfoLoaded: false,
+                              },
+                              percent: 0,
+                              start: &#x27;&#x27;,
+                              stop: &#x27;&#x27;,
+                              presentDelay: 45,
+                              invitation: {
+                                title: &#x27;Tell IBM what you think&#x27;,
+                                content: &#x27;Would you please take 1 minute to take this survey?&#x27;,
+                                yes_label: &#x27;Yes&#x27;,
+                                no_label: &#x27;No thanks&#x27;,
+                              },
+                              survey: {
+                                type: &#x27;medallia&#x27;,
+                                id: &#x27;web-exp&#x27;,
+                                width: 700,
+                                height: 700,
+                                metaData: &#x27;&#x27;,
+                              },
+                            },
+                            ibmGlobalDefaultInterceptConfig = {
+                              survey: {
+                                intercept: {
+                                  enabled: true,
+                                  percent: 0,
+                                  start: &#x27;Jul 27 2016&#x27;,
+                                  stop: &#x27;Jul 27 2099&#x27;,
+                                  invitation: {
+                                    title: &#x27;Tell IBM what you think&#x27;,
+                                    content:
+                                      &#x27;Would you please take a minute to send IBM your feedback?&#x27;,
+                                    yes_label: &#x27;Yes&#x27;,
+                                    no_label: &#x27;No Thanks&#x27;,
+                                  },
+                                  survey: {
+                                    type: &#x27;medallia&#x27;,
+                                    id: &#x27;web-exp&#x27;,
+                                    width: 970,
+                                    height: 700,
+                                  },
+                                },
+                              },
+                            },
+                            invitation,
+                            invitationStatus = &#x27;&#x27;,
+                            overrideInvitation,
+                            settings = null,
+                            survey = null,
+                            surveyConfigs = {
+                              randNum: Math.random() * 100,
+                              globalDefault: null,
+                              pageCustom: null,
+                              pageAlt: null,
+                            },
+                            defaultSettings = [],
+                            currentUrl = location.href.replace(location.protocol + &#x27;//&#x27;, &#x27;&#x27;),
+                            allowedTtl = IBMCore.www.module.truste.getUiAllowedStorageTtl(
+                              30 * 24 * 3600
+                            ),
+                            langcountries = {
+                              en: &#x27;enus&#x27;,
+                              de: &#x27;dede&#x27;,
+                              es: &#x27;esco&#x27;,
+                              fr: &#x27;frfr&#x27;,
+                              it: &#x27;itit&#x27;,
+                              pt: &#x27;ptbr&#x27;,
+                              ko: &#x27;kokr&#x27;,
+                              ja: &#x27;jajp&#x27;,
+                              ru: &#x27;ruru&#x27;,
+                              zh: &#x27;zhcn&#x27;,
+                              tr: &#x27;trtr&#x27;,
+                            },
+                            urllangcountry;
+                        
+                          function Deflangcountry() {
+                            var pageInfo = IBMCore.common.meta.page.pageInfo.ibm,
+                              langcode = pageInfo.lc,
+                              langcountry = &#x27;enus&#x27;; // default langcountry
+                            if (langcode) {
+                              var clientLangCountry = langcode + pageInfo.cc;
+                              if ([&#x27;eses&#x27;, &#x27;zhtw&#x27;, &#x27;frca&#x27;].indexOf(clientLangCountry) &gt; -1) {
+                                langcountry = clientLangCountry;
+                              } else if (langcountries[langcode]) {
+                                langcountry = langcountries[langcode];
+                              }
+                            }
+                            return langcountry;
+                          }
+                        
+                          /**
+                        		This let&#x27;s us know if the page&#x27;s intercept survey has expired.
+                        		@method isSurveyExpired
+                        		@private
+                        		@param endDate [String] The formatted end date of the survey.
+                        		@return [Boolean] True or false, if today&#x27;s date is past the survey stop date.
+                        	**/
+                        
+                          function isSurveyExpired(endDate) {
+                            var isExpired = false,
+                              now = new Date(),
+                              end = new Date(endDate);
+                            if (now &gt; end) {
+                              isExpired = true;
+                            }
+                            return isExpired;
+                          }
+                        
+                          /**
+                        		This let&#x27;s us know if the page&#x27;s intercept survey has passed the &quot;start&quot; date set.
+                        		@method isSurveyStarted
+                        		@private
+                        		@param startDate [String] The formatted start date of the survey.
+                        		@return [Boolean] True or false, if today is past the survey start date.
+                        	**/
+                          function isSurveyStarted(startDate) {
+                            var pastStartDate = false,
+                              now = new Date(),
+                              start = new Date(startDate);
+                        
+                            if (now &gt; start) {
+                              pastStartDate = true;
+                            }
+                            return pastStartDate;
+                          }
+                        
+                          // Set survey config flags to use for logic of determining which one to use.
+                          function setSurveyConfigFlags(config) {
+                            if (config) {
+                              var cookieName = (config.cookie_name =
+                                &#x27;ccf-&#x27; + config.survey.type + &#x27;:&#x27; + config.survey.id);
+                              // Being &quot;active&quot; means:
+                              //   we&#x27;re between the start/stop dates,
+                              //   it&#x27;s enabled (set to true)
+                              //   it&#x27;s not set to 0 percent (same as saying enabled: false, but for global default also)
+                              config.isActive =
+                                isSurveyStarted(config.start) &amp;&amp;
+                                !isSurveyExpired(config.stop) &amp;&amp;
+                                config.enabled &amp;&amp;
+                                config.percent !== 0;
+                              config.seen = IBM.common.util.cookie.get(cookieName) !== null;
+                            }
+                            return config;
+                          }
+                        
+                          // Set the global config to use the global_percent from page setting if exists,
+                          //  else it uses the default set (5) in the &quot;ibmGlobalDefaultInterceptConfig&quot; object above.
+                          function setGlobalDefaultEntryPercent(config) {
+                            var pageDefinedGlobPercent = IBM.common.util.config.get(
+                              &#x27;survey.global_percent&#x27;
+                            );
+                            if (pageDefinedGlobPercent &gt;= 0) {
+                              config.percent = Number(pageDefinedGlobPercent);
+                            }
+                            return config;
+                          }
+                        
+                          // This is based on combination of:
+                          //   what is set,
+                          //   what is actually active,
+                          //   what has been seen.
+                          function setConfigToUse(configs) {
+                            var globDef = configs.globalDefault,
+                              pageCustom = configs.pageCustom,
+                              alt = configs.pageAlt,
+                              useThisConfig;
+                            // SHORT CIRCUIT: No custom config is set, NOR active = Majority (90%) of pages.
+                            // Don&#x27;t have to worry about #s here because there&#x27;s no splitting. Only 1 choice.
+                            // If global hasn&#x27;t been seen: use it.
+                            // Else do nothing. We&#x27;ve seen the one and only.
+                            if (!alt.isActive &amp;&amp; !pageCustom.isActive) {
+                              if (!globDef.seen) {
+                                useThisConfig = globDef;
+                                return useThisConfig;
+                              }
+                              return useThisConfig;
+                            }
+                        
+                            // Getting to this point means they have either/both page custom and alt intercept setup.
+                            // If page custom (only, no alt) is active and not seen, use it (existing basic intercept override).
+                            // Else do nothing. We&#x27;ve seen the one and only page custom that overrided the default.
+                            if (!alt.isActive &amp;&amp; pageCustom.isActive &amp;&amp; !pageCustom.seen) {
+                              useThisConfig = pageCustom;
+                            }
+                            // Else: NEW feature of traffic splitting using ALT intercept.
+                            else if (alt.isActive) {
+                              // Alt is active here.
+                              // Alt HAS been seen: Use survey A (custom or default).
+                              if (alt.seen) {
+                                // If pageCustom is active &amp;&amp; !seen: use pageCustom.
+                                // If pageCustom is !active and default !seen: use default.
+                                if (pageCustom.isActive &amp;&amp; !pageCustom.seen) {
+                                  useThisConfig = pageCustom;
+                                } else if (!pageCustom.isActive &amp;&amp; !globDef.seen) {
+                                  useThisConfig = globDef;
+                                }
+                              }
+                              // Alt is active here.
+                              // ELSE alt has NOT been seen: Determine if we use it based on user traffic #.
+                              // If the # falls outside of alt&#x27;s %, use other if other has not been seen.
+                              else {
+                                // Alt is active and NOT been seen here.
+                                // If random # inside the % for alt: use alt,
+                                // Or if they&#x27; already see the survey A&#x27;s in the split... means this is the only valid one to see.
+                                // else choose pageCustom or default, whatever hasn&#x27;t been seen.
+                                if (
+                                  surveyConfigs.randNum &lt; alt.percent ||
+                                  (pageCustom.isActive &amp;&amp; pageCustom.seen) ||
+                                  (!pageCustom.isActive &amp;&amp; globDef.seen)
+                                ) {
+                                  useThisConfig = alt;
+                                }
+                                // else: # is higher than % for alt and we HAVEN&#x27;T seen one of the survey As,
+                                //  so if pageCustom is active &amp;&amp; !seen: use pageCustom.
+                                else if (pageCustom.isActive &amp;&amp; !pageCustom.seen) {
+                                  useThisConfig = pageCustom;
+                                }
+                                // else: if pageCustom is !active and default !seen: use default.
+                                else if (!pageCustom.isActive &amp;&amp; !globDef.seen) {
+                                  useThisConfig = globDef;
+                                }
+                              }
+                            }
+                            return useThisConfig;
+                          }
+                        
+                          /**
+                        	 * This is the public function to call to open a feedback survey. It can be called from on click of a link, or
+                        		 programatically after some process or user event.
+                        		@method autoInit
+                        	**/
+                          me.autoInit = function() {
+                            var configToUse = null,
+                              entryNumber = 0,
+                              waitingForInterceptXlations;
+                        
+                            // Pull in configs.
+                            surveyConfigs.globalDefault =
+                              ibmGlobalDefaultInterceptConfig.survey.intercept;
+                            surveyConfigs.pageCustom = IBM.common.util.config.get(&#x27;survey.intercept&#x27;);
+                            surveyConfigs.pageAlt = IBM.common.util.config.get(
+                              &#x27;survey.intercept_alternate&#x27;
+                            );
+                        
+                            // Merge in the one override (percent) for the global default.
+                            surveyConfigs.globalDefault = setGlobalDefaultEntryPercent(
+                              surveyConfigs.globalDefault
+                            );
+                        
+                            // Set flags for ease of logic and consistency. Then set empty object for consistency checking.
+                            surveyConfigs.globalDefault = setSurveyConfigFlags(
+                              surveyConfigs.globalDefault
+                            );
+                            surveyConfigs.pageCustom =
+                              setSurveyConfigFlags(surveyConfigs.pageCustom) || {};
+                            surveyConfigs.pageAlt = setSurveyConfigFlags(surveyConfigs.pageAlt) || {};
+                        
+                            //
+                            // At this point, we have all three configs; each have entry %s and flags for logic.
+                            //
+                        
+                            /**
+                        			First do quick check to see if the traffic entry % even matches.
+                        			It&#x27;s useless to do anything if user don&#x27;t even qualify to get in the door.
+                        
+                        			If there&#x27;s an alternate set:
+                        				If alt is active: use new &#x27;entry_percent&#x27;,
+                        				Otherwise it&#x27;s like alt wasn&#x27;t coded and treat like normal page custom intercept...
+                        			Else if there&#x27;s a regular custom config (only); if that&#x27;s active use that local % (existing functionality custom intercept)
+                        			Otherwise all cases use page global default setting.
+                        
+                        		**/
+                            if (surveyConfigs.pageAlt.isActive) {
+                              entryNumber = IBM.common.util.config.get(&#x27;survey.entry_percent&#x27;);
+                            } else if (surveyConfigs.pageCustom.isActive) {
+                              entryNumber = surveyConfigs.pageCustom.percent;
+                            } else {
+                              entryNumber = surveyConfigs.globalDefault.percent;
+                            }
+                        
+                            // Getting here means the rand # was inside our max entry #.
+                            // So now we just figure out what config to dynamically use, then apply it and we&#x27;re set.
+                            configToUse = setConfigToUse(surveyConfigs);
+                            if (configToUse) {
+                              IBM.common.util.debug.add(
+                                &#x27;log&#x27;,
+                                &#x27;Using survey config: &#x27; + configToUse.survey.id
+                              );
+                              // Metrics collection for Jo Welsh.
+                              // Merge in all the settings.
+                              // IF the config used is NOT the default then fire off this &#x27;exception&#x27; event for tracking.
+                              var metricData = $.extend(
+                                true,
+                                {},
+                                defaults,
+                                IBM.common.util.config.get(&#x27;survey.intercept&#x27;),
+                                configToUse || {}
+                              );
+                        
+                              if (
+                                metricData.survey.id !== &#x27;web-exp&#x27; ||
+                                !surveyConfigs.globalDefault.percent ||
+                                (surveyConfigs.globalDefault.percent &amp;&amp;
+                                  surveyConfigs.globalDefault.percent !== 5)
+                              ) {
+                                var evtData = {
+                                  ibmEV: &#x27;v18 survey tracker&#x27;,
+                                  ibmEvAction: metricData.survey.type,
+                                  ibmEvGroup: metricData.survey.id,
+                                  ibmEvModule: metricData.percent, // % traffic setting of the specific survey config used.
+                                  ibmEvSection: entryNumber, // special # you first have to meet to get in.
+                                  ibmEvLinkTitle: surveyConfigs.globalDefault.percent, // global default setting.
+                                  ibmEvLinkTarget: metricData.presentDelay,
+                                };
+                                IBM.common.util.statshelper.fireEvent(evtData);
+                              }
+                        
+                              globalAjaxSetting();
+                        
+                              // If queue/translations don&#x27;t load in 5 seconds, kill it.
+                              setTimeout(function() {
+                                IBM.common.util.queue.remove(waitingForInterceptXlations);
+                                window.console.warn(
+                                  &#x27;v18: Intercept translations took too long, killed listener.&#x27;
+                                );
+                              }, 1000);
+                        
+                              // Request translations for default intercept survey.
+                              $.ajax({
+                                url: IBM.common.util.config.get(&#x27;jsFilesUrl&#x27;) + &#x27;ccftranslations.js&#x27;,
+                                dataType: &#x27;script&#x27;,
+                                cache: true,
+                              }).fail(function(message) {
+                                window.console.error(
+                                  &#x27;v18: Error while loading intercept survey translation file.&#x27;,
+                                  message
+                                );
+                              });
+                            } else {
+                              IBM.common.util.debug.add(
+                                &#x27;log&#x27;,
+                                &#x27;A survey config was matched but you have already seen it.&#x27;
+                              );
+                            }
+                          };
+                        
+                          /**
+                        
+                        		@method initFeedback
+                        		@param conf {Object} The settings for the feedback survey that you want to show.
+                        	**/
+                          me.initFeedback = initFeedback;
+                          function initFeedback() {
+                            urllangcountry = Deflangcountry();
+                            settings = $.extend(
+                              true,
+                              defaults,
+                              IBM.common.util.config.get(&#x27;survey.intercept&#x27;)
+                            );
+                            settings.cookie_name =
+                              &#x27;ccf-&#x27; + settings.survey.type + &#x27;-&#x27; + settings.survey.id;
+                            if (makeSurveyURL()) {
+                              if (window.digitalData.user.segment.isIBMer) {
+                                invitation = supportoverlay();
+                              } else {
+                                invitation = createInvitation();
+                              }
+                              bindInvitationEvents();
+                              // If not exit survey
+                              if (
+                                settings.interceptDisp !== &#x27;pageExit&#x27; &amp;&amp;
+                                settings.interceptDisp !== &#x27;siteExit&#x27;
+                              ) {
+                                setTimeout(function() {
+                                  invitation.show();
+                                }, settings.presentDelay);
+                                // If exit survey
+                              } else {
+                                exitPageOplabTrigger();
+                              }
+                            }
+                          }
+                        
+                          // In this function we are calling the json data for Dev and Proud
+                          function globalAjaxSetting() {
+                            var environment = IBM.common.util.cookie.get(&#x27;__forcev18env&#x27;);
+                            var temp = {
+                              dataType: &#x27;script&#x27;,
+                              url:
+                                &#x27;https://tags.tiqcdn.com/dle/ibm/web/d_medallia_survey_configurations.js?callback=?&#x27;,
+                              timeout: 5000,
+                              data: &#x27;prod&#x27;,
+                            };
+                        
+                            if (environment) {
+                              temp = {
+                                dataType: &#x27;json&#x27;,
+                                //dev url
+                                // url: &#x27;https://ssmsystem.w3ibm.mybluemix.net/callbackmergedata&#x27;,
+                                // prod url
+                                url:
+                                  &#x27;https://singlesurveysystem-prod.w3ibm.mybluemix.net/callbackmergedata&#x27;,
+                                timeout: 5000,
+                                data: &#x27;preview&#x27;,
+                              };
+                            }
+                        
+                            $.ajax(temp).done(function(data) {
+                              switch (temp.data) {
+                                case &#x27;prod&#x27;:
+                                  defaultSettings =
+                                    window.utag.globals.dle.enrichments
+                                      .d_medallia_survey_configurations;
+                                  break;
+                                case &#x27;preview&#x27;:
+                                  defaultSettings = data;
+                                  break;
+                              }
+                              initFeedback();
+                            });
+                          }
+                        
+                          function exitPageOplabTrigger() {
+                            var mastheadLinks = &#x27;#ibm-masthead a, .ibm-mobilemenu a&#x27;,
+                              footerLinks = &#x27;#ibm-footer-module a, #ibm-footer a&#x27;,
+                              customLinks = &#x27;a.ibm-intercept-exit-survey&#x27;,
+                              redirectStatus = false,
+                              pageLink = {
+                                url: &#x27;&#x27;,
+                              };
+                        
+                            // Diff function for arrays.
+                            // Does array deltas (removes items from one array that exist in another.)
+                            Array.prototype.diff = function(a) {
+                              return this.filter(function(i) {
+                                return a.indexOf(i) &lt; 0;
+                              });
+                            };
+                        
+                            function tagAllLinks() {
+                              // If the abandon link has a valid URL:
+                              //   Stop the click action.
+                              //   Store the URL for later use.
+                              //   Show (try) the survey &amp; goto the URL after survey complete (or a no-show).
+                              $(mastheadLinks).click(function(evt) {
+                                var ul_tag = evt.currentTarget.parentElement.parentElement;
+                                if (
+                                  evt.currentTarget.href !== &#x27;&#x27; &amp;&amp;
+                                  evt.currentTarget.href.substr(0, 1) !== &#x27;#&#x27; &amp;&amp;
+                                  ul_tag.id !== &#x27;ibm-menu-links&#x27;
+                                ) {
+                                  evt.preventDefault();
+                                  pageLink.target = evt.currentTarget.target;
+                                  pageLink.url = evt.currentTarget.href;
+                                  launchExitSurvey();
+                                }
+                              });
+                        
+                              $(footerLinks).click(function(evt) {
+                                if (
+                                  evt.currentTarget.href !== &#x27;&#x27; &amp;&amp;
+                                  evt.currentTarget.href.substr(0, 1) !== &#x27;#&#x27;
+                                ) {
+                                  evt.preventDefault();
+                                  pageLink.target = evt.currentTarget.target;
+                                  pageLink.url = evt.currentTarget.href;
+                                  launchExitSurvey();
+                                }
+                              });
+                        
+                              $(customLinks).click(function(evt) {
+                                if (
+                                  evt.currentTarget.href !== &#x27;&#x27; &amp;&amp;
+                                  evt.currentTarget.href.substr(0, 1) !== &#x27;#&#x27;
+                                ) {
+                                  evt.preventDefault();
+                                  pageLink.url = evt.currentTarget.href;
+                                  pageLink.target = evt.currentTarget.target;
+                                  //removeWindowExitEvents();
+                                  launchExitSurvey();
+                                }
+                              });
+                        
+                              windowExitEvents();
+                            }
+                        
+                            function showOverlay() {
+                              if (invitationStatus === &#x27;&#x27;) {
+                                // If there&#x27;s no other overlay currently showing, show it.
+                                // This is safety so that we don&#x27;t open an overlay on top of another one some other JS is showing.
+                                if (!IBMCore.common.widget.overlay.currentShowingOverlay()) {
+                                  invitation.show();
+                                } else {
+                                  window.console.log(
+                                    &#x27;v18: Survey invitation did not show because another overlay was currently showing.&#x27;
+                                  );
+                                  return;
+                                }
+                        
+                                invitation.subscribe(&#x27;hide&#x27;, &#x27;Overlay&#x27;, function() {
+                                  if (invitationStatus === &#x27;opt-in&#x27;) {
+                                    redirectStatus = true;
+                                    survey.subscribe(&#x27;hide&#x27;, &#x27;Overlay&#x27;, function() {
+                                      redirectStatus = false;
+                                      redirectPage();
+                                    });
+                                  } else {
+                                    redirectPage();
+                                  }
+                                });
+                              } else {
+                                survey.show();
+                                survey.subscribe(&#x27;hide&#x27;, &#x27;Overlay&#x27;, function() {
+                                  redirectStatus = false;
+                                  redirectPage();
+                                });
+                              }
+                            }
+                        
+                            function launchExitSurvey() {
+                              showOverlay();
+                              windowExitEvents();
+                            }
+                        
+                            function redirectPage() {
+                              if (!redirectStatus) {
+                                redirectStatus = true;
+                                removeWindowExitEvents();
+                                if (pageLink.url !== &#x27;&#x27;) {
+                                  if (pageLink.target === &#x27;&#x27;) {
+                                    window.location.href = pageLink.url;
+                                  } else {
+                                    window.open(pageLink.url, pageLink.target);
+                                  }
+                                }
+                              }
+                            }
+                        
+                            function removeWindowExitEvents() {
+                              window.onbeforeunload = null;
+                              $(window).unbind(&#x27;beforeunload&#x27;);
+                            }
+                        
+                            function windowExitEvents() {
+                              $(window).bind(&#x27;beforeunload&#x27;, function() {
+                                showOverlay();
+                                return settings.invitation.title;
+                              });
+                              setTimeout(function() {
+                                window.onbeforeunload = function() {
+                                  showOverlay();
+                                  return settings.invitation.title;
+                                };
+                              }, 500);
+                            }
+                        
+                            // Wait to try and let all widgets init so we can bind links in them also.
+                            setTimeout(function() {
+                              tagAllLinks();
+                            }, 1000);
+                        
+                            return {
+                              status: &#x27;loaded&#x27;,
+                            };
+                          }
+                        
+                          function createCookieValue() {
+                            return (
+                              &#x27;{&quot;date&quot;: &#x27; +
+                              new Date().getTime() +
+                              &#x27;,&quot;type&quot;: &quot;&#x27; +
+                              settings.survey.type +
+                              &#x27;&quot;,&quot;id&quot;: &quot;&#x27; +
+                              settings.survey.id +
+                              &#x27;&quot;}&#x27;
+                            );
+                          }
+                        
+                          /**
+                           * Creating Intercept Survey Invitation overlay.
+                           *
+                           * It will pop up on the page loading, and asking for participating to the survey.
+                           *
+                           *  1) If User clicks on yes button, means they wish to participate on survey then, open survey overlay and hide invitation overlay
+                           *  2) If user clicks on no button, means they do not wish to participate on survey.
+                           *  3) Create a cookie on hiding of the invitation overlay, as global barrier for 30 days to restrict them to participate on another survey from IBM.com.
+                           *
+                           */
+                        
+                          function validateContent(contentType) {
+                            var defaultInvitation = defaultSettings.defaults.invitation;
+                            var content = defaultInvitation[contentType][urllangcountry];
+                            if (overrideInvitation &amp;&amp; overrideInvitation[contentType]) {
+                              content = overrideInvitation[contentType][urllangcountry];
+                            }
+                            return content;
+                          }
+                        
+                          function Aboutfeedback() {
+                            var feedback_statement_title = validateContent(&#x27;feedback_statement_label&#x27;),
+                              feedback_statement_content = validateContent(
+                                &#x27;feedback_statement_content&#x27;
+                              );
+                        
+                            var feedback_html =
+                              &#x27;&lt;div class=&quot;ibm-padding-content&quot;&gt;&lt;h2 class=&quot;ibm-bold&quot;&gt;&#x27; +
+                              feedback_statement_title +
+                              &#x27;&lt;/h2&gt;&lt;p class=&quot;ibm-small&quot;&gt;&#x27; +
+                              feedback_statement_content +
+                              &#x27;&lt;/p&gt;&lt;/div&gt;&#x27;;
+                        
+                            var overlay = IBM.common.widget.overlay.createOverlay({
+                              backgroundcolor: &#x27;#ffffff&#x27;,
+                              contentHtml: feedback_html,
+                              fullwidth: false,
+                              seamless: true,
+                              classes: &#x27;ibm-overlay ibm-overlay-alt&#x27;,
+                            });
+                            overlay.init();
+                        
+                            overlay.subscribe(&#x27;hide&#x27;, &#x27;Overlay&#x27;, function() {
+                              var cookie_value = createCookieValue();
+                              IBM.common.util.cookie.set(settings.cookie_name, cookie_value, {
+                                path: &#x27;/&#x27;,
+                                domain: &#x27;.ibm.com&#x27;,
+                                expires: allowedTtl,
+                              });
+                            });
+                        
+                            return overlay;
+                          }
+                        
+                          function createInvitation() {
+                            if (defaultSettings.override.hasOwnProperty(currentUrl)) {
+                              overrideInvitation = defaultSettings.override[currentUrl].invitation;
+                            }
+                            var invitation_title = validateContent(&#x27;invitation_title&#x27;),
+                              invitation_content = validateContent(&#x27;invitation_content&#x27;),
+                              invitation_yes_label = validateContent(&#x27;invitation_yes_label&#x27;),
+                              invitation_no_label = validateContent(&#x27;invitation_no_label&#x27;),
+                              feedback_statement_label = validateContent(&#x27;feedback_statement_label&#x27;),
+                              url = window.location.href,
+                              innerDiv = $(&quot;&lt;div class=&#x27;ibm-center&#x27;&gt;&quot;),
+                              heading = $(&#x27;&lt;h2&gt;&#x27;)
+                                .attr({
+                                  class: &#x27;ibm-h2 ibm-margin-top-1 ibm-margin-bottom-1&#x27;,
+                                })
+                                .html(invitation_title),
+                              str = &#x27;&lt;p class=&quot;ibm-h4&quot;&gt;&#x27; + invitation_content + &#x27;&lt;/p&gt;&#x27;,
+                              button =
+                                &quot;&lt;p class=&#x27;ibm-padding-content&#x27;&gt;&lt;button class=&#x27;ibm-btn-pri ibm-btn-blue-50&#x27; data-action=&#x27;showme&#x27; data-attribute1=&#x27;ok_survey_nps&#x27; data-attribute2=&quot; +
+                                url +
+                                &#x27; &gt;&#x27; +
+                                invitation_yes_label +
+                                &quot;&lt;/button&gt; &lt;button class=&#x27;ibm-btn-pri ibm-btn-blue-50&#x27; data-action=&#x27;hideme&#x27; data-attribute1=&#x27;no_thanks_survey_nps&#x27; data-attribute2=&quot; +
+                                url +
+                                &#x27; &gt;&#x27; +
+                                invitation_no_label +
+                                &#x27;&lt;/button&gt;&lt;/p&gt;&#x27;,
+                              lastpara =
+                                &quot;&lt;p id=&#x27;feedback&#x27; class=&#x27;ibm-button-link ibm-padding-top-1 ibm-padding-bottom-0 ibm-margin-bottom-0&#x27;&gt;&lt;a href=&#x27;#&#x27; class=&#x27;ibm-btn-gray-50 ibm-margin-bottom-0 ibm-btn-pri ibm-fullwidth&#x27; data-action=&#x27;feedback-slide&#x27; &gt;&quot; +
+                                feedback_statement_label +
+                                &#x27;&lt;a&gt;&lt;/p&gt;&#x27;,
+                              paragraph = $(&#x27;&lt;div&gt;&#x27;)
+                                .attr({ class: &#x27;ibm-padding-bottom-0&#x27; })
+                                .html(str + button + lastpara);
+                        
+                            innerDiv.append(heading, paragraph);
+                            $(&#x27;body&#x27;).click(&#x27;#feedback&#x27;, bindInvitationEvents);
+                            var overlay = IBM.common.widget.overlay.createOverlay({
+                              backgroundcolor: &#x27;#ffffff&#x27;,
+                              contentHtml: innerDiv,
+                              fullwidth: false,
+                              seamless: true,
+                              classes: &#x27;ibm-overlay ibm-overlay-alt&#x27;,
+                            });
+                            overlay.init();
+                        
+                            overlay.subscribe(&#x27;hide&#x27;, &#x27;Overlay&#x27;, function() {
+                              var cookie_value = createCookieValue();
+                              IBM.common.util.cookie.set(settings.cookie_name, cookie_value, {
+                                path: &#x27;/&#x27;,
+                                domain: &#x27;.ibm.com&#x27;,
+                                expires: allowedTtl,
+                              });
+                            });
+                        
+                            return overlay;
+                          }
+                        
+                          function supportoverlay() {
+                            var heading,
+                              str,
+                              paragraph,
+                              innerDiv = $(&quot;&lt;div class=&#x27;ibm-padding-content&#x27;&gt;&quot;);
+                            heading = $(&#x27;&lt;h2&gt;&#x27;)
+                              .attr({ class: &#x27;ibm-h1 ibm-bottom-top-1 ibm-center&#x27; })
+                              .html(&#x27;Need Help ?&#x27;);
+                        
+                            str =
+                              &#x27;&lt;p class=&quot;ibm-ind-link ibm-h3&quot;&gt;&lt;a class=&quot;ibm-help-link&quot; href=&quot;https://w3.ibm.com/help&quot; target=&quot;_blank&quot;&gt;Help@IBM&lt;/a&gt;&lt;/p&gt;&#x27;;
+                        
+                            var lastpara =
+                              &quot;&lt;p class=&#x27;ibm-button-link ibm-h5 ibm-background-blue-10 ibm-center ibm-padding-bottom-0 ibm-margin-bottom-0&#x27;&gt;Medallia survey suppressed for internal IBM visitors&lt;/p&gt;&quot;;
+                        
+                            paragraph = $(&#x27;&lt;div&gt;&#x27;)
+                              .attr({ class: &#x27;ibm-padding-bottom-0&#x27; })
+                              .html(str + lastpara);
+                            innerDiv.append(heading, paragraph);
+                            var overlay = IBM.common.widget.overlay.createOverlay({
+                              backgroundcolor: &#x27;#ffffff&#x27;,
+                              contentHtml: innerDiv,
+                              fullwidth: false,
+                              seamless: true,
+                              classes: &#x27;ibm-overlay ibm-overlay-alt&#x27;,
+                            });
+                            overlay.init();
+                        
+                            overlay.subscribe(&#x27;hide&#x27;, &#x27;Overlay&#x27;, function() {
+                              var cookie_value = createCookieValue();
+                              IBM.common.util.cookie.set(settings.cookie_name, cookie_value, {
+                                path: &#x27;/&#x27;,
+                                domain: &#x27;.ibm.com&#x27;,
+                                expires: allowedTtl,
+                              });
+                            });
+                        
+                            return overlay;
+                          }
+                        
+                          /**
+                           * Creating Intercept Survey overlay.
+                           *
+                           * It will pop up after user clicks on yes button from invitation overlay, which will load the survey with in IFRAME from external/internal sources.
+                           *
+                           * 1) Create a cookie on hiding of the survey overlay, as local barrier till end date for the survey, to restrict them to participate on current survey again.
+                           *
+                           */
+                          function createSurvey() {
+                            var anonData,
+                              html,
+                              survey_width,
+                              ip = IBM.common.util.user.getInfo().ip,
+                              template =
+                                &#x27;&lt;iframe src=&quot;{{survey_url}}&quot; width=&quot;{{survey_width}}&quot; height=&quot;800&quot;&gt;&lt;/iframe&gt;&#x27;;
+                        
+                            if (ip) {
+                              anonData = &#x27;id=&#x27; + ip;
+                            }
+                        
+                            if (anonData) {
+                              if (settings.survey.url.indexOf(&#x27;?&#x27;) &gt; -1) {
+                                anonData = &#x27;&amp;&#x27; + anonData;
+                              } else {
+                                anonData = &#x27;?&#x27; + anonData;
+                              }
+                            }
+                        
+                            if (window.innerWidth &gt; 770) {
+                              survey_width = 950;
+                            } else {
+                              survey_width = &#x27;100%&#x27;;
+                            }
+                        
+                            // Create survey content that goes inside the overlay.
+                            html = template
+                              .replace(&#x27;{{survey_url}}&#x27;, settings.survey.url + anonData)
+                              .replace(&#x27;{{survey_width}}&#x27;, survey_width);
+                        
+                            // Create the overlay widget that uses the html for the contents and init it.
+                            var overlay = IBM.common.widget.overlay.createOverlay({
+                              backgroundcolor: &#x27;#ffffff&#x27;,
+                              contentHtml: html,
+                              seamless: true,
+                              classes: &#x27;ibm-overlay ibm-overlay-alt-three&#x27;,
+                            });
+                            overlay.init();
+                            var getid = $(&#x27;#&#x27; + overlay.getId());
+                        
+                            overlay.subscribe(&#x27;show&#x27;, &#x27;Overlay&#x27;, function() {
+                              /**
+                               * Tracking by coremetrics code for intercept shown
+                               */
+                              IBM.common.util.statshelper.fireEvent({
+                                ibmEV: &#x27;ol survey&#x27;,
+                                ibmEvGroup: settings.survey.type,
+                                ibmEvModule: settings.survey.id,
+                                ibmEvAction: &#x27;intercept shown&#x27;,
+                              });
+                        
+                              var cookie_value = createCookieValue();
+                        
+                              IBM.common.util.cookie.set(settings.cookie_name, cookie_value, {
+                                path: &#x27;/&#x27;,
+                                domain: &#x27;.ibm.com&#x27;,
+                                expires: allowedTtl,
+                              });
+                              getid.find(&#x27;iframe&#x27;).attr({ height: getid.height() - 80 });
+                            });
+                            return overlay;
+                          }
+                        
+                          /**
+                           * Events created for invitation overlay form,
+                           *
+                           * 1) Yes button:               If user clicks on yes button, then open survey overlay
+                           * 2) No button:                If user clicks on no button, then hide the invitaiton overlay
+                           * 3) About feedback at IBM:    If user clicks on &#x27;About feedback at IBM&#x27;, then show the IBM privaly policy window on the invitation overlay.
+                           *
+                           */
+                        
+                          function bindInvitationEvents() {
+                            var $overlay = $(&#x27;#&#x27; + invitation.getId());
+                            $(&#x27;[data-action]&#x27;, $overlay).on(&#x27;click&#x27;, function() {
+                              var $self = $(this),
+                                action = $self.data(&#x27;action&#x27;);
+                              switch (action) {
+                                case &#x27;hideme&#x27;:
+                                  invitationStatus = &#x27;opt-out&#x27;;
+                                  invitation.hide();
+                                  break;
+                                case &#x27;feedback-slide&#x27;:
+                                  invitationStatus = &#x27;opt-in&#x27;;
+                                  invitation.hide();
+                                  survey = Aboutfeedback();
+                                  if (
+                                    settings.surveyDisp !== &#x27;pageExit&#x27; &amp;&amp;
+                                    settings.surveyDisp !== &#x27;siteExit&#x27;
+                                  ) {
+                                    survey.show();
+                                  } else {
+                                    exitPageOplabTrigger();
+                                  }
+                                  break;
+                                case &#x27;showme&#x27;:
+                                  invitationStatus = &#x27;opt-in&#x27;;
+                                  /**
+                                   * Tracking by coremetrics code for if user clicks yes button
+                                   */
+                                  IBM.common.util.statshelper.fireEvent({
+                                    ibmEV: &#x27;ol survey&#x27;,
+                                    ibmEvGroup: settings.survey.type,
+                                    ibmEvModule: settings.survey.id,
+                                    ibmEvAction: &#x27;intercept yes clicked&#x27;,
+                                  });
+                                  invitation.hide();
+                                  // Add special param so we know this survey was from an intercept and not
+                                  // the feedback link in the footer. (that one adds inter=n).
+                                  settings.survey.url += &#x27;&amp;inter=y&#x27;;
+                                  survey = createSurvey();
+                                  if (
+                                    settings.surveyDisp !== &#x27;pageExit&#x27; &amp;&amp;
+                                    settings.surveyDisp !== &#x27;siteExit&#x27;
+                                  ) {
+                                    survey.show();
+                                  } else {
+                                    exitPageOplabTrigger();
+                                  }
+                                  break;
+                              }
+                            });
+                          }
+                        
+                          /**
+                           * Creating survey URL.
+                           *
+                           * Based on the survey type, survey URL will vary from different sources.
+                           * This function is making URL for the particular survey based on the survey type.
+                           *
+                           * 1) Creating survey URL
+                           * 2) Adding metadata with the URL if user given in configuration (This is now only appicable to ASM survey&#x27;s, rest of the survey type meta information will add up later)
+                           *
+                           * */
+                          function makeSurveyURL() {
+                            var url = &#x27;&#x27;,
+                              metadata = getMetaData();
+                        
+                            switch (settings.survey.type) {
+                              case &#x27;medallia&#x27;:
+                                /** As per instruction from Ben, all medallia survey id will be start with &quot;ibm-&quot; so, adding it dynamically to all medallia survey. It may required some rework. **/
+                                //dev
+                                //url = &#x27;https://surveysbx.sbx.lon.medallia.eu/?ibm-web-exp&amp;&#x27; + metadata;
+                                //prod
+                                metadata = metadata.length &gt; 0 ? &#x27;?&#x27; + metadata : &#x27;&#x27;;
+                                url = &#x27;https://survey.medallia.eu/ibm-&#x27; + settings.survey.id + metadata;
+                                break;
+                        
+                              case &#x27;qualtrics&#x27;:
+                                url = &#x27;https://ibmsurveys.qualtrics.com/SE/?SID=&#x27; + settings.survey.id;
+                                break;
+                        
+                              case &#x27;efm&#x27;:
+                                url =
+                                  &#x27;https://ucdsurvey1.torolab.ibm.com/ss2/wsb.dll/s/&#x27; +
+                                  settings.survey.id;
+                                break;
+                        
+                              case &#x27;verint&#x27;:
+                                url = &#x27;https://survey.vovici.com/se/&#x27; + settings.survey.id + &#x27;/?&#x27;;
+                                break;
+                        
+                              case &#x27;userzoom&#x27;:
+                                url = &#x27;https://s.userzoom.com/m/&#x27; + settings.survey.id;
+                                break;
+                        
+                              case &#x27;sg&#x27;:
+                                url = &#x27;https://www.surveygizmo.com/&#x27; + settings.survey.id;
+                                break;
+                        
+                              case &#x27;customB&#x27;:
+                                url = settings.survey.url;
+                                break;
+                            }
+                        
+                            if (url === null) {
+                              window.console.warn(
+                                &#x27;v18: Intercept survey type is unknown: &#x27; + settings.survey.type
+                              );
+                              return false;
+                            }
+                        
+                            settings.survey.url = url;
+                            return true;
+                          }
+                        
+                          /**
+                           * Creating survey meta data format.
+                           */
+                          function getMetaData() {
+                            var parameters = [],
+                              metadata = settings.survey.metaData,
+                              lang,
+                              variables,
+                              variable,
+                              m,
+                              digitalDataPage = window.digitalData.page,
+                              digitalDataIbm = digitalDataPage.category.ibm,
+                              digitalPageinfo = digitalDataPage.pageInfo.ibm;
+                        
+                            if (settings.survey.type.toLowerCase() === &#x27;medallia&#x27;) {
+                              parameters.push(&#x27;tstamp=&#x27; + getUTCDate());
+                              try {
+                                lang = IBMCore.common.meta.page.pageInfo.language.split(&#x27;-&#x27;);
+                              } catch (e) {
+                                // If meta data no set for the page, using en-US as default language
+                                lang = [&#x27;en-US&#x27;].split(&#x27;-&#x27;);
+                              }
+                              //Getting User Country
+                              var country;
+                              if (!digitalPageinfo.country || digitalPageinfo.country === &#x27;WW&#x27;) {
+                                country = &#x27;US&#x27;;
+                              } else {
+                                country = digitalPageinfo.country;
+                              }
+                              parameters.push(prepareMeta(&#x27;country&#x27;, country.toUpperCase(), &#x27;US&#x27;));
+                              var supported_lang = Object.keys(langcountries);
+                              if (supported_lang.indexOf(lang[0].toLowerCase()) &gt; -1) {
+                                if (country === &#x27;ca&#x27; || country === &#x27;tw&#x27; || country === &#x27;co&#x27;) {
+                                  parameters.push(
+                                    prepareMeta(&#x27;lang&#x27;, lang[0] + &#x27;_&#x27; + country.toUpperCase())
+                                  );
+                                } else {
+                                  parameters.push(prepareMeta(&#x27;lang&#x27;, lang[0]));
+                                }
+                              } else {
+                                parameters.push(prepareMeta(&#x27;lang&#x27;, &#x27;en&#x27;));
+                              }
+                        
+                              if (IBMCore.common.util.user) {
+                                var usercountry = IBMCore.common.util.user
+                                  .getInfo()
+                                  .country.toUpperCase();
+                                parameters.push(prepareMeta(&#x27;usercountry&#x27;, usercountry));
+                              }
+                        
+                              //Adding source origin
+                              parameters.push(prepareMeta(&#x27;source&#x27;, &#x27;footer&#x27;));
+                        
+                              var tmpMetadata = &#x27;&#x27;,
+                                overrideSurvey;
+                        
+                              if (defaultSettings.override.hasOwnProperty(currentUrl)) {
+                                overrideSurvey = defaultSettings.override[currentUrl].survey;
+                              }
+                        
+                              if (overrideSurvey &amp;&amp; overrideSurvey.metaData) {
+                                tmpMetadata = overrideSurvey.metaData;
+                              }
+                        
+                              if (tmpMetadata) {
+                                variables = tmpMetadata.split(&#x27;&amp;&#x27;);
+                              } else if (metadata) {
+                                variables = metadata.split(&#x27;&amp;&#x27;);
+                              }
+                              if (variables) {
+                                for (m = 0; m &lt; variables.length; m++) {
+                                  variable = variables[m].split(&#x27;=&#x27;);
+                                  if (parameters.indexOf(variable[0]) &lt; 0) {
+                                    parameters.push(prepareMeta(variable[0], variable[1]));
+                                  }
+                                }
+                              }
+                        
+                              if (tmpMetadata.indexOf(&#x27;pgroup&#x27;) &lt; 0) {
+                                parameters.push(prepareMeta(&#x27;pgroup&#x27;, null, &#x27;default&#x27;));
+                              }
+                              if (tmpMetadata.indexOf(&#x27;pparent&#x27;) &lt; 0 &amp;&amp; digitalPageinfo.owner) {
+                                parameters.push(prepareMeta(&#x27;pparent&#x27;, digitalPageinfo.owner));
+                              }
+                              if (tmpMetadata.indexOf(&#x27;pmain&#x27;) &lt; 0 &amp;&amp; digitalPageinfo.industry) {
+                                parameters.push(prepareMeta(&#x27;pmain&#x27;, digitalPageinfo.industry));
+                              }
+                              if (digitalPageinfo.owningPortal) {
+                                parameters.push(prepareMeta(&#x27;origin&#x27;, digitalPageinfo.owningPortal));
+                              }
+                              if (digitalPageinfo.subject) {
+                                parameters.push(prepareMeta(&#x27;content&#x27;, digitalPageinfo.subject));
+                              }
+                              if (
+                                digitalDataPage.category &amp;&amp;
+                                digitalDataPage.category.primaryCategory
+                              ) {
+                                parameters.push(
+                                  prepareMeta(&#x27;campaign&#x27;, digitalDataPage.category.primaryCategory)
+                                );
+                              }
+                              if (digitalPageinfo.siteID) {
+                                parameters.push(prepareMeta(&#x27;oid&#x27;, digitalPageinfo.siteID));
+                              }
+                              if (digitalDataPage.pageInfo &amp;&amp; digitalDataPage.pageInfo.pageName) {
+                                parameters.push(
+                                  prepareMeta(&#x27;oname&#x27;, digitalDataPage.pageInfo.pageName)
+                                );
+                              }
+                              if (digitalDataIbm.globalBrandTableL10 &amp;&amp; digitalDataIbm.gbt10) {
+                                parameters.push(
+                                  prepareMeta(
+                                    &#x27;gbt10&#x27;,
+                                    digitalDataIbm.gbt10 + &#x27; - &#x27; + digitalDataIbm.globalBrandTableL10
+                                  )
+                                );
+                              } else if (digitalDataIbm.gbt10) {
+                                parameters.push(prepareMeta(&#x27;gbt10&#x27;, digitalDataIbm.gbt10));
+                              }
+                              if (digitalDataIbm.globalBrandTableL17 &amp;&amp; digitalDataIbm.gbt17) {
+                                parameters.push(
+                                  prepareMeta(
+                                    &#x27;gbt17&#x27;,
+                                    digitalDataIbm.gbt17 + &#x27; - &#x27; + digitalDataIbm.globalBrandTableL17
+                                  )
+                                );
+                              } else if (digitalDataIbm.gbt17) {
+                                parameters.push(prepareMeta(&#x27;gbt17&#x27;, digitalDataIbm.gbt17));
+                              }
+                              if (digitalDataIbm.globalBrandTableL20 &amp;&amp; digitalDataIbm.gbt20) {
+                                parameters.push(
+                                  prepareMeta(
+                                    &#x27;gbt20&#x27;,
+                                    digitalDataIbm.gbt20 + &#x27; - &#x27; + digitalDataIbm.globalBrandTableL20
+                                  )
+                                );
+                              } else if (digitalDataIbm.gbt20) {
+                                parameters.push(prepareMeta(&#x27;gbt20&#x27;, digitalDataIbm.gbt20));
+                              }
+                              if (digitalDataIbm.globalBrandTableL30 &amp;&amp; digitalDataIbm.gbt30) {
+                                parameters.push(
+                                  prepareMeta(
+                                    &#x27;gbt30&#x27;,
+                                    digitalDataIbm.gbt30 + &#x27; - &#x27; + digitalDataIbm.globalBrandTableL30
+                                  )
+                                );
+                              } else if (digitalDataIbm.gbt30) {
+                                parameters.push(prepareMeta(&#x27;gbt30&#x27;, digitalDataIbm.gbt30));
+                              }
+                              if (digitalDataIbm.globalBrandTableL40 &amp;&amp; digitalDataIbm.gbt40) {
+                                parameters.push(
+                                  prepareMeta(
+                                    &#x27;gbt40&#x27;,
+                                    digitalDataIbm.gbt40 + &#x27; - &#x27; + digitalDataIbm.globalBrandTableL40
+                                  )
+                                );
+                              } else if (digitalDataIbm.gbt40) {
+                                parameters.push(prepareMeta(&#x27;gbt40&#x27;, digitalDataIbm.gbt40));
+                              }
+                              if (digitalDataIbm.ut10) {
+                                parameters.push(prepareMeta(&#x27;ut10&#x27;, digitalDataIbm.ut10));
+                              }
+                              if (digitalDataIbm.ut15) {
+                                parameters.push(prepareMeta(&#x27;ut15&#x27;, digitalDataIbm.ut15));
+                              }
+                              if (digitalDataIbm.ut17) {
+                                parameters.push(prepareMeta(&#x27;ut17&#x27;, digitalDataIbm.ut17));
+                              }
+                              if (digitalDataIbm.ut20) {
+                                parameters.push(prepareMeta(&#x27;ut20&#x27;, digitalDataIbm.ut20));
+                              }
+                              if (digitalDataIbm.ut30) {
+                                parameters.push(prepareMeta(&#x27;ut30&#x27;, digitalDataIbm.ut30));
+                              }
+                              if (digitalDataPage.session &amp;&amp; digitalDataPage.session.uPageViewID) {
+                                parameters.push(
+                                  prepareMeta(&#x27;pageviewid&#x27;, digitalDataPage.session.uPageViewID)
+                                );
+                              }
+                              var dataUser = window.digitalData.user;
+                              if (dataUser &amp;&amp; dataUser.profile &amp;&amp; dataUser.profile.auid) {
+                                parameters.push(prepareMeta(&#x27;upid&#x27;, dataUser.profile.auid));
+                              }
+                              if (
+                                dataUser &amp;&amp;
+                                dataUser.user &amp;&amp;
+                                dataUser.segment &amp;&amp;
+                                dataUser.segment.isIBMer
+                              ) {
+                                parameters.push(prepareMeta(&#x27;isibmer&#x27;, dataUser.segment.isIBMer));
+                              }
+                              // Filtering to remove all empty or &quot;&quot; data
+                              parameters = parameters.filter(Boolean);
+                              parameters.push(
+                                prepareMeta(&#x27;url&#x27;, encodeURIComponent(window.location.href), &#x27;&#x27;)
+                              );
+                            }
+                            return parameters.length &gt; 0 ? parameters.join(&#x27;&amp;&#x27;) : &#x27;&#x27;;
+                          }
+                        
+                          /** Miscelloanous Functions */
+                        
+                          function prepareMeta(name, param, defaultValue) {
+                            var returnThis = name + &#x27;=&#x27; + param;
+                            defaultValue = defaultValue || null;
+                            if (
+                              param === &#x27;&#x27; ||
+                              param === &#x27;REPLACE&#x27; ||
+                              typeof param === &#x27;undefined&#x27; ||
+                              param === null
+                            ) {
+                              if (defaultValue === null) {
+                                returnThis = &#x27;&#x27;;
+                              } else {
+                                returnThis = name + &#x27;=&#x27; + defaultValue;
+                              }
+                            }
+                            return returnThis;
+                          }
+                        
+                          function getUTCDate() {
+                            var d1 = new Date();
+                            var utcDate =
+                                d1.getUTCDate() &lt; 10 ? &#x27;0&#x27; + d1.getUTCDate() : d1.getUTCDate(),
+                              utcMonth =
+                                d1.getUTCHours() &lt; 10
+                                  ? &#x27;0&#x27; + (d1.getUTCMonth() + 1)
+                                  : d1.getUTCMonth() + 1,
+                              utcHours =
+                                d1.getUTCHours() &lt; 10 ? &#x27;0&#x27; + d1.getUTCHours() : d1.getUTCHours(),
+                              utcMinutes =
+                                d1.getUTCMinutes() &lt; 10 ? &#x27;0&#x27; + d1.getUTCMinutes() : d1.getUTCMinutes(),
+                              utcSeconds =
+                                d1.getUTCSeconds() &lt; 10 ? &#x27;0&#x27; + d1.getUTCSeconds() : d1.getUTCSeconds();
+                        
+                            // As per Randy, date format is yyyy-mm-dd HH:mm:ss
+                            return (
+                              d1.getUTCFullYear() +
+                              &#x27;-&#x27; +
+                              utcMonth +
+                              &#x27;-&#x27; +
+                              utcDate +
+                              &#x27; &#x27; +
+                              utcHours +
+                              &#x27;:&#x27; +
+                              utcMinutes +
+                              &#x27;:&#x27; +
+                              utcSeconds
+                            );
+                          }
+                        })(jQuery, IBMCore);
+                        
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <title>IBMCore.common.util.a11y - IBM v18 (Northstar) common Javascript documentation</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" href="http://www.ibm.com/favicon.ico">
+    <script>
+        digitalData = {
+            page: {
+                pageInfo: {
+                    effectiveDate: '2017-02-25',
+                    expiryDate: '2020-02-25',
+                    language: 'en-US',
+                    publishDate: '2017-02-25',
+                    publisher: 'IBM Corporation',
+                    ibm: {
+                        contentDelivery: 'yuidoc via grunt',
+                        contentProducer: 'Michael Santelia',
+                        country: 'US',
+                        owner: 'Michael Santelia'
+                    }
+                }
+            }
+        };
+    </script>
+
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+
+    <script>
+
+		var lastUpdate = new Date(document.lastModified),
+			updatedMonth = lastUpdate.getMonth(),
+			updatedDate = lastUpdate.getDate(),
+			updatedYear = lastUpdate.getFullYear(),
+			today = new Date(),
+			todayMonth = today.getMonth(),
+			todayDate = today.getDate(),
+			todayYear = today.getFullYear(),
+			monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"],
+			lastUpdatedText = "",
+			daysAgo = Math.floor((today - lastUpdate) / (1000*60*60*24));
+
+		updatedMonthName = monthNames[updatedMonth];
+
+		switch (daysAgo) {
+
+			case 1: 
+				lastUpdatedText = "Updated yesterday";
+				break;
+				
+			case 0: 
+				lastUpdatedText = "Updated today";
+				break;
+				
+			default: 
+				lastUpdatedText = "Updated " + daysAgo + " days ago";
+				break;
+		}
+
+		if (daysAgo > 4) {
+			lastUpdatedText = "Updated: " + updatedMonthName + " " + updatedDate + ", " + updatedYear;
+		}
+
+    </script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-1-2">
+            <div style="background: url(http://1.www.s81c.com/i/v17/t/ibm-logo.png) no-repeat scroll 0px 0px transparent; width: 105px; height: 45px; margin: 0.85em 0px;text-indent:-9999px;">IBM v18 (Northstar) common Javascript documentation</div>
+        </div>
+        <div class="yui3-u-1-2 version">
+            <em>Javascript documentation for: IBM v18 (Northstar)<br />
+            	<span style="font-size: 0.6em; position: absolute; right: 35px;"><script>document.writeln(lastUpdatedText)</script></span></em>
+        </div>
+    </div>
+    
+    <p><a href="../assets../../v18-js-source-documentation.zip" style="margin-left: 10px; padding-left: 15px; background: url(http://1.www.s81c.com/i/v17/icons/ibm_sprite_transactional_blue_ON.png) no-repeat 0 -202px;">Download a copy of this documentation (ZIP).</a></p>
+    
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4" style="float: left;width:25%;">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/IBMCore.common.module.backtotop.html">IBMCore.common.module.backtotop</a></li>
+                                <li><a href="../classes/IBMCore.common.module.canadanotice.html">IBMCore.common.module.canadanotice</a></li>
+                                <li><a href="../classes/IBMCore.common.module.contactmodule.html">IBMCore.common.module.contactmodule</a></li>
+                                <li><a href="../classes/IBMCore.common.module.footer.html">IBMCore.common.module.footer</a></li>
+                                <li><a href="../classes/IBMCore.common.module.footermenu.html">IBMCore.common.module.footermenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.leftnav.html">IBMCore.common.module.leftnav</a></li>
+                                <li><a href="../classes/IBMCore.common.module.liveperson.html">IBMCore.common.module.liveperson</a></li>
+                                <li><a href="../classes/IBMCore.common.module.localeselector.html">IBMCore.common.module.localeselector</a></li>
+                                <li><a href="../classes/IBMCore.common.module.localpagenotification.html">IBMCore.common.module.localpagenotification</a></li>
+                                <li><a href="../classes/IBMCore.common.module.masthead.html">IBMCore.common.module.masthead</a></li>
+                                <li><a href="../classes/IBMCore.common.module.masthead.sticky.html">IBMCore.common.module.masthead.sticky</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mastheadbanner.html">IBMCore.common.module.mastheadbanner</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mastheadsearch.html">IBMCore.common.module.mastheadsearch</a></li>
+                                <li><a href="../classes/IBMCore.common.module.merchandising.html">IBMCore.common.module.merchandising</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mobilemenu.html">IBMCore.common.module.mobilemenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sharethiscontent.html">IBMCore.common.module.sharethiscontent</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sharethispage.html">IBMCore.common.module.sharethispage</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sitenavmenu.html">IBMCore.common.module.sitenavmenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.urx.html">IBMCore.common.module.urx</a></li>
+                                <li><a href="../classes/IBMCore.common.translations.html">IBMCore.common.translations</a></li>
+                                <li><a href="../classes/IBMCore.common.util.a11y.html">IBMCore.common.util.a11y</a></li>
+                                <li><a href="../classes/IBMCore.common.util.addCssRule.html">IBMCore.common.util.addCssRule</a></li>
+                                <li><a href="../classes/IBMCore.common.util.anchorlinkAdjustment.html">IBMCore.common.util.anchorlinkAdjustment</a></li>
+                                <li><a href="../classes/IBMCore.common.util.bitly.html">IBMCore.common.util.bitly</a></li>
+                                <li><a href="../classes/IBMCore.common.util.color.html">IBMCore.common.util.color</a></li>
+                                <li><a href="../classes/IBMCore.common.util.config.html">IBMCore.common.util.config</a></li>
+                                <li><a href="../classes/IBMCore.common.util.convertSecondsToHMS.html">IBMCore.common.util.convertSecondsToHMS</a></li>
+                                <li><a href="../classes/IBMCore.common.util.cookie.html">IBMCore.common.util.cookie</a></li>
+                                <li><a href="../classes/IBMCore.common.util.coreservices.html">IBMCore.common.util.coreservices</a></li>
+                                <li><a href="../classes/IBMCore.common.util.data.html">IBMCore.common.util.data</a></li>
+                                <li><a href="../classes/IBMCore.common.util.debug.html">IBMCore.common.util.debug</a></li>
+                                <li><a href="../classes/IBMCore.common.util.eventCoordinator.html">IBMCore.common.util.eventCoordinator</a></li>
+                                <li><a href="../classes/IBMCore.common.util.freezeScrollbars.html">IBMCore.common.util.freezeScrollbars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.gatekeeper.html">IBMCore.common.util.gatekeeper</a></li>
+                                <li><a href="../classes/IBMCore.common.util.generateId.html">IBMCore.common.util.generateId</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getCurrentGridSize.html">IBMCore.common.util.getCurrentGridSize</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getDataAttributes.html">IBMCore.common.util.getDataAttributes</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getScrollbarWidth.html">IBMCore.common.util.getScrollbarWidth</a></li>
+                                <li><a href="../classes/IBMCore.common.util.has12grid.html">IBMCore.common.util.has12grid</a></li>
+                                <li><a href="../classes/IBMCore.common.util.hasScrollbars.html">IBMCore.common.util.hasScrollbars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.meta.html">IBMCore.common.util.meta</a></li>
+                                <li><a href="../classes/IBMCore.common.util.perf.html">IBMCore.common.util.perf</a></li>
+                                <li><a href="../classes/IBMCore.common.util.queue.html">IBMCore.common.util.queue</a></li>
+                                <li><a href="../classes/IBMCore.common.util.scrolledintoview.html">IBMCore.common.util.scrolledintoview</a></li>
+                                <li><a href="../classes/IBMCore.common.util.scrolltracker.html">IBMCore.common.util.scrolltracker</a></li>
+                                <li><a href="../classes/IBMCore.common.util.setIpcCookie.html">IBMCore.common.util.setIpcCookie</a></li>
+                                <li><a href="../classes/IBMCore.common.util.statshelper.html">IBMCore.common.util.statshelper</a></li>
+                                <li><a href="../classes/IBMCore.common.util.storage.html">IBMCore.common.util.storage</a></li>
+                                <li><a href="../classes/IBMCore.common.util.string.htmlspecialchars.html">IBMCore.common.util.string.htmlspecialchars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.url.html">IBMCore.common.util.url</a></li>
+                                <li><a href="../classes/IBMCore.common.util.user.html">IBMCore.common.util.user</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.carousel.html">IBMCore.common.widget.carousel</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.ccfintercept.html">IBMCore.common.widget.ccfintercept</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.datatable.html">IBMCore.common.widget.datatable</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.datepicker.html">IBMCore.common.widget.datepicker</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.dyntabs.html">IBMCore.common.widget.dyntabs</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.fileinput.html">IBMCore.common.widget.fileinput</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.forms.html">IBMCore.common.widget.forms</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.formvalidator.html">IBMCore.common.widget.formvalidator</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.leavingibm.html">IBMCore.common.widget.leavingibm</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.manager.html">IBMCore.common.widget.manager</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.masonry.html">IBMCore.common.widget.masonry</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.overlay.html">IBMCore.common.widget.overlay</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.parallaxscroll.html">IBMCore.common.widget.parallaxscroll</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.rssdisplay.html">IBMCore.common.widget.rssdisplay</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.scrollable.html">IBMCore.common.widget.scrollable</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.selectlist.html">IBMCore.common.widget.selectlist</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.selectlistnav.html">IBMCore.common.widget.selectlistnav</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.setsameheight.html">IBMCore.common.widget.setsameheight</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.showhide.html">IBMCore.common.widget.showhide</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.stepindicator.html">IBMCore.common.widget.stepindicator</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.stickytabs.html">IBMCore.common.widget.stickytabs</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.syntaxhighlighter.html">IBMCore.common.widget.syntaxhighlighter</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.tablerowselector.html">IBMCore.common.widget.tablerowselector</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.tooltip.html">IBMCore.common.widget.tooltip</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.twisty.html">IBMCore.common.widget.twisty</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videolooper.html">IBMCore.common.widget.videolooper</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.html">IBMCore.common.widget.videoplayer</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.kaltura.html">IBMCore.common.widget.videoplayer.kaltura</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.ustream.html">IBMCore.common.widget.videoplayer.ustream</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.youtube.html">IBMCore.common.widget.videoplayer.youtube</a></li>
+                                <li><a href="../classes/IBMCore.namespace.html">IBMCore.namespace</a></li>
+                                <li><a href="../classes/IBMCore.www.module.dynamiccontactmodule.html">IBMCore.www.module.dynamiccontactmodule</a></li>
+                                <li><a href="../classes/IBMCore.www.module.truste.html">IBMCore.www.module.truste</a></li>
+                                <li><a href="../classes/jQuery.browser.html">jQuery.browser</a></li>
+                                <li><a href="../classes/jQuery.fn.dataTable.html">jQuery.fn.dataTable</a></li>
+                                <li><a href="../classes/jQuery.fn.slick.html">jQuery.fn.slick</a></li>
+                                <li><a href="../classes/jQuery.layout.html">jQuery.layout</a></li>
+                                <li><a href="../classes/jQuery.os.html">jQuery.os</a></li>
+                                <li><a href="../classes/jQuery:focusable.html">jQuery:focusable</a></li>
+                                <li><a href="../classes/Masonry.html">Masonry</a></li>
+                                <li><a href="../classes/Modernizr.html">Modernizr</a></li>
+                                <li><a href="../classes/Mustache.html">Mustache</a></li>
+                                <li><a href="../classes/NanoScroll.html">NanoScroll</a></li>
+                                <li><a href="../classes/Other IBM - Canada notice loader.html">Other IBM - Canada notice loader</a></li>
+                                <li><a href="../classes/Other IBM - common init.html">Other IBM - common init</a></li>
+                                <li><a href="../classes/Other IBM - common v18 page tracker.html">Other IBM - common v18 page tracker</a></li>
+                                <li><a href="../classes/Other IBM - errorchecking.html">Other IBM - errorchecking</a></li>
+                                <li><a href="../classes/Other IBM - footer feedback link.html">Other IBM - footer feedback link</a></li>
+                                <li><a href="../classes/Other IBM - grid change.html">Other IBM - grid change</a></li>
+                                <li><a href="../classes/Other IBM - jstimer-end.html">Other IBM - jstimer-end</a></li>
+                                <li><a href="../classes/Other IBM - jstimer-start.html">Other IBM - jstimer-start</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/IBMCore.html">IBMCore</a></li>
+                                <li><a href="../modules/jQuery.browser.html">jQuery.browser</a></li>
+                                <li><a href="../modules/jQuery.dataTable.html">jQuery.dataTable</a></li>
+                                <li><a href="../modules/jQuery.slick.html">jQuery.slick</a></li>
+                                <li><a href="../modules/Masonry.html">Masonry</a></li>
+                                <li><a href="../modules/Modernizr.html">Modernizr</a></li>
+                                <li><a href="../modules/Mustache.html">Mustache</a></li>
+                                <li><a href="../modules/Nanoscroller.html">Nanoscroller</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4"style="float: left;width:75%;">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected" checked>
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private" checked>
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated" checked>
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>IBMCore.common.util.a11y Class</h1>
+                        <div class="box meta">
+                        
+                        
+                                <div class="foundat">
+                                    Defined in: <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l1"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:1</code></a>
+                                </div>
+                        
+                                    Module: <a href="../modules/IBMCore.html">IBMCore</a>
+                        
+                        </div>
+                        
+                        
+                        <div class="box intro">
+                            <p>Accessibility utilities.
+                        <br />Things in here are only cases where it's not feasible nor realistic for the page dev to put
+                        proper accessibility keyboard controls (required by JS) on an element. Item here are for <strong>page shell elements only</strong>.
+                        <br />
+                        <br />Currently these are generic a11y utilities and widgets, and only contain inits for
+                        primary tabs (since there's no other JS associated with them.)
+                        <br />
+                        <br />Accessibility is responsibility of the thing that generates the HTML element on the page:
+                        <br />Template generator or widget's JS or page developer (for content space HTML).</p>
+                        
+                        </div>
+                        
+                        
+                        <div id="classdocs" class="tabview">
+                            <ul class="api-class-tabs">
+                                <li class="api-class-tab index"><a href="#index">Index</a></li>
+                        
+                                    <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+                            </ul>
+                        
+                            <div>
+                                <div id="index" class="api-class-tabpanel index">
+                                    <h2 class="off-left">Item Index</h2>
+                        
+                                        <div class="index-section methods">
+                                            <h3>Methods</h3>
+                        
+                                            <ul class="index-list methods">
+                                                    <li class="index-item method private">
+                                                        <a href="#method_addMainElementLabel">addMainElementLabel</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_gotoChildTreeLink">gotoChildTreeLink</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_gotoFirstItem">gotoFirstItem</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_gotoLastItem">gotoLastItem</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_gotoNextItem">gotoNextItem</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_gotoNextLink">gotoNextLink</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_gotoNextTreeLink">gotoNextTreeLink</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_gotoParentTreeLink">gotoParentTreeLink</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_gotoPrevLink">gotoPrevLink</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_gotoPrevTreeLink">gotoPrevTreeLink</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_makeMenuAccessible">makeMenuAccessible</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_makeTabsAccessible">makeTabsAccessible</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_makeToolbarAccessible">makeToolbarAccessible</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_makeTreeAccessible">makeTreeAccessible</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_menuDownArrowControl">menuDownArrowControl</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_menuLeftArrowControl">menuLeftArrowControl</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_menuRightArrowControl">menuRightArrowControl</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_menuUpArrowControl">menuUpArrowControl</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_openMenu">openMenu</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_setLinkAsActive">setLinkAsActive</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        
+                        
+                        
+                                </div>
+                        
+                                    <div id="methods" class="api-class-tabpanel">
+                                        <h2 class="off-left">Methods</h2>
+                        
+                                            <div id="method_addMainElementLabel" class="method item private">
+                                                <h3 class="name"><code>addMainElementLabel</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l742"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:742</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Automatically and dynamically sets the label on the &lt;main&gt; element using text from the selected tab, subtab, and H1 on DOM ready.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="method_gotoChildTreeLink" class="method item private">
+                                                <h3 class="name"><code>gotoChildTreeLink</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$treeContainer</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l703"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:703</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Focus on the first link in the next level down from the currently focused link level in the tree widget. This is
+                                            specific for a tree structure (ULs and nexted ULs).
+                                            <br />If there is no child level/links tree, goto the next link in the current link level per a11y standards.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$treeContainer</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The container that houses all the items.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_gotoFirstItem" class="method item">
+                                                <h3 class="name"><code>gotoFirstItem</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$linksContainer</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l549"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:549</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Focus on the first visible link in the given container element. This just finds the first descendent link and focuses on it.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$linksContainer</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The element that contains links that you want to focus on the first one in.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_gotoLastItem" class="method item private">
+                                                <h3 class="name"><code>gotoLastItem</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$linksContainer</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l560"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:560</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Focus on the last visible link in the given container element. This just finds the last descendent link and focuses on it,
+                                            no matter what the internal HTML structure is for container.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$linksContainer</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The element that contains links that you want to focus on the last one in.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_gotoNextItem" class="method item private">
+                                                <h3 class="name"><code>gotoNextItem</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$currentLink</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l620"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:620</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Focus on the next item (LI/A)
+                                            <br />If there is no next item (the last one is currently in focus), this loops back and goes to the first link per
+                                            a11y standards.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$currentLink</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The currently focused link.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_gotoNextLink" class="method item private">
+                                                <h3 class="name"><code>gotoNextLink</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$linksContainer</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l572"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:572</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Focus on the next visible link (from current focused one) in the given container element. This uses the container's @data-activeindex
+                                            to determine what the current focused link index # is. Used by methods that do and don't want tabindex changed.
+                                            <br />If there is no next link (the last one is currently in focus), this loops back and goes to the first link per
+                                            a11y standards.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$linksContainer</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The element that contains links that you want to focus on the next one in.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_gotoNextTreeLink" class="method item private">
+                                                <h3 class="name"><code>gotoNextTreeLink</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$treeContainer</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l641"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:641</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Focus on the next link in the tree widget (from current focused one). This is specific for a tree structure
+                                            (ULs and nexted ULs).
+                                            <br />If there is no next link (the last one is currently in focus), this loops back and goes to the first link per
+                                            a11y standards.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$treeContainer</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The container that houses all the items.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_gotoParentTreeLink" class="method item private">
+                                                <h3 class="name"><code>gotoParentTreeLink</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$currentLink</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l683"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:683</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Focus on the parent link of the currently focused link in the tree widget. This is specific for a tree structure
+                                            (ULs and nexted ULs).
+                                            <br />If there is no parent tree, goto the previous link in the current link level per a11y standards.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$currentLink</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The currently focused link.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_gotoPrevLink" class="method item private">
+                                                <h3 class="name"><code>gotoPrevLink</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$linksContainer</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l595"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:595</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Focus on the previous visible link (from current focused one) in the given container element. This uses the container's</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$linksContainer</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The element that contains links that you want to focus on the previous one in.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_gotoPrevTreeLink" class="method item private">
+                                                <h3 class="name"><code>gotoPrevTreeLink</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$treeContainer</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l662"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:662</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Focus on the previous link in the tree widget (from current focused one). This is specific for a tree structure
+                                            (ULs and nexted ULs).
+                                            <br />If there is no previous link (the first one in the current level UL is currently in focus), this loops back and
+                                            goes to the last link per a11y standards.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$treeContainer</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The container that houses all the items.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_makeMenuAccessible" class="method item">
+                                                <h3 class="name"><code>makeMenuAccessible</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>settings</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l114"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:114</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Take a named list element (UL) and setup standard menu (WAI menu widget) keyboard accessibility controls for it.
+                                            <br />A &quot;menu&quot; is a specifially designed a11y widget which is simply a list with items and nested lists.
+                                            <br />The menu is a single tab stop and controls within the menu items is done via arrow keys.
+                                            <br />A menu does NOT need (and typically doesn't have) a &quot;selected&quot; state so tab focus in is usually just on the first element. As well, it does not need to remember what menu item you were on, when focus is removed.
+                                            <br />There's not much flexibility in the core structure: UL &gt; LI &gt; A + UL &gt; LI &gt; A, etc. and because of this, this a11y
+                                            widget can be applied to <em>any</em> menu-type HTML structure to satisfy a11y requirements b/c it relies on the required HTML
+                                            structure and can easily use .next() and .prev() and .parent() successfully.
+                                            <br />How it works: This widget uses .on() and delegated event handling, which means menu items/links can be dynamically
+                                            injected at any time and they will automatically work in the flow of the keyboard controls without needing to re-init
+                                            or specifically bind the new items.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">settings</code>
+                                                                    <span class="type">Object</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>Object with optional cookie settings:</p>
+                                            
+                                                                </div>
+                                            
+                                                                    <ul class="params-list">
+                                                                        <li class="param">
+                                                                                <code class="param-name">el</code>
+                                                                                <span class="type">DOM element</span>
+                                            
+                                                                            <div class="param-description">
+                                                                                <p>The UL to apply the menu accessibility controls to.</p>
+                                            
+                                                                            </div>
+                                            
+                                                                        </li>
+                                                                        <li class="param">
+                                                                                <code class="param-name optional">[focus]</code>
+                                                                                <span class="type">Function</span>
+                                                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                                                            <div class="param-description">
+                                                                                <p>A custom function to call on focus of an element in the menu. Gets passed the element and
+                                            the event object.</p>
+                                            
+                                                                            </div>
+                                            
+                                                                        </li>
+                                                                        <li class="param">
+                                                                                <code class="param-name optional">[keydown]</code>
+                                                                                <span class="type">Function</span>
+                                                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                                                            <div class="param-description">
+                                                                                <p>A custom function to call on keydown on an element in the menu. Gets passed the element</p>
+                                            
+                                                                            </div>
+                                            
+                                                                        </li>
+                                                                    </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_makeTabsAccessible" class="method item">
+                                                <h3 class="name"><code>makeTabsAccessible</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>settings</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l366"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:366</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Take a named SINGLE tab set (a UL) and setup standard tabs (WAI tablist) keyboard accessibility controls for it.
+                                            <br />What's special: This a11y control widget applies to a single UL, not nested ULs (like a &quot;tree&quot;). It differs from a
+                                            toolbar b/c it has one &quot;selected&quot; item, and the tabindex does <strong>not</strong> change, which are the opposite of a menubar
+                                            <br />The HTML structure of tabs are generally the same, but not always and can't guarantee they are in UL format. DIVs are
+                                            starting to replace ULs for tabbing and menus structure.
+                                            <b />Since we can't be 100% sure what level links are coded in tabs, we can't use .next/prev() because the link might be
+                                            in a span, or in a LI, or in a span in a LI, etc. or even a DIV, and the next one might need to be traversed via a parent()
+                                            or parent.parent().
+                                            <br />How it works: It works the same as the toolbar a11y widget: We collect an array of <strong>all</strong> links in the UL no matter
+                                            how they are nested in HTML, and use their index # from the arrayto determine the prev/next link to focus on. This widget
+                                            uses .on() and delegated event handling, which means tree items/links can be dynamically injected at any time and they will
+                                            automatically work in the flow of the keyboard controls without needing to re-init or specifically bind the new items.
+                                            <br />An example where is is used is primary-tabs and secondary-tabs on a tab nav layout page.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">settings</code>
+                                                                    <span class="type">Object</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>Settings for the tablist accessibility widget.</p>
+                                            
+                                                                </div>
+                                            
+                                                                    <ul class="params-list">
+                                                                        <li class="param">
+                                                                                <code class="param-name">el</code>
+                                                                                <span class="type">DOM element</span>
+                                            
+                                                                            <div class="param-description">
+                                                                                <p>The element/container to apply the tablist a11y controls to.</p>
+                                            
+                                                                            </div>
+                                            
+                                                                        </li>
+                                                                        <li class="param">
+                                                                                <code class="param-name optional">[focus]</code>
+                                                                                <span class="type">Function</span>
+                                                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                                                            <div class="param-description">
+                                                                                <p>A custom function to call on focus of an element in the tablist. Gets passed the element and
+                                            the event object.</p>
+                                            
+                                                                            </div>
+                                            
+                                                                        </li>
+                                                                        <li class="param">
+                                                                                <code class="param-name optional">[keydown]</code>
+                                                                                <span class="type">Function</span>
+                                                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                                                            <div class="param-description">
+                                                                                <p>A custom function to call on keydown on an element in the tablist. Gets passed the element
+                                            and the event object.</p>
+                                            
+                                                                            </div>
+                                            
+                                                                        </li>
+                                                                    </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_makeToolbarAccessible" class="method item">
+                                                <h3 class="name"><code>makeToolbarAccessible</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>settings</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l458"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:458</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Take a named element (a toolbar container) and setup standard toolbar (WAI toolbar) keyboard accessibility controls for it.
+                                            <br />What's special: This a11y control widget applies to a container of links, which are serial in nature/display and do not
+                                            contain nested, dropdown, or dynamic changing content. It differs from a tablist b/c it has never has a &quot;selected&quot; item, but
+                                            has a single tabstop which chnages based on the last focus'd item, which is the opposite of tabs.
+                                            <br />The HTML structure of a toolbar is completely unknown. Because of this we can't use .next/prev() because there is no way
+                                            to know what level of HTML nesting the actual link is in.
+                                            <br />How it works: It works the same as the tablist a11y widget: We collect an array of <strong>all</strong> links in the toolbar container
+                                            no matter how they are nested in HTML, and use their index # from the array to determine the prev/next link to focus on. This
+                                            widget uses .on() and delegated event handling, which means tree items/links can be dynamically injected at any time and they will automatically work in the flow of the keyboard controls without needing to re-init or specifically bind the new items.
+                                            <br />An example where is is used is the masthead country/lang links, and the social sharing toolbar.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">settings</code>
+                                                                    <span class="type">Object</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>Settings for the toolbar accessibility widget.</p>
+                                            
+                                                                </div>
+                                            
+                                                                    <ul class="params-list">
+                                                                        <li class="param">
+                                                                                <code class="param-name">el</code>
+                                                                                <span class="type">DOM element</span>
+                                            
+                                                                            <div class="param-description">
+                                                                                <p>The element/container to apply the toolbar a11y controls to.</p>
+                                            
+                                                                            </div>
+                                            
+                                                                        </li>
+                                                                        <li class="param">
+                                                                                <code class="param-name optional">[focus]</code>
+                                                                                <span class="type">Function</span>
+                                                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                                                            <div class="param-description">
+                                                                                <p>A custom function to call on focus of an element in the toolbar. Gets passed the element
+                                            and the event object.</p>
+                                            
+                                                                            </div>
+                                            
+                                                                        </li>
+                                                                        <li class="param">
+                                                                                <code class="param-name optional">[keydown]</code>
+                                                                                <span class="type">Function</span>
+                                                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                                                            <div class="param-description">
+                                                                                <p>A custom function to call on keydown on an element in the toolbar. Gets passed the element
+                                            and the event object.</p>
+                                            
+                                                                            </div>
+                                            
+                                                                        </li>
+                                                                    </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_makeTreeAccessible" class="method item">
+                                                <h3 class="name"><code>makeTreeAccessible</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>settings</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l21"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:21</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Take a named list element (UL) and setup standard tree (WAI tree widget) keyboard accessibility controls for it.
+                                            <br />A &quot;tree&quot; is a specifially designed a11y widget which is simply a list with items and nested lists.
+                                            <br />A tree usually has a &quot;selected&quot; state so tab focus-in should goto the active/highlighted element.
+                                            <br />There's not much flexibility in the core structure: UL &gt; LI &gt; A + UL &gt; LI &gt; A, etc. and because of this, this a11y
+                                            widget can be applied to <em>any</em> tree-type HTML structure to satisfy a11y requirements b/c it relies on the required HTML
+                                            structure and can easily use .next() and .prev() and .parent() successfully.
+                                            <br />How it works: This widget uses .on() and delegated event handling, which means tree items/links can be dynamically
+                                            injected at any time and they will automatically work in the flow of the keyboard controls without needing to re-init
+                                            or specifically bind the new items.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">settings</code>
+                                                                    <span class="type">Object</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>Settings for the tree accessibility widget.</p>
+                                            
+                                                                </div>
+                                            
+                                                                    <ul class="params-list">
+                                                                        <li class="param">
+                                                                                <code class="param-name">el</code>
+                                                                                <span class="type">DOM element</span>
+                                            
+                                                                            <div class="param-description">
+                                                                                <p>The UL to apply the tree accessibility controls to.</p>
+                                            
+                                                                            </div>
+                                            
+                                                                        </li>
+                                                                        <li class="param">
+                                                                                <code class="param-name optional">[focus]</code>
+                                                                                <span class="type">Function</span>
+                                                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                                                            <div class="param-description">
+                                                                                <p>A custom function to call on focus of an element in the tree. Gets passed the element and
+                                            the event object.</p>
+                                            
+                                                                            </div>
+                                            
+                                                                        </li>
+                                                                        <li class="param">
+                                                                                <code class="param-name optional">[keydown]</code>
+                                                                                <span class="type">Function</span>
+                                                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                                                            <div class="param-description">
+                                                                                <p>A custom function to call on keydown on an element in the tree. Gets passed the element
+                                            and the event object.</p>
+                                            
+                                                                            </div>
+                                            
+                                                                        </li>
+                                                                    </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_menuDownArrowControl" class="method item private">
+                                                <h3 class="name"><code>menuDownArrowControl</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$currentItemLink</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l224"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:224</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>On callback of down arrow; checks if there's a menu for the current item. If so, it opens and goes to first item in
+                                            the menu, else it goes to the next sibling item to the item passed.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$currentItemLink</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The currently focused link.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_menuLeftArrowControl" class="method item private">
+                                                <h3 class="name"><code>menuLeftArrowControl</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$currentItemLink</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l299"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:299</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>On callback of left arrow. If there's no previous item, loops to last one. If focus is on a sub-menu item, it hops to the previous
+                                            main menu bar item and opens that menu (if exists), else just highlights the previous main menu item or loops to last one.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$currentItemLink</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The currently focused link.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_menuRightArrowControl" class="method item private">
+                                                <h3 class="name"><code>menuRightArrowControl</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$currentItemLink</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l264"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:264</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>On callback of right arrow. If there's no next item, loops to first one. If focus is on a sub-menu item, it hops to the next
+                                            main menu bar item and opens that menu (if exists), else just highlights the next main menu item or loops to first one.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$currentItemLink</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The currently focused link.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_menuUpArrowControl" class="method item private">
+                                                <h3 class="name"><code>menuUpArrowControl</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$currentItemLink</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l334"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:334</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>On callback of up arrow; checks if there's a menu for the current item. If so, it opens and goes to first item in
+                                            the menu, else it goes to the previous sibling item to the item passed.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$currentItemLink</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The currently focused link.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_openMenu" class="method item private">
+                                                <h3 class="name"><code>openMenu</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$currentItemLink</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l251"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:251</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Adds an active class to the current main item's parent. Doesn't actually &quot;open&quot; the menu, but sets a class
+                                            on the parent and CSS &quot;shows&quot; the nested UL based on that class.
+                                            <br/>Used in conjunction with &quot;gotoFirstItem&quot; (called after this is called).</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$currentItemLink</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The currently focused link.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_setLinkAsActive" class="method item private">
+                                                <h3 class="name"><code>setLinkAsActive</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$linksContainer</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>$linkEl</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_util_accessibility.js.html#l723"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;util&#x2F;accessibility.js:723</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Removes the tabstop from every link in the container and places it on the link.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$linksContainer</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The container that houses all the items.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">$linkEl</code>
+                                                                    <span class="type">JQuery selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The link you want to make active and put the tabstop (tabindex=0) on. Removes it from other items in the container.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                    </div>
+                        
+                        
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

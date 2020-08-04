@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <title>src/js/sources/ibm/common/widgets/videoplayer-kaltura.js - IBM v18 (Northstar) common Javascript documentation</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" href="http://www.ibm.com/favicon.ico">
+    <script>
+        digitalData = {
+            page: {
+                pageInfo: {
+                    effectiveDate: '2017-02-25',
+                    expiryDate: '2020-02-25',
+                    language: 'en-US',
+                    publishDate: '2017-02-25',
+                    publisher: 'IBM Corporation',
+                    ibm: {
+                        contentDelivery: 'yuidoc via grunt',
+                        contentProducer: 'Michael Santelia',
+                        country: 'US',
+                        owner: 'Michael Santelia'
+                    }
+                }
+            }
+        };
+    </script>
+
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+
+    <script>
+
+		var lastUpdate = new Date(document.lastModified),
+			updatedMonth = lastUpdate.getMonth(),
+			updatedDate = lastUpdate.getDate(),
+			updatedYear = lastUpdate.getFullYear(),
+			today = new Date(),
+			todayMonth = today.getMonth(),
+			todayDate = today.getDate(),
+			todayYear = today.getFullYear(),
+			monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"],
+			lastUpdatedText = "",
+			daysAgo = Math.floor((today - lastUpdate) / (1000*60*60*24));
+
+		updatedMonthName = monthNames[updatedMonth];
+
+		switch (daysAgo) {
+
+			case 1: 
+				lastUpdatedText = "Updated yesterday";
+				break;
+				
+			case 0: 
+				lastUpdatedText = "Updated today";
+				break;
+				
+			default: 
+				lastUpdatedText = "Updated " + daysAgo + " days ago";
+				break;
+		}
+
+		if (daysAgo > 4) {
+			lastUpdatedText = "Updated: " + updatedMonthName + " " + updatedDate + ", " + updatedYear;
+		}
+
+    </script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-1-2">
+            <div style="background: url(http://1.www.s81c.com/i/v17/t/ibm-logo.png) no-repeat scroll 0px 0px transparent; width: 105px; height: 45px; margin: 0.85em 0px;text-indent:-9999px;">IBM v18 (Northstar) common Javascript documentation</div>
+        </div>
+        <div class="yui3-u-1-2 version">
+            <em>Javascript documentation for: IBM v18 (Northstar)<br />
+            	<span style="font-size: 0.6em; position: absolute; right: 35px;"><script>document.writeln(lastUpdatedText)</script></span></em>
+        </div>
+    </div>
+    
+    <p><a href="../assets../../v18-js-source-documentation.zip" style="margin-left: 10px; padding-left: 15px; background: url(http://1.www.s81c.com/i/v17/icons/ibm_sprite_transactional_blue_ON.png) no-repeat 0 -202px;">Download a copy of this documentation (ZIP).</a></p>
+    
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4" style="float: left;width:25%;">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/IBMCore.common.module.backtotop.html">IBMCore.common.module.backtotop</a></li>
+                                <li><a href="../classes/IBMCore.common.module.canadanotice.html">IBMCore.common.module.canadanotice</a></li>
+                                <li><a href="../classes/IBMCore.common.module.contactmodule.html">IBMCore.common.module.contactmodule</a></li>
+                                <li><a href="../classes/IBMCore.common.module.footer.html">IBMCore.common.module.footer</a></li>
+                                <li><a href="../classes/IBMCore.common.module.footermenu.html">IBMCore.common.module.footermenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.leftnav.html">IBMCore.common.module.leftnav</a></li>
+                                <li><a href="../classes/IBMCore.common.module.liveperson.html">IBMCore.common.module.liveperson</a></li>
+                                <li><a href="../classes/IBMCore.common.module.localeselector.html">IBMCore.common.module.localeselector</a></li>
+                                <li><a href="../classes/IBMCore.common.module.localpagenotification.html">IBMCore.common.module.localpagenotification</a></li>
+                                <li><a href="../classes/IBMCore.common.module.masthead.html">IBMCore.common.module.masthead</a></li>
+                                <li><a href="../classes/IBMCore.common.module.masthead.sticky.html">IBMCore.common.module.masthead.sticky</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mastheadbanner.html">IBMCore.common.module.mastheadbanner</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mastheadsearch.html">IBMCore.common.module.mastheadsearch</a></li>
+                                <li><a href="../classes/IBMCore.common.module.merchandising.html">IBMCore.common.module.merchandising</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mobilemenu.html">IBMCore.common.module.mobilemenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sharethiscontent.html">IBMCore.common.module.sharethiscontent</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sharethispage.html">IBMCore.common.module.sharethispage</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sitenavmenu.html">IBMCore.common.module.sitenavmenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.urx.html">IBMCore.common.module.urx</a></li>
+                                <li><a href="../classes/IBMCore.common.translations.html">IBMCore.common.translations</a></li>
+                                <li><a href="../classes/IBMCore.common.util.a11y.html">IBMCore.common.util.a11y</a></li>
+                                <li><a href="../classes/IBMCore.common.util.addCssRule.html">IBMCore.common.util.addCssRule</a></li>
+                                <li><a href="../classes/IBMCore.common.util.anchorlinkAdjustment.html">IBMCore.common.util.anchorlinkAdjustment</a></li>
+                                <li><a href="../classes/IBMCore.common.util.bitly.html">IBMCore.common.util.bitly</a></li>
+                                <li><a href="../classes/IBMCore.common.util.color.html">IBMCore.common.util.color</a></li>
+                                <li><a href="../classes/IBMCore.common.util.config.html">IBMCore.common.util.config</a></li>
+                                <li><a href="../classes/IBMCore.common.util.convertSecondsToHMS.html">IBMCore.common.util.convertSecondsToHMS</a></li>
+                                <li><a href="../classes/IBMCore.common.util.cookie.html">IBMCore.common.util.cookie</a></li>
+                                <li><a href="../classes/IBMCore.common.util.coreservices.html">IBMCore.common.util.coreservices</a></li>
+                                <li><a href="../classes/IBMCore.common.util.data.html">IBMCore.common.util.data</a></li>
+                                <li><a href="../classes/IBMCore.common.util.debug.html">IBMCore.common.util.debug</a></li>
+                                <li><a href="../classes/IBMCore.common.util.eventCoordinator.html">IBMCore.common.util.eventCoordinator</a></li>
+                                <li><a href="../classes/IBMCore.common.util.freezeScrollbars.html">IBMCore.common.util.freezeScrollbars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.gatekeeper.html">IBMCore.common.util.gatekeeper</a></li>
+                                <li><a href="../classes/IBMCore.common.util.generateId.html">IBMCore.common.util.generateId</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getCurrentGridSize.html">IBMCore.common.util.getCurrentGridSize</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getDataAttributes.html">IBMCore.common.util.getDataAttributes</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getScrollbarWidth.html">IBMCore.common.util.getScrollbarWidth</a></li>
+                                <li><a href="../classes/IBMCore.common.util.has12grid.html">IBMCore.common.util.has12grid</a></li>
+                                <li><a href="../classes/IBMCore.common.util.hasScrollbars.html">IBMCore.common.util.hasScrollbars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.meta.html">IBMCore.common.util.meta</a></li>
+                                <li><a href="../classes/IBMCore.common.util.perf.html">IBMCore.common.util.perf</a></li>
+                                <li><a href="../classes/IBMCore.common.util.queue.html">IBMCore.common.util.queue</a></li>
+                                <li><a href="../classes/IBMCore.common.util.scrolledintoview.html">IBMCore.common.util.scrolledintoview</a></li>
+                                <li><a href="../classes/IBMCore.common.util.scrolltracker.html">IBMCore.common.util.scrolltracker</a></li>
+                                <li><a href="../classes/IBMCore.common.util.setIpcCookie.html">IBMCore.common.util.setIpcCookie</a></li>
+                                <li><a href="../classes/IBMCore.common.util.statshelper.html">IBMCore.common.util.statshelper</a></li>
+                                <li><a href="../classes/IBMCore.common.util.storage.html">IBMCore.common.util.storage</a></li>
+                                <li><a href="../classes/IBMCore.common.util.string.htmlspecialchars.html">IBMCore.common.util.string.htmlspecialchars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.url.html">IBMCore.common.util.url</a></li>
+                                <li><a href="../classes/IBMCore.common.util.user.html">IBMCore.common.util.user</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.carousel.html">IBMCore.common.widget.carousel</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.ccfintercept.html">IBMCore.common.widget.ccfintercept</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.datatable.html">IBMCore.common.widget.datatable</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.datepicker.html">IBMCore.common.widget.datepicker</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.dyntabs.html">IBMCore.common.widget.dyntabs</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.fileinput.html">IBMCore.common.widget.fileinput</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.forms.html">IBMCore.common.widget.forms</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.formvalidator.html">IBMCore.common.widget.formvalidator</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.leavingibm.html">IBMCore.common.widget.leavingibm</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.manager.html">IBMCore.common.widget.manager</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.masonry.html">IBMCore.common.widget.masonry</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.overlay.html">IBMCore.common.widget.overlay</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.parallaxscroll.html">IBMCore.common.widget.parallaxscroll</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.rssdisplay.html">IBMCore.common.widget.rssdisplay</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.scrollable.html">IBMCore.common.widget.scrollable</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.selectlist.html">IBMCore.common.widget.selectlist</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.selectlistnav.html">IBMCore.common.widget.selectlistnav</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.setsameheight.html">IBMCore.common.widget.setsameheight</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.showhide.html">IBMCore.common.widget.showhide</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.stepindicator.html">IBMCore.common.widget.stepindicator</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.stickytabs.html">IBMCore.common.widget.stickytabs</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.syntaxhighlighter.html">IBMCore.common.widget.syntaxhighlighter</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.tablerowselector.html">IBMCore.common.widget.tablerowselector</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.tooltip.html">IBMCore.common.widget.tooltip</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.twisty.html">IBMCore.common.widget.twisty</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videolooper.html">IBMCore.common.widget.videolooper</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.html">IBMCore.common.widget.videoplayer</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.kaltura.html">IBMCore.common.widget.videoplayer.kaltura</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.ustream.html">IBMCore.common.widget.videoplayer.ustream</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.youtube.html">IBMCore.common.widget.videoplayer.youtube</a></li>
+                                <li><a href="../classes/IBMCore.namespace.html">IBMCore.namespace</a></li>
+                                <li><a href="../classes/IBMCore.www.module.dynamiccontactmodule.html">IBMCore.www.module.dynamiccontactmodule</a></li>
+                                <li><a href="../classes/IBMCore.www.module.truste.html">IBMCore.www.module.truste</a></li>
+                                <li><a href="../classes/jQuery.browser.html">jQuery.browser</a></li>
+                                <li><a href="../classes/jQuery.fn.dataTable.html">jQuery.fn.dataTable</a></li>
+                                <li><a href="../classes/jQuery.fn.slick.html">jQuery.fn.slick</a></li>
+                                <li><a href="../classes/jQuery.layout.html">jQuery.layout</a></li>
+                                <li><a href="../classes/jQuery.os.html">jQuery.os</a></li>
+                                <li><a href="../classes/jQuery:focusable.html">jQuery:focusable</a></li>
+                                <li><a href="../classes/Masonry.html">Masonry</a></li>
+                                <li><a href="../classes/Modernizr.html">Modernizr</a></li>
+                                <li><a href="../classes/Mustache.html">Mustache</a></li>
+                                <li><a href="../classes/NanoScroll.html">NanoScroll</a></li>
+                                <li><a href="../classes/Other IBM - Canada notice loader.html">Other IBM - Canada notice loader</a></li>
+                                <li><a href="../classes/Other IBM - common init.html">Other IBM - common init</a></li>
+                                <li><a href="../classes/Other IBM - common v18 page tracker.html">Other IBM - common v18 page tracker</a></li>
+                                <li><a href="../classes/Other IBM - errorchecking.html">Other IBM - errorchecking</a></li>
+                                <li><a href="../classes/Other IBM - footer feedback link.html">Other IBM - footer feedback link</a></li>
+                                <li><a href="../classes/Other IBM - grid change.html">Other IBM - grid change</a></li>
+                                <li><a href="../classes/Other IBM - jstimer-end.html">Other IBM - jstimer-end</a></li>
+                                <li><a href="../classes/Other IBM - jstimer-start.html">Other IBM - jstimer-start</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/IBMCore.html">IBMCore</a></li>
+                                <li><a href="../modules/jQuery.browser.html">jQuery.browser</a></li>
+                                <li><a href="../modules/jQuery.dataTable.html">jQuery.dataTable</a></li>
+                                <li><a href="../modules/jQuery.slick.html">jQuery.slick</a></li>
+                                <li><a href="../modules/Masonry.html">Masonry</a></li>
+                                <li><a href="../modules/Modernizr.html">Modernizr</a></li>
+                                <li><a href="../modules/Mustache.html">Mustache</a></li>
+                                <li><a href="../modules/Nanoscroller.html">Nanoscroller</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4"style="float: left;width:75%;">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected" checked>
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private" checked>
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated" checked>
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src/js/sources/ibm/common/widgets/videoplayer-kaltura.js</h1>
+                        
+                        <div class="file">
+                            <pre class="code prettyprint linenums">
+                        /**
+                        
+                          Kaltura video widget.
+                          &lt;br&gt;Dependency: videoplayer.js
+                          &lt;br&gt;View the &lt;a href=&quot;IBMCore.common.widget.videoplayer.html&quot;&gt;videoplayer.js&lt;/a&gt; for all implementation and options detailer. It is the main controller class that creates the proper object and setup.
+                          &lt;br&gt;This is the video player sub-class for the Kaltura embedded video player object.
+                          &lt;br&gt;
+                          &lt;br&gt;__Event usage__: Subscribe to the IBM widget init event that fires on your DOM element to know when the widget has been initialized and you can access its APIs.
+                        
+                          @class IBMCore.common.widget.videoplayer.kaltura
+                        
+                        **/
+                        
+                        /**
+                          Notes:
+                        
+                          Kaltura API/events:  http://www.kaltura.org/demos/kdp3/docs.html
+                          Reusing a player (just change loaded video, for playlist with thumbs):  http://player.kaltura.com/docs/changeMedia
+                        
+                        **/
+                        
+                        (function($, IBM) {
+                          var ibmKt = IBM.namespace(IBM, &#x27;common.widget.videoplayer.kaltura&#x27;),
+                            api = {
+                              dev: {
+                                partnerId: 1511271,
+                                uiConfId: {
+                                  title_sharing: 27801331,
+                                },
+                              },
+                              prod: {
+                                partnerId: 1773841,
+                                uiConfId: {
+                                  title_sharing: 27941801,
+                                },
+                              },
+                              embedVideo: {
+                                dynamic:
+                                  &#x27;https://cdnapisec.kaltura.com/p/{partnerId}/sp/{partnerId}00/embedIframeJs/uiconf_id/{uiConfId}/partner_id/{partnerId}&#x27;,
+                              },
+                              images: {
+                                video:
+                                  &#x27;https://cfvod.kaltura.com/p/{partnerId}/sp/{partnerId}00/thumbnail/entry_id/{videoId}/acv/191/width/{width}&#x27;,
+                              },
+                            };
+                        
+                          // Flag so that multiple KT widgets on a page only load the API once for the entire page.
+                          ibmKt.apiStatus = &#x27;&#x27;;
+                        
+                          /**
+                            Published on widget&#x27;s DOM element after Kaltura placeholder trigger is clicked and video player is injected.
+                            &lt;br&gt;&lt;strong&gt;Example usage&lt;/strong&gt;:
+                            &lt;pre&gt;
+                              jQuery(&quot;&amp;lt;your_widget_selector&gt;&quot;)[0].addEventListener(&quot;ibm-init&quot;, function (evt) {
+                                  // Kaltura player widget is embedded and API is available.
+                              });
+                            &lt;/pre&gt;
+                        
+                            @event ibm-init
+                          **/
+                          /**
+                            Creates the API URL using the object data.
+                        
+                            @method createApiUrl
+                            @private
+                            @param data {Object} Object with data values to populate API template varaibles.
+                            @return {String} The API URL to call.
+                          **/
+                          function createApiUrl(data) {
+                            return data.url
+                              .replace(/\{partnerId\}/g, api.prod.partnerId)
+                              .replace(/\{uiConfId\}/g, getPlayerId())
+                              .replace(/\{videoId\}/g, data.videoId)
+                              .replace(/\{width\}/g, data.width)
+                              .replace(/\{height\}/g, data.height);
+                          }
+                        
+                          /**
+                            Returns the Kaltura player UID to use.
+                            &lt;br /&gt;There are different one for prod vs. dev KT environment. Manually set to dev if you need to test something
+                            in Kaltura dev environment. Usually you don&#x27;t need to.
+                        
+                            @method getPlayerId
+                            @private
+                            @return {String} The UID of the Kaltura player to use.
+                          **/
+                          function getPlayerId() {
+                            var id = api.prod.uiConfId.title_sharing;
+                            return id;
+                          }
+                        
+                          /**
+                            Loads the Kaltura IFRAME API for the player. Only runs once, based on empty api status/flag.
+                        
+                            @method loadApi
+                          **/
+                          ibmKt.loadApi = function() {
+                            if (ibmKt.apiStatus !== &#x27;&#x27;) {
+                              return;
+                            }
+                        
+                            ibmKt.apiStatus = &#x27;loading&#x27;;
+                        
+                            var apiUrl = createApiUrl({ url: api.embedVideo.dynamic }),
+                              tag = document.createElement(&#x27;script&#x27;),
+                              firstScriptTag = document.getElementsByTagName(&#x27;script&#x27;)[0];
+                        
+                            tag.src = apiUrl;
+                            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                          };
+                        
+                          /**
+                            Player contructor object for the Kaltura video player.
+                            &lt;br /&gt;Dependency: videoplayer.js
+                            &lt;br /&gt;Used by the video player factory in videoplayer.js file, which is used by the jQuery plug-in.
+                            &lt;br /&gt;You can&#x27;t use this directly. Use the standard jQuery(xxxx).videoplayer() plug-in method to create a video player.
+                        
+                            @method Player
+                            @constructor
+                            @param [settings] {Object} Settings to override defaults and element&#x27;s @data-xxxx attributes.
+                            @example
+                              // You can access your widget object that was created (this) using the standard convention:
+                              jQuery(&quot;&lt;your_player_container_selector&gt;&quot;).data(&quot;widget&quot;);
+                          **/
+                          ibmKt.Player = function(userSettings) {
+                            var me = this,
+                              myEvents = IBM.common.util.eventCoordinator(me, &#x27;videoplayer&#x27;, [
+                                &#x27;videoDataReady&#x27;,
+                              ]),
+                              ibmVp = IBM.common.widget.videoplayer,
+                              appliedPlayerVars = {},
+                              appliedSettings = {},
+                              defaults = {
+                                settings: {
+                                  // Make ALL LOWERCASE so they can be overridden by @data-attr (works in lowercase only).
+                                  carouselcolumns: 6,
+                                  customplaceholder: false,
+                                  maxnumvideos: 20,
+                                  overlayclasses: &#x27;ibm-common-overlay ibm-overlay-alt&#x27;,
+                                  overlayplayerwidth: 564,
+                                  overlayplayersize: &#x27;medium&#x27;, // &quot;medium&quot; is the preset for the above overlay params
+                                  placeholderalttext: &#x27;&#x27;,
+                                  showimageplaybutton: true,
+                                  showvideodescription: false,
+                                  showvideoduration: true,
+                                  showvideotitle: true,
+                                  theatermode: false,
+                                  titledisplaytype: &#x27;below&#x27;,
+                                  videodisplay: &#x27;inline&#x27;,
+                                  videodurationcolor: &#x27;default&#x27;,
+                                  videoid: &#x27;&#x27;, // Single video or CSV for &quot;manual&quot; playlists.
+                                  videoplaylistid: &#x27;&#x27;, // Single playlist ID.
+                                  videoratio: &#x27;16/9&#x27;, // this is a string to make it easy for consistency.
+                                  videotitleoverride: &#x27;&#x27;,
+                                  videotype: &#x27;kaltura&#x27;,
+                                },
+                              },
+                              playerPlaceholderClass = &#x27;ibm-video-placeholder&#x27;,
+                              playerVars = {
+                                dataPrefix: &#x27;playervar_&#x27;,
+                                defaults: {
+                                  // These get mapped to true/false after merge.
+                                  autoplay: 1,
+                                  showinfo: 1,
+                                },
+                              },
+                              videoData = {};
+                        
+                            // &quot;userSettings&quot; came in from videoplayer.js factory and include all element&#x27;s @data-attrs and parent defaults.
+                            // Merge in the user&#x27;s settings and overwrite any defaults and update appliedSettings.
+                            $.extend(true, appliedSettings, defaults.settings, userSettings);
+                        
+                            appliedSettings.id =
+                              appliedSettings.origEl.id || IBM.common.util.generateId();
+                            appliedSettings.playerContainerId = appliedSettings.id + &#x27;_playercontainer&#x27;;
+                            appliedSettings.$origEl = $(appliedSettings.origEl);
+                            appliedSettings.$restoreEl = appliedSettings.$origEl.clone(true);
+                        
+                            // Merge in the element&#x27;s @data-playervars and overwrite any defaults and update appliedPlayerVars.
+                            // Keep the &quot;forced&quot; settings (don&#x27;t let devs override these).
+                            $.extend(
+                              true,
+                              appliedPlayerVars,
+                              playerVars.defaults,
+                              getUserDefinedPlayerVars(),
+                              playerVars.force
+                            );
+                        
+                            convertSettingsToPlayerVars();
+                        
+                            // Make the vars and settings public to this object instace so they can be seen and used.
+                            // We use all local vars for these, so try not to change playervars or settings after this point else
+                            //   the public values will be different.
+                            me.appliedPlayerVars = appliedPlayerVars;
+                            me.appliedSettings = appliedSettings;
+                            me.player = { status: &#x27;Kaltura player not created yet&#x27; };
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br /&gt;Destroys the widget and puts back the original HTML element that existed before the widget initialized.
+                        
+                              @method Player.destroy
+                              @return {jQuery/DOM element} The original element that was put back (that you called widget destroy on).
+                            **/
+                            me.destroy = function() {
+                              if (me.overlay) {
+                                me.overlay.destroy();
+                              }
+                        
+                              // If it&#x27;s a carousel, kill all the carousel&#x27;s overlays, if they exist.
+                              if (appliedSettings.videodisplay.indexOf(&#x27;carousel-&#x27;) &gt; -1) {
+                                appliedSettings.$origEl.find(&#x27;.ibm-video-player-con&#x27;).each(function() {
+                                  if ($(this).data(&#x27;widget&#x27;).overlay) {
+                                    $(this)
+                                      .data(&#x27;widget&#x27;)
+                                      .overlay.destroy();
+                                  }
+                                });
+                              }
+                        
+                              appliedSettings.$origEl.replaceWith(appliedSettings.$restoreEl);
+                        
+                              return appliedSettings.$restoreEl;
+                            };
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br /&gt;Called by videoplayer.js jQuery plugin after the factory returns a player object (an instance of this &quot;Player&quot; object).
+                              &lt;br /&gt;Creates a player and injects it on the page.
+                        
+                              @method Player.init
+                            **/
+                            me.init = init;
+                            function init() {
+                              if (typeof kWidget === &#x27;undefined&#x27;) {
+                                IBM.common.util.queue.push(
+                                  function() {
+                                    return typeof kWidget !== &#x27;undefined&#x27;;
+                                  },
+                                  function() {
+                                    ibmKt.apiStatus = &#x27;ready&#x27;;
+                                    setupPlayerWidget();
+                                  }
+                                );
+                        
+                                ibmKt.loadApi();
+                              } else {
+                                setupPlayerWidget();
+                              }
+                            }
+                        
+                            /**
+                              EVENTS functions (for metrics).
+                            ************************************************************************************************************/
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;Fires a metrics event when the video was played. Pass events to common metrics event.
+                              &lt;br /&gt;Uses Youtube player states:
+                              &lt;br /&gt;0 = ended, 1 = played, 2 = paused, 3 = error.
+                        
+                              @method Player.fireMetricsEvent
+                              @private
+                              @param playerState {Integer} The player state, using the same numbering syste Youtube uses.
+                            **/
+                            function fireMetricsEvent(playerState) {
+                              // If video was played and timestamp is 0, it should be &quot;launched&quot; state.
+                              var currentTime = Math.round(
+                                me.player.evaluate(&#x27;{video.player.currentTime}&#x27;)
+                              );
+                        
+                              if (playerState === 2 &amp;&amp; currentTime === 0) {
+                                playerState = 0;
+                              }
+                        
+                              var eventData = {
+                                playerType: &#x27;kaltura&#x27;,
+                                title: me.player.evaluate(&#x27;{mediaProxy.entry.name}&#x27;),
+                                currentTime: currentTime,
+                                duration: me.player.evaluate(&#x27;{mediaProxy.entry.duration}&#x27;),
+                                playerState: playerState,
+                                videoId: appliedSettings.videoid,
+                              };
+                        
+                              // Get any custom ibmevent tagging on the element to pass to the event fire.
+                              eventData.customMetricsData = IBM.common.util.statshelper.getCustomEventParams(
+                                appliedSettings.$origEl
+                              );
+                        
+                              ibmVp.fireVideoEvent(eventData);
+                            }
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;Callback fired when the video is played.
+                              &lt;br /&gt;Uses Youtube player states:
+                              &lt;br /&gt;0 = ended, 1 = played, 2 = paused, 3 = error.
+                        
+                              @method Player.onPlayerPlayed
+                              @private
+                            **/
+                            function onPlayerPlayed() {
+                              fireMetricsEvent(2);
+                            }
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;Callback fired when the video is __paused__.
+                              &lt;br /&gt;Uses Youtube player states:
+                              &lt;br /&gt;0 = ended, 1 = played, 2 = paused, 3 = error.
+                        
+                              @method Player.onPlayerPause
+                              @private
+                            **/
+                            function onPlayerPause() {
+                              fireMetricsEvent(1);
+                            }
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;Callback fired when the video has __ended__.
+                              &lt;br /&gt;Uses Youtube player states:
+                              &lt;br /&gt;0 = ended, 1 = played, 2 = paused, 3 = error.
+                        
+                              @method Player.onPlayerEnd
+                              @private
+                            **/
+                            function onPlayerEnd() {
+                              fireMetricsEvent(3);
+                            }
+                        
+                            /**
+                              WIDGET functions.
+                            ************************************************************************************************************/
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;Takes the @data-overlayplayersize and converts that preset to the proper width and classes needed for the
+                              player and the overlay
+                              &lt;br /&gt;Optional based on embed settings.
+                        
+                              @method Player.setOverlayPresets
+                              @private
+                            **/
+                            function setOverlayPresets() {
+                              if (appliedSettings.overlayplayersize === &#x27;large&#x27;) {
+                                appliedSettings.overlayplayerwidth = 745;
+                                appliedSettings.overlayclasses =
+                                  &#x27;ibm-common-overlay ibm-overlay-alt-two&#x27;;
+                              } else if (appliedSettings.overlayplayersize === &#x27;xlarge&#x27;) {
+                                appliedSettings.overlayplayerwidth = 975;
+                                appliedSettings.overlayclasses =
+                                  &#x27;ibm-common-overlay ibm-overlay-alt-three&#x27;;
+                              } else {
+                                appliedSettings.overlayplayerwidth =
+                                  defaults.settings.overlayplayerwidth;
+                                appliedSettings.overlayclasses = defaults.settings.overlayclasses;
+                              }
+                            }
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;Adds the aria-label to the trigger for better a11y so screen reader reads name of hosting service also.
+                        
+                              @method PLayer.addAriaLabel
+                              @private
+                              @param $el {jQuery DOM selector} The placeholder trigger element where we&#x27;re putting the aria-label.
+                              @param customText {String} Custom text (existing) to use, else uses video title.
+                            **/
+                        
+                            function addAriaLabel($el, customText) {
+                              var videoTitle =
+                                  appliedSettings.videotitleoverride !== &#x27;&#x27;
+                                    ? appliedSettings.videotitleoverride
+                                    : videoData.name,
+                                ariaText = !customText || customText === &#x27;&#x27; ? videoTitle : customText;
+                        
+                              $el.attr(&#x27;aria-label&#x27;, &#x27;MediaCenter - &#x27; + ariaText);
+                            }
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;Adds the video description, name, and formatted time to the placeholder.
+                              &lt;br /&gt;Optional based on embed settings.
+                        
+                              @method Player.addPlaceholderInfo
+                              @private
+                            **/
+                            function addPlaceholderInfo() {
+                              // Creates the title and descr and passes back to us to do what we want with it.
+                              myEvents.subscribe(&#x27;videoDataReady&#x27;, &#x27;videoplayer&#x27;, function() {
+                                var infoHtml = &#x27;&#x27;,
+                                  durationHtml = &#x27;&#x27;,
+                                  videoTitle =
+                                    appliedSettings.videotitleoverride !== &#x27;&#x27;
+                                      ? appliedSettings.videotitleoverride
+                                      : videoData.name,
+                                  placeholderAlt =
+                                    appliedSettings.placeholderalttext !== &#x27;&#x27;
+                                      ? appliedSettings.placeholderalttext
+                                      : videoTitle;
+                        
+                                if (!videoData) {
+                                  return;
+                                }
+                        
+                                if (appliedSettings.showvideoduration) {
+                                  durationHtml =
+                                    &#x27;&lt;div class=&quot;ibm-video-duration&quot;&gt;&lt;p class=&quot;ibm-padding-bottom-0&quot;&gt;&#x27; +
+                                    videoData.formattedTime +
+                                    &#x27;&lt;/p&gt;&lt;/div&gt;&#x27;;
+                                }
+                        
+                                if (appliedSettings.showvideotitle) {
+                                  infoHtml +=
+                                    &#x27;&lt;div class=&quot;ibm-video-title ibm-bold&quot;&gt;&lt;p class=&quot;ibm-padding-bottom-0&quot;&gt;&#x27; +
+                                    videoTitle +
+                                    &#x27;&lt;/p&gt;&lt;/div&gt;&#x27;;
+                                }
+                        
+                                if (appliedSettings.showvideodescription) {
+                                  infoHtml +=
+                                    &#x27;&lt;p class=&quot;ibm-padding-bottom-0&quot;&gt;&#x27; + videoData.description + &#x27;&lt;/p&gt;&#x27;;
+                                }
+                        
+                                // If video title set to display overlay&#x27;d, put the info into info container,
+                                //  else put under/after placeholder.
+                                if (
+                                  appliedSettings.titledisplaytype === &#x27;overlay&#x27; &amp;&amp;
+                                  durationHtml !== &#x27;&#x27; &amp;&amp;
+                                  infoHtml !== &#x27;&#x27;
+                                ) {
+                                  me.$trigger.append(
+                                    &#x27;&lt;div class=&quot;ibm-video-info&quot;&gt;&#x27; + durationHtml + infoHtml + &#x27;&lt;/div&gt;&#x27;
+                                  );
+                                } else {
+                                  if (durationHtml !== &#x27;&#x27;) {
+                                    me.$trigger.append(
+                                      &#x27;&lt;div class=&quot;ibm-video-info&quot;&gt;&#x27; + durationHtml + &#x27;&lt;/div&gt;&#x27;
+                                    );
+                                  }
+                        
+                                  appliedSettings.$origEl.children(&#x27;div&#x27;).after(infoHtml);
+                                }
+                        
+                                // Add the video title as the alt text.
+                                me.$trigger.children(&#x27;img&#x27;).attr(&#x27;alt&#x27;, placeholderAlt);
+                              });
+                            }
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;Calculates a height for a given number using the default video apect ratio (16/9).
+                        
+                              @method Player.calcHeight
+                              @private
+                              @param num {Integer} The number to use as a width to calculate the proper height for.
+                              @return {Integer} The number to use as a height for the given width.
+                            **/
+                            function calcHeight(num) {
+                              var ratioArr = appliedSettings.videoratio.split(&#x27;/&#x27;),
+                                w = ratioArr[0],
+                                h = ratioArr[1];
+                        
+                              return num / (w / h);
+                            }
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;Takes settings from defaults or data-attrs and converts appropriate ones to playerVars for use with KT embed API.
+                        
+                              @method Player.convertSettingsToPlayerVars
+                              @private
+                            **/
+                            function convertSettingsToPlayerVars() {
+                              // Kaltura uses true/false where Youtube uses 0 and 1. Maps 0/1 to true/false for Kaltura.
+                              $.each(appliedPlayerVars, function(k, v) {
+                                if (k === &#x27;autoplay&#x27; || k === &#x27;showinfo&#x27;) {
+                                  if (v === 0) {
+                                    appliedPlayerVars[k] = false;
+                                  } else if (v === 1) {
+                                    appliedPlayerVars[k] = true;
+                                  }
+                                }
+                              });
+                        
+                              // Convert combo setting &quot;showinfo&quot; to Kaltura&#x27;s two settings.
+                              if (appliedPlayerVars.showinfo === true) {
+                                appliedPlayerVars.showtitle = true;
+                                appliedPlayerVars.showshare = true;
+                              } else {
+                                appliedPlayerVars.showtitle = false;
+                                appliedPlayerVars.showshare = false;
+                              }
+                            }
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;Embed the video. Builds and calls KT script which injects player into original element&#x27;s child playercontainer.
+                        
+                              @method Player.createInlinePlayer
+                              @private
+                              @param elementId {String} The ID where we&#x27;re putting the placeholder.
+                              @param videoId {String} The video (ID) we&#x27;re embedding the placeholder for.
+                            **/
+                            function createInlinePlayer(elementId, videoId) {
+                              embedVideo(elementId, videoId); // Uses the DOM el, not the selector.
+                            }
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;Take the video ID and get the image.
+                              &lt;br /&gt;Create, bind, and replace origEl innerHTML with: a-&gt;img.
+                              &lt;br /&gt;Onclick of the &lt;a&gt; we injected, embed the video player (and play it).
+                        
+                              @method Player.createPlayerTrigger
+                              @private
+                              @param videoId {String} The video (ID) we&#x27;re embedding the placeholder/trigger for.
+                            **/
+                            function createPlayerTrigger(videoId) {
+                              var useWidth = me.overlay
+                                  ? appliedSettings.width
+                                  : appliedSettings.$origEl.width(),
+                                //useHeight = calcHeight(useWidth),
+                                // useClass = playerPlaceholderClass,
+                                imageUrl = createApiUrl({
+                                  url: api.images.video,
+                                  videoId: videoId,
+                                  width: useWidth,
+                                  //height: useHeight
+                                }),
+                                autoPlaceholder = $(&#x27;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&#x27;).html(
+                                  &#x27;&lt;img src=&quot;&#x27; + imageUrl + &#x27;&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;&quot; /&gt;&#x27;
+                                );
+                        
+                              //me.$trigger = $(&#x27;&lt;a class=&quot;&#x27; + useClass + &#x27;&quot; href=&quot;#&quot;&gt;&lt;/a&gt;&#x27;).html(&#x27;&lt;img src=&quot;&#x27; + imageUrl + &#x27;&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;&quot; /&gt;&#x27;).prepend(&#x27;&lt;span class=&quot;ibm-video-play&quot;&gt;&lt;/span&gt;&#x27;);
+                        
+                              me.$trigger = appliedSettings.customplaceholder
+                                ? appliedSettings.$origEl.find(&#x27;a&#x27;)
+                                : autoPlaceholder;
+                        
+                              // Add the class to the trigger.
+                              me.$trigger.addClass(playerPlaceholderClass);
+                        
+                              if (appliedSettings.showimageplaybutton) {
+                                addPlaybutton(me.$trigger);
+                              }
+                            }
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;Adds the &amp;lt;span&gt; to the placeholder container right before the image which shows the overlay&#x27;d
+                               play button on top of whatever image is used.
+                        
+                              @method Player.addPlaybutton
+                              @private
+                              @param $triggerLink {jQuery element} The placeholder element in which to add the overlay&#x27;d play button over the image.
+                            **/
+                            function addPlaybutton($triggerLink) {
+                              $triggerLink
+                                .find(&#x27;img&#x27;)
+                                .before(&#x27;&lt;span class=&quot;ibm-play-link&quot;&gt;&lt;/span&gt;&#x27;)
+                                .parent();
+                            }
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;Does the actual video player embed.
+                        
+                              @method Player.embedVideo
+                              @private
+                              @param elementId {String} The ID where we&#x27;re putting the placeholder.
+                              @param videoId {String} The video (ID) we&#x27;re embedding the placeholder for.
+                            **/
+                            function embedVideo(elementId, videoId) {
+                              var useHeight = me.overlay
+                                  ? calcHeight(appliedSettings.width)
+                                  : calcHeight(appliedSettings.$origEl.width()),
+                                ktPlayerid = getPlayerId();
+                        
+                              // Set the height of the container to ensure proper sizing and placeholding (esp for overlays) because
+                              //   the iframe doesn&#x27;t include a height.
+                              $(document.getElementById(elementId)).css(&#x27;height&#x27;, useHeight);
+                        
+                              // We just call kWidget here (KT API object) b/c we&#x27;ve already loaded the API,
+                              // We don&#x27;t setup the widgets until the API is loaded so it&#x27;s impossible to get here w/o kWidget existing.
+                              // eslint-disable-next-line
+                              kWidget.embed({
+                                targetId: elementId,
+                                wid: &#x27;_&#x27; + api.prod.partnerId,
+                                uiconf_id: ktPlayerid,
+                                entry_id: videoId,
+                                flashvars: {
+                                  autoPlay: appliedPlayerVars.autoplay,
+                                  &#x27;titleLabel.plugin&#x27;: appliedPlayerVars.showtitle,
+                                  &#x27;share.plugin&#x27;: appliedPlayerVars.showshare,
+                                },
+                                params: {
+                                  wmode: &#x27;transparent&#x27;,
+                                },
+                                readyCallback: function(playerId) {
+                                  me.player = $(document.getElementById(playerId)).get(0);
+                        
+                                  me.player.addJsListener(&#x27;playerPaused&#x27;, function() {
+                                    onPlayerPause(me.player);
+                                  });
+                                  me.player.addJsListener(&#x27;playerPlayed&#x27;, function() {
+                                    onPlayerPlayed(me.player);
+                                  });
+                                  me.player.addJsListener(&#x27;playerPlayEnd&#x27;, function() {
+                                    onPlayerEnd(me.player);
+                                  });
+                                  me.player.addJsListener(&#x27;IbmCtaEvent&#x27;, function(params) {
+                                    var eventData = params;
+                                    eventData.customMetricsData = $.extend(
+                                      true,
+                                      eventData.customMetricsData,
+                                      IBM.common.util.statshelper.getCustomEventParams(
+                                        appliedSettings.$origEl
+                                      )
+                                    );
+                        
+                                    ibmVp.fireVideoEvent(eventData);
+                                  });
+                                },
+                              });
+                            }
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;Takes user-defined playerVars from data-xxxxx naming convention and returns them to be merged into applied settings.
+                        
+                              @method Player.getUserDefinedPlayerVars
+                              @private
+                              @return {Object} An object containing the settings to use for the video embed.
+                            **/
+                            function getUserDefinedPlayerVars() {
+                              return IBM.common.util.getDataAttributes(
+                                appliedSettings.$origEl,
+                                playerVars.dataPrefix
+                              );
+                            }
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;Calls API to get video info and passes JSON to callback function.
+                        
+                              @method Player.getVideoInfo
+                              @private
+                              @param videoId {String} The video (ID) we want to get info for
+                              @param cb {Function} The function to call and pass the returned data object to.
+                            **/
+                            // eslint-disable-next-line
+                            function getVideoInfo(videoId, cb) {
+                              // Get the video info and return to sender.
+                              // eslint-disable-next-line
+                              new kWidget.api({
+                                wid: &#x27;_&#x27; + api.prod.partnerId,
+                              }).doRequest(
+                                {
+                                  service: &#x27;media&#x27;,
+                                  action: &#x27;get&#x27;,
+                                  entryId: videoId,
+                                },
+                                function(jsonObj) {
+                                  jsonObj.formattedTime = IBM.common.util.convertSecondsToHMS(
+                                    jsonObj.duration
+                                  );
+                        
+                                  videoData = jsonObj;
+                                  myEvents.publish(&#x27;videoDataReady&#x27;);
+                                }
+                              );
+                            }
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br /&gt;Called onclick of the user&#x27;s link, or the auto-generated image that serves as the overlay trigger.
+                              &lt;br /&gt;Public method to use to programatically open and play the associated video. Or you can just do: $(&quot;myTrigger a&quot;).click();
+                        
+                              @method Player.showOverlayAndPlay
+                            **/
+                            me.showOverlayAndPlay = showOverlayAndPlay;
+                            function showOverlayAndPlay() {
+                              // Open the overlay for this player object instance.
+                              me.overlay.show();
+                              // If there&#x27;s no iframe yet in the overlay (the overlay still has our TMP DIV),
+                              //   it means we haven&#x27;t embedded the player yet, so embed it,
+                              // Else it means the video is there already (iframe, we embedded) so just play it.
+                              if (
+                                !$(document.getElementById(appliedSettings.playerContainerId)).children(
+                                  &#x27;iframe&#x27;
+                                )[0]
+                              ) {
+                                embedVideo(appliedSettings.playerContainerId, appliedSettings.videoid);
+                              } else {
+                                setTimeout(function() {
+                                  me.player.sendNotification(&#x27;play&#x27;);
+                                }, 600);
+                              }
+                            }
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;This is our KT player factory.
+                              &lt;br /&gt;Called by init(). This is like our sub-factory.
+                              &lt;br /&gt;Based on the display type, it calls the proper functions to make the proper widget elements for that type.
+                              &lt;br /&gt;This is ONLY called after KT API is loaded, so assume all kWidget APIs are available.
+                        
+                              @method Player.setupPlayerWidget
+                              @private
+                            **/
+                            function setupPlayerWidget() {
+                              var playerType = appliedSettings.videodisplay;
+                        
+                              if (playerType.indexOf(&#x27;carousel-&#x27;) === 0) {
+                                playerType = &#x27;carousel&#x27;;
+                              }
+                        
+                              appliedSettings.$origEl.addClass(&#x27;ibm-video-player-con&#x27;);
+                        
+                              switch (playerType) {
+                                case &#x27;inline&#x27;:
+                                  // We inject an inline player inside the element that initiated the plug-in.
+                        
+                                  // Call API to get video info. Stores locally and fires event for reuse.
+                                  getVideoInfo(appliedSettings.videoid);
+                        
+                                  // Create a video player trigger (placeholder image), used on both inline and overlayAndTrigger displays.
+                                  createPlayerTrigger(appliedSettings.videoid);
+                        
+                                  // Inject the placeholder INSIDE this element that&#x27;s inside the orig container element.
+                                  // The KT player gets injected inside this, that&#x27;s why we need to give it an ID.
+                                  $(&#x27;&lt;div id=&quot;&#x27; + appliedSettings.playerContainerId + &#x27;&quot;&gt;&lt;/div&gt;&#x27;)
+                                    .appendTo(appliedSettings.$origEl.empty())
+                                    .html(me.$trigger);
+                        
+                                  // Add placeholder/trigger video info.
+                                  addPlaceholderInfo();
+                        
+                                  // Add Aria label.
+                                  myEvents
+                                    .subscribe(&#x27;videoDataReady&#x27;, &#x27;videoplayer&#x27;, function() {
+                                      addAriaLabel(me.$trigger);
+                                    })
+                                    .runAsap(function() {
+                                      addAriaLabel(me.$trigger);
+                                    });
+                        
+                                  // Bind the trigger to REPLACE the original element (containers the trigger).
+                                  // Creates and plays an embeded video player.
+                                  me.$trigger.click(function(evt) {
+                                    evt.preventDefault();
+                        
+                                    createInlinePlayer(
+                                      appliedSettings.playerContainerId,
+                                      appliedSettings.videoid
+                                    );
+                        
+                                    // On resize, recalculate height and reset iframe@height value. Makes the player responsive and adjust height
+                                    //  of iframe based on width of any container it&#x27;s in, when the container changes width.
+                                    $(window).on(&#x27;resize&#x27;, function() {
+                                      var $playerContainer = $(
+                                          document.getElementById(appliedSettings.playerContainerId)
+                                        ),
+                                        newHeightStyle = {
+                                          height: calcHeight($playerContainer.width()) + &#x27;px&#x27;,
+                                        };
+                        
+                                      $playerContainer
+                                        .css(newHeightStyle)
+                                        .children(&#x27;iframe&#x27;)
+                                        .css(newHeightStyle);
+                                    });
+                        
+                                    // Add processed state (class) and fire common init event on the HTML element.
+                                    IBM.common.widget.manager.dispatchInitEvent(
+                                      appliedSettings.$origEl[0]
+                                    );
+                                  });
+                        
+                                  break;
+                        
+                                case &#x27;overlay&#x27;:
+                                  // We make ONLY the overlay here.
+                        
+                                  // Call API to get video info. Stores locally and fires event for reuse.
+                                  getVideoInfo(appliedSettings.videoid);
+                        
+                                  // Set the overlay and video embed width/heigt from the preset used.
+                                  setOverlayPresets();
+                        
+                                  // Get the video&#x27;s info and append the duration of the video to the trigger link if they set the option.
+                                  if (appliedSettings.showvideoduration) {
+                                    myEvents.subscribe(&#x27;videoDataReady&#x27;, &#x27;videoplayer&#x27;, function() {
+                                      if (appliedSettings.videodurationcolor !== &#x27;none&#x27;) {
+                                        appliedSettings.$origEl.append(
+                                          &#x27; &lt;span class=&quot;ibm-item-note&quot;&gt;(&#x27; +
+                                            videoData.formattedTime +
+                                            &#x27;)&lt;/span&gt;&#x27;
+                                        );
+                                      } else {
+                                        appliedSettings.$origEl.append(
+                                          &#x27; (&#x27; + videoData.formattedTime + &#x27;)&#x27;
+                                        );
+                                      }
+                                    });
+                                  }
+                        
+                                  // Make overlay and attach to this object.
+                                  me.overlay = ibmVp.createOverlay(appliedSettings);
+                                  // me.overlay.setHtml(&#x27;&lt;div id=&quot;&#x27; + appliedSettings.playerContainerId + &#x27;&quot; style=&quot;margin:auto;width:&#x27; + appliedSettings.overlayplayerwidth + &#x27;px;&quot;&gt;&lt;/div&gt;&#x27;);
+                                  me.overlay.setHtml(
+                                    &#x27;&lt;div id=&quot;&#x27; +
+                                      appliedSettings.playerContainerId +
+                                      &#x27;&quot; style=&quot;margin:auto;width:100%;&quot;&gt;&lt;/div&gt;&#x27;
+                                  );
+                        
+                                  // Bind the video to pause if the overlay is closed.
+                                  me.overlay.subscribe(&#x27;hide&#x27;, &#x27;Videoplayer&#x27;, function() {
+                                    me.player.sendNotification(&#x27;pause&#x27;);
+                                  });
+                        
+                                  // If they explicitely said to show the play button on a custom trigger.
+                                  // Add the play button span.
+                                  if (userSettings.showimageplaybutton) {
+                                    appliedSettings.$origEl.addClass(playerPlaceholderClass);
+                                    addPlaybutton(appliedSettings.$origEl);
+                                  }
+                        
+                                  // Change the width to the preset overlay player widget, instead of the width of the container on the page.
+                                  appliedSettings.width = appliedSettings.overlayplayerwidth;
+                        
+                                  // Add Aria label.
+                                  myEvents
+                                    .subscribe(&#x27;videoDataReady&#x27;, &#x27;videoplayer&#x27;, function() {
+                                      addAriaLabel(
+                                        appliedSettings.$origEl,
+                                        appliedSettings.$origEl.text()
+                                      );
+                                    })
+                                    .runAsap(function() {
+                                      addAriaLabel(
+                                        appliedSettings.$origEl,
+                                        appliedSettings.$origEl.text()
+                                      );
+                                    });
+                        
+                                  // Bind the element (usually an &lt;a&gt; but can technically be anything) that was init via the plugin to open overlay.
+                                  appliedSettings.$origEl.click(function(evt) {
+                                    evt.preventDefault();
+                                    showOverlayAndPlay();
+                        
+                                    // Add processed state (class) and fire common init event on the HTML element.
+                                    IBM.common.widget.manager.dispatchInitEvent(
+                                      appliedSettings.$origEl[0]
+                                    );
+                                  });
+                        
+                                  break;
+                        
+                                case &#x27;overlayandtrigger&#x27;:
+                                  // We make both the overlay AND the trigger (image they click on to launch the overlay).
+                        
+                                  // Call API to get video info. Stores locally and fires event for reuse.
+                                  getVideoInfo(appliedSettings.videoid);
+                        
+                                  // Set the overlay and video embed width/heigt from the preset used.
+                                  setOverlayPresets();
+                        
+                                  // Create a video player trigger (placeholder image), used on both inline and overlayAndTrigger displays.
+                                  createPlayerTrigger(appliedSettings.videoid);
+                        
+                                  // Inject the trigger INSIDE the element that init&#x27;d the plug-in.
+                                  $(&#x27;&lt;div&gt;&lt;/div&gt;&#x27;)
+                                    .appendTo(appliedSettings.$origEl.empty())
+                                    .html(me.$trigger);
+                        
+                                  // Add placeholder/trigger video info.
+                                  addPlaceholderInfo();
+                        
+                                  // Make overlay and attach to this object.
+                                  me.overlay = ibmVp.createOverlay(appliedSettings);
+                                  me.overlay.setHtml(
+                                    &#x27;&lt;div id=&quot;&#x27; + appliedSettings.playerContainerId + &#x27;&quot;&gt;&lt;/div&gt;&#x27;
+                                  );
+                        
+                                  // Bind the video to pause if the overlay is closed.
+                                  me.overlay.subscribe(&#x27;hide&#x27;, &#x27;Videoplayer&#x27;, function() {
+                                    me.player.sendNotification(&#x27;pause&#x27;);
+                                  });
+                        
+                                  // Change the width to the preset overlay player widget, instead of the width of the container on the page.
+                                  // NOTE: This HAS to be after we create the trigger, else the trigger will use this width and automatically make a big play button.
+                                  appliedSettings.width = appliedSettings.overlayplayerwidth;
+                        
+                                  // Add Aria label.
+                                  myEvents
+                                    .subscribe(&#x27;videoDataReady&#x27;, &#x27;videoplayer&#x27;, function() {
+                                      addAriaLabel(me.$trigger);
+                                    })
+                                    .runAsap(function() {
+                                      addAriaLabel(me.$trigger);
+                                    });
+                        
+                                  // Bind trigger -&gt; open overlay and play.. dupe what overlay above does just on a different element.
+                                  me.$trigger.click(function(evt) {
+                                    evt.preventDefault();
+                                    showOverlayAndPlay();
+                        
+                                    // Add processed state (class) and fire common init event on the HTML element.
+                                    IBM.common.widget.manager.dispatchInitEvent(
+                                      appliedSettings.$origEl[0]
+                                    );
+                                  });
+                        
+                                  break;
+                        
+                                case &#x27;carousel&#x27;:
+                                  // This creates a div element in a carousel for each video ID.
+                                  // Used for both types of carouse. The only differnece is the videodisplay, and it is
+                                  //   determined using the passed appliedSettings in the ibmVp.createVideoCarousel function.
+                                  // Then it inits the videoplayer plug-in on each.
+                                  // Then it inits the carousel.
+                        
+                                  // It&#x27;s just as if the dev custom coded the elements themselves, then say &quot;displaytype=overlaywithtrigger&quot;.
+                                  if (appliedSettings.videoplaylistid !== &#x27;&#x27;) {
+                                    window.console.log(
+                                      &quot;v18: Video playlist for Kaltura aren&#x27;t setup yet.&quot;
+                                    );
+                                    /**
+                                    // Get video info from videoinfo API using CSV of IDs.
+                                    $.getJSON(api.playlistVideos.replace(&quot;{playlistId}&quot;, appliedSettings.videoplaylistid).replace(&quot;{maxResults}&quot;, appliedSettings.maxnumvideos)).done(function (jsonObj) {
+                                      var videoIds = &quot;&quot;;
+                        
+                                      $.each(jsonObj.items, function(){
+                                        videoIds += &quot;,&quot; + this.contentDetails.videoId;
+                                      });
+                        
+                                      videoIds = videoIds.substring(1);
+                        
+                                      // Take CSV of video IDs and generate placeholder divs in a carousel, then init both.
+                                      ibmVp.createVideoCarousel(videoIds, appliedSettings);
+                                    });
+                                    **/
+                                  } else if (appliedSettings.videoid.indexOf(&#x27;,&#x27;) &gt; -1) {
+                                    // Take CSV of video IDs and generate placeholder divs in a carousel, then init both.
+                                    ibmVp.createVideoCarousel(appliedSettings.videoid, appliedSettings);
+                                  }
+                        
+                                  break;
+                        
+                                default:
+                                  IBM.common.util.debug.add(&#x27;log&#x27;, [
+                                    &#x27;Video player display type unknown: &#x27;,
+                                    appliedSettings.$origEl,
+                                  ]);
+                              }
+                            }
+                        
+                            /**
+                              Map common player actions to an abstracted API for cross-player ease of use.
+                              Safety check to make sure the lower level function is there before calling it.
+                              &quot;me&quot; here is == $el.data(&quot;widget&quot;)
+                              So &quot;me.playVideo&quot; here is letting the page JS say:  $(&quot;widgetContainer&quot;).data(&quot;widget&quot;).playVideo();
+                            **/
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;This plays the video.
+                        
+                              @method Player.playVideo
+                              @example
+                                jQuery(&quot;&lt;your_table_container_selector&gt;&quot;).data(&quot;widget&quot;).playVideo();
+                            **/
+                            me.playVideo = function() {
+                              if (me.player.sendNotification) {
+                                me.player.sendNotification(&#x27;doPlay&#x27;);
+                              }
+                            };
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;This plays the video starting at a specific point on the timeline (# of seconds).
+                        
+                              @method Player.playVideoAt
+                              @param timesec {String} The time, in seconds, where to seek to and play the video.
+                              @example
+                                jQuery(&quot;&lt;your_table_container_selector&gt;&quot;).data(&quot;widget&quot;).playVideoAt();
+                            **/
+                            me.playVideoAt = function(timesec) {
+                              if (me.player.sendNotification) {
+                                me.player.sendNotification(&#x27;doSeek&#x27;, timesec);
+                              }
+                            };
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;This pauses the video.
+                        
+                              @method Player.pauseVideo
+                              @example
+                                jQuery(&quot;&lt;your_table_container_selector&gt;&quot;).data(&quot;widget&quot;).pauseVideo();
+                            **/
+                            me.pauseVideo = function() {
+                              if (me.player.sendNotification) {
+                                me.player.sendNotification(&#x27;doPause&#x27;);
+                              }
+                            };
+                        
+                            /**
+                              This is a method of the &quot;Player&quot; constructor.
+                              &lt;br&gt;This stops the video.
+                        
+                              @method Player.stopVideo
+                              @example
+                                jQuery(&quot;&lt;your_table_container_selector&gt;&quot;).data(&quot;widget&quot;).stopVideo();
+                            **/
+                            me.stopVideo = function() {
+                              if (me.player.sendNotification) {
+                                me.player.sendNotification(&#x27;doStop&#x27;);
+                              }
+                            };
+                          };
+                        })(jQuery, IBMCore);
+                        
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

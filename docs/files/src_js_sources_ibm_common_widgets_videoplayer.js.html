@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <title>src/js/sources/ibm/common/widgets/videoplayer.js - IBM v18 (Northstar) common Javascript documentation</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" href="http://www.ibm.com/favicon.ico">
+    <script>
+        digitalData = {
+            page: {
+                pageInfo: {
+                    effectiveDate: '2017-02-25',
+                    expiryDate: '2020-02-25',
+                    language: 'en-US',
+                    publishDate: '2017-02-25',
+                    publisher: 'IBM Corporation',
+                    ibm: {
+                        contentDelivery: 'yuidoc via grunt',
+                        contentProducer: 'Michael Santelia',
+                        country: 'US',
+                        owner: 'Michael Santelia'
+                    }
+                }
+            }
+        };
+    </script>
+
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+
+    <script>
+
+		var lastUpdate = new Date(document.lastModified),
+			updatedMonth = lastUpdate.getMonth(),
+			updatedDate = lastUpdate.getDate(),
+			updatedYear = lastUpdate.getFullYear(),
+			today = new Date(),
+			todayMonth = today.getMonth(),
+			todayDate = today.getDate(),
+			todayYear = today.getFullYear(),
+			monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"],
+			lastUpdatedText = "",
+			daysAgo = Math.floor((today - lastUpdate) / (1000*60*60*24));
+
+		updatedMonthName = monthNames[updatedMonth];
+
+		switch (daysAgo) {
+
+			case 1: 
+				lastUpdatedText = "Updated yesterday";
+				break;
+				
+			case 0: 
+				lastUpdatedText = "Updated today";
+				break;
+				
+			default: 
+				lastUpdatedText = "Updated " + daysAgo + " days ago";
+				break;
+		}
+
+		if (daysAgo > 4) {
+			lastUpdatedText = "Updated: " + updatedMonthName + " " + updatedDate + ", " + updatedYear;
+		}
+
+    </script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-1-2">
+            <div style="background: url(http://1.www.s81c.com/i/v17/t/ibm-logo.png) no-repeat scroll 0px 0px transparent; width: 105px; height: 45px; margin: 0.85em 0px;text-indent:-9999px;">IBM v18 (Northstar) common Javascript documentation</div>
+        </div>
+        <div class="yui3-u-1-2 version">
+            <em>Javascript documentation for: IBM v18 (Northstar)<br />
+            	<span style="font-size: 0.6em; position: absolute; right: 35px;"><script>document.writeln(lastUpdatedText)</script></span></em>
+        </div>
+    </div>
+    
+    <p><a href="../assets../../v18-js-source-documentation.zip" style="margin-left: 10px; padding-left: 15px; background: url(http://1.www.s81c.com/i/v17/icons/ibm_sprite_transactional_blue_ON.png) no-repeat 0 -202px;">Download a copy of this documentation (ZIP).</a></p>
+    
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4" style="float: left;width:25%;">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/IBMCore.common.module.backtotop.html">IBMCore.common.module.backtotop</a></li>
+                                <li><a href="../classes/IBMCore.common.module.canadanotice.html">IBMCore.common.module.canadanotice</a></li>
+                                <li><a href="../classes/IBMCore.common.module.contactmodule.html">IBMCore.common.module.contactmodule</a></li>
+                                <li><a href="../classes/IBMCore.common.module.footer.html">IBMCore.common.module.footer</a></li>
+                                <li><a href="../classes/IBMCore.common.module.footermenu.html">IBMCore.common.module.footermenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.leftnav.html">IBMCore.common.module.leftnav</a></li>
+                                <li><a href="../classes/IBMCore.common.module.liveperson.html">IBMCore.common.module.liveperson</a></li>
+                                <li><a href="../classes/IBMCore.common.module.localeselector.html">IBMCore.common.module.localeselector</a></li>
+                                <li><a href="../classes/IBMCore.common.module.localpagenotification.html">IBMCore.common.module.localpagenotification</a></li>
+                                <li><a href="../classes/IBMCore.common.module.masthead.html">IBMCore.common.module.masthead</a></li>
+                                <li><a href="../classes/IBMCore.common.module.masthead.sticky.html">IBMCore.common.module.masthead.sticky</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mastheadbanner.html">IBMCore.common.module.mastheadbanner</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mastheadsearch.html">IBMCore.common.module.mastheadsearch</a></li>
+                                <li><a href="../classes/IBMCore.common.module.merchandising.html">IBMCore.common.module.merchandising</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mobilemenu.html">IBMCore.common.module.mobilemenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sharethiscontent.html">IBMCore.common.module.sharethiscontent</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sharethispage.html">IBMCore.common.module.sharethispage</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sitenavmenu.html">IBMCore.common.module.sitenavmenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.urx.html">IBMCore.common.module.urx</a></li>
+                                <li><a href="../classes/IBMCore.common.translations.html">IBMCore.common.translations</a></li>
+                                <li><a href="../classes/IBMCore.common.util.a11y.html">IBMCore.common.util.a11y</a></li>
+                                <li><a href="../classes/IBMCore.common.util.addCssRule.html">IBMCore.common.util.addCssRule</a></li>
+                                <li><a href="../classes/IBMCore.common.util.anchorlinkAdjustment.html">IBMCore.common.util.anchorlinkAdjustment</a></li>
+                                <li><a href="../classes/IBMCore.common.util.bitly.html">IBMCore.common.util.bitly</a></li>
+                                <li><a href="../classes/IBMCore.common.util.color.html">IBMCore.common.util.color</a></li>
+                                <li><a href="../classes/IBMCore.common.util.config.html">IBMCore.common.util.config</a></li>
+                                <li><a href="../classes/IBMCore.common.util.convertSecondsToHMS.html">IBMCore.common.util.convertSecondsToHMS</a></li>
+                                <li><a href="../classes/IBMCore.common.util.cookie.html">IBMCore.common.util.cookie</a></li>
+                                <li><a href="../classes/IBMCore.common.util.coreservices.html">IBMCore.common.util.coreservices</a></li>
+                                <li><a href="../classes/IBMCore.common.util.data.html">IBMCore.common.util.data</a></li>
+                                <li><a href="../classes/IBMCore.common.util.debug.html">IBMCore.common.util.debug</a></li>
+                                <li><a href="../classes/IBMCore.common.util.eventCoordinator.html">IBMCore.common.util.eventCoordinator</a></li>
+                                <li><a href="../classes/IBMCore.common.util.freezeScrollbars.html">IBMCore.common.util.freezeScrollbars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.gatekeeper.html">IBMCore.common.util.gatekeeper</a></li>
+                                <li><a href="../classes/IBMCore.common.util.generateId.html">IBMCore.common.util.generateId</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getCurrentGridSize.html">IBMCore.common.util.getCurrentGridSize</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getDataAttributes.html">IBMCore.common.util.getDataAttributes</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getScrollbarWidth.html">IBMCore.common.util.getScrollbarWidth</a></li>
+                                <li><a href="../classes/IBMCore.common.util.has12grid.html">IBMCore.common.util.has12grid</a></li>
+                                <li><a href="../classes/IBMCore.common.util.hasScrollbars.html">IBMCore.common.util.hasScrollbars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.meta.html">IBMCore.common.util.meta</a></li>
+                                <li><a href="../classes/IBMCore.common.util.perf.html">IBMCore.common.util.perf</a></li>
+                                <li><a href="../classes/IBMCore.common.util.queue.html">IBMCore.common.util.queue</a></li>
+                                <li><a href="../classes/IBMCore.common.util.scrolledintoview.html">IBMCore.common.util.scrolledintoview</a></li>
+                                <li><a href="../classes/IBMCore.common.util.scrolltracker.html">IBMCore.common.util.scrolltracker</a></li>
+                                <li><a href="../classes/IBMCore.common.util.setIpcCookie.html">IBMCore.common.util.setIpcCookie</a></li>
+                                <li><a href="../classes/IBMCore.common.util.statshelper.html">IBMCore.common.util.statshelper</a></li>
+                                <li><a href="../classes/IBMCore.common.util.storage.html">IBMCore.common.util.storage</a></li>
+                                <li><a href="../classes/IBMCore.common.util.string.htmlspecialchars.html">IBMCore.common.util.string.htmlspecialchars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.url.html">IBMCore.common.util.url</a></li>
+                                <li><a href="../classes/IBMCore.common.util.user.html">IBMCore.common.util.user</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.carousel.html">IBMCore.common.widget.carousel</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.ccfintercept.html">IBMCore.common.widget.ccfintercept</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.datatable.html">IBMCore.common.widget.datatable</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.datepicker.html">IBMCore.common.widget.datepicker</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.dyntabs.html">IBMCore.common.widget.dyntabs</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.fileinput.html">IBMCore.common.widget.fileinput</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.forms.html">IBMCore.common.widget.forms</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.formvalidator.html">IBMCore.common.widget.formvalidator</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.leavingibm.html">IBMCore.common.widget.leavingibm</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.manager.html">IBMCore.common.widget.manager</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.masonry.html">IBMCore.common.widget.masonry</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.overlay.html">IBMCore.common.widget.overlay</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.parallaxscroll.html">IBMCore.common.widget.parallaxscroll</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.rssdisplay.html">IBMCore.common.widget.rssdisplay</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.scrollable.html">IBMCore.common.widget.scrollable</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.selectlist.html">IBMCore.common.widget.selectlist</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.selectlistnav.html">IBMCore.common.widget.selectlistnav</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.setsameheight.html">IBMCore.common.widget.setsameheight</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.showhide.html">IBMCore.common.widget.showhide</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.stepindicator.html">IBMCore.common.widget.stepindicator</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.stickytabs.html">IBMCore.common.widget.stickytabs</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.syntaxhighlighter.html">IBMCore.common.widget.syntaxhighlighter</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.tablerowselector.html">IBMCore.common.widget.tablerowselector</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.tooltip.html">IBMCore.common.widget.tooltip</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.twisty.html">IBMCore.common.widget.twisty</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videolooper.html">IBMCore.common.widget.videolooper</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.html">IBMCore.common.widget.videoplayer</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.kaltura.html">IBMCore.common.widget.videoplayer.kaltura</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.ustream.html">IBMCore.common.widget.videoplayer.ustream</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.youtube.html">IBMCore.common.widget.videoplayer.youtube</a></li>
+                                <li><a href="../classes/IBMCore.namespace.html">IBMCore.namespace</a></li>
+                                <li><a href="../classes/IBMCore.www.module.dynamiccontactmodule.html">IBMCore.www.module.dynamiccontactmodule</a></li>
+                                <li><a href="../classes/IBMCore.www.module.truste.html">IBMCore.www.module.truste</a></li>
+                                <li><a href="../classes/jQuery.browser.html">jQuery.browser</a></li>
+                                <li><a href="../classes/jQuery.fn.dataTable.html">jQuery.fn.dataTable</a></li>
+                                <li><a href="../classes/jQuery.fn.slick.html">jQuery.fn.slick</a></li>
+                                <li><a href="../classes/jQuery.layout.html">jQuery.layout</a></li>
+                                <li><a href="../classes/jQuery.os.html">jQuery.os</a></li>
+                                <li><a href="../classes/jQuery:focusable.html">jQuery:focusable</a></li>
+                                <li><a href="../classes/Masonry.html">Masonry</a></li>
+                                <li><a href="../classes/Modernizr.html">Modernizr</a></li>
+                                <li><a href="../classes/Mustache.html">Mustache</a></li>
+                                <li><a href="../classes/NanoScroll.html">NanoScroll</a></li>
+                                <li><a href="../classes/Other IBM - Canada notice loader.html">Other IBM - Canada notice loader</a></li>
+                                <li><a href="../classes/Other IBM - common init.html">Other IBM - common init</a></li>
+                                <li><a href="../classes/Other IBM - common v18 page tracker.html">Other IBM - common v18 page tracker</a></li>
+                                <li><a href="../classes/Other IBM - errorchecking.html">Other IBM - errorchecking</a></li>
+                                <li><a href="../classes/Other IBM - footer feedback link.html">Other IBM - footer feedback link</a></li>
+                                <li><a href="../classes/Other IBM - grid change.html">Other IBM - grid change</a></li>
+                                <li><a href="../classes/Other IBM - jstimer-end.html">Other IBM - jstimer-end</a></li>
+                                <li><a href="../classes/Other IBM - jstimer-start.html">Other IBM - jstimer-start</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/IBMCore.html">IBMCore</a></li>
+                                <li><a href="../modules/jQuery.browser.html">jQuery.browser</a></li>
+                                <li><a href="../modules/jQuery.dataTable.html">jQuery.dataTable</a></li>
+                                <li><a href="../modules/jQuery.slick.html">jQuery.slick</a></li>
+                                <li><a href="../modules/Masonry.html">Masonry</a></li>
+                                <li><a href="../modules/Modernizr.html">Modernizr</a></li>
+                                <li><a href="../modules/Mustache.html">Mustache</a></li>
+                                <li><a href="../modules/Nanoscroller.html">Nanoscroller</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4"style="float: left;width:75%;">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected" checked>
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private" checked>
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated" checked>
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src/js/sources/ibm/common/widgets/videoplayer.js</h1>
+                        
+                        <div class="file">
+                            <pre class="code prettyprint linenums">
+                        /**
+                        
+                          IBM video player widget.
+                          &lt;br /&gt;
+                          &lt;br /&gt;This only sets up the .videoplayer() jQuery plug-in and creates the video player widget factory. That&#x27;s it.
+                          &lt;br /&gt;Automatically creates the proper video player widget on page load based on the presence and value of the
+                          magic @data-widget=&quot;videoplayer&quot; attribute on the element.
+                          &lt;br /&gt;Each type of player is an object/class and is in it&#x27;s own separate file for ease of maintenance.
+                          &lt;br /&gt;This file should only be touched if there is a new type of player, in which case you just add it to the factory.
+                          &lt;br /&gt;
+                          &lt;br /&gt;Usage:
+                        
+                            &lt;!-- Basic default inline video player --&gt;
+                            &lt;div data-widget=&quot;videoplayer&quot; data-videoid=&quot;9mMzHSM2z14&quot; data-videotype=&quot;youtube&quot;&gt;&lt;/div&gt;
+                        
+                            &lt;!-- Basic default &quot;play in an overlay&quot; video player --&gt;
+                            &lt;p class=&quot;ibm-ind-link&quot;&gt;&lt;a data-widget=&quot;videoplayer&quot; data-videodisplay=&quot;overlay&quot; data-videoid=&quot;9mMzHSM2z14&quot; data-videotype=&quot;youtube&quot; class=&quot;ibm-video-link&quot; href=&quot;https://www.youtube.com/watch?v=9mMzHSM2z14&amp;index=1&amp;list=WL&quot;&gt;Watch the video&lt;/a&gt;&lt;/p&gt;
+                        
+                            &lt;!-- Basic default videos in a carousel via manual video list, &quot;play in an overlay&quot; --&gt;
+                            &lt;div data-widget=&quot;videoplayer&quot; data-videodisplay=&quot;carousel-overlay&quot; data-videoid=&quot;0uje575Dewc, 9mMzHSM2z14, fZ_JOBCLF-I, eKGpsM0LGyY&quot; data-videotype=&quot;youtube&quot;&gt;&lt;/div&gt;
+                        
+                            &lt;!-- Basic default videos in a carousel via YouTube playlist ID, &quot;play in an overlay&quot;, specifying the # of columns(videos) per carousel panel --&gt;
+                            &lt;div data-widget=&quot;videoplayer&quot; data-videodisplay=&quot;carousel-overlay&quot; data-carouselcolumns=&quot;3&quot; data-videoplaylistid=&quot;PLaFe0BJiho2qz2KOUVLdl1DLBA__P1K5Y&quot; data-videotype=&quot;youtube&quot;&gt;&lt;/div&gt;
+                        
+                          __To destroy the widget__ and return back the original HTML that the widget initialized on:
+                        
+                          jQuery(&quot;&lt;your_table_selector&gt;&quot;).data(&quot;widget&quot;).destroy();
+                        
+                        
+                          &lt;br /&gt;Allowed options and values. __All values are strings__ (html standards):
+                          &lt;br /&gt;__data-widget__: videoplayer
+                          &lt;br /&gt;__data-autoplay__: true | false (default)
+                          &lt;br /&gt;__data-carouselcolumns__: 1 | 2 | 3 | 4 | 5 | 6
+                          &lt;br /&gt;__data-customplaceholder__: true | false (default)
+                          &lt;br /&gt;__data-ibmevent_&amp;lt;eventParamNameLowercase&gt;__: &quot;String value&quot;
+                          &lt;br /&gt;__data-imagesize__: large (default) | medium | thumbnail (Youtube only)
+                          &lt;br /&gt;__data-maxnumvideos__: n | 20 (default)
+                          &lt;br /&gt;__data-overlayplayersize__: medium (default) | large | xlarge
+                          &lt;br /&gt;__data-placeholderalttext__: &quot;String value&quot;
+                          &lt;br /&gt;__data-playervar_showinfo__: 0 | 1 (default)
+                          &lt;br /&gt;__data-showimageplaybutton__: true (default) | false
+                          &lt;br /&gt;__data-showvideodescription__: true | false (default)
+                          &lt;br /&gt;__data-showvideoduration__: true (default) | false
+                          &lt;br /&gt;__data-showvideotitle__: true (default) | false
+                          &lt;br /&gt;__data-theatermode__: true | false (default)
+                          &lt;br /&gt;__data-titledisplaytype__: below (default) | overlay
+                          &lt;br /&gt;__data-videodisplay__: inline (default) | overlay | overlayandtrigger | carousel-inline | carousel-overlay
+                          &lt;br /&gt;__data-videodurationcolor__: &quot;default&quot; (default) | &quot;none&quot;,
+                          &lt;br /&gt;__data-videoid__: &amp;lt;video\_id&gt;[,&amp;lt;video\_id&gt;+]
+                          &lt;br /&gt;__data-videoplaylistid__: &amp;lt;playlist\_id&gt;
+                          &lt;br /&gt;__data-videoratio__: &quot;16/9&quot; (default) | &quot;&amp;lt;W&gt;/&amp;lt;H&gt;&quot;
+                          &lt;br /&gt;__data-videotitleoverride__: &amp;lt;empty&gt;
+                          &lt;br /&gt;__data-videotype__: youtube | kaltura
+                        
+                          @class IBMCore.common.widget.videoplayer
+                        
+                        **/
+                        
+                        (function($, IBM) {
+                          var ibmVp = IBM.namespace(IBM, &#x27;common.widget.videoplayer&#x27;);
+                        
+                          ibmVp.videos = [];
+                          ibmVp.object_name = &#x27;Videoplayer&#x27;;
+                        
+                          /**
+                            The IBM video player plug-in.
+                            &lt;br /&gt;
+                            &lt;br /&gt;This
+                        
+                          **/
+                          $.fn.videoplayer = function(settings) {
+                            return this.each(function() {
+                              var thisPlayer = createVideoPlayer(this, settings);
+                        
+                              ibmVp.videos.push(thisPlayer);
+                        
+                              $(this).data(&#x27;widget&#x27;, thisPlayer);
+                              thisPlayer.init();
+                            });
+                          };
+                        
+                          // #2.
+                          // Called by the public jQuery plug-in. Makes behind-the-scenes changes easy.
+                          // Inits the widget &amp; registers the instance into array of all this widget instances and returns instance to caller.
+                          function createVideoPlayer(el, userSettings) {
+                            var defaultSettings = {
+                                videotype: &#x27;direct&#x27;,
+                                width: $(el).width(),
+                              },
+                              appliedSettings = $.extend(
+                                true,
+                                defaultSettings,
+                                $(el).data(),
+                                userSettings,
+                                { origEl: el }
+                              ),
+                              playerObj = {
+                                appliedSettings: appliedSettings,
+                                init: function() {
+                                  window.console.warn(
+                                    &#x27;v18: Video player type is not valid on this element: &#x27;,
+                                    appliedSettings.origEl
+                                  );
+                                },
+                                status: &#x27;Video player type is not valid.&#x27;,
+                              };
+                        
+                            /**
+                              Video player factory.
+                              Creates and returns the proper vendor plugin object.
+                              This is the only thing that should be touched, and it&#x27;s only when you need to add/remove a type of player from the factory.
+                        
+                              Init is called after new videoplayer() above in createVideoPlayer.
+                              This decides what type of sub-class/object player to create.
+                              That sub class/object player is responsible for everything.
+                            **/
+                            switch (appliedSettings.videotype) {
+                              case &#x27;youtube&#x27;:
+                                playerObj = new ibmVp.youtube.Player(appliedSettings);
+                                break;
+                        
+                              case &#x27;kaltura&#x27;:
+                                playerObj = new ibmVp.kaltura.Player(appliedSettings);
+                                break;
+                        
+                              case &#x27;ustream&#x27;:
+                                playerObj = new ibmVp.ustream.Player(appliedSettings);
+                                break;
+                        
+                              default:
+                                // Do nothing (Error handled by default obj set at top of class).
+                                break;
+                            }
+                        
+                            return playerObj;
+                          }
+                        
+                          /**
+                            Common video player methods and helers.
+                          ************************************************************************************************************/
+                        
+                          // Take the # of columns we&#x27;re supposed to put in the carousel and return the proper class to use for each column in it.
+                          ibmVp.columnsToClass = function(num) {
+                            var className = &#x27;&#x27;;
+                        
+                            // In most popular order for speed.
+                            switch (num) {
+                              case 6:
+                                className = &#x27;ibm-col-6-1&#x27;;
+                                break;
+                        
+                              case 5:
+                                className = &#x27;ibm-col-5-1&#x27;;
+                                break;
+                        
+                              case 3:
+                                className = &#x27;ibm-col-6-2&#x27;;
+                                break;
+                        
+                              case 4:
+                                className = &#x27;ibm-col-4-1&#x27;;
+                                break;
+                        
+                              case 2:
+                                className = &#x27;ibm-col-6-3&#x27;;
+                                break;
+                        
+                              case 1:
+                                className = &#x27;ibm-col-1-1&#x27;;
+                                break;
+                        
+                              default:
+                                break;
+                            }
+                        
+                            return className;
+                          };
+                        
+                          // Create an instance of an overlay, bind COMMON OVERLAY ONLY actions (like on close).
+                          // Then set it as an object property for common use.
+                          ibmVp.createOverlay = function(settings) {
+                            var thisOverlay = IBM.common.widget.overlay.createOverlay({
+                              allowResize: false,
+                              backgroundcolor: &#x27;#000000&#x27;,
+                              classes: settings.overlayclasses + &#x27; ibm-video-overlay&#x27;,
+                              contentHtml: &#x27; &#x27;,
+                              fullwidth: settings.theatermode,
+                              hidexscroll: true,
+                              seamless: true,
+                            });
+                        
+                            thisOverlay.init();
+                        
+                            return thisOverlay;
+                          };
+                        
+                          // Loop thru each videoid and put in columns and create placeholder divs.
+                          // Take @data-attr from orig el, dupe to each placeholder to set options on each video.
+                          // Set proper @data-videodisplay on each placeholder trigger image we made.
+                          // Init each video widget container DIV with .videoplayer()
+                          // Init carousel.
+                          ibmVp.createVideoCarousel = function(videoIds, appliedSettings) {
+                            var ids = videoIds.split(&#x27;,&#x27;),
+                              thisColumnIds,
+                              columns = [];
+                        
+                            // For each video ID in the array, put each into a ibm-col-x-x and output video widget div container for it.
+                            function createColumn(ids) {
+                              var colHtml = &#x27;&#x27;;
+                        
+                              $.each(ids, function() {
+                                colHtml +=
+                                  &#x27;&lt;div class=&quot;&#x27; +
+                                  ibmVp.columnsToClass(appliedSettings.carouselcolumns) +
+                                  &#x27;&quot;&gt;&lt;div data-videoid=&quot;&#x27; +
+                                  this +
+                                  &#x27;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&#x27;;
+                              });
+                        
+                              return colHtml;
+                            }
+                        
+                            // Splice out X number of videos for each ibm-column, build each ibm-col-x-x for it and add the column to the array of columns
+                            //  for the carousel HTML output.
+                            while (ids.length &gt;= appliedSettings.carouselcolumns) {
+                              thisColumnIds = ids.splice(0, appliedSettings.carouselcolumns);
+                        
+                              columns.push(
+                                &#x27;&lt;div class=&quot;ibm-columns&quot;&gt;&#x27; + createColumn(thisColumnIds) + &#x27;&lt;/div&gt;&#x27;
+                              );
+                            }
+                        
+                            // Add any remaining videos in a column.
+                            if (ids.length &gt; 0) {
+                              columns.push(&#x27;&lt;div class=&quot;ibm-columns&quot;&gt;&#x27; + createColumn(ids) + &#x27;&lt;/div&gt;&#x27;);
+                            }
+                        
+                            // Echo the carousel with video widget containers in the original element.
+                            appliedSettings.$origEl.html(
+                              &#x27;&lt;div data-widget=&quot;carousel&quot;&gt;&#x27; + columns.join(&#x27; &#x27;) + &#x27;&lt;/div&gt;&#x27;
+                            );
+                        
+                            // Init the video widget on each container we just output.
+                            appliedSettings.$origEl.find(&#x27;[data-videoid]&#x27;).each(function() {
+                              var $this = $(this);
+                        
+                              // Copy the data-attrs from original carousel El, to this el, but then
+                              //  overwrite the specific data-attrs needed for this specific player.
+                              $.extend(true, $this.data(), appliedSettings.$origEl.data(), {
+                                videotype: appliedSettings.videotype,
+                                videodisplay:
+                                  appliedSettings.videodisplay === &#x27;carousel-overlay&#x27;
+                                    ? &#x27;overlayandtrigger&#x27;
+                                    : &#x27;inline&#x27;,
+                                videoid: $this.data().videoid,
+                              });
+                        
+                              // Init this player
+                              $this.videoplayer($this.data());
+                            });
+                        
+                            // We just init each of the players in the carouse, so now init the carousel.
+                            appliedSettings.$origEl.find(&quot;[data-widget=&#x27;carousel&#x27;]&quot;).carousel({
+                              dots: true,
+                              arrows: true,
+                            });
+                          };
+                        
+                          ibmVp.fireVideoEvent = function(data) {
+                            var metricsData,
+                              playerState = &#x27;n/a&#x27;,
+                              ibmCoremetricsState = data.playerState,
+                              currentTime = Math.floor(data.currentTime),
+                              duration = Math.floor(data.duration),
+                              percentWatched =
+                                data.percentWatched || Math.floor((currentTime / duration) * 100);
+                        
+                            // Set nicenames for player states for event.
+                            switch (data.playerState) {
+                              case 0:
+                                playerState = &#x27;launched&#x27;;
+                                break;
+                        
+                              case 1:
+                                playerState = &#x27;paused&#x27;;
+                                break;
+                        
+                              case 2:
+                                playerState = &#x27;played&#x27;;
+                                break;
+                        
+                              case 3:
+                                playerState = &#x27;ended&#x27;;
+                                break;
+                        
+                              case 99:
+                                playerState = &#x27;error&#x27;;
+                                break;
+                        
+                              default:
+                            }
+                        
+                            if (currentTime === 0) {
+                              currentTime = &#x27;start&#x27;;
+                              percentWatched = &#x27;0&#x27;;
+                            }
+                        
+                            if (currentTime &gt;= duration || data.playerState === 3) {
+                              currentTime = &#x27;end&#x27;;
+                              percentWatched = &#x27;100&#x27;;
+                            }
+                        
+                            // If went to the end of the video, and fired &quot;pause&quot; event, don&#x27;t fire pause event b/c it&#x27;s really
+                            //   the end of the video, so just let &quot;end&quot; event fire and tag metrics.
+                            if (currentTime === &#x27;end&#x27; &amp;&amp; data.playerState === 1) {
+                              return;
+                            }
+                        
+                            metricsData = {
+                              type: &#x27;video&#x27;,
+                              primaryCategory: &#x27;VIDEO&#x27;,
+                              eventName: data.title,
+                              eventCategoryGroup: data.playerType,
+                              executionPath: data.videoId,
+                              execPathReturnCode: playerState,
+                              eventVidStatus: ibmCoremetricsState,
+                              eventVidTimeStamp: currentTime,
+                              eventVidLength: duration,
+                              eventVidPlayed: percentWatched + &#x27;%&#x27;,
+                            };
+                        
+                            if (data.customMetricsData) {
+                              if (data.customMetricsData.driverId) {
+                                metricsData.driverId = data.customMetricsData.driverId;
+                              }
+                        
+                              if (data.customMetricsData.targetURL) {
+                                metricsData.targetURL = data.customMetricsData.targetURL;
+                              }
+                        
+                              if (data.customMetricsData.playerStateLabel) {
+                                metricsData.playerStateLabel = data.customMetricsData.playerStateLabel;
+                              }
+                            }
+                        
+                            // Special event for video player, call event function directly.
+                            window.ibmStats.event(metricsData);
+                          };
+                        })(jQuery, IBMCore);
+                        
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

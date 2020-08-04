@@ -1,0 +1,616 @@
+{
+  "unav": {
+    "title": "Discover IBM",
+    "links": [
+      {
+        "title": "Products (US)",
+        "url": "https://www.ibm.com/products/en-us/"
+      },
+      {
+        "title": "Services (US)",
+        "url": "https://www.ibm.com/services/en-us/"
+      },
+      {
+        "title": "Industries (US)",
+        "url": "https://www.ibm.com/industries/en-us/"
+      },
+      { "title": "Careers (US)", "url": "https://www.ibm.com/employment/" },
+      { "title": "Partners", "url": "https://www.ibm.com/partnerworld/" },
+      { "title": "Support (US)", "url": "https://www.ibm.com/support/en-us/" }
+    ]
+  },
+  "catnav": {
+    "title": "Featured categories",
+    "links": [
+      {
+        "id": "item1",
+        "title": "Analytics",
+        "url": "https://www.ibm.com/analytics/us/en/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Analytics",
+            "description": "Advanced analytics fuel cognitive business.",
+            "link1": {
+              "title": "Explore Analytics",
+              "url": "https://www.ibm.com/analytics/us/en/"
+            }
+          },
+          "col2": {
+            "heading": "Featured service",
+            "title": "Open for Data",
+            "description": "A new portfolio of cloud data services for the next-generation information handler",
+            "link1": {
+              "title": "Learn about Open for Data",
+              "url": "https://www.ibm.com/analytics/us/en/technology/cloud-data-services/open-for-data/"
+            }
+          },
+          "col3": {
+            "heading": "Company speeds order delivery by 70%",
+            "imageUrl": "https://www.ibm.com/images/portal/X055393A11627Z97/newlog-casestudy.jpg",
+            "linkTitle": "Learn how a consulting firm provides actionable insight using IBM Cloud Data Services to quickly deploy delivery tracking system",
+            "linkUrl": "https://www.ibm.com/software/businesscasestudies/us/en/corp?synkey=Q324106A41169F30"
+          }
+        }
+      },
+      {
+        "id": "item2",
+        "title": "Cloud",
+        "url": "https://www.ibm.com/cloud/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Cloud",
+            "description": "Innovate with the cloud built for cognitive business.",
+            "link1": {
+              "title": "Explore Cloud",
+              "url": "https://www.ibm.com/cloud-computing/us/en/"
+            },
+            "link2": {
+              "title": "Try and buy Cloud",
+              "url": "https://www.ibm.com/marketplace/cloud/us/en-us/"
+            }
+          },
+          "col2": {
+            "heading": "Featured product",
+            "title": "MobileFirst Foundation app development platform",
+            "description": "Advance your enterprise with fast and secure mobile app development tools",
+            "link1": {
+              "title": "Learn more",
+              "url": "https://www.ibm.com/cloud-computing/solutions/mobile-cloud-computing/mobile-app-development-tools?cm_mmc=Earned_Other-_-IBM+Cloud_Hybrid-_-WW_WW-_-IBM+homepage+cloud+navigation"
+            }
+          },
+          "col3": {
+            "heading": "Release apps 75% faster",
+            "imageUrl": "https://www.ibm.com/images/portal/N769083E04461C55/03152016_minimenu_cloud-urban-code-deploy_380x170.jpg",
+            "linkTitle": "Automate manual processes and deploy at scale, from mobile to thousands of servers. Learn more about UrbanCode Deploy.",
+            "linkUrl": "https://www.ibm.com/cloud-computing/solutions/cloud-devops/automated-application-deployment"
+          }
+        }
+      },
+      {
+        "id": "item3",
+        "title": "Commerce",
+        "url": "https://www.ibm.com/commerce/us/en/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Commerce",
+            "description": "Unleash the power of cognitive commerce to build a predictive value chain and create customer engagements that inspire advocacy.",
+            "link1": {
+              "title": "Explore Commerce",
+              "url": "https://www.ibm.com/commerce/us-en/"
+            }
+          },
+          "col2": {
+            "heading": "Featured product",
+            "title": "IBM Customer Experience Analytics",
+            "description": "Visualize the customer journey, relive customer experiences and gain the insights you need to drive meaningful change.",
+            "link1": {
+              "title": "Learn about Customer Experience Analytics",
+              "url": "https://www.ibm.com/commerce/us-en/campaigns/customer-experience-analytics/"
+            },
+            "link2": {
+              "title": "Explore more Commerce solutions",
+              "url": "https://www.ibm.com/commerce/us-en/"
+            }
+          },
+          "col3": {
+            "heading": "Perspectives on Commerce",
+            "imageUrl": "https://www.ibm.com/images/portal/N416039Z50379Y06/IBM_Commerce_megamenu_image.jpg",
+            "linkTitle": "What's the future of commerce? Visit #NewWayToEngage Futurists Insights for predictions and forecasts from external thought leaders.",
+            "linkUrl": "https://www.ibm.com/commerce/us-en/futurists-insights/"
+          }
+        }
+      },
+      {
+        "id": "item4",
+        "title": "IT Infrastructure",
+        "url": "https://www.ibm.com/it-infrastructure/us-en/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "IT Infrastructure",
+            "description": "Become a better service provider by evolving your IT infrastructure to master hybrid cloud.",
+            "link1": {
+              "title": "Explore IT Infrastructure",
+              "url": "https://www.ibm.com/it-infrastructure/us-en/"
+            }
+          },
+          "col2": {
+            "heading": "Featured product",
+            "title": "LinuxONE Community Cloud",
+            "description": "Test drive LinuxONE and see how easy it is to provision a virtual server with the Linux distribution of your choice",
+            "link1": {
+              "title": "Try now at no charge",
+              "url": "https://developer.ibm.com/linuxone?source=web&ca=linuxone&ovcode=ov44223&tactic=C47300NW"
+            },
+            "link2": {
+              "title": "Explore more IT infrastructure products",
+              "url": "https://www.ibm.com/it-infrastructure/us-en/"
+            }
+          },
+          "col3": {
+            "heading": "The IT infrastructure conversation",
+            "imageUrl": "https://1.www.s81c.com/common/v18/i/megamenu/itinfrastructure.jpg",
+            "linkTitle": "See how a strong infrastructure can lead to a competitive advantage in these IBV studies.",
+            "linkUrl": "https://www.ibm.com/it-infrastructure/us-en/it-infrastructure-report/"
+          }
+        }
+      },
+      {
+        "id": "item5",
+        "title": "MobileFirst",
+        "url": "https://www.ibm.com/mobilefirst/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "IBM MobileFirst",
+            "description": "MobileFirst delivers apps, infrastructure and ways to engage that are designed exclusively for mobile users — personalized with data, security-rich and convenient.",
+            "link1": {
+              "title": "Explore MobileFirst",
+              "url": "https://www.ibm.com/mobilefirst/us/en/"
+            }
+          },
+          "col2": {
+            "heading": "Featured product",
+            "title": "IBM MobileFirst Platform",
+            "description": "A scalable platform for delivering great apps — with advanced integration, security and analytics capabilities.",
+            "link1": {
+              "title": "Learn more",
+              "url": "https://www.ibm.com/mobilefirst/us/en/mobile-platform.html"
+            },
+            "link2": {
+              "title": "Read why Gartner positions IBM as a leader in mobile",
+              "url": "https://www.ibm.com/marketing/iwm/dre/signup?source=mrs-form-162&S_PKG=ov38145&S_TACT=000000NS&S_OFF_CD=10000342"
+            }
+          },
+          "col3": {
+            "heading": "Mobile insights",
+            "imageUrl": "https://www.ibm.com/images/portal/T794582C17315N78/IBMHomepage_MF_GAGA_380x170.jpg",
+            "linkTitle": "Why good mobile apps are not good enough: what consumers want — that you might not know",
+            "linkUrl": "https://www.ibm.com/mobilefirst/us/en/good-apps-great-apps.html"
+          }
+        }
+      },
+      {
+        "id": "item6",
+        "title": "Security",
+        "url": "https://www.ibm.com/security/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Security",
+            "description": "Stop advanced threats, protect critical assets and optimize your security practices with IBM's integrated portfolio of products and services.",
+            "link1": {
+              "title": "Explore Security",
+              "url": "https://www.ibm.com/security/"
+            }
+          },
+          "col2": {
+            "heading": "Featured product",
+            "title": "IBM Application Security Testing on Cloud",
+            "description": "Strengthen security for web, mobile and desktop applications with convenient testing in the cloud.",
+            "link1": {
+              "title": "Learn more",
+              "url": "https://www.ibm.com/software/products/en/ibm-application-security-on-cloud/"
+            }
+          },
+          "col3": {
+            "heading": "Perspectives on Security",
+            "imageUrl": "https://www.ibm.com/images/portal/Q913228N16163Z98/CODB_mega_v2.jpg",
+            "linkTitle": "What truly affects the cost of a data breach? Ponemon Institute's latest study details the impact.",
+            "linkUrl": "https://www.ibm.com/security/data-breach/"
+          }
+        }
+      },
+      {
+        "id": "item7",
+        "title": "Social",
+        "url": "https://www.ibm.com/social-business/us-en/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "",
+            "description": "",
+            "link1": { "title": "", "url": "" }
+          },
+          "col2": {
+            "heading": "",
+            "title": "",
+            "description": "",
+            "link1": { "title": "", "url": "" }
+          },
+          "col3": {
+            "heading": "",
+            "imageUrl": "",
+            "linkTitle": "",
+            "linkUrl": ""
+          }
+        }
+      },
+      {
+        "id": "item8",
+        "title": "Watson",
+        "url": "https://www.ibm.com/watson/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Watson",
+            "description": "Meet IBM Watson, a cognitive system that enables a new partnership between people and computers that enhances, scales and accelerates human expertise.",
+            "link1": {
+              "title": "Explore Watson",
+              "url": "https://www.ibm.com/smarterplanet/us/en/ibmwatson/"
+            }
+          },
+          "col2": {
+            "heading": "Featured product",
+            "title": "Watson IoT",
+            "description": "Transform your industry by learning from the connected world",
+            "link1": {
+              "title": "Learn more",
+              "url": "https://www.ibm.com/internet-of-things/"
+            },
+            "link2": {
+              "title": "View all Watson products",
+              "url": "https://www.ibm.com/smarterplanet/us/en/ibmwatson/"
+            }
+          },
+          "col3": {
+            "heading": "Perspectives on Watson",
+            "imageUrl": "https://1.www.s81c.com/common/v18/i/megamenu/watson.jpg",
+            "linkTitle": "See how Watson IoT will benefit business and society",
+            "linkUrl": "https://www.ibm.com/iot"
+          }
+        }
+      }
+    ]
+  },
+  "mastheadNav": {
+    "links": [
+      {
+        "title": "Products",
+        "url": "",
+        "hasMenu": true,
+        "hasMegapanel": false,
+        "menuSections": [
+          {
+            "heading": "Find",
+            "menuItems": [
+              {
+                "title": "All products",
+                "url": "https://www.ibm.com/products?lnk=mpra_zwen&lnk2=learn"
+              }
+            ]
+          },
+          {
+            "heading": "Explore",
+            "menuItems": [
+              {
+                "title": "Products",
+                "url": "https://www.ibm.com/products?lnk=mpr_zwen&lnk2=learn"
+              },
+              {
+                "title": "Analytics",
+                "url": "https://www.ibm.com/analytics?lnk=mpr_bua_zwen&lnk2=learn"
+              },
+              {
+                "title": "Automation",
+                "url": "https://www.ibm.com/automation?lnk=mpr_buau_zwen&lnk2=learn"
+              },
+              {
+                "title": "Blockchain",
+                "url": "https://www.ibm.com/blockchain?lnk=mpr_bubk_zwen&lnk2=learn"
+              },
+              {
+                "title": "Cloud",
+                "url": "https://www.ibm.com/cloud?lnk=mpr_bucl_zwen&lnk2=learn"
+              },
+              {
+                "title": "Internet of Things",
+                "url": "https://www.ibm.com/internet-of-things?lnk=mpr_iot_zwen&lnk2=learn"
+              },
+              {
+                "title": "IT Infrastructure",
+                "url": "https://www.ibm.com/it-infrastructure?lnk=mpr_buit_zwen&lnk2=learn"
+              },
+              {
+                "title": "Mobile",
+                "url": "https://www.ibm.com/mobile?lnk=mpr_bumf_zwen&lnk2=learn"
+              },
+              {
+                "title": "Security",
+                "url": "https://www.ibm.com/security?lnk=mpr_buse_zwen&lnk2=learn"
+              },
+              {
+                "title": "Supply Chain",
+                "url": "https://www.ibm.com/supply-chain?lnk=mpr_busc_zwen&lnk2=learn"
+              },
+              {
+                "title": "Talent",
+                "url": "https://www.ibm.com/services/process/talent?lnk=mpr_buta_zwen&lnk2=learn"
+              },
+              {
+                "title": "Watson",
+                "url": "https://www.ibm.com/watson?lnk=mpr_buwa_zwen&lnk2=learn"
+              },
+              {
+                "title": "Watson Health",
+                "url": "https://www.ibm.com/watson/health?lnk=mpr_buwh_zwen&Ink2=learn"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Services",
+        "url": "",
+        "hasMenu": true,
+        "hasMegapanel": false,
+        "menuSections": [
+          {
+            "heading": "",
+            "menuItems": [
+              {
+                "title": "Financing (US)",
+                "url": "https://www.ibm.com/financing?lnk=mse_fin_zwen&lnk2=learn"
+              },
+              {
+                "title": "Industry expertise (US)",
+                "url": "https://www.ibm.com/industries?lnk=mse_ie_zwen&lnk2=learn"
+              },
+              {
+                "title": "Training and skills (US)",
+                "url": "https://www.ibm.com/training?lnk=mse_tr_zwen&lnk2=learn"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Industries",
+        "url": "https://www.ibm.com/industries?lnk=min_zwen",
+        "hasMenu": false,
+        "hasMegapanel": false,
+        "menuSections": []
+      },
+      {
+        "title": "Developers",
+        "url": "",
+        "hasMenu": true,
+        "hasMegapanel": false,
+        "menuSections": [
+          {
+            "heading": "",
+            "menuItems": [
+              {
+                "title": "developerWorks (US)",
+                "url": "https://www.ibm.com/developerworks/"
+              },
+              {
+                "title": "PartnerWorld",
+                "url": "https://www.ibm.com/partnerworld/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Support",
+        "url": "https://www.ibm.com/support/en-us/",
+        "hasMenu": false,
+        "hasMegapanel": false,
+        "menuSections": []
+      }
+    ]
+  },
+  "profileMenu": {
+    "signedout": [
+      { "title": "My IBM", "url": "https://myibm.ibm.com/dashboard/" },
+      {
+        "title": "Sign in",
+        "url": "https://idaas.iam.ibm.com/idaas/mtfim/sps/authsvc?PolicyId=urn:ibm:security:authentication:asf:basicldapuser&Target={{window.location}}"
+      }
+    ],
+    "signedin": [
+      { "title": "My IBM", "url": "https://myibm.ibm.com/dashboard/" },
+      { "title": "Profile", "url": "https://myibm.ibm.com/profile/" },
+      {
+        "title": "Billing",
+        "url": "https://myibm.ibm.com/billing/?lnk=mmi"
+      },
+      {
+        "id": "signout",
+        "title": "Sign out",
+        "url": "https://www.ibm.com/account/us-en/signout.html"
+      }
+    ]
+  },
+  "marketplace": {
+    "title": "Products",
+    "url": ""
+  },
+  "footerMenu": [
+    {
+      "title": "Discover",
+      "links": [
+        {
+          "title": "Products (US)",
+          "url": "https://www.ibm.com/products?lnk=fdi_zwen"
+        },
+        {
+          "title": "Redbooks (US)",
+          "url": "https://www.redbooks.ibm.com?lnk=fdi_zwen"
+        },
+        {
+          "title": "Services (US)",
+          "url": "https://www.ibm.com/services?lnk=fdi_zwen"
+        },
+        {
+          "title": "Industries (US)",
+          "url": "https://www.ibm.com/industries?lnk=fdi_zwen"
+        },
+        {
+          "title": "IBM Research (US)",
+          "url": "https://research.ibm.com?lnk=fdi_zwen"
+        },
+        {
+          "title": "Case studies (US)",
+          "url": "https://www.ibm.com/case-studies?lnk=fdi_zwen"
+        },
+        {
+          "title": "Financing (US)",
+          "url": "https://www.ibm.com/financing?ref=ibmfooter&lnk=fdi_zwen"
+        }
+      ]
+    },
+    {
+      "title": "Information for...",
+      "links": [
+        {
+          "title": "Developers (US)",
+          "url": "https://www.ibm.com/developerworks/"
+        },
+        {
+          "title": "Business Partners",
+          "url": "https://www.ibm.com/partnerworld"
+        }
+      ]
+    },
+    {
+      "title": "Connect with us",
+      "links": [
+        { "title": "Support", "url": "https://www.ibm.com/support/zw/en/" },
+        {
+          "title": "Find a Business Partner (US)",
+          "url": "https://www.ibm.com/partnerworld/wps/bplocator/search.jsp"
+        }
+      ]
+    },
+    {
+      "title": "About IBM",
+      "links": [
+        { "title": "Careers", "url": "https://www.ibm.com/employment/" },
+        {
+          "title": "Latest news (US)",
+          "url": "https://www.ibm.com/press/us/en/index.wss"
+        },
+        {
+          "title": "Investor relations (US)",
+          "url": "https://www.ibm.com/investor/"
+        },
+        {
+          "title": "Corporate responsibility (US)",
+          "url": "https://www.ibm.com/ibm/responsibility/"
+        },
+        { "title": "About IBM", "url": "https://www.ibm.com/zw-en/about" }
+      ]
+    }
+  ],
+  "footerThin": [
+    { "title": "Contact", "url": "https://www.ibm.com/contact/zw/en/" },
+    { "title": "Privacy", "url": "https://www.ibm.com/privacy/zw/en/" },
+    { "title": "Terms of use", "url": "https://www.ibm.com/zw-en/legal" },
+    {
+      "title": "Accessibility",
+      "url": "https://www.ibm.com/accessibility/zw/en/"
+    }
+  ],
+  "localeSelector": {
+    "localVersions": "Translated versions of this page",
+    "homepages": "Worldwide ibm.com home pages"
+  },
+  "socialFollow": {
+    "title": "Follow IBM",
+    "links": [
+      {
+        "linkClass": "ibm-twitter-encircled-link",
+        "title": "Twitter",
+        "url": "https://www.twitter.com/ibm"
+      },
+      {
+        "linkClass": "ibm-linkedin-encircled-link",
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/company/ibm"
+      },
+      {
+        "linkClass": "ibm-facebook-encircled-link",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/ibm"
+      },
+      {
+        "linkClass": "ibm-youtube-encircled-link",
+        "title": "YouTube",
+        "url": "https://www.youtube.com/ibm"
+      }
+    ]
+  },
+  "socialSharing": [
+    {
+      "id": "digg",
+      "title": "Digg",
+      "url": "https://digg.com/submit?phase=2&url=%{URL}&title=%{TITLE}"
+    },
+    {
+      "id": "facebook",
+      "title": "Facebook",
+      "url": "https://www.facebook.com/sharer.php?u=%{URL}&t=%{TITLE}"
+    },
+    {
+      "id": "twitter",
+      "title": "Twitter",
+      "url": "https://twitter.com/home?status=%{URL}%20-%20%{TITLE}"
+    },
+    {
+      "id": "delicious",
+      "title": "Delicious",
+      "url": "https://delicious.com/post?url=%{URL}&title=%{TITLE}"
+    },
+    {
+      "id": "linkedin",
+      "title": "Linked In",
+      "url": "https://www.linkedin.com/shareArticle?mini=true&url=%{URL}&title=%{TITLE}"
+    }
+  ],
+  "leaving": {
+    "LEAVING001": "Leaving the IBM Web site",
+    "LEAVING002": "You are now leaving the IBM Web site. IBM makes no representations or warranties about any other Web site which you may access through this one. When you access non-IBM Web sites, even though they might contain the IBM logo and content regarding IBM's products and services, such Web sites are independent of IBM and IBM has no control over the operation of non-IBM Web sites. In addition, a link to a non-IBM Web site does not mean that IBM endorses that Web site or has any responsibility for the use of such Web site.",
+    "LEAVING003": "The link you requested or were directed to is",
+    "LEAVING004": "Notice"
+  },
+  "misc": {
+    "backtotop": "Back to top",
+    "cancelText": "Cancel",
+    "close": "Close",
+    "cookiePrefs": "Cookie preferences",
+    "continueText": "Continue",
+    "editProfile": "Edit profile",
+    "emailThisPage": "",
+    "feedback": "Feedback",
+    "mpScopedSearh": "In Products",
+    "withinMp": "Products",
+    "next": "Next",
+    "noresults": "No results found",
+    "prev": "Previous",
+    "resultsNav": "Use down and up arrow keys to navigate through the results.",
+    "search": "Search",
+    "selectCountry": "Select a country/region",
+    "sharePage": "Share this page",
+    "signin": "Sign in",
+    "signout": "Sign out",
+    "sitenav": "Site navigation",
+    "welcomeback": "Welcome back"
+  }
+}

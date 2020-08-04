@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en-US"> 
+	<head>
+		
+				<meta charset="UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="canonical" href="http://www.ibm.com/__REPLACEME__">
+
+		<meta name="robots" content="index,follow">
+		<meta name="description" content="__REPLACE_ME____REPLACE_ME__">
+		<meta name="keywords" content="__REPLACE_ME____REPLACE_ME__">
+
+		<meta name="geo.country" content="US">
+		<meta name="dcterms.date" content="__REPLACE_ME__">
+		<meta name="dcterms.rights" content="© Copyright IBM Corp. 2017">
+
+ 		
+ 		
+ 				<script>
+			digitalData = {
+				page: {
+					category: {
+						primaryCategory: '__REPLACE_ME__'
+					},
+					pageInfo: {
+						effectiveDate: '__REPLACE_ME__',
+						expiryDate: '__REPLACE_ME__',
+						language: 'en-US',
+						publishDate: '__REPLACE_ME__',
+						publisher: 'IBM Corporation',
+						version: 'v18',
+						ibm: {
+							country: 'US',
+							industry: '__REPLACE_ME__',
+							owner: '__REPLACE_ME__',
+							siteID: 'IBMTEST',
+							subject: '__REPLACE_ME__',
+							type: '__REPLACE_ME__',
+							config: {}
+						}
+					}
+				}
+			};
+
+		</script>
+
+ 		
+ 		
+		<title>Masthead typeahead</title>
+		
+		
+
+
+		<link href="/css/www.css" rel="stylesheet">
+		<link href="/css/tables.css" rel="stylesheet">
+		<link href="/css/textcolumns.css" rel="stylesheet">
+		<link href="/css/forms.css" rel="stylesheet">
+		<link href="/css/expertise.css" rel="stylesheet">
+		<link href="/css/syntaxhighlighter.css" rel="stylesheet">
+		<link href="/css/grid-fluid.css" rel="stylesheet">
+		<link href="/css/textcolumns.css" rel="stylesheet">
+		
+		<script src="https://1.www.s81c.com/common/stats/ida_stats.js"></script>
+		<script src="/js/www.js"></script>
+		<script src="/js/forms.js"></script>
+		<script src="/js/tables.js"></script>
+		<script src="/js/dyntabs.js"></script>
+		<script src="/js/syntaxhighlighter.js"></script>
+
+ 		
+		
+				
+		<script>
+			
+			// URL param override.
+							
+					
+		(function(IBM,$) {
+			var myRequestNum = 0,
+				IBMms = IBM.common.module.mastheadsearch; // Shortcut.
+			
+			// Set the customTypeaheadFunction so the masthead calls mine instead of the default, when the box is checked.
+			IBMms.customTypeaheadFunction = function (term) {
+				
+				// Setup our custom function that calls our custom typeahead service.
+				// On success it passes the searched string and array of results to the typeahead API to pop them on the glass.
+				function fetchSuggestions () {
+					$.ajax({
+						url: "/api/getdatawithcallback/?url=http://api.tvmaze.com/search/shows?q=" + term,
+						dataType: "json",
+						searchTerm: term,
+						myRequestNum: ++myRequestNum,
+						success: function(response) {
+							// If this request isn't the latest one (for slow API responses), 
+							//  don't update the TA box with it's results.
+							if (myRequestNum !== this.myRequestNum) {
+								return;
+							}
+							
+							// Format the results into a simply array of terms/strings and 
+							//  call the function to create the typeahead box with our results.
+							var titleListArr = [],
+								i = 0, 
+								len = response.length;
+								 
+							for (i; i < len; i++) {
+								if (response[i].show.name) {
+									titleListArr.push(response[i].show.name);
+								}
+							}
+							
+							// Call the masthead typeahead API with the term used for *this WSR* 
+							//  and the array you created of results to show.
+							IBMms.createTypeahead(this.searchTerm, titleListArr);
+						},
+						error: function(response) {
+							console.error('Error calling typeahead service: ', response);
+						}
+					});
+				}
+				
+				// Tell the masthead typeahead "makeTypeaheadRequest" API to call our custom request function above instead of the default one.
+				IBMms.makeTypeaheadRequest(fetchSuggestions);
+			};
+			
+		})(IBMCore, jQuery);
+						
+		</script>
+			
+	</head>
+
+	<body id="ibm-com" class="ibm-type">
+		<div id="ibm-top">
+
+						<!-- MASTHEAD_BEGIN -->
+			<div id="ibm-masthead" role="banner" aria-label="IBM">
+				<div id="ibm-universal-nav">		
+					<nav role="navigation" aria-label="IBM">
+						<div id="ibm-home"><a href="http://www.ibm.com/us/en/">IBM®</a></div>
+						
+						<!--<div class="ibm-parent-site-name"><a href="###">This is my parent site name</a></div>-->
+
+						<ul id="ibm-menu-links" role="toolbar" aria-label="Site map">
+							<li><a href="http://www.ibm.com/sitemap/us/en/">Site map</a></li>
+						</ul>
+					</nav>
+					
+					<div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead">
+						<form id="ibm-search-form" action="//www.ibm.com/Search/" method="get">
+							<p>
+								<label for="q">IBM</label>
+								<input type="text" maxlength="100" value="" placeholder="Search" name="q" id="q" aria-label="Search"/>
+								<input type="hidden" value="18" name="v"/>
+								<input type="hidden" value="utf" name="en"/>
+								<input type="hidden" value="en" name="lang"/>
+								<input type="hidden" value="us" name="cc"/>
+								<input type="submit" id="ibm-search" class="ibm-btn-search" value="Submit">
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- MASTHEAD_END -->
+
+			
+
+			<!-- MAIN PAGE WRAPPER AROUND LEADSPACE, MAIN CONTENT -->
+			<div id="ibm-content-wrapper">
+			
+				<header role="banner" aria-labelledby="ibm-pagetitle-h1">
+										<div class="ibm-fluid ibm-margin-top-1">
+						<div class="ibm-col-12-12">
+							
+
+
+<p class="ibm-ind-link"><a class="ibm-back-link" href="/">v18 repo home page</a></p>
+							<p class="ibm-bold ibm-h2">Masthead typeahead</p></div>
+					</div>
+									</header>
+				
+				<main role="main" aria-labelledby="ibm-pagetitle-h1">
+					<div id="ibm-pcon" class="ibm-margin-top-1">
+						
+									<div class="ibm-fluid">
+										<div class="ibm-col-12-2 ibm-col-medium-12-3 nsdev-v18el-leftnav">
+											
+											<div class="ibm-hidden-small">
+    <ul class="ibm-plain-list ibm-small">
+        <li><a href="adaptivelinebreaks.html">Adaptivelinebreaks</a></li>
+<li><a href="alignments.html">Alignments</a></li>
+<li><a href="anchorlink-adjustment.html">Anchorlink-adjustment</a></li>
+<li><a href="anchorlinks.html">Anchorlinks</a></li>
+<li><a href="animation.html">Animation</a></li>
+<li><a href="audioplayer.html">Audioplayer</a></li>
+<li><a href="background-colors.html">Background-colors</a></li>
+<li><a href="backtotop.html">Backtotop</a></li>
+<li><a href="blocklink.html">Blocklink</a></li>
+<li><a href="blocks.html">Blocks</a></li>
+<li><a href="border-colors.html">Border-colors</a></li>
+<li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+<li><a href="buttons.html">Buttons</a></li>
+<li><a href="cards.html">Cards</a></li>
+<li><a href="carousel.html">Carousel</a></li>
+<li><a href="checkbox.html">Checkbox</a></li>
+<li><a href="contactmodule.html">Contactmodule</a></li>
+<li><a href="cookies.html">Cookies</a></li>
+<li><a href="datatable-rowselector.html">Datatable-rowselector</a></li>
+<li><a href="datatable-scroll.html">Datatable-scroll</a></li>
+<li><a href="datatable-widget.html">Datatable-widget</a></li>
+<li><a href="datatable.html">Datatable</a></li>
+<li><a href="datepicker.html">Datepicker</a></li>
+<li><a href="default-config.html">Default-config</a></li>
+<li><a href="deprecated.html">Deprecated</a></li>
+<li><a href="disablemodules.html">Disablemodules</a></li>
+<li><a href="disablewidgets.html">Disablewidgets</a></li>
+<li><a href="dropdown-menu.html">Dropdown-menu</a></li>
+<li><a href="fileinput.html">Fileinput</a></li>
+<li><a href="focusable.html">Focusable</a></li>
+<li><a href="footer-alternate.html">Footer-alternate</a></li>
+<li><a href="footer-corporate-social.html">Footer-corporate-social</a></li>
+<li><a href="footer-popup.html">Footer-popup</a></li>
+<li><a href="footer.html">Footer</a></li>
+<li><a href="forms.html">Forms</a></li>
+<li><a href="grid-classes.html">Grid-classes</a></li>
+<li><a href="grid-override.html">Grid-override</a></li>
+<li><a href="grid.html">Grid</a></li>
+<li><a href="helper-classes.html">Helper-classes</a></li>
+<li><a href="hide-background.html">Hide-background</a></li>
+<li><a href="hide-element.html">Hide-element</a></li>
+<li><a href="horizontal-rules.html">Horizontal-rules</a></li>
+<li><a href="how-widgets-work.html">How-widgets-work</a></li>
+<li><a href="icons-social.html">Icons-social</a></li>
+<li><a href="icons.html">Icons</a></li>
+<li><a href="image-circle.html">Image-circle</a></li>
+<li><a href="images.html">Images</a></li>
+<li><a href="index.html">Index</a></li>
+<li><a href="leadspace.html">Leadspace</a></li>
+<li><a href="leavingibm.html">Leavingibm</a></li>
+<li><a href="left-navigation.html">Left-navigation</a></li>
+<li><a href="legalfootertext.html">Legalfootertext</a></li>
+<li><a href="links.html">Links</a></li>
+<li><a href="lists.html">Lists</a></li>
+<li><a href="locale-selector.html">Locale-selector</a></li>
+<li><a href="localstorage.html">Localstorage</a></li>
+<li><a href="masonry.html">Masonry</a></li>
+<li><a href="masthead-profile-demo.html">Masthead-profile-demo</a></li>
+<li><a href="masthead-profile.html">Masthead-profile</a></li>
+<li><a href="masthead-search-local.html">Masthead-search-local</a></li>
+<li><a href="masthead-search-typeahead.html">Masthead-search-typeahead</a></li>
+<li><a href="masthead-v3.html">Masthead-v3</a></li>
+<li><a href="masthead.html">Masthead</a></li>
+<li><a href="mediaobject.html">Mediaobject</a></li>
+<li><a href="menunav.html">Menunav</a></li>
+<li><a href="metrics.html">Metrics</a></li>
+<li><a href="modernizr.html">Modernizr</a></li>
+<li><a href="moduleconventions.html">Moduleconventions</a></li>
+<li><a href="multiple-columns.html">Multiple-columns</a></li>
+<li><a href="noticechoice.html">Noticechoice</a></li>
+<li><a href="old-grandma-rocker.html">Old-grandma-rocker</a></li>
+<li><a href="overlay.html">Overlay</a></li>
+<li><a href="pageconfiguration.html">Pageconfiguration</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="parallax-scroll.html">Parallax-scroll</a></li>
+<li><a href="popup.html">Popup</a></li>
+<li><a href="publish-subscribe.html">Publish-subscribe</a></li>
+<li><a href="pullquote.html">Pullquote</a></li>
+<li><a href="queue.html">Queue</a></li>
+<li><a href="radiobutton.html">Radiobutton</a></li>
+<li><a href="rssdisplay.html">Rssdisplay</a></li>
+<li><a href="scrollable.html">Scrollable</a></li>
+<li><a href="scrolledintoview.html">Scrolledintoview</a></li>
+<li><a href="scrolltracker.html">Scrolltracker</a></li>
+<li><a href="selectlist.html">Selectlist</a></li>
+<li><a href="selectlistnav.html">Selectlistnav</a></li>
+<li><a href="setsameheight.html">Setsameheight</a></li>
+<li><a href="sharethiscontent.html">Sharethiscontent</a></li>
+<li><a href="sharethispage.html">Sharethispage</a></li>
+<li><a href="showhide.html">Showhide</a></li>
+<li><a href="spacing.html">Spacing</a></li>
+<li><a href="spacingtester.html">Spacingtester</a></li>
+<li><a href="spinner.html">Spinner</a></li>
+<li><a href="statshelper.html">Statshelper</a></li>
+<li><a href="stepindicator.html">Stepindicator</a></li>
+<li><a href="surveys.html">Surveys</a></li>
+<li><a href="syntaxhighlighter.html">Syntaxhighlighter</a></li>
+<li><a href="tabs-dynamic.html">Tabs-dynamic</a></li>
+<li><a href="tabs-navigation.html">Tabs-navigation</a></li>
+<li><a href="tabs-sticky.html">Tabs-sticky</a></li>
+<li><a href="text-colors.html">Text-colors</a></li>
+<li><a href="text-size-overrides.html">Text-size-overrides</a></li>
+<li><a href="text-sizes.html">Text-sizes</a></li>
+<li><a href="text-weights.html">Text-weights</a></li>
+<li><a href="text.html">Text</a></li>
+<li><a href="tooltip.html">Tooltip</a></li>
+<li><a href="urlparameters.html">Urlparameters</a></li>
+<li><a href="userinformation.html">Userinformation</a></li>
+<li><a href="video-looper.html">Video-looper</a></li>
+<li><a href="videoplayer-kaltura.html">Videoplayer-kaltura</a></li>
+<li><a href="videoplayer-ustream.html">Videoplayer-ustream</a></li>
+<li><a href="videoplayer-youtube.html">Videoplayer-youtube</a></li>
+    </ul>
+</div>
+											
+											
+										</div>
+										<div class="ibm-col-12-10 ibm-col-medium-12-9">
+											
+		<div class="ibm-fluid">
+			<div class="ibm-col-12-12">
+				
+				<div data-widget="dyntabs" class="ibm-graphic-tabs ibm-graphic-tabs--colored">
+					<div class="ibm-tab-section">
+						<ul class="ibm-tabs ibm-background-neutral-white-30 ibm-border-blue-50 ibm-linkcolor-default" role="tablist">
+							<li><a aria-selected="true" role="tab" href="#examples">Examples &amp; code</a></li>
+							<li><a role="tab" href="#overview">Overview &amp; guidelines</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div id="examples" class="ibm-tabs-content">
+					<p class="ibm-light ibm-textcolor-green-60">(Never view the page source or use Firebug to copy HTML. Only use provided code snippets.) </p>
+					
+					
+		<p>Start typing in the masthead on this page. I've enabled a movie search that will suggest titles and on search submit will send you to IMDB search.</p>
+		
+		<p>Below is my custom typeahead function I setup for this page. This won't work elsewhere except this site so don't try to use this. You need to use your own search service and callback processing.</p>
+		
+		
+		<pre data-widget="syntaxhighlighter" class="brush: js">
+					
+		(function(IBM,$) {
+			var myRequestNum = 0,
+				IBMms = IBM.common.module.mastheadsearch; // Shortcut.
+			
+			// Set the customTypeaheadFunction so the masthead calls mine instead of the default, when the box is checked.
+			IBMms.customTypeaheadFunction = function (term) {
+				
+				// Setup our custom function that calls our custom typeahead service.
+				// On success it passes the searched string and array of results to the typeahead API to pop them on the glass.
+				function fetchSuggestions () {
+					$.ajax({
+						url: "/api/getdatawithcallback/?url=http://api.tvmaze.com/search/shows?q=" + term,
+						dataType: "json",
+						searchTerm: term,
+						myRequestNum: ++myRequestNum,
+						success: function(response) {
+							// If this request isn't the latest one (for slow API responses), 
+							//  don't update the TA box with it's results.
+							if (myRequestNum !== this.myRequestNum) {
+								return;
+							}
+							
+							// Format the results into a simply array of terms/strings and 
+							//  call the function to create the typeahead box with our results.
+							var titleListArr = [],
+								i = 0, 
+								len = response.length;
+								 
+							for (i; i < len; i++) {
+								if (response[i].show.name) {
+									titleListArr.push(response[i].show.name);
+								}
+							}
+							
+							// Call the masthead typeahead API with the term used for *this WSR* 
+							//  and the array you created of results to show.
+							IBMms.createTypeahead(this.searchTerm, titleListArr);
+						},
+						error: function(response) {
+							console.error('Error calling typeahead service: ', response);
+						}
+					});
+				}
+				
+				// Tell the masthead typeahead "makeTypeaheadRequest" API to call our custom request function above instead of the default one.
+				IBMms.makeTypeaheadRequest(fetchSuggestions);
+			};
+			
+		})(IBMCore, jQuery);
+			</pre>
+		
+		 
+				</div>
+
+				<div id="overview" class="ibm-tabs-content">
+					<h2 class="ibm-bold ibm-h4">Official standards &amp; guidelines</h2><p class="ibm-ind-link"><a class="ibm-forward-link" href="http://www.ibm.com/standards/web/design/masthead-search/">ibm.com/standards/web/design/masthead-search/</a></p><br><div class="ibm-rule ibm-alternate-1 ibm-green-60"><hr></div><h2 class="ibm-bold ibm-h4">What</h2><p>A new feature that allows you to hook into the masthead search typeahead option and use it with your own custom typeahead web service instead of the default enterprise ibm.com typeahead web service.</p><br><div class="ibm-rule ibm-alternate-1 ibm-green-60"><hr></div><h2 class="ibm-bold ibm-h4">Why</h2><p>If you have your own custom search term typeahead service and you want to suggest terms from <strong>your</strong> site/web service instead of the enterprise ibm.com search term suggestions. This also provides a consistent experience for users no matter what service the suggestions are coming from, the experience will be the same for them.</p><br><div class="ibm-rule ibm-alternate-1 ibm-green-60"><hr></div><h2 class="ibm-bold ibm-h4">Rules &amp; guidelines</h2>
+		<ul>
+			<li>This is an add-on to the <a href="./masthead-search-local/?pagetype=repotestpage">masthead local search</a>. You must add that scoped search checkbox and your own form to submit in order to use the typeahead hook (this thing you're reading about) because this is useless without those.</li>
+			<li>Set the custom typeahead function and use API to display your new set of results.</li>
+		</ul>
+	<br><div class="ibm-rule ibm-alternate-1 ibm-green-60"><hr></div><h2 class="ibm-bold ibm-h4">How</h2>
+		<p class="ibm-bold">High level:</p>
+		
+		<ul>
+			<li>Set/alias the masthead search custom function: <code>IBMCore.common.module.mastheadsearch.customTypeaheadFunction</code> to your custom typeahead function to run (call your web service) instead of the default one that calls the enterprise typeahead web service. The term/string is passed to your function as a string so you don't have to "get" it.</li>
+			<li>On response of your WSR, do whatever processing you gotta do to build the data needed, then simply call the <code>IBMCore.common.module.mastheadsearch.createTypeahead</code> API, passing it these two pieces of data: 
+				<ol>
+					<li>The string that was searched on.</li>
+					<li>An array of strings/result terms to show in the box.</li>
+				</ol>
+			<li>That's it!</li>
+		</ul>
+		
+		
+		<p class="ibm-bold">Details:</p>
+		<p>If the scoped search box is checked, v18 checks to see if <code>IBMCore.common.module.mastheadsearch.customTypeaheadFunction</code> exists, and if it does it calls it. You set that to your custom function.</p>
+		<p>Inside of "customTypeaheadFunction" do whatever setups and functions you need to, and then call the <code>IBMCore.common.module.mastheadsearch.makeTypeaheadRequest</code> API and pass it your function to call that makes your actual JSON/AJAX/WSR. The "makeTypeaheadRequest" call has a short timeout to handle fast typers so unnecessary WSRs aren't made.</p>
+		<p>On success response of your WSR, format the results into a simple array of strings and call the <code>IBMCore.common.module.mastheadsearch.createTypeahead</code> API, passing it these two pieces of data: 
+			<ol>
+				<li>The string that was searched on.</li>
+				<li>An array of strings/result terms to show in the box.</li>
+			</ol>
+		</p>
+		
+		<p>For illustrative purposes, if you were to look at it all in a single nested example:</p>
+		
+		<pre data-widget="syntaxhighlighter" class="brush: js">
+			// Set the "customTypeaheadFunction" function so the masthead calls this instead of the default one, when the box is checked.
+			// The v18 JS will pass the current search string/term to this function.
+			IBMCore.common.module.mastheadsearch.customTypeaheadFunction = function (term) {
+					
+				// Call the the "makeTypeaheadRequest" API wrapper and pass it our custom code to run when it makes a request.
+				IBMCore.common.module.mastheadsearch.makeTypeaheadRequest(function () {
+					$.ajax({
+						url: "_____",
+						searchTerm: term,
+						// other params, etc....
+						success: function(response) {
+							// Do some processing to format the results...
+							
+							// Call the masthead typeahead API with the term used for *this WSR* and the array of results to show.
+							IBMCore.common.module.mastheadsearch.createTypeahead(this.searchTerm, array_of_result_strings);
+						}
+					});
+				});
+			};</pre>
+			
+		<p>Of course you can order/alias/move things around per your style, but those are the pieces and how things need to happen.</p>
+		
+	<br><div class="ibm-rule ibm-alternate-1 ibm-green-60"><hr></div><h2 class="ibm-bold ibm-h4">Additional JS/CSS files required</h2>
+				<p>Required supplemental JS and CSS files for this element:</p>
+				<pre data-widget="syntaxhighlighter" class="brush: js; html-script: true;">
+&lt;link href=&quot;https://1.www.s81c.com/common../../../css/forms.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;https://1.www.s81c.com/common../../../js/forms.js&quot;&gt;&lt;/script&gt;
+				</pre>
+			<br><div class="ibm-rule ibm-alternate-1 ibm-green-60"><hr></div><h2 class="ibm-bold ibm-h4">Hints and tips</h2><p>Make sure to account for a slow WSR response or network connection. Remember, not everyone is on a 40MB+ connection, especially across the pond. The "myRequestNum" variable is the example section is used for that, so that requests don't overlap.</p>
+				</div>
+				
+				
+				<div id="related" class="ibm-tabs-content">
+					<h4 class="ibm-bold">Other people also viewed:</h4>
+					<ul><li><a href="0">Background colors</a></li><li><a href="1">Buttons</a></li><li><a href="2">Home</a></li><li><a href="3">Text sizes</a></li><li><a href="4">v18 elements list</a></li></ul>
+				</div>
+				
+			</div>
+		</div>
+	
+										</div>
+									</div>
+													</div>
+				</main>
+				
+			</div>
+
+						<!-- Footer menu -->
+			<div id="ibm-footer-module"></div>
+			
+			<!-- Corporate thin footer -->
+			<footer role="contentinfo" aria-label="IBM">
+				<div id="ibm-footer" class="ibm-padding-normal">
+					<ul>
+						<li><a href="http://www.ibm.com/contact/us/en/">Contact</a></li>
+						<li><a href="http://www.ibm.com/privacy/us/en/">Privacy</a></li>
+						<li><a href="http://www.ibm.com/legal/us/en/">Terms of use</a></li>
+						<li><a href="http://www.ibm.com/accessibility/us/en/">Accessibility</a></li>
+					</ul>
+				</div>
+			</footer>
+			<!-- FOOTER_END -->
+
+			
+				
+			<!-- #ibm-top END -->
+		</div>
+			
+	</body>
+
+</html>
+

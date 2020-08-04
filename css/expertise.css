@@ -1,0 +1,17 @@
+.ibm-el-widget-expert {
+  border: 1px solid #c7c7c7; }
+
+.ibm-el-info-email .ibm-email-link {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%; }
+
+.ibm-el-expert-thumb {
+  padding: 0px 5px 5px 0; }
+
+.ibm-el-section-otherlinks.ibm-show-hide .ibm-container-body {
+  padding-left: 30px; }

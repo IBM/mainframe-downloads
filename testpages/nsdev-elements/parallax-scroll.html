@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en-US"> 
+	<head>
+		
+				<meta charset="UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="canonical" href="http://www.ibm.com/__REPLACEME__">
+
+		<meta name="robots" content="index,follow">
+		<meta name="description" content="__REPLACE_ME____REPLACE_ME__">
+		<meta name="keywords" content="__REPLACE_ME____REPLACE_ME__">
+
+		<meta name="geo.country" content="US">
+		<meta name="dcterms.date" content="__REPLACE_ME__">
+		<meta name="dcterms.rights" content="© Copyright IBM Corp. 2017">
+
+ 		
+ 		
+ 				<script>
+			digitalData = {
+				page: {
+					category: {
+						primaryCategory: '__REPLACE_ME__'
+					},
+					pageInfo: {
+						effectiveDate: '__REPLACE_ME__',
+						expiryDate: '__REPLACE_ME__',
+						language: 'en-US',
+						publishDate: '__REPLACE_ME__',
+						publisher: 'IBM Corporation',
+						version: 'v18',
+						ibm: {
+							country: 'US',
+							industry: '__REPLACE_ME__',
+							owner: '__REPLACE_ME__',
+							siteID: 'IBMTEST',
+							subject: '__REPLACE_ME__',
+							type: '__REPLACE_ME__',
+							config: {}
+						}
+					}
+				}
+			};
+
+		</script>
+
+ 		
+ 		
+		<title>Parallax scroll widget</title>
+		
+		
+
+
+		<link href="/css/www.css" rel="stylesheet">
+		<link href="/css/tables.css" rel="stylesheet">
+		<link href="/css/textcolumns.css" rel="stylesheet">
+		<link href="/css/forms.css" rel="stylesheet">
+		<link href="/css/expertise.css" rel="stylesheet">
+		<link href="/css/syntaxhighlighter.css" rel="stylesheet">
+		<link href="/css/grid-fluid.css" rel="stylesheet">
+		<link href="/css/textcolumns.css" rel="stylesheet">
+		
+		<script src="https://1.www.s81c.com/common/stats/ida_stats.js"></script>
+		<script src="/js/www.js"></script>
+		<script src="/js/forms.js"></script>
+		<script src="/js/tables.js"></script>
+		<script src="/js/dyntabs.js"></script>
+		<script src="/js/syntaxhighlighter.js"></script>
+
+ 		
+		
+				
+		<script>
+			
+			// URL param override.
+							
+				
+			jQuery(function($){
+				$(function(){
+					var el = $("#animnum"),
+					endNum = el.text().replace(",", "");
+					
+					console.log(endNum);
+					
+					$(window).scroll(function(){
+						if (IBMCore.common.util.scrolledintoview(el)) {
+							animateNumber();
+						}
+					});
+					
+					$("#animnum").html("1");
+					
+					function animateNumber() {
+						if (!this.alreadyAnimated) {
+							$("#animnum").each(function() {
+								var j = $(this);
+								
+								$({someValue: 1}).animate({someValue: endNum}, {
+									duration: 2000,
+									easing: "swing",
+									step: function() {
+										var num = Math.round(this.someValue);
+										
+										if (num > 1000) {
+											num = num.toString();
+											num = num.substr(0,1) + "," + num.substr(1);
+										}
+										
+										j.text(num);
+									}
+								});
+							});
+						}
+						this.alreadyAnimated = true;
+					}					
+				});
+				
+			});
+						
+		</script>
+			
+	</head>
+
+	<body id="ibm-com" class="ibm-type">
+		<div id="ibm-top">
+
+						<!-- MASTHEAD_BEGIN -->
+			<div id="ibm-masthead" role="banner" aria-label="IBM">
+				<div id="ibm-universal-nav">		
+					<nav role="navigation" aria-label="IBM">
+						<div id="ibm-home"><a href="http://www.ibm.com/us/en/">IBM®</a></div>
+						
+						<!--<div class="ibm-parent-site-name"><a href="###">This is my parent site name</a></div>-->
+
+						<ul id="ibm-menu-links" role="toolbar" aria-label="Site map">
+							<li><a href="http://www.ibm.com/sitemap/us/en/">Site map</a></li>
+						</ul>
+					</nav>
+					
+					<div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead">
+						<form id="ibm-search-form" action="//www.ibm.com/Search/" method="get">
+							<p>
+								<label for="q">IBM</label>
+								<input type="text" maxlength="100" value="" placeholder="Search" name="q" id="q" aria-label="Search"/>
+								<input type="hidden" value="18" name="v"/>
+								<input type="hidden" value="utf" name="en"/>
+								<input type="hidden" value="en" name="lang"/>
+								<input type="hidden" value="us" name="cc"/>
+								<input type="submit" id="ibm-search" class="ibm-btn-search" value="Submit">
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- MASTHEAD_END -->
+
+			
+
+			<!-- MAIN PAGE WRAPPER AROUND LEADSPACE, MAIN CONTENT -->
+			<div id="ibm-content-wrapper">
+			
+				<header role="banner" aria-labelledby="ibm-pagetitle-h1">
+										<div class="ibm-fluid ibm-margin-top-1">
+						<div class="ibm-col-12-12">
+							
+
+
+<p class="ibm-ind-link"><a class="ibm-back-link" href="/">v18 repo home page</a></p>
+							<p class="ibm-bold ibm-h2">Parallax scroll widget</p></div>
+					</div>
+									</header>
+				
+				<main role="main" aria-labelledby="ibm-pagetitle-h1">
+					<div id="ibm-pcon" class="ibm-margin-top-1">
+						
+		<div class="ibm-fluid">
+			<div class="ibm-col-12-12">
+				
+				<div data-widget="dyntabs" class="ibm-graphic-tabs ibm-graphic-tabs--colored">
+					<div class="ibm-tab-section">
+						<ul class="ibm-tabs ibm-background-neutral-white-30 ibm-border-blue-50 ibm-linkcolor-default" role="tablist">
+							<li><a aria-selected="true" role="tab" href="#examples">Examples &amp; code</a></li>
+							<li><a role="tab" href="#overview">Overview &amp; guidelines</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div id="examples" class="ibm-tabs-content">
+					<p class="ibm-light ibm-textcolor-green-60">(Never view the page source or use Firebug to copy HTML. Only use provided code snippets.) </p>
+					
+					<br><div class="ibm-rule ibm-alternate-1 ibm-green-60"><hr></div><h2 class="ibm-bold ibm-h4">Element classes</h2><ul><li><strong class="ibm-textcolor-magenta-60">ibm-parallax-scroll</strong><br>Optional class to add to your <code>&lt;div></code> that automatically sets the background to <code>fixed cover no-repeat</code>.</li></ul>
+	
+		<p>All examples are using 100% standard compliant elements and classes. The only custom styling that is present is the background styling on the .ibm-band, which is required.</p>
+		
+		
+	
+		
+		<div class="ibm-band ibm-padding-top-0 ibm-padding-bottom-0 ibm-alternate-background" style="background-color: #000;">
+			<div data-widget="parallaxscroll" data-scrollspeed="20" style="background: transparent url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/planetsun.png) no-repeat scroll 100% 30% / contain ;">
+				<div data-widget="parallaxscroll" data-scrollspeed="7" style="background: transparent url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/planet6.png) no-repeat scroll 65% 30% / contain ;">
+					<div data-widget="parallaxscroll" data-scrollspeed="5" style="background: transparent url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/planet5.png) no-repeat scroll 60% 30% / contain ;">
+						<div data-widget="parallaxscroll" data-scrollspeed="3" style="background: transparent url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/planet3.png) no-repeat scroll 50% 30% / contain ;">
+							<div data-widget="parallaxscroll" data-scrollspeed="1.2" style="background: transparent url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/planet1.png) no-repeat scroll 10% 30% / contain ;">
+								<div class="ibm-fluid ibm-padding-top-r3 ibm-padding-bottom-r3">
+									<div class="ibm-col-12-12 ibm-padding-top-r3 ibm-padding-bottom-r3">
+										<h3 class="ibm-h1 ibm-large ibm-light ibm-padding-top-r3 ibm-padding-bottom-r3">&nbsp;</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><div class="ibm-fluid"><div class="ibm-col-12-12">
+			<div data-widget="showhide" data-type="panel" class="ibm-show-hide">
+				<h2><a href="javascript:void();" class="ibm-no-border">Code snippet for above</a></h2>
+				<div class="ibm-container-body">
+					<pre data-widget="syntaxhighlighter" class="brush: js; html-script: true;">
+		&lt;div class=&quot;ibm-band ibm-padding-top-0 ibm-padding-bottom-0 ibm-alternate-background&quot; style=&quot;background-color: #000;&quot;&gt;
+			&lt;div data-widget=&quot;parallaxscroll&quot; data-scrollspeed=&quot;20&quot; style=&quot;background: transparent url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/planetsun.png) no-repeat scroll 100% 30% / contain ;&quot;&gt;
+				&lt;div data-widget=&quot;parallaxscroll&quot; data-scrollspeed=&quot;7&quot; style=&quot;background: transparent url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/planet6.png) no-repeat scroll 65% 30% / contain ;&quot;&gt;
+					&lt;div data-widget=&quot;parallaxscroll&quot; data-scrollspeed=&quot;5&quot; style=&quot;background: transparent url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/planet5.png) no-repeat scroll 60% 30% / contain ;&quot;&gt;
+						&lt;div data-widget=&quot;parallaxscroll&quot; data-scrollspeed=&quot;3&quot; style=&quot;background: transparent url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/planet3.png) no-repeat scroll 50% 30% / contain ;&quot;&gt;
+							&lt;div data-widget=&quot;parallaxscroll&quot; data-scrollspeed=&quot;1.2&quot; style=&quot;background: transparent url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/planet1.png) no-repeat scroll 10% 30% / contain ;&quot;&gt;
+								&lt;div class=&quot;ibm-fluid ibm-padding-top-r3 ibm-padding-bottom-r3&quot;&gt;
+									&lt;div class=&quot;ibm-col-12-12 ibm-padding-top-r3 ibm-padding-bottom-r3&quot;&gt;
+										&lt;h3 class=&quot;ibm-h1 ibm-large ibm-light ibm-padding-top-r3 ibm-padding-bottom-r3&quot;&gt;&amp;nbsp;&lt;/h3&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;</pre>
+				</div>
+			</div>
+		</div></div>
+
+		<div class="ibm-fluid">
+			<div class="ibm-col-12-12">
+				<h3 class="ibm-padding-top-1 ibm-padding-bottom-3">The example above is for demonstration purposes only, to show that you can have multiple nested <code>&lt;div></code>s set with parallax scrolling with different backgrounds set to different scroll speeds to give a more 3D effect. Note that the more and larger images you have, the slower the performance of the page will be.</h3>
+				
+				<p>The section below has the <code>data-disablesmallgrid="true"</code> set on it. If you shrink your browser, you will see that the image will not move and stay fixed in place when you scroll.</p>
+			</div>
+		</div>
+				
+		
+		<div class="ibm-band ibm-alternate-background ibm-padding-top-0 ibm-padding-bottom-0" data-widget="parallaxscroll" data-disablesmallgrid="true" style="background-image: url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/unfinbus1.jpg); background-position: 50% 0%;">
+			<div style="background: rgba(0,0,0,.8);">
+			<div class="ibm-fluid ibm-padding-top-3 ibm-padding-bottom-3">
+				<div class="ibm-col-12-12 ibm-center ibm-padding-top-3 ibm-padding-bottom-3">
+					<h3 class="ibm-h1 ibm-padding-bottom-1">Social business starts when you put people at the center.</h2>
+					<h4 class="ibm-h3 ibm-padding-bottom-1">Amplify the value of human connections.</h4>
+					<p class="ibm-h4">Need to optimize workforce productivity?<br />Want to understand customers and measure marketing performance?
+					</p>
+
+					<p class="ibm-button-link ibm-padding-top-3"><a href="http://www.ibm.com/social-business/us/en/" class="ibm-btn-pri ibm-btn-magenta-50">See what Social Business can do for you</a></p>
+				</div>
+			</div>
+			</div>
+		</div><div class="ibm-fluid"><div class="ibm-col-12-12">
+			<div data-widget="showhide" data-type="panel" class="ibm-show-hide">
+				<h2><a href="javascript:void();" class="ibm-no-border">Code snippet for above</a></h2>
+				<div class="ibm-container-body">
+					<pre data-widget="syntaxhighlighter" class="brush: js; html-script: true;">
+		&lt;div class=&quot;ibm-band ibm-alternate-background ibm-padding-top-0 ibm-padding-bottom-0&quot; data-widget=&quot;parallaxscroll&quot; data-disablesmallgrid=&quot;true&quot; style=&quot;background-image: url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/unfinbus1.jpg); background-position: 50% 0%;&quot;&gt;
+			&lt;div style=&quot;background: rgba(0,0,0,.8);&quot;&gt;
+			&lt;div class=&quot;ibm-fluid ibm-padding-top-3 ibm-padding-bottom-3&quot;&gt;
+				&lt;div class=&quot;ibm-col-12-12 ibm-center ibm-padding-top-3 ibm-padding-bottom-3&quot;&gt;
+					&lt;h3 class=&quot;ibm-h1 ibm-padding-bottom-1&quot;&gt;Social business starts when you put people at the center.&lt;/h2&gt;
+					&lt;h4 class=&quot;ibm-h3 ibm-padding-bottom-1&quot;&gt;Amplify the value of human connections.&lt;/h4&gt;
+					&lt;p class=&quot;ibm-h4&quot;&gt;Need to optimize workforce productivity?&lt;br /&gt;Want to understand customers and measure marketing performance?
+					&lt;/p&gt;
+
+					&lt;p class=&quot;ibm-button-link ibm-padding-top-3&quot;&gt;&lt;a href=&quot;http://www.ibm.com/social-business/us/en/&quot; class=&quot;ibm-btn-pri ibm-btn-magenta-50&quot;&gt;See what Social Business can do for you&lt;/a&gt;&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;</pre>
+				</div>
+			</div>
+		</div></div>
+		
+		
+		<div class="ibm-band ibm-padding-top-3 ibm-padding-bottom-3" data-widget="parallaxscroll" style="background-image: url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/unfinbus3.jpg);background-position: 30% 0%;">
+			<div class="ibm-fluid">
+				<div class="ibm-col-12-8 ibm-padding-top-3 ibm-padding-bottom-3">
+					<h3 class="ibm-h1 ibm-padding-bottom-1">Business decision making will never be the same</h3>
+					<p class="ibm-h4">IBM and Twitter announce a landmark partnership to help inform every business decision. Twitter represents the public pulse of the planet. Coupled with IBM's industry-leading cloud-based analytics, customer engagement platforms and consulting services, together we have the potential to transform how businesses and institutions understand their customers, markets and trends.</p>
+					<p class="ibm-button-link ibm-padding-top-3"><a href="http://www.ibm.com/big-data/us/en/big-data-and-analytics/ibmandtwitter.html" class="ibm-btn-pri ibm-btn-blue-50">Find out more about IBM and Twitter</a></p>
+				</div>
+			</div>
+		</div><div class="ibm-fluid"><div class="ibm-col-12-12">
+			<div data-widget="showhide" data-type="panel" class="ibm-show-hide">
+				<h2><a href="javascript:void();" class="ibm-no-border">Code snippet for above</a></h2>
+				<div class="ibm-container-body">
+					<pre data-widget="syntaxhighlighter" class="brush: js; html-script: true;">
+		&lt;div class=&quot;ibm-band ibm-padding-top-3 ibm-padding-bottom-3&quot; data-widget=&quot;parallaxscroll&quot; style=&quot;background-image: url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/unfinbus3.jpg);background-position: 30% 0%;&quot;&gt;
+			&lt;div class=&quot;ibm-fluid&quot;&gt;
+				&lt;div class=&quot;ibm-col-12-8 ibm-padding-top-3 ibm-padding-bottom-3&quot;&gt;
+					&lt;h3 class=&quot;ibm-h1 ibm-padding-bottom-1&quot;&gt;Business decision making will never be the same&lt;/h3&gt;
+					&lt;p class=&quot;ibm-h4&quot;&gt;IBM and Twitter announce a landmark partnership to help inform every business decision. Twitter represents the public pulse of the planet. Coupled with IBM's industry-leading cloud-based analytics, customer engagement platforms and consulting services, together we have the potential to transform how businesses and institutions understand their customers, markets and trends.&lt;/p&gt;
+					&lt;p class=&quot;ibm-button-link ibm-padding-top-3&quot;&gt;&lt;a href=&quot;http://www.ibm.com/big-data/us/en/big-data-and-analytics/ibmandtwitter.html&quot; class=&quot;ibm-btn-pri ibm-btn-blue-50&quot;&gt;Find out more about IBM and Twitter&lt;/a&gt;&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;</pre>
+				</div>
+			</div>
+		</div></div>
+		
+		
+		<div class="ibm-band ibm-padding-top-3 ibm-padding-bottom-3" data-widget="parallaxscroll" style="background-image: url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/unfinbus2.jpg);background-position: 100% 0;">
+			<div class="ibm-fluid">
+				<div class="ibm-col-12-6 ibm-col-medium-6-2"></div>
+				<div class="ibm-col-12-6 ibm-col-medium-6-4 ibm-padding-top-3 ibm-padding-bottom-3">
+					<h3 class="ibm-h3 ibm-padding-bottom-1">More than <span id="animnum" class="ibm-h1 ibm-large ibm-bold">4,000</span> IBM professionals</h3>
+					<p class="ibm-h4">are now helping clients apply Twitter data across all kinds of business decisions. Twitter is like no other data source in the world. It is a real-time, public, conversational and global information platform where voices from around the world are speaking about every topic imaginable. Through our client engagements, IBM and Twitter have identified three key insights that will help drive better decision making. </p>
+					<p class="ibm-button-link ibm-padding-top-3"><a href="http://www.ibm.com/big-data/us/en/big-data-and-analytics/ibmandtwitter.html" class="ibm-btn-pri ibm-btn-green-50">Find out more about IBM and Twitter</a></p>
+				</div>
+			</div>
+		</div><div class="ibm-fluid"><div class="ibm-col-12-12">
+			<div data-widget="showhide" data-type="panel" class="ibm-show-hide">
+				<h2><a href="javascript:void();" class="ibm-no-border">Code snippet for above</a></h2>
+				<div class="ibm-container-body">
+					<pre data-widget="syntaxhighlighter" class="brush: js; html-script: true;">
+		&lt;div class=&quot;ibm-band ibm-padding-top-3 ibm-padding-bottom-3&quot; data-widget=&quot;parallaxscroll&quot; style=&quot;background-image: url(https://ibmdev.webmaster.ibm.com/v18/img/bandimages/unfinbus2.jpg);background-position: 100% 0;&quot;&gt;
+			&lt;div class=&quot;ibm-fluid&quot;&gt;
+				&lt;div class=&quot;ibm-col-12-6 ibm-col-medium-6-2&quot;&gt;&lt;/div&gt;
+				&lt;div class=&quot;ibm-col-12-6 ibm-col-medium-6-4 ibm-padding-top-3 ibm-padding-bottom-3&quot;&gt;
+					&lt;h3 class=&quot;ibm-h3 ibm-padding-bottom-1&quot;&gt;More than &lt;span id=&quot;animnum&quot; class=&quot;ibm-h1 ibm-large ibm-bold&quot;&gt;4,000&lt;/span&gt; IBM professionals&lt;/h3&gt;
+					&lt;p class=&quot;ibm-h4&quot;&gt;are now helping clients apply Twitter data across all kinds of business decisions. Twitter is like no other data source in the world. It is a real-time, public, conversational and global information platform where voices from around the world are speaking about every topic imaginable. Through our client engagements, IBM and Twitter have identified three key insights that will help drive better decision making. &lt;/p&gt;
+					&lt;p class=&quot;ibm-button-link ibm-padding-top-3&quot;&gt;&lt;a href=&quot;http://www.ibm.com/big-data/us/en/big-data-and-analytics/ibmandtwitter.html&quot; class=&quot;ibm-btn-pri ibm-btn-green-50&quot;&gt;Find out more about IBM and Twitter&lt;/a&gt;&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;</pre>
+				</div>
+			</div>
+		</div></div>
+		
+		 
+				</div>
+
+				<div id="overview" class="ibm-tabs-content">
+					<h2 class="ibm-bold ibm-h4">Official standards &amp; guidelines</h2><p class="ibm-ind-link"><a class="ibm-forward-link" href="http://www.ibm.com/standards/web/design/parallax/">ibm.com/standards/web/design/parallax/</a></p><br><div class="ibm-rule ibm-alternate-1 ibm-green-60"><hr></div><h2 class="ibm-bold ibm-h4">What</h2><p>Parallax scrolling is a technique in computer graphics and web design, where background images move by the camera slower than foreground images, creating an illusion of depth in a 2D scene and adding to the immersion.</p><br><div class="ibm-rule ibm-alternate-1 ibm-green-60"><hr></div><h2 class="ibm-bold ibm-h4">Why</h2><p>Parallax scrolling effects can help liven up a section and provide a nice subtle element of depth (of field) in otherwise flat 2D imagery.</p><br><div class="ibm-rule ibm-alternate-1 ibm-green-60"><hr></div><h2 class="ibm-bold ibm-h4">What's new</h2><p>The parallax scrolling widget is new and can easily be enabled on any <a href="./full-width-band/?pagetype=repotestpage">full width band section</a>.</p><br><div class="ibm-rule ibm-alternate-1 ibm-green-60"><hr></div><h2 class="ibm-bold ibm-h4">Rules &amp; guidelines</h2><p>The parallax scroll widget can be enabled on any section that has a background image (lead space or .ibm-band). All rules that apply to imagery and lead spaces apply to .ibm-band and parallax scrolling band sections. Ex: No text in images. Ensuring overlaid text is accessible, readable, etc.
+	<br />As tempting as it is, don't go crazy with this. The more and larger images you have, the slower the performance of the page will be.</p><br><div class="ibm-rule ibm-alternate-1 ibm-green-60"><hr></div><h2 class="ibm-bold ibm-h4">How</h2><p>Simply take an existing <a href="./full-width-band/?pagetype=repotestpage">full width band section</a> or create an .ibm-band section and add the <code>data-widget="parallaxscroll"</code> attribute to it. </p>
+	
+	<pre data-widget="syntaxhighlighter" class="brush: js; html-script: true;highlight: [2,6];gutter:true">
+		&lt;-- Add other background-xxxxx styles here as appropriate. -->
+		&lt;div class="ibm-band" data-widget="parallaxscroll" style="background-image: url(__REPLACE_SOME_IMAGE.HERE);">
+			&lt;div class="ibm-fluid">
+				....Standard grid columns (.ibm-col-x-x) here....
+			&lt;/div>
+		&lt;/div></pre>
+	
+	<p>As with the <a href="full-width-band.php?pagetype=repotestpage">full width band section</a>, when you define your background-image style on the <code>&lt;div></code>, you need to also set the other background properties based on your text and imagery and desired effect for the proper placements. You <strong>must</strong> set background properties separately because the widget automatically adjusts some of them. If you use the style shorthand <code>background</code> property on your container it will not work correctly.</p>
+		<ul>
+			<li><strong>Background position</strong>: Set this using "%" or "px" units to position the image properly (horizontal) and test the responsive behavior by resizing your browser. NOTE: The widget changes the vertical position on scroll (that's how it works), so it will override whatever you set for the vertical position. Always assume top position (0/top).</li>
+			<li><strong>Background size</strong>: By default this is already set to "cover" for the widget, but you can set to other values such as "contain" based on your needs.</li>
+			<li><strong>Scroll speed</strong>: You can adjust the default scroll speed of the widget by adding the <code>data-scrollspeed</code> attribute.  The default is 6. It works like a ratio. You are saying "For every ##px the browser scrolls, move my image 1px. For example: <code>data-scrollspeed="20"</code> says "move my image up 1px for every 20px that the page scrolls" (this is slow). If you set <code>data-scrollspeed="2"</code> you are saying "move my image up 1px for every 2px that the page scrolls" (this is fast).</li>
+			<li><strong>Disabling on small screen:</strong> Often on a small screen you hide the background image and use a solid background color instead (because there's not a lot of space where you will even see the image.) So to disable parallax scroll widget on small screen you simply add the <code>disablesmallgrid="true"</code> attribute to the widget div and it will prevent the widget from moving the background up on a small screen.</li>
+		</ul>
+	<br><div class="ibm-rule ibm-alternate-1 ibm-green-60"><hr></div><h2 class="ibm-bold ibm-h4">Hints and tips</h2>
+	<p>You can add padding and "air out" the band section by using the standard static or responsive <a href="./padding/?pagetype=repotestpage">padding classes</a>.</p>
+	<p>You can get creative and do things like put your entire page in a band but using a subtle faded background or place a background color on your <code>ibm-fluid</code> on top of an image. Or place several bands in sequence one right after the other with the parallax scroll widget on each of them to create that nifty scrolling + wiping effect seen below.</p>
+	
+				</div>
+				
+				
+				<div id="related" class="ibm-tabs-content">
+					<h4 class="ibm-bold">Other people also viewed:</h4>
+					<ul><li><a href="0">Background colors</a></li><li><a href="1">Home</a></li><li><a href="2">Icons</a></li><li><a href="3">YouTube player</a></li><li><a href="4">v18 elements list</a></li></ul>
+				</div>
+				
+			</div>
+		</div>
+						</div>
+				</main>
+				
+			</div>
+
+						<!-- Footer menu -->
+			<div id="ibm-footer-module"></div>
+			
+			<!-- Corporate thin footer -->
+			<footer role="contentinfo" aria-label="IBM">
+				<div id="ibm-footer" class="ibm-padding-normal">
+					<ul>
+						<li><a href="http://www.ibm.com/contact/us/en/">Contact</a></li>
+						<li><a href="http://www.ibm.com/privacy/us/en/">Privacy</a></li>
+						<li><a href="http://www.ibm.com/legal/us/en/">Terms of use</a></li>
+						<li><a href="http://www.ibm.com/accessibility/us/en/">Accessibility</a></li>
+					</ul>
+				</div>
+			</footer>
+			<!-- FOOTER_END -->
+
+			
+				
+			<!-- #ibm-top END -->
+		</div>
+			
+	</body>
+
+</html>
+

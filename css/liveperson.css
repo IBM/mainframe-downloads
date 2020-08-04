@@ -1,0 +1,82 @@
+.lpinvite-con {
+  background-color: #fff;
+  border: 2px solid #000;
+  -webkit-box-shadow: 0 0 10px #333;
+          box-shadow: 0 0 10px #333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  left: 50%;
+  margin-left: -200px;
+  padding: 20px;
+  position: fixed;
+  top: 100px;
+  width: 400px;
+  z-index: 9999; }
+  .lpinvite-con p {
+    line-height: 26px;
+    padding-bottom: 15px; }
+
+.lpinvite-close {
+  text-align: right; }
+  .lpinvite-close button {
+    background: transparent url(//1.www.s81c.com/common/v18/i/close.svg) no-repeat 0 0;
+    border: 0 none;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: 600;
+    height: 20px;
+    overflow: hidden;
+    padding: 0;
+    text-indent: 100px;
+    width: 20px; }
+    .lpinvite-close button:hover {
+      background: transparent url(//1.www.s81c.com/common/v18/i/close_hover.svg) no-repeat 0 0; }
+
+.lpinvite-heading {
+  font-weight: 600; }
+
+p.lpinvite-button-row {
+  padding-top: 50px;
+  text-align: right; }
+  p.lpinvite-button-row button {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    max-width: 100%;
+    min-height: 20px;
+    min-width: 120px;
+    overflow: hidden;
+    padding: 0.7em 1.125em;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+    p.lpinvite-button-row button + button {
+      margin-left: 20px; }
+
+.lpinvite-btn-pri {
+  background-color: #323232;
+  border: 2px solid #323232;
+  border-color: #323232;
+  color: #ffffff; }
+  .lpinvite-btn-pri:hover {
+    background-color: #000; }
+
+.lpinvite-btn-sec {
+  background-color: #fff;
+  border: 2px solid #323232;
+  color: #323232; }
+  .lpinvite-btn-sec:hover {
+    background-color: #323232;
+    border-color: #323232;
+    color: #fff; }
+
+.lpinvite-rule {
+  display: none; }

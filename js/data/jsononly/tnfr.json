@@ -1,0 +1,1129 @@
+{
+  "unav": {
+    "title": "Découvrez IBM",
+    "links": [
+      {
+        "title": "Produits (US)",
+        "url": "https://www.ibm.com/products/en-us/"
+      },
+      {
+        "title": "Services (US)",
+        "url": "https://www.ibm.com/services/en-us/"
+      },
+      {
+        "title": "Secteurs d'activité (US)",
+        "url": "https://www.ibm.com/industries/en-us/"
+      },
+      { "title": "Carrières (US)", "url": "https://www.ibm.com/employment/" },
+      { "title": "Partenaires", "url": "https://www.ibm.com/partnerworld/" },
+      { "title": "Support (US)", "url": "https://www.ibm.com/support/en-us/" }
+    ]
+  },
+  "catnav": {
+    "title": "A la une",
+    "links": [
+      {
+        "id": "item1",
+        "title": "Analytics",
+        "url": "https://www.ibm.com/analytics/us/en/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Analytics",
+            "description": "L'analytics avancée aide les entreprises cognitives.",
+            "link1": {
+              "title": "Découvrez l'analytics",
+              "url": "https://www.ibm.com/analytics/us/en/"
+            }
+          },
+          "col2": {
+            "heading": "Service proposé",
+            "title": "Open for Data",
+            "description": "Une nouvelle gamme de services de données dans le cloud conçue pour la nouvelle génération de gestionnaires d'informations",
+            "link1": {
+              "title": "En savoir plus sur l'Open for Data",
+              "url": "https://www.ibm.com/analytics/us/en/technology/cloud-data-services/open-for-data/"
+            }
+          },
+          "col3": {
+            "heading": "Une entreprise améliore de 70 % ses délais de livraison",
+            "imageUrl": "https://www.ibm.com/images/portal/X055393A11627Z97/newlog-casestudy.jpg",
+            "linkTitle": "Découvrez comment un cabinet de conseil a pu fournir des informations exploitables grâce à IBM Cloud Data Services pour permettre le déploiement rapide d'un système de suivi des livraisons",
+            "linkUrl": "https://www.ibm.com/software/businesscasestudies/us/en/corp?synkey=Q324106A41169F30"
+          }
+        }
+      },
+      {
+        "id": "item2",
+        "title": "Cloud",
+        "url": "https://www.ibm.com/cloud/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Cloud",
+            "description": "Innovez avec un Cloud conçu pour le business cognitif.",
+            "link1": {
+              "title": "Découvrez le Cloud",
+              "url": "https://www.ibm.com/cloud-computing/us/en/"
+            },
+            "link2": {
+              "title": "Essayez et achetez une solution Cloud",
+              "url": "https://www.ibm.com/marketplace/cloud/us/en-us/"
+            }
+          },
+          "col2": {
+            "heading": "Produit à la une",
+            "title": "Plateforme de développement d'applications MobileFirst Foundation",
+            "description": "Prenez une longueur d'avance grâce à des outils de développement d'applications mobiles rapides et sécurisées",
+            "link1": {
+              "title": "En savoir plus",
+              "url": "https://www.ibm.com/cloud-computing/solutions/mobile-cloud-computing/mobile-app-development-tools/?cm_mmc=Earned_Other-_-IBM+Cloud_Hybrid-_-WW_WW-_-IBM+homepage+cloud+navigation"
+            }
+          },
+          "col3": {
+            "heading": "Publiez vos applications 75 % plus vite",
+            "imageUrl": "https://www.ibm.com/images/portal/N769083E04461C55/03152016_minimenu_cloud-urban-code-deploy_380x170.jpg",
+            "linkTitle": "Automatisez les processus manuels et déployez à l'échelle nécessaire, aussi bien des appareils mobiles que des milliers de serveurs. En savoir plus sur UrbanCode Deploy.",
+            "linkUrl": "https://www.ibm.com/cloud-computing/solutions/cloud-devops/automated-application-deployment"
+          }
+        }
+      },
+      {
+        "id": "item3",
+        "title": "Commerce",
+        "url": "https://www.ibm.com/commerce/us/en/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Commerce",
+            "description": "Exploitez toute la puissance du commerce cognitif pour construire une chaîne de valeur prédictive et créer des interactions qui donnent à vos clients l'envie de vous soutenir.",
+            "link1": {
+              "title": "Découvrez les solutions Commerce",
+              "url": "https://www.ibm.com/commerce/us-en/"
+            }
+          },
+          "col2": {
+            "heading": "Produit à la une",
+            "title": "IBM Customer Experience Analytics",
+            "description": "Visualisez le parcours de vos clients, revivez leurs expériences et obtenez les informations synthétiques qui vous permettront d'apporter des modifications utiles.",
+            "link1": {
+              "title": "En savoir plus sur Customer Experience Analytics",
+              "url": "https://www.ibm.com/commerce/us-en/campaigns/customer-experience-analytics/"
+            },
+            "link2": {
+              "title": "Découvrez d'autres solutions Commerce",
+              "url": "https://www.ibm.com/commerce/us-en/"
+            }
+          },
+          "col3": {
+            "heading": "Perspectives sur les solutions Commerce",
+            "imageUrl": "https://www.ibm.com/images/portal/N416039Z50379Y06/IBM_Commerce_megamenu_image.jpg",
+            "linkTitle": "Quel avenir pour le commerce ? Visitez #NewWayToEngage Futurists Insights pour connaître les prévisions de grands analystes indépendants.",
+            "linkUrl": "https://www.ibm.com/commerce/us-en/futurists-insights/"
+          }
+        }
+      },
+      {
+        "id": "item4",
+        "title": "Infrastructure IT",
+        "url": "https://www.ibm.com/it-infrastructure/us-en/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Infrastructure IT",
+            "description": "Devenez un fournisseur de services plus performant en maîtrisant le Cloud hybride dans votre infrastructure IT.",
+            "link1": {
+              "title": "Découvrez l'infrastructure IT",
+              "url": "https://www.ibm.com/it-infrastructure/us-en/"
+            }
+          },
+          "col2": {
+            "heading": "Produit à la une",
+            "title": "Cloud LinuxONE Community",
+            "description": "Essayez LinuxONE et découvrez à quel point il est facile de provisionner un serveur virtuel avec la distribution Linux de votre choix",
+            "link1": {
+              "title": "Essayez-le gratuitement dès maintenant",
+              "url": "https://developer.ibm.com/linuxone/?source=web&ca=linuxone&ovcode=ov44223&tactic=C47300NW"
+            },
+            "link2": {
+              "title": "Découvrez d'autres produits d'infrastructure IT",
+              "url": "https://www.ibm.com/it-infrastructure/us-en/"
+            }
+          },
+          "col3": {
+            "heading": "Discussion sur l'infrastructure IT",
+            "imageUrl": "https://1.www.s81c.com/common/v18/i/megamenu/itinfrastructure.jpg",
+            "linkTitle": "Lisez ces études de l'IBV et découvrez comment une infrastructure puissante offre un avantage concurrentiel.",
+            "linkUrl": "https://www.ibm.com/it-infrastructure/us-en/it-infrastructure-report/"
+          }
+        }
+      },
+      {
+        "id": "item5",
+        "title": "MobileFirst",
+        "url": "https://www.ibm.com/mobilefirst/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "IBM MobileFirst",
+            "description": "MobileFirst fournit des applications, des infrastructures et des méthodes d'engagement exclusivement conçues pour les utilisateurs mobiles. La solution est personnalisée avec des données, très sécurisée et appropriée.",
+            "link1": {
+              "title": "Explorez MobileFirst",
+              "url": "https://www.ibm.com/mobilefirst/us/en/"
+            }
+          },
+          "col2": {
+            "heading": "Produit à la une",
+            "title": "IBM MobileFirst Platform",
+            "description": "Une plateforme évolutive pour créer d'excellentes applications, qui offre des fonctionnalités avancées d'intégration, de sécurité et d'analyse.",
+            "link1": {
+              "title": "En savoir plus",
+              "url": "https://www.ibm.com/mobilefirst/us/en/mobile-platform.html"
+            },
+            "link2": {
+              "title": "Découvrez pourquoi Gartner place IBM parmi les leaders de l'informatique mobile.",
+              "url": "https://www.ibm.com/marketing/iwm/dre/signup?source=mrs-form-162&S_PKG=ov38145&S_TACT=000000NS&S_OFF_CD=10000342"
+            }
+          },
+          "col3": {
+            "heading": "Éclairages sur l'informatique mobile",
+            "imageUrl": "https://www.ibm.com/images/portal/T794582C17315N78/IBMHomepage_MF_GAGA_380x170.jpg",
+            "linkTitle": "Pourquoi de bonnes applications mobiles ne suffisent pas : ce que veulent vraiment les consommateurs et que vous ignorez peut-être",
+            "linkUrl": "https://www.ibm.com/mobilefirst/us/en/good-apps-great-apps.html"
+          }
+        }
+      },
+      {
+        "id": "item6",
+        "title": "Sécurité",
+        "url": "https://www.ibm.com/security/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Sécurité",
+            "description": "Arrêtez les menaces, protégez les ressources vitales et optimisez vos pratiques de sécurité avec le portefeuille IBM intégré de produits et de services.",
+            "link1": {
+              "title": "Découvrez la sécurité",
+              "url": "https://www.ibm.com/security/"
+            }
+          },
+          "col2": {
+            "heading": "Produit à la une",
+            "title": "IBM Application Security Testing on Cloud",
+            "description": "Renforcez la sécurité de vos applications web, mobiles et de bureau grâce à des fonctionnalités pratiques de test dans le cloud.",
+            "link1": {
+              "title": "En savoir plus",
+              "url": "https://www.ibm.com/software/products/en/ibm-application-security-on-cloud/"
+            }
+          },
+          "col3": {
+            "heading": "Perspectives sur la sécurité",
+            "imageUrl": "https://www.ibm.com/images/portal/Q913228N16163Z98/CODB_mega_v2.jpg",
+            "linkTitle": "Qu'est-ce qui détermine vraiment le coût d'une violation de la confidentialité des données d'une entreprise ? Une nouvelle étude du Ponemon Institute l'explique en détail.",
+            "linkUrl": "https://www.ibm.com/security/data-breach/"
+          }
+        }
+      },
+      {
+        "id": "item7",
+        "title": "Social",
+        "url": "https://www.ibm.com/social-business/us-en/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "",
+            "description": "",
+            "link1": { "title": "", "url": "" }
+          },
+          "col2": {
+            "heading": "",
+            "title": "",
+            "description": "",
+            "link1": { "title": "", "url": "" }
+          },
+          "col3": {
+            "heading": "",
+            "imageUrl": "",
+            "linkTitle": "",
+            "linkUrl": ""
+          }
+        }
+      },
+      {
+        "id": "item8",
+        "title": "Watson",
+        "url": "https://www.ibm.com/watson/",
+        "megamenuContent": {
+          "col1": {
+            "heading": "Watson",
+            "description": "Découvrez IBM Watson, un système cognitif qui crée un nouveau partenariat entre l'homme et l'ordinateur et permet d'approfondir, de faire évoluer et d'accélérer l'expertise humaine.",
+            "link1": {
+              "title": "Découvrez Watson",
+              "url": "https://www.ibm.com/smarterplanet/us/en/ibmwatson/"
+            }
+          },
+          "col2": {
+            "heading": "Produit à la une",
+            "title": "Watson IoT",
+            "description": "Transformez votre secteur d'activité en tirant des enseignements du monde connecté",
+            "link1": {
+              "title": "En savoir plus",
+              "url": "https://www.ibm.com/internet-of-things/"
+            },
+            "link2": {
+              "title": "Voir tous les produits Watson",
+              "url": "https://www.ibm.com/smarterplanet/us/en/ibmwatson/"
+            }
+          },
+          "col3": {
+            "heading": "Perspectives sur Watson",
+            "imageUrl": "https://1.www.s81c.com/common/v18/i/megamenu/watson.jpg",
+            "linkTitle": "Découvrez comment Watson IoT profitera aux entreprises et à la société",
+            "linkUrl": "https://www.ibm.com/iot"
+          }
+        }
+      }
+    ]
+  },
+  "mastheadNav": {
+    "links": [
+      {
+        "title": "Produits",
+        "url": "",
+        "hasMenu": true,
+        "hasMegapanel": true,
+        "menuSections": [
+          {
+            "heading": "Rechercher",
+            "menuItems": [
+              {
+                "title": "Tous les produits (US)",
+                "url": "https://www.ibm.com/products/en-us/"
+              }
+            ]
+          },
+          {
+            "heading": "En savoir plus",
+            "menuItems": [
+              {
+                "title": "Tous les produits IBM",
+                "url": "https://www.ibm.com/redirect-marketplace/tn-fr/products?lnk=hpmpr",
+                "megapanelContent": {
+                  "headingTitle": "Tous les produits IBM",
+                  "headingUrl": "https://www.ibm.com/tn-fr/products?lnk=hpmpr",
+                  "description": "",
+                  "quickLinks": {
+                    "title": "Rechercher, tester ou acheter des produits et services",
+                    "links": [
+                      {
+                        "title": "Essais gratuits",
+                        "url": "https://www.ibm.com/tn-fr/products/trials?lnk=hpmpr&lnk2=trial&lnk=STW_TN_MAST_NAV_TL&lnk2=trial_THP"
+                      },
+                      {
+                        "title": "Dernières offres",
+                        "url": "https://www.ibm.com/tn-fr/products/offers-and-discounts?lnk=hpmpr&lnk2=trial&lnk=STW_TN_MAST_NAV_TL&lnk2=discount_MPDISC"
+                      },
+                      {
+                        "title": "Technologies",
+                        "url": "https://www.ibm.com/tn-fr/products/category/technology?lnk=hpmpr&lnk2=learn&lnk=STW_TN_MAST_NAV_TL&lnk2=learn_CATTech"
+                      },
+                      {
+                        "title": "Besoins de l'entreprise",
+                        "url": "https://www.ibm.com/tn-fr/products/category/business?lnk=hpmpr&lnk2=learn&lnk=STW_TN_MAST_NAV_TL&lnk2=learn_CATBusneeds"
+                      },
+                      {
+                        "title": "Services",
+                        "url": "https://www.ibm.com/tn-fr/products/services?lnk=hpmpr&lnk2=learn&lnk=STW_TN_MAST_NAV_TL&lnk2=learn_VHP"
+                      },
+                      {
+                        "title": "Hardware",
+                        "url": "https://www.ibm.com/tn-fr/products/hardware?lnk=hpmpr&lnk2=learn&lnk=STW_TN_MAST_NAV_TL&lnk2=learn_HHP"
+                      },
+                      {
+                        "title": "Software",
+                        "url": "https://www.ibm.com/tn-fr/products/software?lnk=hpmpr&lnk2=learn&lnk=STW_TN_MAST_NAV_TL&lnk2=learn_SHP"
+                      },
+                      {
+                        "title": "Voir tous les produits",
+                        "url": "https://www.ibm.com/tn-fr/products?lnk=hpmpr&lnk2=learn&lnk=STW_TN_MAST_NAV_TL&lnk2=learn_MHP"
+                      }
+                    ]
+                  },
+                  "feature": {
+                    "heading": "",
+                    "imageUrl": "",
+                    "linkTitle": "",
+                    "linkUrl": ""
+                  }
+                }
+              },
+              {
+                "title": "Analytics (US)",
+                "url": "https://www.ibm.com/analytics/us/en/",
+                "megapanelContent": {
+                  "headingTitle": "Analytics (US)",
+                  "headingUrl": "https://www.ibm.com/analytics/us/en/",
+                  "description": "",
+                  "quickLinks": {
+                    "title": "Les incontournables",
+                    "links": [
+                      {
+                        "title": "Analyse et gestion de données (US)",
+                        "url": "https://www.ibm.com/analytics/us/en/technology/"
+                      },
+                      {
+                        "title": "Analyse sectorielle (US)",
+                        "url": "https://www.ibm.com/analytics/us/en/industry/"
+                      },
+                      {
+                        "title": "Analyse appliquée à l'optimisation des entreprises (US)",
+                        "url": "https://www.ibm.com/analytics/us/en/business/"
+                      },
+                      {
+                        "title": "Watson Analytics (US)",
+                        "url": "https://www.ibm.com/analytics/watson-analytics/us/en/"
+                      },
+                      {
+                        "title": "Services de données Cloud (US)",
+                        "url": "https://www.ibm.com/analytics/us/en/technology/cloud-data-services/"
+                      }
+                    ]
+                  },
+                  "feature": {
+                    "heading": "L'analyse de vos menaces informatiques",
+                    "imageUrl": "https://www.ibm.com/images/v18/analyticsfc.jpg",
+                    "linkTitle": "Obtenez des informations pratiques qui vous aideront à renforcer votre cybersécurité (US)",
+                    "linkUrl": "https://www.ibm.com/analytics/us/en/safer-planet/cyber-threat-analysis/"
+                  }
+                }
+              },
+              {
+                "title": "Cloud (US)",
+                "url": "https://www.ibm.com/cloud-computing/",
+                "megapanelContent": {
+                  "headingTitle": "Cloud (US)",
+                  "headingUrl": "https://www.ibm.com/cloud-computing/",
+                  "description": "",
+                  "quickLinks": {
+                    "title": "Les incontournables",
+                    "links": [
+                      {
+                        "title": "Outils pour applications mobiles (US)",
+                        "url": "https://www.ibm.com/cloud-computing/solutions/mobile-cloud-computing/mobile-app-development-tools/?cm_mmc=OwnedPageTile-_-IBM+Cloud_Hybrid-_-WW_US-_-IBMcloud_newstile&cm_mmca1=000000NS&cm_mmca2=10000342"
+                      },
+                      {
+                        "title": "IBM Bluemix (US)",
+                        "url": "https://www.ibm.com/cloud-computing/bluemix/"
+                      },
+                      {
+                        "title": "Cloud Managed Services (US)",
+                        "url": "https://www.ibm.com/cloud-computing/infrastructure/managed-cloud-hosting/"
+                      },
+                      {
+                        "title": "Outil de conseil pour l'adoption du cloud (US)",
+                        "url": "https://www.ibm.com/services/us/en/it-services/cloud-services/cloud-adoption-advisor/index.html"
+                      }
+                    ]
+                  },
+                  "feature": {
+                    "heading": "Directeurs informatiques, obtenez un avantage concurrentiel en utilisant le cloud hybride",
+                    "imageUrl": "https://www.ibm.com/images/v18/cloudfc.jpg",
+                    "linkTitle": "Lire l'étude (US)",
+                    "linkUrl": "https://www.ibm.com/cloud-computing/services/it-consulting-services/"
+                  }
+                }
+              },
+              {
+                "title": "Cognitive Business (US)",
+                "url": "https://www.ibm.com/cognitive/",
+                "megapanelContent": {
+                  "headingTitle": "Cognitive Business (US)",
+                  "headingUrl": "https://www.ibm.com/cognitive/",
+                  "description": "Cognitive Business. Insufflez de l'intelligence digitale dans votre business digital.",
+                  "quickLinks": {
+                    "title": "Les incontournables",
+                    "links": [
+                      {
+                        "title": "Cognitive Business (US)",
+                        "url": "https://www.ibm.com/cognitive/"
+                      },
+                      {
+                        "title": "Galerie d'applications cognitives (US)",
+                        "url": "https://ibmwatsonecosystem.com/app-gallery-public/"
+                      },
+                      {
+                        "title": "Solutions cognitives (US)",
+                        "url": "https://www.ibm.com/marketplace/cognitive-computing-ibm-watson/"
+                      }
+                    ]
+                  },
+                  "feature": {
+                    "heading": "Votre avenir cognitif",
+                    "imageUrl": "https://www.ibm.com/images/v18/cognitive.jpg",
+                    "linkTitle": "Lisez ce rapport de l'IBM Institute for Business Value pour savoir comment le cognitive business va changer notre vie et notre façon de travailler (US)",
+                    "linkUrl": "https://www.ibm.com/common/ssi/cgi-bin/ssialias?subtype=XB&infotype=PM&appname=CB_BU_B_CBUE_GB_TI_USEN&htmlfid=GBE03641USEN&attachment=GBE03641USEN.PDF"
+                  }
+                }
+              },
+              {
+                "title": "Internet des objets (US)",
+                "url": "https://www.ibm.com/internet-of-things/",
+                "megapanelContent": {
+                  "headingTitle": "Internet des objets (US)",
+                  "headingUrl": "https://www.ibm.com/internet-of-things/",
+                  "description": "",
+                  "quickLinks": {
+                    "title": "Les incontournables",
+                    "links": [
+                      {
+                        "title": "Watson Internet of Things (US)",
+                        "url": "https://www.ibm.com/internet-of-things/"
+                      },
+                      {
+                        "title": "Plateforme Watson IoT (US)",
+                        "url": "https://www.ibm.com/internet-of-things/iot-solutions/watson-iot-platform/"
+                      },
+                      {
+                        "title": "Gestion des équipements (US)",
+                        "url": "https://www.ibm.com/internet-of-things/iot-solutions/asset-management/"
+                      },
+                      {
+                        "title": "Gestion des actifs immobiliers (US)",
+                        "url": "https://www.ibm.com/internet-of-things/iot-solutions/facilities-management/"
+                      },
+                      {
+                        "title": "Continuous engineering (US)",
+                        "url": "https://www.ibm.com/internet-of-things/iot-solutions/continuous-engineering/"
+                      }
+                    ]
+                  },
+                  "feature": {
+                    "heading": "Watson Internet of Things",
+                    "imageUrl": "https://www.ibm.com/images/v18/iotfc.jpg",
+                    "linkTitle": "Découvrez comment l'IoT cognitif va transformer notre manière d'appréhender le monde physique (US)",
+                    "linkUrl": "https://www.ibm.com/internet-of-things/"
+                  }
+                }
+              },
+              {
+                "title": "Solutions par secteur d'activité (US)",
+                "url": "https://www.ibm.com/industries/",
+                "megapanelContent": {
+                  "headingTitle": "Solutions par secteur d'activité (US)",
+                  "headingUrl": "https://www.ibm.com/industries/",
+                  "description": "",
+                  "quickLinks": {
+                    "title": "Les incontournables",
+                    "links": [
+                      {
+                        "title": "Finances (US)",
+                        "url": "https://www.ibm.com/industries/banking/"
+                      },
+                      {
+                        "title": "Distribution (US)",
+                        "url": "https://www.ibm.com/industries/retail/"
+                      },
+                      {
+                        "title": "Télécommunications (US)",
+                        "url": "https://www.ibm.com/industries/communications/"
+                      },
+                      {
+                        "title": "Public (US)",
+                        "url": "https://www.ibm.com/industries/government/customs_borders.html"
+                      },
+                      {
+                        "title": "Tous les secteurs d'activité (US)",
+                        "url": "https://www.ibm.com/industries/en-us/"
+                      }
+                    ]
+                  },
+                  "feature": {
+                    "heading": "Produit à la une : Expert seller app with Box",
+                    "imageUrl": "https://images/portal/V801947Y93086Y16/July_28_expert_seller_with_box_platform_380.jpg",
+                    "linkTitle": "Accédez à des gammes de produits et de services à jour pour mieux préparer vos réunions avec vos clients et réaliser plus de ventes (US)",
+                    "linkUrl": "https://www.ibm.com/marketplace/cloud/sales-transformation-accelerated/us/en-us"
+                  }
+                }
+              },
+              {
+                "title": "Infrastructure IT (US)",
+                "url": "https://www.ibm.com/it-infrastructure/us-en/",
+                "megapanelContent": {
+                  "headingTitle": "Infrastructure IT (US)",
+                  "headingUrl": "https://www.ibm.com/it-infrastructure/us-en/",
+                  "description": "",
+                  "quickLinks": {
+                    "title": "Les incontournables",
+                    "links": [
+                      {
+                        "title": "IBM Power Systems (US)",
+                        "url": "https://www.ibm.com/systems/power/"
+                      },
+                      {
+                        "title": "IBM z Systems (US)",
+                        "url": "https://www.ibm.com/systems/z/"
+                      },
+                      {
+                        "title": "IBM LinuxONE (US)",
+                        "url": "https://www.ibm.com/systems/linuxone/"
+                      },
+                      {
+                        "title": "IBM Storage (US)",
+                        "url": "https://www.ibm.com/systems/storage/"
+                      }
+                    ]
+                  },
+                  "feature": {
+                    "heading": "Évaluation de l'état de préparation de l'infrastructure IT",
+                    "imageUrl": "https://www.ibm.com/images/v18/itinfrafc.jpg",
+                    "linkTitle": "Votre infrastructure IT est-elle prête pour l'ère du cognitive business ? Faites cette évaluation pour le savoir immédiatement. (US)",
+                    "linkUrl": "https://www.ibm.com/it-infrastructure/us-en/infrastructure-readiness-assessment/"
+                  }
+                }
+              },
+              {
+                "title": "Mobiles (US)",
+                "url": "https://www.ibm.com/mobilefirst/",
+                "megapanelContent": {
+                  "headingTitle": "Mobiles (US)",
+                  "headingUrl": "https://www.ibm.com/mobilefirst/",
+                  "description": "",
+                  "quickLinks": {
+                    "title": "Les incontournables",
+                    "links": [
+                      {
+                        "title": "MobileFirst Foundation (US)",
+                        "url": "https://www.ibm.com/software/products/en/mobilefirstfoundation/"
+                      },
+                      {
+                        "title": "API Connect (US)",
+                        "url": "https://www.ibm.com/software/products/en/api-connect/"
+                      },
+                      {
+                        "title": "IBM Cloudant (US)",
+                        "url": "https://www.ibm.com/software/data/cloudant/index.html"
+                      },
+                      {
+                        "title": "Swift@IBM (US)",
+                        "url": "https://www.ibm.com/cloud-computing/bluemix/swift/"
+                      }
+                    ]
+                  },
+                  "feature": {
+                    "heading": "Retour sur mobilité : capturer la valeur cachée",
+                    "imageUrl": "https://www.ibm.com/images/portal/S692485K83625Y43/Mobile-ROI-Study-Thumbnail_380x160.jpg",
+                    "linkTitle": "Découvrez pourquoi l'appli de calcul du ROI dans la mobilité est bien plus qu'une application sympa (US)",
+                    "linkUrl": "https://www.ibm.com/services/us/gbs/thoughtleadership/mobileroi/"
+                  }
+                }
+              },
+              {
+                "title": "Sécurité (US)",
+                "url": "https://www.ibm.com/security/",
+                "megapanelContent": {
+                  "headingTitle": "Sécurité (US)",
+                  "headingUrl": "https://www.ibm.com/security/",
+                  "description": "Prenez des décisions stratégiques quand vous protégez votre entreprise",
+                  "quickLinks": {
+                    "title": "Les incontournables",
+                    "links": [
+                      {
+                        "title": "Présentation (US)",
+                        "url": "https://www.ibm.com/security/"
+                      },
+                      {
+                        "title": "Produits (US)",
+                        "url": "https://www.ibm.com/security/products/"
+                      },
+                      {
+                        "title": "Services (US)",
+                        "url": "https://www.ibm.com/security/services/security-services/"
+                      }
+                    ]
+                  },
+                  "feature": {
+                    "heading": "Perspectives sur la sécurité",
+                    "imageUrl": "https://www.ibm.com/images/v18/securityfc.jpg",
+                    "linkTitle": "Qu'est-ce qui détermine vraiment le coût d'une violation de la confidentialité des données d'une entreprise ? Découvrez une réponse précise dans la nouvelle étude du Ponemon Institute. (US)",
+                    "linkUrl": "https://www.ibm.com/security/data-breach/"
+                  }
+                }
+              },
+              {
+                "title": "Watson (US)",
+                "url": "https://www.ibm.com/smarterplanet/us/en/ibmwatson/",
+                "megapanelContent": {
+                  "headingTitle": "Watson (US)",
+                  "headingUrl": "https://www.ibm.com/smarterplanet/us/en/ibmwatson/",
+                  "description": "",
+                  "quickLinks": {
+                    "title": "Les incontournables",
+                    "links": [
+                      {
+                        "title": "Catalogue des API (US)",
+                        "url": "https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/services-catalog.html"
+                      },
+                      {
+                        "title": "Documentation des API (US)",
+                        "url": "https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/"
+                      },
+                      {
+                        "title": "Blogue Watson (US)",
+                        "url": "https://www.ibm.com/blogs/watson/"
+                      },
+                      {
+                        "title": "Offres d'emplois (US)",
+                        "url": "https://www.ibm.com/smarterplanet/us/en/ibmwatson/careers.html"
+                      },
+                      {
+                        "title": "Watson Marketing (US)",
+                        "url": "https://www.ibm.com/digital-marketing?lnk=hpmpr_buwa_tnfr&lnk2=learn"
+                      },
+                      {
+                        "title": "Watson Supply Chain (US)",
+                        "url": "https://www.ibm.com/supply-chain?lnk=hpmpr_buwa_tnfr&lnk2=learn"
+                      }
+                    ]
+                  },
+                  "feature": {
+                    "heading": "Kits de démarrage Watson",
+                    "imageUrl": "https://www.ibm.com/images/v18/watson.jpg",
+                    "linkTitle": "Accélérez la construction de votre application cognitive. Utilisez des exemples de code qui combinent plusieurs services couvrant les utilisations les plus courantes. (US)",
+                    "linkUrl": "https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/starter-kits.html"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Services",
+        "url": "",
+        "hasMenu": true,
+        "hasMegapanel": true,
+        "menuSections": [
+          {
+            "heading": "",
+            "menuItems": [
+              {
+                "title": "Business consulting (US)",
+                "url": "https://www.ibm.com/services/us/gbs/consulting/",
+                "megapanelContent": {
+                  "headingTitle": "Business consulting (US)",
+                  "headingUrl": "https://www.ibm.com/services/us/gbs/consulting/",
+                  "description": "",
+                  "quickLinks": {
+                    "title": "Les incontournables",
+                    "links": [
+                      {
+                        "title": "Experience design (US)",
+                        "url": "https://www.ibm.com/services/us/business-consulting/interactiveexperience/"
+                      },
+                      {
+                        "title": "Cognitive Business (US)",
+                        "url": "https://www.ibm.com/services/us/gbs/cognitive/"
+                      },
+                      {
+                        "title": "Application innovation (US)",
+                        "url": "https://www.ibm.com/services/us/gbs/ais/"
+                      },
+                      {
+                        "title": "Opérations numériques (US)",
+                        "url": "https://www.ibm.com/services/us/business-consulting/digital-operations-internetofthings/"
+                      },
+                      {
+                        "title": "Tous les conseils métier (US)",
+                        "url": "https://www.ibm.com/services/us/gbs/consulting/"
+                      }
+                    ]
+                  },
+                  "feature": {
+                    "heading": "Étude de cas : Unilever Europe",
+                    "imageUrl": "https://www.ibm.com/images/v18/busconsultingfc.jpg",
+                    "linkTitle": "Découvrez comment une transformation radicale a aidé cette entreprise internationale à se concentrer sur sa croissance (US)",
+                    "linkUrl": "https://www.ibm.com/common/ssi/cgi-bin/ssialias?subtype=AB&infotype=PM&appname=GTSE_GT_GT_USEN&htmlfid=GTC03035USEN&attachment=GTC03035USEN.PDF"
+                  }
+                }
+              },
+              {
+                "title": "Technology services (US)",
+                "url": "https://www.ibm.com/services/",
+                "megapanelContent": {
+                  "headingTitle": "Global Technology Services (US)",
+                  "headingUrl": "https://www.ibm.com/services/",
+                  "description": "Des services pour vous aider à concevoir, construire et exécuter des systèmes fondamentaux",
+                  "quickLinks": {
+                    "title": "Les incontournables",
+                    "links": [
+                      {
+                        "title": "Services de mobilité (US)",
+                        "url": "https://www.ibm.com/services/us/en/it-services/enterprise-mobility/index.html"
+                      },
+                      {
+                        "title": "Services réseau (US)",
+                        "url": "https://www.ibm.com/services/us/en/it-services/networking-services/index.html"
+                      },
+                      {
+                        "title": "Résilience et continuité opérationnelle (US)",
+                        "url": "https://www.ibm.com/services/us/en/it-services/business-continuity/index.html"
+                      },
+                      {
+                        "title": "Services systèmes (US)",
+                        "url": "https://www.ibm.com/services/us/en/it-services/systems/index.html"
+                      },
+                      {
+                        "title": "Services de support technologique (US)",
+                        "url": "https://www.ibm.com/services/us/en/it-services/technical-support-services/index.html"
+                      }
+                    ]
+                  },
+                  "feature": {
+                    "heading": "Le chemin vers le cognitive business passe par les clouds hybrides",
+                    "imageUrl": "https://www.ibm.com/images/v18/techsvcssvcsfc.jpg",
+                    "linkTitle": "500 décideurs IT parlent des avantages des infrastructures mixtes. Lisez le rapport. (US)",
+                    "linkUrl": "https://www.ibm.com/services/us/en/it-services/cloud-services/growing-up-hybrid/index.html"
+                  }
+                }
+              },
+              {
+                "title": "Financement (US)",
+                "url": "https://www.ibm.com/financing?lnk=mse_fin_tnfr&lnk2=learn",
+                "megapanelContent": {
+                  "headingTitle": "Financement (US)",
+                  "headingUrl": "https://www.ibm.com/financing?lnk=mse_fin_tnfr&lnk2=learn",
+                  "description": "Des options de financement adaptées à votre entreprise",
+                  "quickLinks": {
+                    "title": "Les incontournables",
+                    "links": [
+                      {
+                        "title": "Solutions de financement (US)",
+                        "url": "https://www.ibm.com/financing?lnk=mse_fin_tnfr&lnk2=learn"
+                      },
+                      {
+                        "title": "Options de paiement (US)",
+                        "url": "https://www.ibm.com/financing/us-en/solutions/payment-options/"
+                      }
+                    ]
+                  },
+                  "feature": {
+                    "heading": "Directeurs financiers, transformez-vous votre entreprise de manière à en favoriser la croissance ?",
+                    "imageUrl": "https://www.ibm.com/images/v18/financesvcsfc.jpg",
+                    "linkTitle": "Aidez votre entreprise à trouver de nouvelles façons de favoriser l'innovation. Découvrez IBM Global Financing. (US)",
+                    "linkUrl": "https://www.ibm.com/financing/us-en/expertise/cfo"
+                  }
+                }
+              },
+              {
+                "title": "Expertise dans les secteurs de l'industrie (US)",
+                "url": "https://www.ibm.com/industries/",
+                "megapanelContent": {
+                  "headingTitle": "Expertise dans les secteurs de l'industrie (US)",
+                  "headingUrl": "https://www.ibm.com/industries/",
+                  "description": "",
+                  "quickLinks": {
+                    "title": "Les incontournables",
+                    "links": [
+                      {
+                        "title": "Finances (US)",
+                        "url": "https://www.ibm.com/industries/banking/"
+                      },
+                      {
+                        "title": "Distribution (US)",
+                        "url": "https://www.ibm.com/industries/retail/"
+                      },
+                      {
+                        "title": "Télécommunications (US)",
+                        "url": "https://www.ibm.com/industries/communications/"
+                      },
+                      {
+                        "title": "Public (US)",
+                        "url": "https://www.ibm.com/industries/government/"
+                      },
+                      {
+                        "title": "Tous les secteurs d'activité (US)",
+                        "url": "https://www.ibm.com/industries/en-us/"
+                      }
+                    ]
+                  },
+                  "feature": {
+                    "heading": "Informations sectorielles",
+                    "imageUrl": "https://www.ibm.com/images/v18/indexptsvcsfc.jpg",
+                    "linkTitle": "Lisez l'étude internationale IBM 2015 destinée aux cadres supérieurs : \"Redefining Boundaries\" (US)",
+                    "linkUrl": "https://www.ibm.com/services/c-suite/study/"
+                  }
+                }
+              },
+              {
+                "title": "Formation et compétences (US)",
+                "url": "https://www.ibm.com/training/",
+                "megapanelContent": {
+                  "headingTitle": "Formation et compétences (US)",
+                  "headingUrl": "https://www.ibm.com/training/",
+                  "description": "Commencez votre parcours d'apprentissage, acquérez de l'expertise et de la reconnaissance",
+                  "quickLinks": {
+                    "title": "Les incontournables",
+                    "links": [
+                      {
+                        "title": "Trouver une formation (US)",
+                        "url": "https://www.ibm.com/training/search/"
+                      },
+                      {
+                        "title": "Parcours d'apprentissage (US)",
+                        "url": "https://www.ibm.com/training/journeys/"
+                      },
+                      {
+                        "title": "Badges (US)",
+                        "url": "https://www.ibm.com/training/badges/"
+                      },
+                      {
+                        "title": "Ma formation (US)",
+                        "url": "https://www.ibm.com/training/mylearning/"
+                      },
+                      {
+                        "title": "Evénements (US)",
+                        "url": "https://www.ibm.com/training/events/"
+                      }
+                    ]
+                  },
+                  "feature": {
+                    "heading": "Blog IBM Formation et Compétences",
+                    "imageUrl": "https://www-304.ibm.com/services/learning/images/ibmtraining_380x160.png",
+                    "linkTitle": "Découvrez les dernières informations incitant à la réflexion sur l'apprentissage et la reconnaissance des compétences (US)",
+                    "linkUrl": "https://www.ibm.com/blogs/ibm-training/"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Secteurs d’activité",
+        "url": "https://www.ibm.com/fr-fr/industries",
+        "hasMenu": false,
+        "hasMegapanel": false,
+        "menuSections": []
+      },
+      {
+        "title": "Développeurs",
+        "url": "",
+        "hasMenu": true,
+        "hasMegapanel": false,
+        "menuSections": [
+          {
+            "heading": "",
+            "menuItems": [
+              {
+                "title": "developerWorks (US)",
+                "url": "https://www.ibm.com/developerworks/"
+              },
+              {
+                "title": "Portail PartnerWorld",
+                "url": "https://www.ibm.com/partnerworld/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Support",
+        "url": "https://www.ibm.com/support/en-us/",
+        "hasMenu": false,
+        "hasMegapanel": false,
+        "menuSections": []
+      }
+    ]
+  },
+  "profileMenu": {
+    "signedout": [
+      {
+        "title": "Mon site IBM : My IBM",
+        "url": "https://myibm.ibm.com/dashboard/"
+      },
+      {
+        "title": "Ouvrir une session",
+        "url": "https://idaas.iam.ibm.com/idaas/mtfim/sps/authsvc?PolicyId=urn:ibm:security:authentication:asf:basicldapuser&Target={{window.location}}"
+      }
+    ],
+    "signedin": [
+      {
+        "title": "Mon site IBM : My IBM",
+        "url": "https://myibm.ibm.com/dashboard/"
+      },
+      { "title": "Profil", "url": "https://myibm.ibm.com/profile/" },
+      {
+        "id": "signout",
+        "title": "Se déconnecter",
+        "url": "https://www.ibm.com/account/us-en/signout.html"
+      }
+    ]
+  },
+  "marketplace": {
+    "title": "Produits",
+    "url": ""
+  },
+  "footerMenu": [
+    {
+      "title": "Découvrir",
+      "links": [
+        { "title": "Produits", "url": "https://www.ibm.com/products/tn/fr/" },
+        {
+          "title": "Services",
+          "url": "https://www.ibm.com/technologyservices/tn/fr/"
+        },
+        {
+          "title": "Secteurs d'activité",
+          "url": "https://www.ibm.com/solutions/tn/fr/"
+        },
+        {
+          "title": "Études de cas (US)",
+          "url": "https://www.ibm.com/software/businesscasestudies/us/en/corp/"
+        },
+        {
+          "title": "Au cœur d'IBM (US)",
+          "url": "https://www.ibm.com/thought-leadership/inside-ibm/"
+        }
+      ]
+    },
+    {
+      "title": "Informations pour...",
+      "links": [
+        {
+          "title": "Développeurs (US)",
+          "url": "https://www.ibm.com/developerworks/"
+        },
+        {
+          "title": "Partenaires commerciaux",
+          "url": "https://www.ibm.com/partnerworld"
+        },
+        {
+          "title": "Contrats fédéraux et d'État (US)",
+          "url": "https://www.ibm.com/shop/americas/content/home/en_US/government-contracts.html"
+        }
+      ]
+    },
+    {
+      "title": "Connectez-vous",
+      "links": [
+        { "title": "Support", "url": "https://www.ibm.com/support/tn/fr/" },
+        {
+          "title": "Rechercher un partenaire commercial (US)",
+          "url": "https://www.ibm.com/partnerworld/wps/bplocator/search.jsp"
+        }
+      ]
+    },
+    {
+      "title": "A propos d'IBM",
+      "links": [
+        { "title": "Carrières (US)", "url": "https://www.ibm.com/employment/" },
+        {
+          "title": "A la une (US)",
+          "url": "https://www.ibm.com/press/us/en/index.wss"
+        },
+        {
+          "title": "Relations avec les investisseurs (US)",
+          "url": "https://www.ibm.com/investor/"
+        },
+        {
+          "title": "Responsabilités (US)",
+          "url": "https://www.ibm.com/ibm/responsibility/"
+        },
+        { "title": "A propos d'IBM", "url": "https://www.ibm.com/ibm/tn/fr/" }
+      ]
+    }
+  ],
+  "footerThin": [
+    { "title": "Contact", "url": "https://www.ibm.com/contact/tn/fr/" },
+    {
+      "title": "Données personnelles (US)",
+      "url": "https://www.ibm.com/privacy/us/en/"
+    },
+    {
+      "title": "Conditions d'utilisation (US)",
+      "url": "https://www.ibm.com/tn-fr/legal"
+    },
+    {
+      "title": "Accessibilité",
+      "url": "https://www.ibm.com/accessibility/tn/fr/"
+    }
+  ],
+  "localeSelector": {
+    "localVersions": "Versions traduites de cette page",
+    "homepages": "Pages d'accueil ibm.com Monde"
+  },
+  "socialFollow": {
+    "title": "Suivre IBM",
+    "links": [
+      {
+        "linkClass": "ibm-twitter-encircled-link",
+        "title": "Twitter",
+        "url": "https://www.twitter.com/ibm"
+      },
+      {
+        "linkClass": "ibm-linkedin-encircled-link",
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/company/ibm"
+      },
+      {
+        "linkClass": "ibm-facebook-encircled-link",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/ibm"
+      },
+      {
+        "linkClass": "ibm-youtube-encircled-link",
+        "title": "YouTube",
+        "url": "https://www.youtube.com/ibm"
+      }
+    ]
+  },
+  "socialSharing": [
+    {
+      "id": "digg",
+      "title": "Digg",
+      "url": "https://digg.com/submit?phase=2&url=%{URL}&title=%{TITLE}"
+    },
+    {
+      "id": "facebook",
+      "title": "Facebook",
+      "url": "https://www.facebook.com/sharer.php?u=%{URL}&t=%{TITLE}"
+    },
+    {
+      "id": "twitter",
+      "title": "Twitter",
+      "url": "https://twitter.com/home?status=%{URL}%20-%20%{TITLE}"
+    },
+    {
+      "id": "delicious",
+      "title": "Delicious",
+      "url": "https://delicious.com/post?url=%{URL}&title=%{TITLE}"
+    },
+    {
+      "id": "linkedin",
+      "title": "Linked In",
+      "url": "https://www.linkedin.com/shareArticle?mini=true&url=%{URL}&title=%{TITLE}"
+    }
+  ],
+  "leaving": {
+    "LEAVING001": "Vous êtes sur le point de quitter le site Web d'IBM",
+    "LEAVING002": "Vous êtes sur le point de quitter le site Web d'IBM. IBM décline toutes responsabilités et garanties concernant les autres sites Web auxquels vous pourriez accéder à partir du présent site. Tous les autre sites Web non IBM, même s'ils affichent le logo IBM et du contenu concernant les produits et services d'IBM, sont néanmoins indépendants d'IBM, et IBM n'a aucun contrôle sur l'exploitation de ces sites. De plus, l'existence d'un lien vers un site non IBM ne signifie aucunement qu'IBM assume une quelconque responsabilité quant à son contenu ou à l'usage qui peut en être fait.",
+    "LEAVING003": "Le lien que vous avez demandé ou vers lequel vous avez été redirigé est ---",
+    "LEAVING004": "Remarque"
+  },
+  "misc": {
+    "backtotop": "Début",
+    "cancelText": "Annuler",
+    "close": "Fermez",
+    "cookiePrefs": "Préférences liées aux cookies",
+    "continueText": "Continuer",
+    "editProfile": "Editer mon profil",
+    "emailThisPage": "Envoyer cette page par e-mail",
+    "feedback": "Feedback",
+    "mpScopedSearh": "Produits",
+    "withinMp": "Produits",
+    "next": "Futur nom",
+    "noresults": "Aucun résultat trouvé",
+    "prev": "Précédent",
+    "resultsNav": "Use down and up arrow keys to navigate through the results.",
+    "search": "Search",
+    "selectCountry": "Choisissez un pays/une région",
+    "sharePage": "Partager cette page",
+    "signin": "Connexion",
+    "signout": "Se déconnecter",
+    "sitenav": "Navigation dans le site",
+    "welcomeback": "Bienvenue"
+  }
+}

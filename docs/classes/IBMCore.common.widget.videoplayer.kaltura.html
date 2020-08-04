@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <title>IBMCore.common.widget.videoplayer.kaltura - IBM v18 (Northstar) common Javascript documentation</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" href="http://www.ibm.com/favicon.ico">
+    <script>
+        digitalData = {
+            page: {
+                pageInfo: {
+                    effectiveDate: '2017-02-25',
+                    expiryDate: '2020-02-25',
+                    language: 'en-US',
+                    publishDate: '2017-02-25',
+                    publisher: 'IBM Corporation',
+                    ibm: {
+                        contentDelivery: 'yuidoc via grunt',
+                        contentProducer: 'Michael Santelia',
+                        country: 'US',
+                        owner: 'Michael Santelia'
+                    }
+                }
+            }
+        };
+    </script>
+
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+
+    <script>
+
+		var lastUpdate = new Date(document.lastModified),
+			updatedMonth = lastUpdate.getMonth(),
+			updatedDate = lastUpdate.getDate(),
+			updatedYear = lastUpdate.getFullYear(),
+			today = new Date(),
+			todayMonth = today.getMonth(),
+			todayDate = today.getDate(),
+			todayYear = today.getFullYear(),
+			monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"],
+			lastUpdatedText = "",
+			daysAgo = Math.floor((today - lastUpdate) / (1000*60*60*24));
+
+		updatedMonthName = monthNames[updatedMonth];
+
+		switch (daysAgo) {
+
+			case 1: 
+				lastUpdatedText = "Updated yesterday";
+				break;
+				
+			case 0: 
+				lastUpdatedText = "Updated today";
+				break;
+				
+			default: 
+				lastUpdatedText = "Updated " + daysAgo + " days ago";
+				break;
+		}
+
+		if (daysAgo > 4) {
+			lastUpdatedText = "Updated: " + updatedMonthName + " " + updatedDate + ", " + updatedYear;
+		}
+
+    </script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-1-2">
+            <div style="background: url(http://1.www.s81c.com/i/v17/t/ibm-logo.png) no-repeat scroll 0px 0px transparent; width: 105px; height: 45px; margin: 0.85em 0px;text-indent:-9999px;">IBM v18 (Northstar) common Javascript documentation</div>
+        </div>
+        <div class="yui3-u-1-2 version">
+            <em>Javascript documentation for: IBM v18 (Northstar)<br />
+            	<span style="font-size: 0.6em; position: absolute; right: 35px;"><script>document.writeln(lastUpdatedText)</script></span></em>
+        </div>
+    </div>
+    
+    <p><a href="../assets../../v18-js-source-documentation.zip" style="margin-left: 10px; padding-left: 15px; background: url(http://1.www.s81c.com/i/v17/icons/ibm_sprite_transactional_blue_ON.png) no-repeat 0 -202px;">Download a copy of this documentation (ZIP).</a></p>
+    
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4" style="float: left;width:25%;">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/IBMCore.common.module.backtotop.html">IBMCore.common.module.backtotop</a></li>
+                                <li><a href="../classes/IBMCore.common.module.canadanotice.html">IBMCore.common.module.canadanotice</a></li>
+                                <li><a href="../classes/IBMCore.common.module.contactmodule.html">IBMCore.common.module.contactmodule</a></li>
+                                <li><a href="../classes/IBMCore.common.module.footer.html">IBMCore.common.module.footer</a></li>
+                                <li><a href="../classes/IBMCore.common.module.footermenu.html">IBMCore.common.module.footermenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.leftnav.html">IBMCore.common.module.leftnav</a></li>
+                                <li><a href="../classes/IBMCore.common.module.liveperson.html">IBMCore.common.module.liveperson</a></li>
+                                <li><a href="../classes/IBMCore.common.module.localeselector.html">IBMCore.common.module.localeselector</a></li>
+                                <li><a href="../classes/IBMCore.common.module.localpagenotification.html">IBMCore.common.module.localpagenotification</a></li>
+                                <li><a href="../classes/IBMCore.common.module.masthead.html">IBMCore.common.module.masthead</a></li>
+                                <li><a href="../classes/IBMCore.common.module.masthead.sticky.html">IBMCore.common.module.masthead.sticky</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mastheadbanner.html">IBMCore.common.module.mastheadbanner</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mastheadsearch.html">IBMCore.common.module.mastheadsearch</a></li>
+                                <li><a href="../classes/IBMCore.common.module.merchandising.html">IBMCore.common.module.merchandising</a></li>
+                                <li><a href="../classes/IBMCore.common.module.mobilemenu.html">IBMCore.common.module.mobilemenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sharethiscontent.html">IBMCore.common.module.sharethiscontent</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sharethispage.html">IBMCore.common.module.sharethispage</a></li>
+                                <li><a href="../classes/IBMCore.common.module.sitenavmenu.html">IBMCore.common.module.sitenavmenu</a></li>
+                                <li><a href="../classes/IBMCore.common.module.urx.html">IBMCore.common.module.urx</a></li>
+                                <li><a href="../classes/IBMCore.common.translations.html">IBMCore.common.translations</a></li>
+                                <li><a href="../classes/IBMCore.common.util.a11y.html">IBMCore.common.util.a11y</a></li>
+                                <li><a href="../classes/IBMCore.common.util.addCssRule.html">IBMCore.common.util.addCssRule</a></li>
+                                <li><a href="../classes/IBMCore.common.util.anchorlinkAdjustment.html">IBMCore.common.util.anchorlinkAdjustment</a></li>
+                                <li><a href="../classes/IBMCore.common.util.bitly.html">IBMCore.common.util.bitly</a></li>
+                                <li><a href="../classes/IBMCore.common.util.color.html">IBMCore.common.util.color</a></li>
+                                <li><a href="../classes/IBMCore.common.util.config.html">IBMCore.common.util.config</a></li>
+                                <li><a href="../classes/IBMCore.common.util.convertSecondsToHMS.html">IBMCore.common.util.convertSecondsToHMS</a></li>
+                                <li><a href="../classes/IBMCore.common.util.cookie.html">IBMCore.common.util.cookie</a></li>
+                                <li><a href="../classes/IBMCore.common.util.coreservices.html">IBMCore.common.util.coreservices</a></li>
+                                <li><a href="../classes/IBMCore.common.util.data.html">IBMCore.common.util.data</a></li>
+                                <li><a href="../classes/IBMCore.common.util.debug.html">IBMCore.common.util.debug</a></li>
+                                <li><a href="../classes/IBMCore.common.util.eventCoordinator.html">IBMCore.common.util.eventCoordinator</a></li>
+                                <li><a href="../classes/IBMCore.common.util.freezeScrollbars.html">IBMCore.common.util.freezeScrollbars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.gatekeeper.html">IBMCore.common.util.gatekeeper</a></li>
+                                <li><a href="../classes/IBMCore.common.util.generateId.html">IBMCore.common.util.generateId</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getCurrentGridSize.html">IBMCore.common.util.getCurrentGridSize</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getDataAttributes.html">IBMCore.common.util.getDataAttributes</a></li>
+                                <li><a href="../classes/IBMCore.common.util.getScrollbarWidth.html">IBMCore.common.util.getScrollbarWidth</a></li>
+                                <li><a href="../classes/IBMCore.common.util.has12grid.html">IBMCore.common.util.has12grid</a></li>
+                                <li><a href="../classes/IBMCore.common.util.hasScrollbars.html">IBMCore.common.util.hasScrollbars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.meta.html">IBMCore.common.util.meta</a></li>
+                                <li><a href="../classes/IBMCore.common.util.perf.html">IBMCore.common.util.perf</a></li>
+                                <li><a href="../classes/IBMCore.common.util.queue.html">IBMCore.common.util.queue</a></li>
+                                <li><a href="../classes/IBMCore.common.util.scrolledintoview.html">IBMCore.common.util.scrolledintoview</a></li>
+                                <li><a href="../classes/IBMCore.common.util.scrolltracker.html">IBMCore.common.util.scrolltracker</a></li>
+                                <li><a href="../classes/IBMCore.common.util.setIpcCookie.html">IBMCore.common.util.setIpcCookie</a></li>
+                                <li><a href="../classes/IBMCore.common.util.statshelper.html">IBMCore.common.util.statshelper</a></li>
+                                <li><a href="../classes/IBMCore.common.util.storage.html">IBMCore.common.util.storage</a></li>
+                                <li><a href="../classes/IBMCore.common.util.string.htmlspecialchars.html">IBMCore.common.util.string.htmlspecialchars</a></li>
+                                <li><a href="../classes/IBMCore.common.util.url.html">IBMCore.common.util.url</a></li>
+                                <li><a href="../classes/IBMCore.common.util.user.html">IBMCore.common.util.user</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.carousel.html">IBMCore.common.widget.carousel</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.ccfintercept.html">IBMCore.common.widget.ccfintercept</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.datatable.html">IBMCore.common.widget.datatable</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.datepicker.html">IBMCore.common.widget.datepicker</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.dyntabs.html">IBMCore.common.widget.dyntabs</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.fileinput.html">IBMCore.common.widget.fileinput</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.forms.html">IBMCore.common.widget.forms</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.formvalidator.html">IBMCore.common.widget.formvalidator</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.leavingibm.html">IBMCore.common.widget.leavingibm</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.manager.html">IBMCore.common.widget.manager</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.masonry.html">IBMCore.common.widget.masonry</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.overlay.html">IBMCore.common.widget.overlay</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.parallaxscroll.html">IBMCore.common.widget.parallaxscroll</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.rssdisplay.html">IBMCore.common.widget.rssdisplay</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.scrollable.html">IBMCore.common.widget.scrollable</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.selectlist.html">IBMCore.common.widget.selectlist</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.selectlistnav.html">IBMCore.common.widget.selectlistnav</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.setsameheight.html">IBMCore.common.widget.setsameheight</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.showhide.html">IBMCore.common.widget.showhide</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.stepindicator.html">IBMCore.common.widget.stepindicator</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.stickytabs.html">IBMCore.common.widget.stickytabs</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.syntaxhighlighter.html">IBMCore.common.widget.syntaxhighlighter</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.tablerowselector.html">IBMCore.common.widget.tablerowselector</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.tooltip.html">IBMCore.common.widget.tooltip</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.twisty.html">IBMCore.common.widget.twisty</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videolooper.html">IBMCore.common.widget.videolooper</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.html">IBMCore.common.widget.videoplayer</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.kaltura.html">IBMCore.common.widget.videoplayer.kaltura</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.ustream.html">IBMCore.common.widget.videoplayer.ustream</a></li>
+                                <li><a href="../classes/IBMCore.common.widget.videoplayer.youtube.html">IBMCore.common.widget.videoplayer.youtube</a></li>
+                                <li><a href="../classes/IBMCore.namespace.html">IBMCore.namespace</a></li>
+                                <li><a href="../classes/IBMCore.www.module.dynamiccontactmodule.html">IBMCore.www.module.dynamiccontactmodule</a></li>
+                                <li><a href="../classes/IBMCore.www.module.truste.html">IBMCore.www.module.truste</a></li>
+                                <li><a href="../classes/jQuery.browser.html">jQuery.browser</a></li>
+                                <li><a href="../classes/jQuery.fn.dataTable.html">jQuery.fn.dataTable</a></li>
+                                <li><a href="../classes/jQuery.fn.slick.html">jQuery.fn.slick</a></li>
+                                <li><a href="../classes/jQuery.layout.html">jQuery.layout</a></li>
+                                <li><a href="../classes/jQuery.os.html">jQuery.os</a></li>
+                                <li><a href="../classes/jQuery:focusable.html">jQuery:focusable</a></li>
+                                <li><a href="../classes/Masonry.html">Masonry</a></li>
+                                <li><a href="../classes/Modernizr.html">Modernizr</a></li>
+                                <li><a href="../classes/Mustache.html">Mustache</a></li>
+                                <li><a href="../classes/NanoScroll.html">NanoScroll</a></li>
+                                <li><a href="../classes/Other IBM - Canada notice loader.html">Other IBM - Canada notice loader</a></li>
+                                <li><a href="../classes/Other IBM - common init.html">Other IBM - common init</a></li>
+                                <li><a href="../classes/Other IBM - common v18 page tracker.html">Other IBM - common v18 page tracker</a></li>
+                                <li><a href="../classes/Other IBM - errorchecking.html">Other IBM - errorchecking</a></li>
+                                <li><a href="../classes/Other IBM - footer feedback link.html">Other IBM - footer feedback link</a></li>
+                                <li><a href="../classes/Other IBM - grid change.html">Other IBM - grid change</a></li>
+                                <li><a href="../classes/Other IBM - jstimer-end.html">Other IBM - jstimer-end</a></li>
+                                <li><a href="../classes/Other IBM - jstimer-start.html">Other IBM - jstimer-start</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/IBMCore.html">IBMCore</a></li>
+                                <li><a href="../modules/jQuery.browser.html">jQuery.browser</a></li>
+                                <li><a href="../modules/jQuery.dataTable.html">jQuery.dataTable</a></li>
+                                <li><a href="../modules/jQuery.slick.html">jQuery.slick</a></li>
+                                <li><a href="../modules/Masonry.html">Masonry</a></li>
+                                <li><a href="../modules/Modernizr.html">Modernizr</a></li>
+                                <li><a href="../modules/Mustache.html">Mustache</a></li>
+                                <li><a href="../modules/Nanoscroller.html">Nanoscroller</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4"style="float: left;width:75%;">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected" checked>
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private" checked>
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated" checked>
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>IBMCore.common.widget.videoplayer.kaltura Class</h1>
+                        <div class="box meta">
+                        
+                        
+                                <div class="foundat">
+                                    Defined in: <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l1"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:1</code></a>
+                                </div>
+                        
+                                    Module: <a href="../modules/IBMCore.html">IBMCore</a>
+                        
+                        </div>
+                        
+                        
+                        <div class="box intro">
+                            <p>Kaltura video widget.
+                        <br>Dependency: videoplayer.js
+                        <br>View the <a href="IBMCore.common.widget.videoplayer.html">videoplayer.js</a> for all implementation and options detailer. It is the main controller class that creates the proper object and setup.
+                        <br>This is the video player sub-class for the Kaltura embedded video player object.
+                        <br>
+                        <br><strong>Event usage</strong>: Subscribe to the IBM widget init event that fires on your DOM element to know when the widget has been initialized and you can access its APIs.</p>
+                        
+                        </div>
+                        
+                        
+                        <div id="classdocs" class="tabview">
+                            <ul class="api-class-tabs">
+                                <li class="api-class-tab index"><a href="#index">Index</a></li>
+                        
+                                    <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+                                    <li class="api-class-tab events"><a href="#events">Events</a></li>
+                            </ul>
+                        
+                            <div>
+                                <div id="index" class="api-class-tabpanel index">
+                                    <h2 class="off-left">Item Index</h2>
+                        
+                                        <div class="index-section methods">
+                                            <h3>Methods</h3>
+                        
+                                            <ul class="index-list methods">
+                                                    <li class="index-item method private">
+                                                        <a href="#method_createApiUrl">createApiUrl</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_getPlayerId">getPlayerId</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_loadApi">loadApi</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_Player">Player</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_PLayer.addAriaLabel">PLayer.addAriaLabel</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_Player.addPlaceholderInfo">Player.addPlaceholderInfo</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_Player.addPlaybutton">Player.addPlaybutton</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_Player.calcHeight">Player.calcHeight</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_Player.convertSettingsToPlayerVars">Player.convertSettingsToPlayerVars</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_Player.createInlinePlayer">Player.createInlinePlayer</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_Player.createPlayerTrigger">Player.createPlayerTrigger</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_Player.destroy">Player.destroy</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_Player.embedVideo">Player.embedVideo</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_Player.fireMetricsEvent">Player.fireMetricsEvent</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_Player.getUserDefinedPlayerVars">Player.getUserDefinedPlayerVars</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_Player.getVideoInfo">Player.getVideoInfo</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_Player.init">Player.init</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_Player.onPlayerEnd">Player.onPlayerEnd</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_Player.onPlayerPause">Player.onPlayerPause</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_Player.onPlayerPlayed">Player.onPlayerPlayed</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_Player.pauseVideo">Player.pauseVideo</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_Player.playVideo">Player.playVideo</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_Player.playVideoAt">Player.playVideoAt</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_Player.setOverlayPresets">Player.setOverlayPresets</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method private">
+                                                        <a href="#method_Player.setupPlayerWidget">Player.setupPlayerWidget</a>
+                        
+                                                            <span class="flag private">private</span>
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_Player.showOverlayAndPlay">Player.showOverlayAndPlay</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_Player.stopVideo">Player.stopVideo</a>
+                        
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        
+                        
+                        
+                                        <div class="index-section events">
+                                            <h3>Events</h3>
+                        
+                                            <ul class="index-list events">
+                                                    <li class="index-item event">
+                                                        <a href="#event_ibm-init">ibm-init</a>
+                        
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                </div>
+                        
+                                    <div id="methods" class="api-class-tabpanel">
+                                        <h2 class="off-left">Methods</h2>
+                        
+                                            <div id="method_createApiUrl" class="method item private">
+                                                <h3 class="name"><code>createApiUrl</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>data</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type">String</span>
+                                                    </span>
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l61"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:61</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Creates the API URL using the object data.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">data</code>
+                                                                    <span class="type">Object</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>Object with data values to populate API template varaibles.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                                    <ul class="params-list">
+                                                                        <li class="param"><span class="type" style="font-size:11px;">String</span><div><p>The API URL to call.</p>
+                                            </div></li>
+                                                                    </ul>
+                                                        </div>
+                                                    </div>
+                                            
+                                            </div>
+                                            <div id="method_getPlayerId" class="method item private">
+                                                <h3 class="name"><code>getPlayerId</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type">String</span>
+                                                    </span>
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l78"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:78</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Returns the Kaltura player UID to use.
+                                            <br />There are different one for prod vs. dev KT environment. Manually set to dev if you need to test something
+                                            in Kaltura dev environment. Usually you don't need to.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                                    <ul class="params-list">
+                                                                        <li class="param"><span class="type" style="font-size:11px;">String</span><div><p>The UID of the Kaltura player to use.</p>
+                                            </div></li>
+                                                                    </ul>
+                                                        </div>
+                                                    </div>
+                                            
+                                            </div>
+                                            <div id="method_loadApi" class="method item">
+                                                <h3 class="name"><code>loadApi</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l92"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:92</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Loads the Kaltura IFRAME API for the player. Only runs once, based on empty api status/flag.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player" class="method item">
+                                                <h3 class="name"><code>Player</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code class="optional">[settings]</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l112"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:112</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Player contructor object for the Kaltura video player.
+                                            <br />Dependency: videoplayer.js
+                                            <br />Used by the video player factory in videoplayer.js file, which is used by the jQuery plug-in.
+                                            <br />You can't use this directly. Use the standard jQuery(xxxx).videoplayer() plug-in method to create a video player.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name optional">[settings]</code>
+                                                                    <span class="type">Object</span>
+                                                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>Settings to override defaults and element's @data-xxxx attributes.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <p>// You can access your widget object that was created (this) using the standard convention:
+                                            jQuery(&quot;&lt;your_player_container_selector&gt;&quot;).data(&quot;widget&quot;);</p>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_PLayer.addAriaLabel" class="method item private">
+                                                <h3 class="name"><code>PLayer.addAriaLabel</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$el</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>customText</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l361"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:361</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>Adds the aria-label to the trigger for better a11y so screen reader reads name of hosting service also.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$el</code>
+                                                                    <span class="type">JQuery DOM selector</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The placeholder trigger element where we're putting the aria-label.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">customText</code>
+                                                                    <span class="type">String</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>Custom text (existing) to use, else uses video title.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.addPlaceholderInfo" class="method item private">
+                                                <h3 class="name"><code>Player.addPlaceholderInfo</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l381"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:381</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>Adds the video description, name, and formatted time to the placeholder.
+                                            <br />Optional based on embed settings.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.addPlaybutton" class="method item private">
+                                                <h3 class="name"><code>Player.addPlaybutton</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>$triggerLink</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l550"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:550</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>Adds the &lt;span&gt; to the placeholder container right before the image which shows the overlay'd
+                                            play button on top of whatever image is used.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">$triggerLink</code>
+                                                                    <span class="type">JQuery element</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The placeholder element in which to add the overlay'd play button over the image.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.calcHeight" class="method item private">
+                                                <h3 class="name"><code>Player.calcHeight</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>num</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type">Integer</span>
+                                                    </span>
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l451"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:451</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>Calculates a height for a given number using the default video apect ratio (16/9).</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">num</code>
+                                                                    <span class="type">Integer</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The number to use as a width to calculate the proper height for.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                                    <ul class="params-list">
+                                                                        <li class="param"><span class="type" style="font-size:11px;">Integer</span><div><p>The number to use as a height for the given width.</p>
+                                            </div></li>
+                                                                    </ul>
+                                                        </div>
+                                                    </div>
+                                            
+                                            </div>
+                                            <div id="method_Player.convertSettingsToPlayerVars" class="method item private">
+                                                <h3 class="name"><code>Player.convertSettingsToPlayerVars</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l468"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:468</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>Takes settings from defaults or data-attrs and converts appropriate ones to playerVars for use with KT embed API.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.createInlinePlayer" class="method item private">
+                                                <h3 class="name"><code>Player.createInlinePlayer</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>elementId</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>videoId</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l497"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:497</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>Embed the video. Builds and calls KT script which injects player into original element's child playercontainer.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">elementId</code>
+                                                                    <span class="type">String</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The ID where we're putting the placeholder.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">videoId</code>
+                                                                    <span class="type">String</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The video (ID) we're embedding the placeholder for.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.createPlayerTrigger" class="method item private">
+                                                <h3 class="name"><code>Player.createPlayerTrigger</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>videoId</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l510"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:510</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>Take the video ID and get the image.
+                                            <br />Create, bind, and replace origEl innerHTML with: a-&gt;img.
+                                            <br />Onclick of the <a> we injected, embed the video player (and play it).</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">videoId</code>
+                                                                    <span class="type">String</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The video (ID) we're embedding the placeholder/trigger for.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.destroy" class="method item">
+                                                <h3 class="name"><code>Player.destroy</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type">JQuery/DOM element</span>
+                                                    </span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l198"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:198</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br />Destroys the widget and puts back the original HTML element that existed before the widget initialized.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                                    <ul class="params-list">
+                                                                        <li class="param"><span class="type" style="font-size:11px;">JQuery/DOM element</span><div><p>The original element that was put back (that you called widget destroy on).</p>
+                                            </div></li>
+                                                                    </ul>
+                                                        </div>
+                                                    </div>
+                                            
+                                            </div>
+                                            <div id="method_Player.embedVideo" class="method item private">
+                                                <h3 class="name"><code>Player.embedVideo</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>elementId</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>videoId</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l566"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:566</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>Does the actual video player embed.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">elementId</code>
+                                                                    <span class="type">String</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The ID where we're putting the placeholder.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">videoId</code>
+                                                                    <span class="type">String</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The video (ID) we're embedding the placeholder for.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.fireMetricsEvent" class="method item private">
+                                                <h3 class="name"><code>Player.fireMetricsEvent</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>playerState</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l256"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:256</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>Fires a metrics event when the video was played. Pass events to common metrics event.
+                                            <br />Uses Youtube player states:
+                                            <br />0 = ended, 1 = played, 2 = paused, 3 = error.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">playerState</code>
+                                                                    <span class="type">Integer</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The player state, using the same numbering syste Youtube uses.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.getUserDefinedPlayerVars" class="method item private">
+                                                <h3 class="name"><code>Player.getUserDefinedPlayerVars</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type">Object</span>
+                                                    </span>
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l629"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:629</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>Takes user-defined playerVars from data-xxxxx naming convention and returns them to be merged into applied settings.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                                    <ul class="params-list">
+                                                                        <li class="param"><span class="type" style="font-size:11px;">Object</span><div><p>An object containing the settings to use for the video embed.</p>
+                                            </div></li>
+                                                                    </ul>
+                                                        </div>
+                                                    </div>
+                                            
+                                            </div>
+                                            <div id="method_Player.getVideoInfo" class="method item private">
+                                                <h3 class="name"><code>Player.getVideoInfo</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>videoId</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>cb</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l644"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:644</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>Calls API to get video info and passes JSON to callback function.</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">videoId</code>
+                                                                    <span class="type">String</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The video (ID) we want to get info for</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">cb</code>
+                                                                    <span class="type">Function</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The function to call and pass the returned data object to.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.init" class="method item">
+                                                <h3 class="name"><code>Player.init</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l226"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:226</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br />Called by videoplayer.js jQuery plugin after the factory returns a player object (an instance of this &quot;Player&quot; object).
+                                            <br />Creates a player and injects it on the page.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.onPlayerEnd" class="method item private">
+                                                <h3 class="name"><code>Player.onPlayerEnd</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l319"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:319</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>Callback fired when the video has <strong>ended</strong>.
+                                            <br />Uses Youtube player states:
+                                            <br />0 = ended, 1 = played, 2 = paused, 3 = error.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.onPlayerPause" class="method item private">
+                                                <h3 class="name"><code>Player.onPlayerPause</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l306"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:306</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>Callback fired when the video is <strong>paused</strong>.
+                                            <br />Uses Youtube player states:
+                                            <br />0 = ended, 1 = played, 2 = paused, 3 = error.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.onPlayerPlayed" class="method item private">
+                                                <h3 class="name"><code>Player.onPlayerPlayed</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l293"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:293</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>Callback fired when the video is played.
+                                            <br />Uses Youtube player states:
+                                            <br />0 = ended, 1 = played, 2 = paused, 3 = error.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.pauseVideo" class="method item">
+                                                <h3 class="name"><code>Player.pauseVideo</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l997"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:997</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>This pauses the video.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <p>jQuery(&quot;&lt;your_table_container_selector&gt;&quot;).data(&quot;widget&quot;).pauseVideo();</p>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_Player.playVideo" class="method item">
+                                                <h3 class="name"><code>Player.playVideo</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l968"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:968</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>This plays the video.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <p>jQuery(&quot;&lt;your_table_container_selector&gt;&quot;).data(&quot;widget&quot;).playVideo();</p>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_Player.playVideoAt" class="method item">
+                                                <h3 class="name"><code>Player.playVideoAt</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>timesec</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l982"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:982</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>This plays the video starting at a specific point on the timeline (# of seconds).</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">timesec</code>
+                                                                    <span class="type">String</span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                    <p>The time, in seconds, where to seek to and play the video.</p>
+                                            
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <p>jQuery(&quot;&lt;your_table_container_selector&gt;&quot;).data(&quot;widget&quot;).playVideoAt();</p>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div id="method_Player.setOverlayPresets" class="method item private">
+                                                <h3 class="name"><code>Player.setOverlayPresets</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l336"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:336</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>Takes the @data-overlayplayersize and converts that preset to the proper width and classes needed for the
+                                            player and the overlay
+                                            <br />Optional based on embed settings.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.setupPlayerWidget" class="method item private">
+                                                <h3 class="name"><code>Player.setupPlayerWidget</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                                    <span class="flag private">private</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l703"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:703</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>This is our KT player factory.
+                                            <br />Called by init(). This is like our sub-factory.
+                                            <br />Based on the display type, it calls the proper functions to make the proper widget elements for that type.
+                                            <br />This is ONLY called after KT API is loaded, so assume all kWidget APIs are available.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.showOverlayAndPlay" class="method item">
+                                                <h3 class="name"><code>Player.showOverlayAndPlay</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l676"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:676</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br />Called onclick of the user's link, or the auto-generated image that serves as the overlay trigger.
+                                            <br />Public method to use to programatically open and play the associated video. Or you can just do: $(&quot;myTrigger a&quot;).click();</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="method_Player.stopVideo" class="method item">
+                                                <h3 class="name"><code>Player.stopVideo</code></h3>
+                                            
+                                                    <span class="paren">()</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l1011"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:1011</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>This is a method of the &quot;Player&quot; constructor.
+                                            <br>This stops the video.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                                    <div class="example">
+                                                        <h4>Example:</h4>
+                                            
+                                                        <div class="example-content">
+                                                            <p>jQuery(&quot;&lt;your_table_container_selector&gt;&quot;).data(&quot;widget&quot;).stopVideo();</p>
+                                            
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                    </div>
+                        
+                        
+                        
+                                    <div id="events" class="api-class-tabpanel">
+                                        <h2 class="off-left">Events</h2>
+                        
+                                            <div id="event_ibm-init" class="events item">
+                                                <h3 class="name"><code>ibm-init</code></h3>
+                                                <span class="type"></span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/src_js_sources_ibm_common_widgets_videoplayer-kaltura.js.html#l50"><code>src&#x2F;js&#x2F;sources&#x2F;ibm&#x2F;common&#x2F;widgets&#x2F;videoplayer-kaltura.js:50</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Published on widget's DOM element after Kaltura placeholder trigger is clicked and video player is injected.
+                                            <br><strong>Example usage</strong>:</p>
+                                            <pre>
+                                              jQuery("&lt;your_widget_selector>")[0].addEventListener("ibm-init", function (evt) {
+                                                  // Kaltura player widget is embedded and API is available.
+                                              });
+                                            </pre>
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
