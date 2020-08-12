@@ -1,821 +1,2097 @@
 <!DOCTYPE html>
 <!-- saved from url=(0071)https://developer.ibm.com/mainframe/products/record-generator-for-java/ -->
-<html lang="en-US" prefix="og: http://ogp.me/ns#" style="" class="applicationcache geolocation history postmessage svg websockets localstorage sessionstorage websqldatabase webworkers hashchange pointerevents canvas audio canvastext video webgl cssgradients multiplebgs opacity rgba inlinesvg hsla supports svgclippaths smil no-touchevents fontface generatedcontent textshadow cssanimations backgroundsize borderimage borderradius boxshadow csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox flexboxlegacy cssreflections csstransforms csstransforms3d csstransitions indexeddb indexeddb-deletedatabase js ibm-v18 ibm-cxtype-4g hires mac chrome chrome8 webkit webkit5 ibm-grid-xlarge"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<!-- SITE MON : START (DO NOT DELETE) -->
-	<!-- developerWorks monitoring token -->
-	<!-- SITE MON : END (DO NOT DELETE) -->
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- v18 meta -->
-	<meta name="geo.country" content="ZZ">
-	<meta name="dcterms.rights" content="� Copyright IBM Corp. 2016">
-	<meta name="dcterms.date" content="2016-07-18">
-	<meta name="keywords" content="">
-	<meta name="robots" content="index, follow">
-	<link rel="shortcut icon" href="https://www.ibm.com/favicon.ico">
+<html
+  lang="en-US"
+  prefix="og: http://ogp.me/ns#"
+  style=""
+  class="applicationcache geolocation history postmessage svg websockets localstorage sessionstorage websqldatabase webworkers hashchange pointerevents canvas audio canvastext video webgl cssgradients multiplebgs opacity rgba inlinesvg hsla supports svgclippaths smil no-touchevents fontface generatedcontent textshadow cssanimations backgroundsize borderimage borderradius boxshadow csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox flexboxlegacy cssreflections csstransforms csstransforms3d csstransitions indexeddb indexeddb-deletedatabase js ibm-v18 ibm-cxtype-4g hires mac chrome chrome8 webkit webkit5 ibm-grid-xlarge"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- SITE MON : START (DO NOT DELETE) -->
+    <!-- developerWorks monitoring token -->
+    <!-- SITE MON : END (DO NOT DELETE) -->
 
-		<!-- end of v18 meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- v18 meta -->
+    <meta name="geo.country" content="ZZ" />
+    <meta name="dcterms.rights" content="� Copyright IBM Corp. 2016" />
+    <meta name="dcterms.date" content="2016-07-18" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index, follow" />
+    <link rel="shortcut icon" href="https://www.ibm.com/favicon.ico" />
 
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="https://developer.ibm.com/mainframe/xmlrpc.php">
-<script>
-		 digitalData = {
-		  "page":{
-		    "category":{
-		      "primaryCategory":"SOFDCMFDZZ",		      "ibm":[
+    <!-- end of v18 meta -->
 
-		      ]
-		    },
-		    "pageInfo":{
-		      "effectiveDate":"2016-07-18",
-		      "expiryDate":"2020-07-18",
-		      "language":"en-US",
-		      "publishDate":"2017-07-17",
-		      "publisher":"IBM Corporation",
-		      "version":"v18",
-		      "pageID":"",
-		      "ibm":{
-						"contentDelivery":"HTML",
-		        "contentProducer":"IBM Northstar Template Generator 2.0",
-		        "country":"ZZ",
-		        "industry":"ZZ",
-		        "owner":"Jamie Pickett\/Boulder\/IBM",
-		        "siteID":"DWNEXT",
-						"subject":"SW700",
-		        "type":"SW700",
-		        "cmClientID":"50200000| DWNEXT",
-		        "encoding":"utf8",
-		        "encodingRaw":"utf-8",
-		        "title":"Mainframe DEV",
-						"contentType": "page",
-						"wpid":"46",
-						"topics":"",
-						"contentArea": ""
-		      },
-		      "metrics":[
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link
+      rel="pingback"
+      href="https://developer.ibm.com/mainframe/xmlrpc.php"
+    />
+    <script>
+      digitalData = {
+        page: {
+          category: {
+            primaryCategory: "SOFDCMFDZZ",
+            ibm: [],
+          },
+          pageInfo: {
+            effectiveDate: "2016-07-18",
+            expiryDate: "2020-07-18",
+            language: "en-US",
+            publishDate: "2017-07-17",
+            publisher: "IBM Corporation",
+            version: "v18",
+            pageID: "",
+            ibm: {
+              contentDelivery: "HTML",
+              contentProducer: "IBM Northstar Template Generator 2.0",
+              country: "ZZ",
+              industry: "ZZ",
+              owner: "Jamie Pickett\/Boulder\/IBM",
+              siteID: "DWNEXT",
+              subject: "SW700",
+              type: "SW700",
+              cmClientID: "50200000| DWNEXT",
+              encoding: "utf8",
+              encodingRaw: "utf-8",
+              title: "Mainframe DEV",
+              contentType: "page",
+              wpid: "46",
+              topics: "",
+              contentArea: "",
+            },
+            metrics: [],
+            keywords: "",
+            description:
+              "Mainframe DEV - Enterprise Modernization and Mainframe Development",
+          },
+          attributes: [],
+        },
+        event_coordinator: [],
+        isLoaded: true,
+        user: {
+          profile: [],
+          segment: {},
+        },
+      };
+    </script>
+    <title>IBM Record Generator for Java - Mainframe DEV</title>
 
-		      ],
-		      "keywords":"",
-		      "description":"Mainframe DEV - Enterprise Modernization and Mainframe Development"
-		    },
-		    "attributes":[
+    <!-- This site is optimized with the Yoast SEO plugin v9.0.2 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta
+      name="description"
+      content="IBM Record Generator for Java is a stand-alone utility that imports the generated associated-data (ADATA)."
+    />
+    <link
+      rel="canonical"
+      href="https://developer.ibm.com/mainframe/products/record-generator-for-java/"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="IBM Record Generator for Java - Mainframe DEV"
+    />
+    <meta
+      property="og:description"
+      content="IBM Record Generator for Java is a stand-alone utility that imports the generated associated-data (ADATA)."
+    />
+    <meta
+      property="og:url"
+      content="https://developer.ibm.com/mainframe/products/record-generator-for-java/"
+    />
+    <meta property="og:site_name" content="Mainframe DEV" />
+    <script type="application/ld+json">
+      {
+        "@context": "https:\/\/schema.org",
+        "@type": "Organization",
+        "url": "https:\/\/developer.ibm.com\/mainframe\/",
+        "sameAs": [],
+        "@id": "https:\/\/developer.ibm.com\/mainframe\/#organization",
+        "name": "IBM",
+        "logo": ""
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https:\/\/schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@id": "https:\/\/developer.ibm.com\/mainframe\/",
+              "name": "Home"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@id": "https:\/\/developer.ibm.com\/mainframe\/products\/",
+              "name": "Products"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@id": "https:\/\/developer.ibm.com\/mainframe\/products\/record-generator-for-java\/",
+              "name": "IBM Record Generator for Java"
+            }
+          }
+        ]
+      }
+    </script>
+    <!-- / Yoast SEO plugin. -->
 
-		    ],
-		  },
-		  "event_coordinator":[
-
-		  ],
-		  "isLoaded":true,
-		  "user":{
-		    "profile":[
-
-		    ],
-		    "segment":{
-
-		    }
-		  }
-		};
-	 </script>
-<title>IBM Record Generator for Java - Mainframe DEV</title>
-
-<!-- This site is optimized with the Yoast SEO plugin v9.0.2 - https://yoast.com/wordpress/plugins/seo/ -->
-<meta name="description" content="IBM Record Generator for Java is a stand-alone utility that imports the generated associated-data (ADATA).">
-<link rel="canonical" href="https://developer.ibm.com/mainframe/products/record-generator-for-java/">
-<meta property="og:locale" content="en_US">
-<meta property="og:type" content="article">
-<meta property="og:title" content="IBM Record Generator for Java - Mainframe DEV">
-<meta property="og:description" content="IBM Record Generator for Java is a stand-alone utility that imports the generated associated-data (ADATA).">
-<meta property="og:url" content="https://developer.ibm.com/mainframe/products/record-generator-for-java/">
-<meta property="og:site_name" content="Mainframe DEV">
-<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/developer.ibm.com\/mainframe\/","sameAs":[],"@id":"https:\/\/developer.ibm.com\/mainframe\/#organization","name":"IBM","logo":""}</script>
-<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/developer.ibm.com\/mainframe\/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/developer.ibm.com\/mainframe\/products\/","name":"Products"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/developer.ibm.com\/mainframe\/products\/record-generator-for-java\/","name":"IBM Record Generator for Java"}}]}</script>
-<!-- / Yoast SEO plugin. -->
-
-<link rel="dns-prefetch" href="https://1.www.s81c.com/">
-<link rel="dns-prefetch" href="https://www.ibm.com/">
-<link rel="dns-prefetch" href="https://s.w.org/">
-<link rel="alternate" type="application/rss+xml" title="Mainframe DEV » Feed" href="https://developer.ibm.com/mainframe/feed/">
-<link rel="alternate" type="application/rss+xml" title="Mainframe DEV » Comments Feed" href="https://developer.ibm.com/mainframe/comments/feed/">
-<meta name="segment" property="developerWorks (developerWorks)" producttitle="developerWorks" value="Mainframe DEV (developerWorks)">
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"\/\/dw1.s81c.com\/dw\/wp-includes\/js\/wp-emoji-release.min.js"}};
-			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script><script src="./IBM-Record-Generator-for-Java_files/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-<link rel="stylesheet" id="gdpr-css" href="./IBM-Record-Generator-for-Java_files/gdpr-public.css" type="text/css" media="all">
-<link rel="stylesheet" id="tab-styles-css" href="./IBM-Record-Generator-for-Java_files/tab-styles.css" type="text/css" media="all">
-<link rel="stylesheet" id="home-v17-styles-css" href="./IBM-Record-Generator-for-Java_files/home.css" type="text/css" media="all">
-<link rel="stylesheet" id="rotatingtweets-css" href="./IBM-Record-Generator-for-Java_files/style.css" type="text/css" media="all">
-<link rel="stylesheet" id="dwboomer-style-css" href="./IBM-Record-Generator-for-Java_files/style(1).css" type="text/css" media="all">
-<link rel="stylesheet" id="dashicons-css" href="./IBM-Record-Generator-for-Java_files/dashicons.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="pagepost_css-css" href="./IBM-Record-Generator-for-Java_files/pagepost.css" type="text/css" media="all">
-<style id="pagepost_css-inline-css" type="text/css">
- .ibm-card.dl-card:hover {
+    <link rel="dns-prefetch" href="https://1.www.s81c.com/" />
+    <link rel="dns-prefetch" href="https://www.ibm.com/" />
+    <link rel="dns-prefetch" href="https://s.w.org/" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Mainframe DEV » Feed"
+      href="https://developer.ibm.com/mainframe/feed/"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Mainframe DEV » Comments Feed"
+      href="https://developer.ibm.com/mainframe/comments/feed/"
+    />
+    <meta
+      name="segment"
+      property="developerWorks (developerWorks)"
+      producttitle="developerWorks"
+      value="Mainframe DEV (developerWorks)"
+    />
+    <script type="text/javascript">
+      window._wpemojiSettings = {
+        baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/",
+        ext: ".png",
+        svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/",
+        svgExt: ".svg",
+        source: {
+          concatemoji:
+            "\/\/dw1.s81c.com\/dw\/wp-includes\/js\/wp-emoji-release.min.js",
+        },
+      };
+      !(function(a, b, c) {
+        function d(a, b) {
+          var c = String.fromCharCode;
+          l.clearRect(0, 0, k.width, k.height),
+            l.fillText(c.apply(this, a), 0, 0);
+          var d = k.toDataURL();
+          l.clearRect(0, 0, k.width, k.height),
+            l.fillText(c.apply(this, b), 0, 0);
+          var e = k.toDataURL();
+          return d === e;
+        }
+        function e(a) {
+          var b;
+          if (!l || !l.fillText) return !1;
+          switch (((l.textBaseline = "top"), (l.font = "600 32px Arial"), a)) {
+            case "flag":
+              return (
+                !(b = d(
+                  [55356, 56826, 55356, 56819],
+                  [55356, 56826, 8203, 55356, 56819]
+                )) &&
+                ((b = d(
+                  [
+                    55356,
+                    57332,
+                    56128,
+                    56423,
+                    56128,
+                    56418,
+                    56128,
+                    56421,
+                    56128,
+                    56430,
+                    56128,
+                    56423,
+                    56128,
+                    56447,
+                  ],
+                  [
+                    55356,
+                    57332,
+                    8203,
+                    56128,
+                    56423,
+                    8203,
+                    56128,
+                    56418,
+                    8203,
+                    56128,
+                    56421,
+                    8203,
+                    56128,
+                    56430,
+                    8203,
+                    56128,
+                    56423,
+                    8203,
+                    56128,
+                    56447,
+                  ]
+                )),
+                !b)
+              );
+            case "emoji":
+              return (
+                (b = d(
+                  [55358, 56760, 9792, 65039],
+                  [55358, 56760, 8203, 9792, 65039]
+                )),
+                !b
+              );
+          }
+          return !1;
+        }
+        function f(a) {
+          var c = b.createElement("script");
+          (c.src = a),
+            (c.defer = c.type = "text/javascript"),
+            b.getElementsByTagName("head")[0].appendChild(c);
+        }
+        var g,
+          h,
+          i,
+          j,
+          k = b.createElement("canvas"),
+          l = k.getContext && k.getContext("2d");
+        for (
+          j = Array("flag", "emoji"),
+            c.supports = { everything: !0, everythingExceptFlag: !0 },
+            i = 0;
+          i < j.length;
+          i++
+        )
+          (c.supports[j[i]] = e(j[i])),
+            (c.supports.everything = c.supports.everything && c.supports[j[i]]),
+            "flag" !== j[i] &&
+              (c.supports.everythingExceptFlag =
+                c.supports.everythingExceptFlag && c.supports[j[i]]);
+        (c.supports.everythingExceptFlag =
+          c.supports.everythingExceptFlag && !c.supports.flag),
+          (c.DOMReady = !1),
+          (c.readyCallback = function() {
+            c.DOMReady = !0;
+          }),
+          c.supports.everything ||
+            ((h = function() {
+              c.readyCallback();
+            }),
+            b.addEventListener
+              ? (b.addEventListener("DOMContentLoaded", h, !1),
+                a.addEventListener("load", h, !1))
+              : (a.attachEvent("onload", h),
+                b.attachEvent("onreadystatechange", function() {
+                  "complete" === b.readyState && c.readyCallback();
+                })),
+            (g = c.source || {}),
+            g.concatemoji
+              ? f(g.concatemoji)
+              : g.wpemoji && g.twemoji && (f(g.twemoji), f(g.wpemoji)));
+      })(window, document, window._wpemojiSettings);
+    </script>
+    <script
+      src="./IBM-Record-Generator-for-Java_files/wp-emoji-release.min.js"
+      type="text/javascript"
+      defer=""
+    ></script>
+    <style type="text/css">
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="gdpr-css"
+      href="./IBM-Record-Generator-for-Java_files/gdpr-public.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="tab-styles-css"
+      href="./IBM-Record-Generator-for-Java_files/tab-styles.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="home-v17-styles-css"
+      href="./IBM-Record-Generator-for-Java_files/home.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="rotatingtweets-css"
+      href="./IBM-Record-Generator-for-Java_files/style.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="dwboomer-style-css"
+      href="./IBM-Record-Generator-for-Java_files/style(1).css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="dashicons-css"
+      href="./IBM-Record-Generator-for-Java_files/dashicons.min.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="pagepost_css-css"
+      href="./IBM-Record-Generator-for-Java_files/pagepost.css"
+      type="text/css"
+      media="all"
+    />
+    <style id="pagepost_css-inline-css" type="text/css">
+      .ibm-card.dl-card:hover {
         border-color: #4a40d5;
-    }
-.site-content {
+      }
+      .site-content {
         padding-top: 0;
-    }
-    
-    span.title-highlight{
-        color:#5a3ec8;
-        font-weight:bold;
-    }
-    
-    div.ibm-rule{
+      }
+
+      span.title-highlight {
+        color: #5a3ec8;
+        font-weight: bold;
+      }
+
+      div.ibm-rule {
         border-top: 1px solid #d8d8d8;
-    }
-    
-    p.medfont{
-        font-weight:300;
-        font-size:25px;
-        color:#343334;
-        line-height:35px;
-        text-align:left;
-    }
-    
-    .ibm-btn-pri.btn-indigo{
+      }
+
+      p.medfont {
+        font-weight: 300;
+        font-size: 25px;
+        color: #343334;
+        line-height: 35px;
+        text-align: left;
+      }
+
+      .ibm-btn-pri.btn-indigo {
         background: #4a40d5;
         border-color: #4a40d5;
-    }
-    
-    .ibm-btn-pri.btn-indigo:hover{
-        background:#170DA2;
-        border-color: #170DA2;
-    }
-    
-    #content-section {
+      }
+
+      .ibm-btn-pri.btn-indigo:hover {
+        background: #170da2;
+        border-color: #170da2;
+      }
+
+      #content-section {
         background: #eceef3;
-    }
-    
-    #hero-section {
+      }
+
+      #hero-section {
         background: #20214f;
         background: -moz-linear-gradient(left, #20214f 0%, #4a36a6 100%);
         background: -webkit-linear-gradient(left, #20214f 0%, #4a36a6 100%);
         background: linear-gradient(to right, #20214f 0%, #4a36a6 100%);
         filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#20214f', endColorstr='#4a36a6', GradientType=1);
-    }
-    
-    #introdiv,
-    #howdiv {
+      }
+
+      #introdiv,
+      #howdiv {
         padding-right: 10%;
-    }
-    
-    .ibm-card{
-        overflow:hidden;
-    }
-    
-    .svg-container {
+      }
+
+      .ibm-card {
+        overflow: hidden;
+      }
+
+      .svg-container {
         width: 40%;
         float: left;
         min-height: 140px;
-    }
-    
-    .svg-container object.svg-img{
+      }
+
+      .svg-container object.svg-img {
         max-height: 100%;
         height: 140px;
         width: auto;
-    }
-    
-    
-    #card-1 .svg-container object.svg-img{
-        margin-left:-50px;
-    }
-    
-    #card-2 .svg-container object.svg-img{
+      }
+
+      #card-1 .svg-container object.svg-img {
+        margin-left: -50px;
+      }
+
+      #card-2 .svg-container object.svg-img {
         margin-left: -30px;
         height: 100px;
         margin-top: 20px;
-    }
-    
-    #card-3 .svg-container object.svg-img{
-        margin-left:-35px;
-    }
-    
-    .blurb-container {
+      }
+
+      #card-3 .svg-container object.svg-img {
+        margin-left: -35px;
+      }
+
+      .blurb-container {
         width: 60%;
         min-height: 140px;
         padding-left: 40%;
-    }
-    
-    #herodiv {}
-    
-    #introdiv > h1 {
+      }
+
+      #herodiv {
+      }
+
+      #introdiv > h1 {
         font-weight: 500;
         font-size: 40px;
         color: #89eda0;
         letter-spacing: 0;
         line-height: 50px;
         text-align: left;
-    }
-    
-    #gear-svg-container{
-        padding-right:7%;
-    }
-    
-    @media(min-width:0px) and (max-width:759px) {
-        
-        .blurb-container, .svg-container{
-            min-height:0;
-            width:100%;
-            float:none;
-            padding:0;
+      }
+
+      #gear-svg-container {
+        padding-right: 7%;
+      }
+
+      @media (min-width: 0px) and (max-width: 759px) {
+        .blurb-container,
+        .svg-container {
+          min-height: 0;
+          width: 100%;
+          float: none;
+          padding: 0;
         }
-        
-        .svg-container object.svg-img{
-            margin:0 auto !important;
-            width:100%;
-            height:auto;
-            max-height:140px;
+
+        .svg-container object.svg-img {
+          margin: 0 auto !important;
+          width: 100%;
+          height: auto;
+          max-height: 140px;
         }
-        
-        .svg-container{
-            margin-bottom:20px;
+
+        .svg-container {
+          margin-bottom: 20px;
         }
-        
-        
+
         #introdiv,
         #howdiv {
-            padding-right: inherit;
+          padding-right: inherit;
         }
         #hero-section {
-            background: -moz-linear-gradient(top, #20214f 0%, #4a36a6 100%);
-            background: -webkit-linear-gradient(top, #20214f 0%, #4a36a6 100%);
-            background: linear-gradient(to bottom, #20214f 0%, #4a36a6 100%);
-            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#20214f', endColorstr='#4a36a6', GradientType=0);
+          background: -moz-linear-gradient(top, #20214f 0%, #4a36a6 100%);
+          background: -webkit-linear-gradient(top, #20214f 0%, #4a36a6 100%);
+          background: linear-gradient(to bottom, #20214f 0%, #4a36a6 100%);
+          filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#20214f', endColorstr='#4a36a6', GradientType=0);
         }
-    }
-    
-    @media(min-width:1000px) and (max-width:1239px) {
-        .svg-container object.svg-img{
-            height: 100px;
+      }
+
+      @media (min-width: 1000px) and (max-width: 1239px) {
+        .svg-container object.svg-img {
+          height: 100px;
         }
-        #card-2 .svg-container object.svg-img{
-            margin-top:0;
-            margin-left:-45px;
+        #card-2 .svg-container object.svg-img {
+          margin-top: 0;
+          margin-left: -45px;
         }
-    }
-    
-    @media(min-width:760px) and (max-width:1239px) {
+      }
+
+      @media (min-width: 760px) and (max-width: 1239px) {
         #introdiv,
         #howdiv {
-            padding-right: 5%;
+          padding-right: 5%;
         }
-    }
-</style>
-<link rel="stylesheet" id="pnext.utils-css" href="./IBM-Record-Generator-for-Java_files/pnext.utils.css" type="text/css" media="all">
-<script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/www.js"></script><style></style>
-<script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/jquery.cycle.all.min.js"></script>
-<script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/rotating_tweet.js"></script>
-<script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/dyntabs.js"></script>
-<script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/masonry.js"></script>
-<script type="text/javascript">
-/* <![CDATA[ */
-var GDPR = {"ajaxurl":"https:\/\/developer.ibm.com\/mainframe\/wp-admin\/admin-ajax.php","aborting":"Aborting","is_user_logged_in":"1","privacy_page_id":"0"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/gdpr-public.js"></script>
-<script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/tab-dropdown.js"></script>
-<script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/mainframe.js"></script>
-<script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/pnext.utils.js"></script>
-<script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/ida_stats.js"></script>
-<link rel="https://api.w.org/" href="https://developer.ibm.com/mainframe/wp-json/">
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.ibm.com/mainframe/xmlrpc.php?rsd">
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://developer.ibm.com/mainframe/wp-includes/wlwmanifest.xml"> 
-<meta name="generator" content="WordPress 4.9.9">
-<link rel="shortlink" href="https://developer.ibm.com/mainframe/?p=8047">
-<link rel="alternate" type="application/json+oembed" href="https://developer.ibm.com/mainframe/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fproducts%2Frecord-generator-for-java%2F">
-<link rel="alternate" type="text/xml+oembed" href="https://developer.ibm.com/mainframe/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fproducts%2Frecord-generator-for-java%2F&amp;format=xml">
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="pnext.utils-css"
+      href="./IBM-Record-Generator-for-Java_files/pnext.utils.css"
+      type="text/css"
+      media="all"
+    />
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/www.js"
+    ></script>
+    <style></style>
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/jquery.cycle.all.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/rotating_tweet.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/dyntabs.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/masonry.js"
+    ></script>
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var GDPR = {
+        ajaxurl:
+          "https:\/\/developer.ibm.com\/mainframe\/wp-admin\/admin-ajax.php",
+        aborting: "Aborting",
+        is_user_logged_in: "1",
+        privacy_page_id: "0",
+      };
+      /* ]]> */
+    </script>
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/gdpr-public.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/tab-dropdown.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/mainframe.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/pnext.utils.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/ida_stats.js"
+    ></script>
+    <link
+      rel="https://api.w.org/"
+      href="https://developer.ibm.com/mainframe/wp-json/"
+    />
+    <link
+      rel="EditURI"
+      type="application/rsd+xml"
+      title="RSD"
+      href="https://developer.ibm.com/mainframe/xmlrpc.php?rsd"
+    />
+    <link
+      rel="wlwmanifest"
+      type="application/wlwmanifest+xml"
+      href="https://developer.ibm.com/mainframe/wp-includes/wlwmanifest.xml"
+    />
+    <meta name="generator" content="WordPress 4.9.9" />
+    <link rel="shortlink" href="https://developer.ibm.com/mainframe/?p=8047" />
+    <link
+      rel="alternate"
+      type="application/json+oembed"
+      href="https://developer.ibm.com/mainframe/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fproducts%2Frecord-generator-for-java%2F"
+    />
+    <link
+      rel="alternate"
+      type="text/xml+oembed"
+      href="https://developer.ibm.com/mainframe/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fproducts%2Frecord-generator-for-java%2F&amp;format=xml"
+    />
 
-    <link href="./IBM-Record-Generator-for-Java_files/www.css" rel="stylesheet">
-    <link href="./IBM-Record-Generator-for-Java_files/grid-fluid.css" rel="stylesheet">
-    <link href="./IBM-Record-Generator-for-Java_files/tables.css" rel="stylesheet">
+    <link
+      href="./IBM-Record-Generator-for-Java_files/www.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./IBM-Record-Generator-for-Java_files/grid-fluid.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./IBM-Record-Generator-for-Java_files/tables.css"
+      rel="stylesheet"
+    />
 
-	<script type="text/javascript">
-		 IBMCore.common.util.config.set({
-		  "masthead":{
-		    "type":"alternate"
-		  },
-			greeting: { enabled: false },
-		  "footer":{
-		  	"type":"alternate",
-		    "socialLinks":{
-		      "enabled":false
-		    }
-		  },
-			survey: { global_percent: 0 }
-		});
-	 </script>
-<style id="ibm-sitenav-menu-hidelinks">@media screen and (max-width: 1075px) {.ibm-sitenav-menu-container .ibm-sitenav-menu-list > ul > li {display:none}}@media screen and (min-width: 1076px) {.ibm-mobilemenu-sitenavmenu > ul > li {display:none}}</style><style id="ibm-masthead-hidelinks">@media screen and (max-width: 457px) { .ibm-masthead-categories,#ibm-megamenu-sections{display:none} }</style></head>
+    <script type="text/javascript">
+      IBMCore.common.util.config.set({
+        masthead: {
+          type: "alternate",
+        },
+        greeting: { enabled: false },
+        footer: {
+          type: "alternate",
+          socialLinks: {
+            enabled: false,
+          },
+        },
+        survey: { global_percent: 0 },
+      });
+    </script>
+    <style id="ibm-sitenav-menu-hidelinks">
+      @media screen and (max-width: 1075px) {
+        .ibm-sitenav-menu-container .ibm-sitenav-menu-list > ul > li {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 1076px) {
+        .ibm-mobilemenu-sitenavmenu > ul > li {
+          display: none;
+        }
+      }
+    </style>
+    <style id="ibm-masthead-hidelinks">
+      @media screen and (max-width: 457px) {
+        .ibm-masthead-categories,
+        #ibm-megamenu-sections {
+          display: none;
+        }
+      }
+    </style>
+  </head>
 
-<body id="ibm-com" class="page-template page-template-page-templates page-template-empty page-template-page-templatesempty-php page page-id-8047 page-child parent-pageid-34 logged-in ibm-com ibm-type group-blog ibm-sitenav-menu" data-gr-c-s-loaded="true">
-	<style>
-.code_p_announcement .code_content__wrap {
-    background: #4178be;
-    position: relative;
-    overflow: hidden;
-    padding-right: 3rem;
-}
-.code_p_announcement .code_content__wrap p {
-    display: table;
-    width: auto;
-    margin: 0 auto;
-    padding: 1rem 0.5rem;
-    color: #ffffff;
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.125rem;
-    letter-spacing: 0.16px;
-    word-break: break-word;
-    text-decoration: none;
-}
-.code_p_announcement .code_content__wrap p .ibm-btn-sec.ibm-btn-white {
-    margin-left: 0.5rem;
-    text-decoration: none;
-    padding: 0.75rem;
-    cursor: pointer;
-    font-size: 0.875rem;
-}
-.code_p_announcement .code_content__wrap .announce_link {
-    display: block;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 1rem 0;
-}
-</style>
-	<div style="display:none">page-templates/empty.php</div>
-<!--div id="page" class="site"-->
-<div id="ibm-top" class="ibm-landing-page">
-	<a class="skip-link screen-reader-text" href="https://developer.ibm.com/mainframe/products/record-generator-for-java/#main">Skip to content</a>
+  <body
+    id="ibm-com"
+    class="page-template page-template-page-templates page-template-empty page-template-page-templatesempty-php page page-id-8047 page-child parent-pageid-34 logged-in ibm-com ibm-type group-blog ibm-sitenav-menu"
+    data-gr-c-s-loaded="true"
+  >
+    <style>
+      .code_p_announcement .code_content__wrap {
+        background: #4178be;
+        position: relative;
+        overflow: hidden;
+        padding-right: 3rem;
+      }
+      .code_p_announcement .code_content__wrap p {
+        display: table;
+        width: auto;
+        margin: 0 auto;
+        padding: 1rem 0.5rem;
+        color: #ffffff;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.125rem;
+        letter-spacing: 0.16px;
+        word-break: break-word;
+        text-decoration: none;
+      }
+      .code_p_announcement .code_content__wrap p .ibm-btn-sec.ibm-btn-white {
+        margin-left: 0.5rem;
+        text-decoration: none;
+        padding: 0.75rem;
+        cursor: pointer;
+        font-size: 0.875rem;
+      }
+      .code_p_announcement .code_content__wrap .announce_link {
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 1rem 0;
+      }
+    </style>
+    <div style="display:none">page-templates/empty.php</div>
+    <!--div id="page" class="site"-->
+    <div id="ibm-top" class="ibm-landing-page">
+      <a
+        class="skip-link screen-reader-text"
+        href="https://developer.ibm.com/mainframe/products/record-generator-for-java/#main"
+        >Skip to content</a
+      >
 
-	<!-- MASTHEAD_BEGIN -->
-	<div id="ibm-masthead" role="banner" aria-label="IBM" class="ibm-mhtype-minimal">
-		<div id="ibm-mast-options">
-			<ul role="toolbar" aria-labelledby="ibm-masthead">
-				<li id="ibm-geo" role="presentation">
-					<a href="http://www.ibm.com/planetwide/select/selector.html">United States</a>
-				</li>
-			</ul>
-		</div>
-		<div id="ibm-universal-nav" class="">
-			<div id="ibm-home">
-				<a href="http://www.ibm.com/us-en/?lnk=m">IBM�</a>
-			</div>
-			<div class="dw-nav-left">
-				<a href="http://developer.ibm.com/" class="dw-logo"><span>IBM Developer</span></a>
-							</div>
-			<ul id="ibm-menu-links" role="toolbar" aria-label="Site map" class="ibm-hide">
-				<li><a href="http://www.ibm.com/sitemap/us/en/">Site map</a></li>
-			</ul><div class="ibm-masthead-rightside signedin hasinitials"><div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead" class="ibm-has-scope">
-				<!-- form id="ibm-search-form" action="http://www.ibm.com/Search/" method="get" -->
-				<div class="ibm-masthead-search-close"><p class="ibm-ind-link ibm-icononly ibm-padding-bottom-0"><a href="https://developer.ibm.com/mainframe/products/record-generator-for-java/#" class="ibm-close-link ibm-nospacing">Close</a></p></div><form id="ibm-search-form" action="https://www.ibm.com/Search/" method="get" aria-labelledby="ibm-masthead">
-					<p>
-						<label for="q"><span class="ibm-access">Search</span></label>
-						<input type="text" maxlength="100" value="" name="q" id="q" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="ibm-search-typeahead-container"><input name="lnk" type="hidden" value="mhsrch">
-						<input type="hidden" name="v" value="18">
-						<input type="hidden" name="en" value="utf">
-						<input type="hidden" name="lang" value="en">
-						<input type="hidden" name="cc" value="us">
-						<input type="hidden" name="sn" value="dw">
-						<input type="hidden" name="dw" value="dws">
+      <!-- MASTHEAD_BEGIN -->
+      <div
+        id="ibm-masthead"
+        role="banner"
+        aria-label="IBM"
+        class="ibm-mhtype-minimal"
+      >
+        <div id="ibm-mast-options">
+          <ul role="toolbar" aria-labelledby="ibm-masthead">
+            <li id="ibm-geo" role="presentation">
+              <a href="http://www.ibm.com/planetwide/select/selector.html"
+                >United States</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div id="ibm-universal-nav" class="">
+          <div id="ibm-home">
+            <a href="http://www.ibm.com/us-en/?lnk=m">IBM�</a>
+          </div>
+          <div class="dw-nav-left">
+            <a href="http://developer.ibm.com/" class="dw-logo"
+              ><span>IBM Developer</span></a
+            >
+          </div>
+          <ul
+            id="ibm-menu-links"
+            role="toolbar"
+            aria-label="Site map"
+            class="ibm-hide"
+          >
+            <li><a href="http://www.ibm.com/sitemap/us/en/">Site map</a></li>
+          </ul>
+          <div class="ibm-masthead-rightside signedin hasinitials">
+            <div
+              id="ibm-search-module"
+              role="search"
+              aria-labelledby="ibm-masthead"
+              class="ibm-has-scope"
+            >
+              <!-- form id="ibm-search-form" action="http://www.ibm.com/Search/" method="get" -->
+              <div class="ibm-masthead-search-close">
+                <p class="ibm-ind-link ibm-icononly ibm-padding-bottom-0">
+                  <a
+                    href="https://developer.ibm.com/mainframe/products/record-generator-for-java/#"
+                    class="ibm-close-link ibm-nospacing"
+                    >Close</a
+                  >
+                </p>
+              </div>
+              <form
+                id="ibm-search-form"
+                action="https://www.ibm.com/Search/"
+                method="get"
+                aria-labelledby="ibm-masthead"
+              >
+                <p>
+                  <label for="q"><span class="ibm-access">Search</span></label>
+                  <input
+                    type="text"
+                    maxlength="100"
+                    value=""
+                    name="q"
+                    id="q"
+                    autocomplete="off"
+                    role="combobox"
+                    aria-autocomplete="list"
+                    aria-expanded="false"
+                    aria-owns="ibm-search-typeahead-container"
+                  /><input name="lnk" type="hidden" value="mhsrch" />
+                  <input type="hidden" name="v" value="18" />
+                  <input type="hidden" name="en" value="utf" />
+                  <input type="hidden" name="lang" value="en" />
+                  <input type="hidden" name="cc" value="us" />
+                  <input type="hidden" name="sn" value="dw" />
+                  <input type="hidden" name="dw" value="dws" />
 
-						<span class="ibm-search-scope ibm-fadeout" aria-expanded="true">
-							<input type="checkbox" class="ibm-styled-checkbox" name="sn" value="Search standards" checked="" id="scopeoption">
-							<label for="scopeoption">Search Mainframe DEV</label>
-						</span>
+                  <span
+                    class="ibm-search-scope ibm-fadeout"
+                    aria-expanded="true"
+                  >
+                    <input
+                      type="checkbox"
+                      class="ibm-styled-checkbox"
+                      name="sn"
+                      value="Search standards"
+                      checked=""
+                      id="scopeoption"
+                    />
+                    <label for="scopeoption">Search Mainframe DEV</label>
+                  </span>
 
-						<button role="button" type="submit" id="ibm-search" class="ibm-search-link" value="Submit"><span class="ibm-access">Submit</span></button>
-					</p>
-				</form>
-									<form class="ibm-hide" id="devcenter-search-form" action="https://developer.ibm.com/mainframe/search/" method="get">
-						<p>
-							<label for="pnext-search-input" class="screen-reader-text">Search</label>
-							<input maxlength="100" required="" aria-required="true" id="q" class="pn-search-input pn-nav-search-input fl" name="q" type="text">
-							<input type="submit" id="ibm-search" class="ibm-btn-search" value="Seach">
-						</p>
-					</form>
-								</div><div id="ibm-search-typeahead-container" aria-expanded="true" class="ibm-search-typeahead-container ibm-fadeout"></div><ul aria-label="Tools" role="menubar" class="ibm-masthead-iconsonly"><li role="presentation" class="ibm-masthead-item-signin"><button role="button" aria-haspopup="true" aria-owns="ibm-signin-minimenu-container" class="ibm-profile-link" aria-label="Signed in as CompilerCloudServices IBM"></button><ul id="ibm-signin-minimenu-container" role="menu" aria-label="Profile" class="ibm-dropdown-menu"><li role="presentation"><a role="menuitem" href="https://myibm.ibm.com/dashboard/?lnk=mmi">My IBM</a></li><li role="presentation"><a role="menuitem" href="https://developer.ibm.com/mydeveloperworks">My developerWorks</a></li><li role="presentation"><a role="menuitem" href="https://www.ibm.com/developerworks/community/groups/service/html/mycommunities?lang=en">Communities</a></li><li role="presentation"><a role="menuitem" href="https://www.ibm.com/developerworks/community/news/?lang=en">Settings</a></li><li role="presentation"><a role="menuitem" href="https://developer.ibm.com/mainframe/wp-login.php?action=logout&amp;_wpnonce=b379020856&amp;d=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fproducts%2Frecord-generator-for-java&amp;lang=en_US">Sign Out</a></li></ul></li><li role="presentation" class="ibm-masthead-item-menu"><button role="button" aria-haspopup="true" aria-owns="ibm-burger-menu-container" class="ibm-menu-link">Site navigation</button></li></ul></div>
-			
-		</div>
-	</div><div class="ibm-mobilemenu ibm-hide" id="ibm-burger-menu-container" aria-labelledby="ibm-burgermenu-a11y" role="dialog" tabindex="0"><p class="ibm-hide" id="ibm-burgermenu-a11y">Site navigation</p><div class="ibm-mobilemenu-close"><p class="ibm-icononly ibm-fright ibm-ind-link ibm-nospacing"><a class="ibm-close-link" href="https://developer.ibm.com/mainframe/products/record-generator-for-java/?lnk=hm#">Close</a></p></div><div class="ibm-mobilemenu-section ibm-mobilemenu-sitenavmenu"><ul id="primary-menu" class="menu"><li class="ibm-mobile-section-heading ibm-mobile-sitename">
-    <a href="https://developer.ibm.com/mainframe/?lnk=hm" rel="home">Mainframe DEV</a>
-  </li><li id="menu-item-1540" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1540"><a href="https://developer.ibm.com/mainframe?lnk=hm" tabindex="0">Home</a></li>
-<li id="menu-item-4064" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4064"><a href="https://developer.ibm.com/mainframe/products/downloads/?lnk=hm" tabindex="-1">Downloads</a></li>
-<li id="menu-item-16086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16086"><a href="https://developer.ibm.com/mainframe/products/devops-acceleration-program/training/?lnk=hm" tabindex="-1">Training</a></li>
-<li id="menu-item-14411" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14411"><a href="https://developer.ibm.com/mainframe/products/documentation/?lnk=hm" tabindex="-1">Documentation</a>
-<ul class="sub-menu">
-	<li id="menu-item-14412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14412"><a href="https://developer.ibm.com/mainframe/products/documentation/kc/?lnk=hm"><span>IBM KCCI (Local)</span></a></li>
-	<li id="menu-item-14413" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14413"><a href="https://www.ibm.com/support/knowledgecenter/?lnk=hm"><span>IBM Knowledge Center</span></a></li>
-	<li id="menu-item-22185" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22185"><a href="https://developer.ibm.com/mainframe/products/host-configuration-assistant-for-z-development/?lnk=hm"><span>Host Configuration Assistant for Z Development</span></a></li>
-</ul>
-</li>
-<li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><a href="https://developer.ibm.com/mainframe/blog/?lnk=hm" tabindex="-1">Blogs</a></li>
-<li id="menu-item-9254" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9254"><a href="https://developer.ibm.com/mainframe/announcements/?lnk=hm" tabindex="-1">Announcements</a>
-<ul class="sub-menu">
-	<li id="menu-item-13727" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13727"><a href="https://developer.ibm.com/mainframe/category/announcements/release-notes/ibm-z-os-explorer-aqua/?lnk=hm"><span>Release notes for Aqua</span></a></li>
-</ul>
-</li>
-<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="https://developer.ibm.com/mainframe/events/?lnk=hm" tabindex="-1">Events</a></li>
-<li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"><a href="https://developer.ibm.com/answers/smartspace/mainframe/?lnk=hm" tabindex="-1">Forum</a></li>
-<li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51"><a href="https://developer.ibm.com/mainframe/videos?lnk=hm" tabindex="-1">Videos</a></li>
-</ul></div><div class="ibm-mobilemenu-section"><ul class="ibm-mobilemenu-mhlinks" aria-label="Discover IBM"><li><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2><a href="javascript:void();">Products &amp; Solutions</a></h2><div class="ibm-container-body" style="display: none;"><ul><li><a href="https://www.ibm.com/products?lnk=hmhpmps_bupr&amp;lnk2=link"><span>Top products &amp; platforms</span></a></li><li><a href="https://www.ibm.com/industries?lnk=hmhpmps_buin&amp;lnk2=link"><span>Industries</span></a></li><li><a href="https://www.ibm.com/artificial-intelligence?lnk=hmhpmps_buai&amp;lnk2=link"><span>Artificial intelligence</span></a></li><li><a href="https://www.ibm.com/blockchain?lnk=hmhpmps_bubc&amp;lnk2=link"><span>Blockchain</span></a></li><li><a href="https://www.ibm.com/automation?lnk=hmhpmps_buau&amp;lnk2=link"><span>Business automation</span></a></li><li><a href="https://www.ibm.com/business-operations?lnk=hmhpmps_buop&amp;lnk2=link"><span>Business operations</span></a></li><li><a href="https://www.ibm.com/cloud/products?lnk=hmhpmps_bucl&amp;lnk2=link"><span>Cloud computing</span></a></li><li><a href="https://www.ibm.com/analytics?lnk=hmhpmps_buda&amp;lnk2=link"><span>Data &amp; Analytics</span></a></li><li><a href="https://www.ibm.com/it-infrastructure/?lnk=hmhpmps_buit&amp;lnk2=link"><span>IT infrastructure</span></a></li><li><a href="https://www.ibm.com/security?lnk=hmhpmps_buse&amp;lnk2=link"><span>Security</span></a></li><li><a href="https://www.ibm.com/supply-chain?lnk=hmhpmps_busc&amp;lnk2=link"><span>Supply chain</span></a></li><li><a href="https://www.ibm.com/financing?lnk=hmhpmps_bufi&amp;lnk2=link"><span>Payment plans for Products &amp; Solutions</span></a></li><li><a href="https://www.ibm.com/products?lnk=hmhpmps_buall&amp;lnk2=link"><span>View all products</span></a></li></ul></div></div></li><li><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2><a href="javascript:void();">Services &amp; Consulting</a></h2><div class="ibm-container-body" style="display: none;"><ul><li><a href="https://www.ibm.com/services/process?lnk=hmhpmsc_bups&amp;lnk2=link"><span>Business process services</span></a></li><li><a href="https://www.ibm.com/services/ibmix/?lnk=hmhpmsc_budbs&amp;lnk2=link"><span>Design &amp; business strategy</span></a></li><li><a href="https://www.ibm.com/services/?lnk=hmhpmsc_buhs&amp;lnk2=link"><span>Hybrid multicloud services</span></a></li><li><a href="https://www.ibm.com/talent-management?lnk=hmhpmsc_buta&amp;lnk2=link"><span>Talent &amp; transformation</span></a></li><li><a href="https://www.ibm.com/services/applications?lnk=hmhpmsc_buas&amp;lnk2=link"><span>Application services</span></a></li><li><a href="https://www.ibm.com/security/services?lnk=hmhpmsc_buse&amp;lnk2=link"><span>Security services</span></a></li><li><a href="https://www.ibm.com/services/technology-support?lnk=hmhpmsc_busv&amp;lnk2=link"><span>Services for tech support</span></a></li><li><a href="https://www.ibm.com/financing/solutions/it-services-financing?lnk=hmhpmsc_bufi&amp;lnk2=link"><span>Payment plans for Services &amp; Consulting</span></a></li><li><a href="https://www.ibm.com/services?lnk=hmhpmsc_buall&amp;lnk2=link"><span>View all services</span></a></li></ul></div></div></li><li><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2><a href="javascript:void();">Learn &amp; Support</a></h2><div class="ibm-container-body" style="display: none;"><ul><li><a href="https://www.ibm.com/support?lnk=hmhpmls_busu&amp;lnk2=link"><span>Support</span></a></li><li><a href="https://www.ibm.com/support/knowledgecenter/?lnk=hmhpmls_budc&amp;lnk2=link"><span>Documentation</span></a></li><li><a href="https://developer.ibm.com/?lnk=hmhpmls_bude&amp;lnk2=link"><span>Developer education</span></a></li><li><a href="https://www.ibm.com/training/?lnk=hmhpmls_butr&amp;lnk2=link"><span>Training</span></a></li><li><a href="https://www.ibm.com/blogs/?lnk=hmhpmls_bure&amp;lnk2=link"><span>Resources</span></a></li><li><a href="https://www.ibm.com/cloud/learn?lnk=hmhpmls_buwi&amp;lnk2=link"><span>What is...</span></a></li></ul></div></div></li><li><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2><a href="javascript:void();">Explore more</a></h2><div class="ibm-container-body" style="display: none;"><ul><li><a href="https://www.ibm.com/partnerworld/public?lnk=hmhpmex_bupa&amp;lnk2=link"><span>Partners</span></a></li><li><a href="https://www.research.ibm.com/?lnk=hmhpmex_bure&amp;lnk2=link"><span>IBM Research</span></a></li><li><a href="https://www.ibm.com/ibm/us/en?lnk=hmhpmex_buab&amp;lnk2=link"><span>About IBM</span></a></li></ul></div></div></li><li><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2><a href="javascript:void();">COVID-19</a></h2><div class="ibm-container-body" style="display: none;"><ul><li><a href="https://www.ibm.com/redirect-marketplace/impact/covid-19/business-solutions?lnk=hm"><span>Business solutions</span></a></li><li><a href="https://www.ibm.com/redirect-marketplace/impact/covid-19/?lnk=hm"><span>Science and technology</span></a></li><li><a href="https://newsroom.ibm.com/COVID-19?lnk=hmhpmcov_ns&amp;lnk2=link"><span>News and resources</span></a></li></ul></div></div></li></ul></div></div><div class="ibm-mhplaceholder ibm-hide"></div>
-  <!-- MASTHEAD_END -->
-  <div id="ibm-content-wrapper">
-  	<header role="banner" aria-labelledby="ibm-pagetitle-h1">
-  		<!-- MASTHEAD_SITENAV_BEGIN -->
-<div class="ibm-sitenav-menu-container" data-widgetprocessed="true">
-  <div class="ibm-sitenav-menu-name">
-    <a href="https://developer.ibm.com/mainframe/" rel="home">Mainframe DEV</a>
-  </div>
-    <div class="ibm-sitenav-menu-list"><ul id="primary-menu" class="menu"><li id="menu-item-1540" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1540"><a href="https://developer.ibm.com/mainframe" tabindex="0">Home</a></li>
-<li id="menu-item-4064" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4064"><a href="https://developer.ibm.com/mainframe/products/downloads/" tabindex="-1">Downloads</a></li>
-<li id="menu-item-16086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16086"><a href="https://developer.ibm.com/mainframe/products/devops-acceleration-program/training/" tabindex="-1">Training</a></li>
-<li id="menu-item-14411" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14411"><a href="https://developer.ibm.com/mainframe/products/documentation/" tabindex="-1">Documentation</a>
-<ul class="sub-menu">
-	<li id="menu-item-14412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14412"><a href="https://developer.ibm.com/mainframe/products/documentation/kc/">IBM KCCI (Local)</a></li>
-	<li id="menu-item-14413" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14413"><a href="https://www.ibm.com/support/knowledgecenter/">IBM Knowledge Center</a></li>
-	<li id="menu-item-22185" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22185"><a href="https://developer.ibm.com/mainframe/products/host-configuration-assistant-for-z-development/">Host Configuration Assistant for Z Development</a></li>
-</ul>
-</li>
-<li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><a href="https://developer.ibm.com/mainframe/blog/" tabindex="-1">Blogs</a></li>
-<li id="menu-item-9254" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9254"><a href="https://developer.ibm.com/mainframe/announcements/" tabindex="-1">Announcements</a>
-<ul class="sub-menu" style="width: 202px;">
-	<li id="menu-item-13727" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13727"><a href="https://developer.ibm.com/mainframe/category/announcements/release-notes/ibm-z-os-explorer-aqua/">Release notes for Aqua</a></li>
-</ul>
-</li>
-<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="https://developer.ibm.com/mainframe/events/" tabindex="-1">Events</a></li>
-<li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"><a href="https://developer.ibm.com/answers/smartspace/mainframe/" tabindex="-1">Forum</a></li>
-<li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51"><a href="https://developer.ibm.com/mainframe/videos" tabindex="-1">Videos</a></li>
-</ul></div></div>
-<!-- MASTHEAD_SITENAV_END -->
-  	</header>
-<style>#ibm-com .gsc-adBlock{display:none !important;}</style>
-<div id="content" class="site-content">
-
-
-
-                                                             <!--Because the_content() works only inside a WP Loop -->
-                                            <div id="hero-section" class="ibm-padding-bottom-1 ibm-padding-top-1 ibm-alternate-background">
-    <section class="ibm-fluid content-area-restricted pnpagepost">
-        <nav id="breadcrumbs" role="navigation" aria-label="Breadcrumb">
-            <ul class="ibm-padding-top-1 ibm-padding-bottom-0" id="ibm-navigation-trail" itemscope="" itemtype="//schema.org/BreadcrumbList"><span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="https://developer.ibm.com/mainframe" rel="v:url" property="v:title">Home</a>  <span rel="v:child" typeof="v:Breadcrumb"><a href="https://developer.ibm.com/mainframe/products/" rel="v:url" property="v:title">Products</a>  <span class="breadcrumb_last">IBM Record Generator for Java</span></span>
-                </span>
-                </span>
+                  <button
+                    role="button"
+                    type="submit"
+                    id="ibm-search"
+                    class="ibm-search-link"
+                    value="Submit"
+                  >
+                    <span class="ibm-access">Submit</span>
+                  </button>
+                </p>
+              </form>
+              <form
+                class="ibm-hide"
+                id="devcenter-search-form"
+                action="https://developer.ibm.com/mainframe/search/"
+                method="get"
+              >
+                <p>
+                  <label for="pnext-search-input" class="screen-reader-text"
+                    >Search</label
+                  >
+                  <input
+                    maxlength="100"
+                    required=""
+                    aria-required="true"
+                    id="q"
+                    class="pn-search-input pn-nav-search-input fl"
+                    name="q"
+                    type="text"
+                  />
+                  <input
+                    type="submit"
+                    id="ibm-search"
+                    class="ibm-btn-search"
+                    value="Seach"
+                  />
+                </p>
+              </form>
+            </div>
+            <div
+              id="ibm-search-typeahead-container"
+              aria-expanded="true"
+              class="ibm-search-typeahead-container ibm-fadeout"
+            ></div>
+            <ul
+              aria-label="Tools"
+              role="menubar"
+              class="ibm-masthead-iconsonly"
+            >
+              <li role="presentation" class="ibm-masthead-item-signin">
+                <button
+                  role="button"
+                  aria-haspopup="true"
+                  aria-owns="ibm-signin-minimenu-container"
+                  class="ibm-profile-link"
+                  aria-label="Signed in as CompilerCloudServices IBM"
+                ></button>
+                <ul
+                  id="ibm-signin-minimenu-container"
+                  role="menu"
+                  aria-label="Profile"
+                  class="ibm-dropdown-menu"
+                >
+                  <li role="presentation">
+                    <a
+                      role="menuitem"
+                      href="https://myibm.ibm.com/dashboard/?lnk=mmi"
+                      >My IBM</a
+                    >
+                  </li>
+                  <li role="presentation">
+                    <a
+                      role="menuitem"
+                      href="https://developer.ibm.com/mydeveloperworks"
+                      >My developerWorks</a
+                    >
+                  </li>
+                  <li role="presentation">
+                    <a
+                      role="menuitem"
+                      href="https://www.ibm.com/developerworks/community/groups/service/html/mycommunities?lang=en"
+                      >Communities</a
+                    >
+                  </li>
+                  <li role="presentation">
+                    <a
+                      role="menuitem"
+                      href="https://www.ibm.com/developerworks/community/news/?lang=en"
+                      >Settings</a
+                    >
+                  </li>
+                  <li role="presentation">
+                    <a
+                      role="menuitem"
+                      href="https://developer.ibm.com/mainframe/wp-login.php?action=logout&amp;_wpnonce=b379020856&amp;d=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fproducts%2Frecord-generator-for-java&amp;lang=en_US"
+                      >Sign Out</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li role="presentation" class="ibm-masthead-item-menu">
+                <button
+                  role="button"
+                  aria-haspopup="true"
+                  aria-owns="ibm-burger-menu-container"
+                  class="ibm-menu-link"
+                >
+                  Site navigation
+                </button>
+              </li>
             </ul>
-        </nav>
-        <div class="ibm-fluid ibm-padding-bottom-2 ibm-padding-top-2">
-            <div class="ibm-col-small-12-12 ibm-col-medium-12-7 ibm-col-12-6 ibm-fleft" id="introdiv">
-                <h1 class="entry-title ibm-padding-bottom-2">IBM Record<br class="ibm-br-small ibm-br-medium"> Generator<br class="ibm-br-xlarge ibm-br-large "> for Java</h1>
-                <p class="ibm-light ibm-padding-bottom-2">IBM® Record Generator for Java™ helps Java developers write applications that interact with COBOL and Assembler applications on z/OS.</p>
-                <p class="ibm-ind-link ibm-btn-row ibm-padding-bottom-r2">
-                    <a class="ibm-btn-pri ibm-download-link ibm-btn-white" href="https://www.ibm.com/account/reg/signup?formid=urx-19594">Download now</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ibm-mobilemenu ibm-hide"
+        id="ibm-burger-menu-container"
+        aria-labelledby="ibm-burgermenu-a11y"
+        role="dialog"
+        tabindex="0"
+      >
+        <p class="ibm-hide" id="ibm-burgermenu-a11y">Site navigation</p>
+        <div class="ibm-mobilemenu-close">
+          <p class="ibm-icononly ibm-fright ibm-ind-link ibm-nospacing">
+            <a
+              class="ibm-close-link"
+              href="https://developer.ibm.com/mainframe/products/record-generator-for-java/?lnk=hm#"
+              >Close</a
+            >
+          </p>
+        </div>
+        <div class="ibm-mobilemenu-section ibm-mobilemenu-sitenavmenu">
+          <ul id="primary-menu" class="menu">
+            <li class="ibm-mobile-section-heading ibm-mobile-sitename">
+              <a href="https://developer.ibm.com/mainframe/?lnk=hm" rel="home"
+                >Mainframe DEV</a
+              >
+            </li>
+            <li
+              id="menu-item-1540"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1540"
+            >
+              <a href="https://developer.ibm.com/mainframe?lnk=hm" tabindex="0"
+                >Home</a
+              >
+            </li>
+            <li
+              id="menu-item-4064"
+              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4064"
+            >
+              <a
+                href="https://developer.ibm.com/mainframe/products/downloads/?lnk=hm"
+                tabindex="-1"
+                >Downloads</a
+              >
+            </li>
+            <li
+              id="menu-item-16086"
+              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16086"
+            >
+              <a
+                href="https://developer.ibm.com/mainframe/products/devops-acceleration-program/training/?lnk=hm"
+                tabindex="-1"
+                >Training</a
+              >
+            </li>
+            <li
+              id="menu-item-14411"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14411"
+            >
+              <a
+                href="https://developer.ibm.com/mainframe/products/documentation/?lnk=hm"
+                tabindex="-1"
+                >Documentation</a
+              >
+              <ul class="sub-menu">
+                <li
+                  id="menu-item-14412"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14412"
+                >
+                  <a
+                    href="https://developer.ibm.com/mainframe/products/documentation/kc/?lnk=hm"
+                    ><span>IBM KCCI (Local)</span></a
+                  >
+                </li>
+                <li
+                  id="menu-item-14413"
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14413"
+                >
+                  <a href="https://www.ibm.com/support/knowledgecenter/?lnk=hm"
+                    ><span>IBM Knowledge Center</span></a
+                  >
+                </li>
+                <li
+                  id="menu-item-22185"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22185"
+                >
+                  <a
+                    href="https://developer.ibm.com/mainframe/products/host-configuration-assistant-for-z-development/?lnk=hm"
+                    ><span
+                      >Host Configuration Assistant for Z Development</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li
+              id="menu-item-31"
+              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"
+            >
+              <a
+                href="https://developer.ibm.com/mainframe/blog/?lnk=hm"
+                tabindex="-1"
+                >Blogs</a
+              >
+            </li>
+            <li
+              id="menu-item-9254"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9254"
+            >
+              <a
+                href="https://developer.ibm.com/mainframe/announcements/?lnk=hm"
+                tabindex="-1"
+                >Announcements</a
+              >
+              <ul class="sub-menu">
+                <li
+                  id="menu-item-13727"
+                  class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13727"
+                >
+                  <a
+                    href="https://developer.ibm.com/mainframe/category/announcements/release-notes/ibm-z-os-explorer-aqua/?lnk=hm"
+                    ><span>Release notes for Aqua</span></a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li
+              id="menu-item-386"
+              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"
+            >
+              <a
+                href="https://developer.ibm.com/mainframe/events/?lnk=hm"
+                tabindex="-1"
+                >Events</a
+              >
+            </li>
+            <li
+              id="menu-item-33"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"
+            >
+              <a
+                href="https://developer.ibm.com/answers/smartspace/mainframe/?lnk=hm"
+                tabindex="-1"
+                >Forum</a
+              >
+            </li>
+            <li
+              id="menu-item-51"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51"
+            >
+              <a
+                href="https://developer.ibm.com/mainframe/videos?lnk=hm"
+                tabindex="-1"
+                >Videos</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="ibm-mobilemenu-section">
+          <ul class="ibm-mobilemenu-mhlinks" aria-label="Discover IBM">
+            <li>
+              <div
+                data-widget="showhide"
+                data-type="panel"
+                class="ibm-show-hide ibm-widget-processed"
+              >
+                <h2>
+                  <a href="javascript:void();">Products &amp; Solutions</a>
+                </h2>
+                <div class="ibm-container-body" style="display: none;">
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/products?lnk=hmhpmps_bupr&amp;lnk2=link"
+                        ><span>Top products &amp; platforms</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/industries?lnk=hmhpmps_buin&amp;lnk2=link"
+                        ><span>Industries</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/artificial-intelligence?lnk=hmhpmps_buai&amp;lnk2=link"
+                        ><span>Artificial intelligence</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/blockchain?lnk=hmhpmps_bubc&amp;lnk2=link"
+                        ><span>Blockchain</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/automation?lnk=hmhpmps_buau&amp;lnk2=link"
+                        ><span>Business automation</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/business-operations?lnk=hmhpmps_buop&amp;lnk2=link"
+                        ><span>Business operations</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/cloud/products?lnk=hmhpmps_bucl&amp;lnk2=link"
+                        ><span>Cloud computing</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/analytics?lnk=hmhpmps_buda&amp;lnk2=link"
+                        ><span>Data &amp; Analytics</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/it-infrastructure/?lnk=hmhpmps_buit&amp;lnk2=link"
+                        ><span>IT infrastructure</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/security?lnk=hmhpmps_buse&amp;lnk2=link"
+                        ><span>Security</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/supply-chain?lnk=hmhpmps_busc&amp;lnk2=link"
+                        ><span>Supply chain</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/financing?lnk=hmhpmps_bufi&amp;lnk2=link"
+                        ><span
+                          >Payment plans for Products &amp; Solutions</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/products?lnk=hmhpmps_buall&amp;lnk2=link"
+                        ><span>View all products</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                data-widget="showhide"
+                data-type="panel"
+                class="ibm-show-hide ibm-widget-processed"
+              >
+                <h2>
+                  <a href="javascript:void();">Services &amp; Consulting</a>
+                </h2>
+                <div class="ibm-container-body" style="display: none;">
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/services/process?lnk=hmhpmsc_bups&amp;lnk2=link"
+                        ><span>Business process services</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/services/ibmix/?lnk=hmhpmsc_budbs&amp;lnk2=link"
+                        ><span>Design &amp; business strategy</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/services/?lnk=hmhpmsc_buhs&amp;lnk2=link"
+                        ><span>Hybrid multicloud services</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/talent-management?lnk=hmhpmsc_buta&amp;lnk2=link"
+                        ><span>Talent &amp; transformation</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/services/applications?lnk=hmhpmsc_buas&amp;lnk2=link"
+                        ><span>Application services</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/security/services?lnk=hmhpmsc_buse&amp;lnk2=link"
+                        ><span>Security services</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/services/technology-support?lnk=hmhpmsc_busv&amp;lnk2=link"
+                        ><span>Services for tech support</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/financing/solutions/it-services-financing?lnk=hmhpmsc_bufi&amp;lnk2=link"
+                        ><span
+                          >Payment plans for Services &amp; Consulting</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/services?lnk=hmhpmsc_buall&amp;lnk2=link"
+                        ><span>View all services</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                data-widget="showhide"
+                data-type="panel"
+                class="ibm-show-hide ibm-widget-processed"
+              >
+                <h2><a href="javascript:void();">Learn &amp; Support</a></h2>
+                <div class="ibm-container-body" style="display: none;">
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/support?lnk=hmhpmls_busu&amp;lnk2=link"
+                        ><span>Support</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/support/knowledgecenter/?lnk=hmhpmls_budc&amp;lnk2=link"
+                        ><span>Documentation</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://developer.ibm.com/?lnk=hmhpmls_bude&amp;lnk2=link"
+                        ><span>Developer education</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/training/?lnk=hmhpmls_butr&amp;lnk2=link"
+                        ><span>Training</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/blogs/?lnk=hmhpmls_bure&amp;lnk2=link"
+                        ><span>Resources</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/cloud/learn?lnk=hmhpmls_buwi&amp;lnk2=link"
+                        ><span>What is...</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                data-widget="showhide"
+                data-type="panel"
+                class="ibm-show-hide ibm-widget-processed"
+              >
+                <h2><a href="javascript:void();">Explore more</a></h2>
+                <div class="ibm-container-body" style="display: none;">
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/partnerworld/public?lnk=hmhpmex_bupa&amp;lnk2=link"
+                        ><span>Partners</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.research.ibm.com/?lnk=hmhpmex_bure&amp;lnk2=link"
+                        ><span>IBM Research</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/ibm/us/en?lnk=hmhpmex_buab&amp;lnk2=link"
+                        ><span>About IBM</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                data-widget="showhide"
+                data-type="panel"
+                class="ibm-show-hide ibm-widget-processed"
+              >
+                <h2><a href="javascript:void();">COVID-19</a></h2>
+                <div class="ibm-container-body" style="display: none;">
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/redirect-marketplace/impact/covid-19/business-solutions?lnk=hm"
+                        ><span>Business solutions</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/redirect-marketplace/impact/covid-19/?lnk=hm"
+                        ><span>Science and technology</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://newsroom.ibm.com/COVID-19?lnk=hmhpmcov_ns&amp;lnk2=link"
+                        ><span>News and resources</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ibm-mhplaceholder ibm-hide"></div>
+      <!-- MASTHEAD_END -->
+      <div id="ibm-content-wrapper">
+        <header role="banner" aria-labelledby="ibm-pagetitle-h1">
+          <!-- MASTHEAD_SITENAV_BEGIN -->
+          <div class="ibm-sitenav-menu-container" data-widgetprocessed="true">
+            <div class="ibm-sitenav-menu-name">
+              <a href="https://developer.ibm.com/mainframe/" rel="home"
+                >Mainframe DEV</a
+              >
+            </div>
+            <div class="ibm-sitenav-menu-list">
+              <ul id="primary-menu" class="menu">
+                <li
+                  id="menu-item-1540"
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1540"
+                >
+                  <a href="https://developer.ibm.com/mainframe" tabindex="0"
+                    >Home</a
+                  >
+                </li>
+                <li
+                  id="menu-item-4064"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4064"
+                >
+                  <a
+                    href="https://developer.ibm.com/mainframe/products/downloads/"
+                    tabindex="-1"
+                    >Downloads</a
+                  >
+                </li>
+                <li
+                  id="menu-item-16086"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16086"
+                >
+                  <a
+                    href="https://developer.ibm.com/mainframe/products/devops-acceleration-program/training/"
+                    tabindex="-1"
+                    >Training</a
+                  >
+                </li>
+                <li
+                  id="menu-item-14411"
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14411"
+                >
+                  <a
+                    href="https://developer.ibm.com/mainframe/products/documentation/"
+                    tabindex="-1"
+                    >Documentation</a
+                  >
+                  <ul class="sub-menu">
+                    <li
+                      id="menu-item-14412"
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14412"
+                    >
+                      <a
+                        href="https://developer.ibm.com/mainframe/products/documentation/kc/"
+                        >IBM KCCI (Local)</a
+                      >
+                    </li>
+                    <li
+                      id="menu-item-14413"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14413"
+                    >
+                      <a href="https://www.ibm.com/support/knowledgecenter/"
+                        >IBM Knowledge Center</a
+                      >
+                    </li>
+                    <li
+                      id="menu-item-22185"
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22185"
+                    >
+                      <a
+                        href="https://developer.ibm.com/mainframe/products/host-configuration-assistant-for-z-development/"
+                        >Host Configuration Assistant for Z Development</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  id="menu-item-31"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"
+                >
+                  <a
+                    href="https://developer.ibm.com/mainframe/blog/"
+                    tabindex="-1"
+                    >Blogs</a
+                  >
+                </li>
+                <li
+                  id="menu-item-9254"
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9254"
+                >
+                  <a
+                    href="https://developer.ibm.com/mainframe/announcements/"
+                    tabindex="-1"
+                    >Announcements</a
+                  >
+                  <ul class="sub-menu" style="width: 202px;">
+                    <li
+                      id="menu-item-13727"
+                      class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13727"
+                    >
+                      <a
+                        href="https://developer.ibm.com/mainframe/category/announcements/release-notes/ibm-z-os-explorer-aqua/"
+                        >Release notes for Aqua</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  id="menu-item-386"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"
+                >
+                  <a
+                    href="https://developer.ibm.com/mainframe/events/"
+                    tabindex="-1"
+                    >Events</a
+                  >
+                </li>
+                <li
+                  id="menu-item-33"
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"
+                >
+                  <a
+                    href="https://developer.ibm.com/answers/smartspace/mainframe/"
+                    tabindex="-1"
+                    >Forum</a
+                  >
+                </li>
+                <li
+                  id="menu-item-51"
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51"
+                >
+                  <a
+                    href="https://developer.ibm.com/mainframe/videos"
+                    tabindex="-1"
+                    >Videos</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- MASTHEAD_SITENAV_END -->
+        </header>
+        <style>
+          #ibm-com .gsc-adBlock {
+            display: none !important;
+          }
+        </style>
+        <div id="content" class="site-content">
+          <!--Because the_content() works only inside a WP Loop -->
+          <div
+            id="hero-section"
+            class="ibm-padding-bottom-1 ibm-padding-top-1 ibm-alternate-background"
+          >
+            <section class="ibm-fluid content-area-restricted pnpagepost">
+              <nav id="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+                <ul
+                  class="ibm-padding-top-1 ibm-padding-bottom-0"
+                  id="ibm-navigation-trail"
+                  itemscope=""
+                  itemtype="//schema.org/BreadcrumbList"
+                >
+                  <span xmlns:v="http://rdf.data-vocabulary.org/#"
+                    ><span typeof="v:Breadcrumb"
+                      ><a
+                        href="https://developer.ibm.com/mainframe"
+                        rel="v:url"
+                        property="v:title"
+                        >Home</a
+                      >
+                      <span rel="v:child" typeof="v:Breadcrumb"
+                        ><a
+                          href="https://developer.ibm.com/mainframe/products/"
+                          rel="v:url"
+                          property="v:title"
+                          >Products</a
+                        >
+                        <span class="breadcrumb_last"
+                          >IBM Record Generator for Java</span
+                        ></span
+                      >
+                    </span>
+                  </span>
+                </ul>
+              </nav>
+              <div class="ibm-fluid ibm-padding-bottom-2 ibm-padding-top-2">
+                <div
+                  class="ibm-col-small-12-12 ibm-col-medium-12-7 ibm-col-12-6 ibm-fleft"
+                  id="introdiv"
+                >
+                  <h1 class="entry-title ibm-padding-bottom-2">
+                    IBM Record<br class="ibm-br-small ibm-br-medium" />
+                    Generator<br class="ibm-br-xlarge ibm-br-large " />
+                    for Java
+                  </h1>
+                  <p class="ibm-light ibm-padding-bottom-2">
+                    IBM® Record Generator for Java™ helps Java developers write
+                    applications that interact with COBOL and Assembler
+                    applications on z/OS.
+                  </p>
+                  <p class="ibm-ind-link ibm-btn-row ibm-padding-bottom-r2">
+                    <a
+                      class="ibm-btn-pri ibm-download-link ibm-btn-white"
+                      href="https://www.ibm.com/account/reg/signup?formid=urx-19594"
+                      >Download now</a
+                    >
                     <!--<a class="ibm-btn-pri ibm-btn-white" target="_blank" href="#">Download</a>-->
-                    <a class="ibm-btn-sec ibm-btn-white ibm-information-link" target="blank" href="https://www.ibm.com/support/knowledgecenter/SSMQ4D_3.0.0/documentation/welcome.html">Find out more</a> </p>
-                <!--<h3 class="ibm-padding-bottom-2">How does it work?</h3>
-                    <p class="ibm-light">IBM Record Generator for Java is a stand-alone utility that imports the generated associated-data (ADATA) that is produced from compiling COBOL copybooks or Assembler DSECTs, and generates Java helper classes. These Java helper classes can then be used in a Java applications to marshal data to and from the COBOL or assembler language-specific record structures.</p>--></div>
-            <div class="ibm-col-small-12-12 ibm-col-12-6 ibm-col-medium-12-5 ibm-fright ibm-hide-sm" id="herodiv">
-                <object type="image/svg+xml" class="svg-img" data="./IBM-Record-Generator-for-Java_files/hero-image.svg"></object>
-            </div>
-            <div class="ibm-col-medium-12-12 ibm-col-12-6 ibm-fleft" id="howdiv">
-                <h3 class="ibm-padding-bottom-2">How does it work?</h3>
-                <p class="ibm-light">IBM Record Generator for Java is a stand-alone utility that imports the generated associated-data (ADATA) that is produced from compiling COBOL copybooks or Assembler DSECTs, and generates Java helper classes. These Java helper classes can then be used in a Java applications to marshal data to and from the COBOL or assembler language-specific record structures.</p>
-            </div>
+                    <a
+                      class="ibm-btn-sec ibm-btn-white ibm-information-link"
+                      target="blank"
+                      href="https://www.ibm.com/support/knowledgecenter/SSMQ4D_3.0.0/documentation/welcome.html"
+                      >Find out more</a
+                    >
+                  </p>
+                  <!--<h3 class="ibm-padding-bottom-2">How does it work?</h3>
+                    <p class="ibm-light">IBM Record Generator for Java is a stand-alone utility that imports the generated associated-data (ADATA) that is produced from compiling COBOL copybooks or Assembler DSECTs, and generates Java helper classes. These Java helper classes can then be used in a Java applications to marshal data to and from the COBOL or assembler language-specific record structures.</p>-->
+                </div>
+                <div
+                  class="ibm-col-small-12-12 ibm-col-12-6 ibm-col-medium-12-5 ibm-fright ibm-hide-sm"
+                  id="herodiv"
+                >
+                  <object
+                    type="image/svg+xml"
+                    class="svg-img"
+                    data="./IBM-Record-Generator-for-Java_files/hero-image.svg"
+                  ></object>
+                </div>
+                <div
+                  class="ibm-col-medium-12-12 ibm-col-12-6 ibm-fleft"
+                  id="howdiv"
+                >
+                  <h3 class="ibm-padding-bottom-2">How does it work?</h3>
+                  <p class="ibm-light">
+                    IBM Record Generator for Java is a stand-alone utility that
+                    imports the generated associated-data (ADATA) that is
+                    produced from compiling COBOL copybooks or Assembler DSECTs,
+                    and generates Java helper classes. These Java helper classes
+                    can then be used in a Java applications to marshal data to
+                    and from the COBOL or assembler language-specific record
+                    structures.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- content-section start -->
+          <div
+            id="content-section"
+            class="ibm-padding-bottom-1 ibm-padding-top-1"
+          >
+            <section class="content-area-restricted pnpagepost">
+              <div class="ibm-fluid ibm-padding-bottom-2 ibm-padding-top-2">
+                <!-- card section-->
+                <div
+                  class="ibm-fluid ibm-padding-top-2 ibm-padding-bottom-2 ibm-widget-processed ibm-sameheight-processed"
+                  data-widget="setsameheight"
+                  data-items=".ibm-card"
+                  data-always="true"
+                >
+                  <div
+                    class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-small-12-12"
+                  >
+                    <div
+                      id="card-1"
+                      class="ibm-card dl-card"
+                      style="height: 184px;"
+                    >
+                      <div class="ibm-card__content">
+                        <div class="svg-container">
+                          <object
+                            type="image/svg+xml"
+                            class="svg-img"
+                            data="./IBM-Record-Generator-for-Java_files/usp-01.svg"
+                          ></object>
+                        </div>
+                        <div class="blurb-container">
+                          <p>
+                            Much simpler to develop Java applications that have
+                            to interact with structured enterprise data.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-small-12-12"
+                  >
+                    <div
+                      id="card-2"
+                      class="ibm-card dl-card"
+                      style="height: 184px;"
+                    >
+                      <div class="ibm-card__content">
+                        <div class="svg-container">
+                          <object
+                            type="image/svg+xml"
+                            class="svg-img"
+                            data="./IBM-Record-Generator-for-Java_files/usp-02.svg"
+                          ></object>
+                        </div>
+                        <div class="blurb-container">
+                          <p>
+                            More flexibility than ever before in the data that
+                            can be used as input and the format of the output.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-small-12-12"
+                  >
+                    <div
+                      id="card-3"
+                      class="ibm-card dl-card"
+                      style="height: 184px;"
+                    >
+                      <div class="ibm-card__content">
+                        <div class="svg-container">
+                          <object
+                            type="image/svg+xml"
+                            class="svg-img"
+                            data="./IBM-Record-Generator-for-Java_files/usp-03.svg"
+                          ></object>
+                        </div>
+                        <div class="blurb-container">
+                          <p>
+                            Fully supported by IBM for fixes to issues or
+                            requests for enhancement – and free of charge.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card section - end -->
+
+                <div
+                  class="ibm-rule ibm-margin-top-r2 ibm-margin-bottom-r2"
+                ></div>
+
+                <div class="ibm-fluid ibm-padding-top-2 ibm-padding-bottom-2">
+                  <div class="ibm-col-12-8 ibm-col-medium-12-12">
+                    <p class="medfont">
+                      <span class="title-highlight">IBM Record Generator</span>
+                      for Java Version 3 supersedes the IBM alphaWorks version
+                      of the JZOS Record Generator V2.4.6 and provides a number
+                      of new capabilities
+                    </p>
+                  </div>
+
+                  <div class="ibm-col-12-4 ibm-col-medium-12-12">
+                    <p class="ibm-btn-row ibm-right">
+                      <a
+                        target="_blank"
+                        class="ibm-btn-pri btn-indigo"
+                        href="https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?infotype=an&amp;subtype=ca&amp;supplier=897&amp;letternum=ENUS217-295"
+                        >Read the announcement letter</a
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="ibm-rule ibm-margin-top-r2 ibm-margin-bottom-r2"
+                ></div>
+
+                <div class="ibm-fluid ibm-padding-top-2 ibm-padding-bottom-2">
+                  <div
+                    id="gear-svg-container"
+                    class="ibm-hide-sm ibm-col-12-4 ibm-col-medium-12-6 ibm-col-small-12-12"
+                  >
+                    <object
+                      type="image/svg+xml"
+                      class="svg-img"
+                      data="./IBM-Record-Generator-for-Java_files/technical.svg"
+                    ></object>
+                  </div>
+
+                  <div
+                    class="ibm-col-12-8 ibm-col-medium-12-6 ibm-col-small-12-12"
+                  >
+                    <p class="medfont">
+                      Read the tutorial on using the previous alphaWorks
+                      technology with CICS.
+                    </p>
+                    <br />
+                    <p class="ibm-btn-row">
+                      <a
+                        class="ibm-btn-pri btn-indigo"
+                        target="_blank"
+                        href="https://developer.ibm.com/cics/2016/05/12/java-cics-using-ibmjzos/"
+                        >Read the tutorial</a
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="ibm-rule ibm-margin-top-r2 ibm-margin-bottom-r2"
+                ></div>
+
+                <div class="ibm-fluid ibm-padding-top-2 ibm-padding-bottom-2">
+                  <div class="ibm-col-12-9 ibm-col-medium-12-12">
+                    <p class="medfont">
+                      Shape future updates to IBM Record Generator for Java; as
+                      a fully supported offering you can now raise a Request for
+                      Enhancement (RFE) to propose new functionality to be added
+                      to the tool.
+                    </p>
+                  </div>
+
+                  <div class="ibm-col-12-3 ibm-col-medium-12-12">
+                    <p class="ibm-btn-row ibm-right">
+                      <a
+                        target="_blank"
+                        class="ibm-btn-pri btn-indigo"
+                        href="https://www.ibm.com/developerworks/rfe/?PROD_ID=1716"
+                        >Raise a RFE</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- content-section end -->
+          <!-- Page Content -->
         </div>
-    </section>
-</div>
-<!-- content-section start -->
-<div id="content-section" class="ibm-padding-bottom-1 ibm-padding-top-1">
-    <section class="content-area-restricted pnpagepost">
-        <div class="ibm-fluid ibm-padding-bottom-2 ibm-padding-top-2">
-            <!-- card section-->
-            <div class="ibm-fluid ibm-padding-top-2 ibm-padding-bottom-2 ibm-widget-processed ibm-sameheight-processed" data-widget="setsameheight" data-items=".ibm-card" data-always="true">
-                <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-small-12-12">
-                    <div id="card-1" class="ibm-card dl-card" style="height: 184px;">
-                        <div class="ibm-card__content">
-                            <div class="svg-container">
-                                <object type="image/svg+xml" class="svg-img" data="./IBM-Record-Generator-for-Java_files/usp-01.svg"></object>
-                            </div>
-                            <div class="blurb-container">
-                                <p>Much simpler to develop Java applications that have to interact with structured enterprise data.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-small-12-12">
-                    <div id="card-2" class="ibm-card dl-card" style="height: 184px;">
-                        <div class="ibm-card__content">
-                            <div class="svg-container">
-                                <object type="image/svg+xml" class="svg-img" data="./IBM-Record-Generator-for-Java_files/usp-02.svg"></object>
-                            </div>
-                            <div class="blurb-container">
-                                <p>More flexibility than ever before in the data that can be used as input and the format of the output.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-small-12-12">
-                    <div id="card-3" class="ibm-card dl-card" style="height: 184px;">
-                        <div class="ibm-card__content">
-                            <div class="svg-container">
-                                <object type="image/svg+xml" class="svg-img" data="./IBM-Record-Generator-for-Java_files/usp-03.svg"></object>
-                            </div>
-                            <div class="blurb-container">
-                                <p>Fully supported by IBM for fixes to issues or requests for enhancement – and free of charge.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- card section - end -->
-            
-            <div class="ibm-rule ibm-margin-top-r2 ibm-margin-bottom-r2"></div>
+        <!-- #content -->
+      </div>
+      <!-- end of ibm-content-wrapper -->
 
-            
-            <div class="ibm-fluid ibm-padding-top-2 ibm-padding-bottom-2">
-                <div class="ibm-col-12-8 ibm-col-medium-12-12"><p class="medfont"><span class="title-highlight">IBM Record Generator</span> for Java Version 3 supersedes the IBM alphaWorks version of the JZOS Record Generator V2.4.6 and provides a number of new capabilities</p></div>
-                
-                <div class="ibm-col-12-4 ibm-col-medium-12-12"><p class="ibm-btn-row ibm-right"><a target="_blank" class="ibm-btn-pri btn-indigo" href="https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?infotype=an&amp;subtype=ca&amp;supplier=897&amp;letternum=ENUS217-295">Read the announcement letter</a></p></div>
+      <p
+        class="ibm-ind-link ibm-nospacing ibm-icononly ibm-btt-auto ibm-hidden-small"
+      >
+        <a
+          class="ibm-nospacing ibm-top-link"
+          aria-label="Back to top"
+          href="https://developer.ibm.com/mainframe/products/record-generator-for-java/#top"
+          tabindex="0"
+          >Back to top</a
+        >
+      </p>
+
+      <footer role="contentinfo" aria-label="IBM" id="themeFooter">
+        <div id="boomer-footer" class="boomer_footer_menu"></div>
+        <div id="dw-footer" class="ibm-alternate ibm-padding-normal">
+          
+      </footer>
+    </div>
+    <!-- #page -->
+
+    <div class="gdpr-overlay"></div>
+    <div class="gdpr gdpr-privacy-preferences">
+      <div class="gdpr-wrapper">
+        <form
+          method="post"
+          class="gdpr-privacy-preferences-frm"
+          action="https://developer.ibm.com/mainframe/wp-admin/admin-post.php"
+        >
+          <input
+            type="hidden"
+            name="action"
+            value="gdpr_update_privacy_preferences"
+          />
+          <input
+            type="hidden"
+            id="update-privacy-preferences-nonce"
+            name="update-privacy-preferences-nonce"
+            value="7e1e09930f"
+          /><input
+            type="hidden"
+            name="_wp_http_referer"
+            value="/mainframe/products/record-generator-for-java/"
+          />
+          <header>
+            <div class="gdpr-box-title">
+              <h3>Privacy Preference Center</h3>
+              <span class="gdpr-close"></span>
             </div>
-                
-            <div class="ibm-rule ibm-margin-top-r2 ibm-margin-bottom-r2"></div>
-
-            
-            <div class="ibm-fluid ibm-padding-top-2 ibm-padding-bottom-2">
-                
-                <div id="gear-svg-container" class="ibm-hide-sm ibm-col-12-4 ibm-col-medium-12-6 ibm-col-small-12-12">
-                                <object type="image/svg+xml" class="svg-img" data="./IBM-Record-Generator-for-Java_files/technical.svg"></object>
-
+          </header>
+          <div class="gdpr-mobile-menu">
+            <button type="button">Options</button>
+          </div>
+          <div class="gdpr-content">
+            <ul class="gdpr-tabs">
+              <li>
+                <button
+                  type="button"
+                  class="gdpr-tab-button gdpr-active"
+                  data-target="gdpr-consent-management"
+                >
+                  Consent Management
+                </button>
+              </li>
+            </ul>
+            <div class="gdpr-tab-content">
+              <div class="gdpr-consent-management gdpr-active">
+                <header>
+                  <h4>Consent Management</h4>
+                </header>
+                <div class="gdpr-info">
+                  <p></p>
                 </div>
-            
-            
-            
-                <div class="ibm-col-12-8 ibm-col-medium-12-6 ibm-col-small-12-12"><p class="medfont">Read the tutorial on using the previous alphaWorks technology with CICS.</p><br><p class="ibm-btn-row"><a class="ibm-btn-pri btn-indigo" target="_blank" href="https://developer.ibm.com/cics/2016/05/12/java-cics-using-ibmjzos/">Read the tutorial</a></p></div>
-            
-            
+              </div>
             </div>
-            
-            <div class="ibm-rule ibm-margin-top-r2 ibm-margin-bottom-r2"></div>
+            <input type="hidden" name="all_cookies" value="[]" />
+          </div>
+          <footer>
+            <input type="submit" value="Save Preferences" />
+          </footer>
+        </form>
+      </div>
+    </div>
 
-            
-            <div class="ibm-fluid ibm-padding-top-2 ibm-padding-bottom-2">
-                <div class="ibm-col-12-9 ibm-col-medium-12-12"><p class="medfont">Shape future updates to IBM Record Generator for Java; as a fully supported offering you can now raise a Request for Enhancement (RFE) to propose new functionality to be added to the tool.</p></div>
-                
-                <div class="ibm-col-12-3 ibm-col-medium-12-12"><p class="ibm-btn-row ibm-right"><a target="_blank" class="ibm-btn-pri btn-indigo" href="https://www.ibm.com/developerworks/rfe/?PROD_ID=1716">Raise a RFE</a></p></div>
-            </div>
-            
+    <div class="gdpr gdpr-general-confirmation gdpr-delete-confirmation">
+      <div class="gdpr-wrapper">
+        <header>
+          <div class="gdpr-box-title">
+            <h3>Close your account?</h3>
+            <span class="gdpr-close"></span>
+          </div>
+        </header>
+        <div class="gdpr-content">
+          <p>
+            Your account will be closed and all data will be permanently deleted
+            and cannot be recovered. Are you sure?
+          </p>
         </div>
-    </section>
-</div>
-<!-- content-section end -->                                                <!-- Page Content -->
-                                                    
+        <footer>
+          <button class="gdpr-delete-account">Continue</button>
+          <button class="gdpr-cancel">Cancel</button>
+        </footer>
+      </div>
+    </div>
 
+    <script>
+      jQuery(document).ready(function($) {
+        var dcName = "mainframe";
+        // $('a').each(function(){
+        //   if(this.href.match('bluemix.net')){
+        //     if(this.search){
+        //       this.href = this.href + '&cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
+        //     }else{
+        //       this.href = this.href + '?cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
+        //     }
+        //   }
+        // });
 
-		</div><!-- #content -->
-	</div><!-- end of ibm-content-wrapper -->
-
-	<p class="ibm-ind-link ibm-nospacing ibm-icononly ibm-btt-auto ibm-hidden-small">
-		<a class="ibm-nospacing ibm-top-link" aria-label="Back to top" href="https://developer.ibm.com/mainframe/products/record-generator-for-java/#top" tabindex="0">Back to top</a>
-	</p>
-
-	<footer role="contentinfo" aria-label="IBM" id="themeFooter">
-		<div id="boomer-footer" class="boomer_footer_menu"></div>
-		<div id="dw-footer" class="ibm-alternate ibm-padding-normal">
-			<div class="ibm-columns ibm-padding-bottom-0">
-				<div class="ibm-col-1-1">
-					<div class="ibm-footer-corporate-links">
-						<ul>
-              <li><a href="https://developer.ibm.com/feedback/">Contact</a></li>
-              <li><a href="https://www.ibm.com/privacy/us/en/">Privacy</a></li>
-              <li><a href="https://developer.ibm.com/terms/ibm-developer-terms-of-use/">Terms of use</a></li>
-              <li><a href="https://www.ibm.com/accessibility/us/en/">Accessibility</a></li>
-              <li class="ibm-feedbacklink"><a href="https://developer.ibm.com/mainframe/products/record-generator-for-java/#">Feedback</a></li>
-							<li><a href="https://www.ibm.com/developerworks/secure/report/">Report Abuse</a></li>
-              <li id="ibm-truste-cp"><a onclick="truste.eu.clickListener();return false;" href="https://developer.ibm.com/mainframe/products/record-generator-for-java/#">Cookie Preferences</a></li>
-          	</ul>
-					</div>
-					<div id="ibm-footer-locale-selector"><h3 id="ibm-footer-locale-selector-label" class="ibm-bold">Select a country/region</h3><select class="ibm-fullwidth select2-hidden-accessible ibm-widget-processed" aria-labelledby="ibm-footer-locale-selector-label" tabindex="-1" aria-hidden="true" style="width: 399px;"><optgroup label="Worldwide ibm.com home pages"><option data-localecode="en-us" value="http://www.ibm.com/us-en/?lnk=fcc">United States - English</option><option data-localecode="en-af" value="http://www.ibm.com/af-en/?lnk=fcc">Afghanistan - English</option><option data-localecode="fr-dz" value="http://www.ibm.com/dz-fr/?lnk=fcc">Algeria - French</option><option data-localecode="pt-ao" value="http://www.ibm.com/ao-pt/?lnk=fcc">Angola - Portuguese</option><option data-localecode="en-ai" value="http://www.ibm.com/ai-en/?lnk=fcc">Anguilla - English</option><option data-localecode="en-ag" value="http://www.ibm.com/ag-en/?lnk=fcc">Antigua and Barbuda - English</option><option data-localecode="es-ar" value="http://www.ibm.com/ar-es/?lnk=fcc">Argentina - Spanish</option><option data-localecode="en-aw" value="http://www.ibm.com/aw-en/?lnk=fcc">Aruba - English</option><option data-localecode="en-au" value="http://www.ibm.com/au-en/?lnk=fcc">Australia - English</option><option data-localecode="de-at" value="http://www.ibm.com/at-de/?lnk=fcc">Austria - German</option><option data-localecode="en-bs" value="http://www.ibm.com/bs-en/?lnk=fcc">Bahamas - English</option><option data-localecode="en-bh" value="http://www.ibm.com/bh-en/?lnk=fcc">Bahrain - English</option><option data-localecode="en-bd" value="http://www.ibm.com/bd-en/?lnk=fcc">Bangladesh - English</option><option data-localecode="en-bb" value="http://www.ibm.com/bb-en/?lnk=fcc">Barbados - English</option><option data-localecode="nl-be" value="http://www.ibm.com/be-nl/?lnk=fcc">Belgium/Luxembourg - Dutch</option><option data-localecode="en-be" value="http://www.ibm.com/be-en/?lnk=fcc">Belgium/Luxembourg - English</option><option data-localecode="fr-be" value="http://www.ibm.com/be-fr/?lnk=fcc">Belgium/Luxembourg - French</option><option data-localecode="en-bm" value="http://www.ibm.com/bm-en/?lnk=fcc">Bermuda - English</option><option data-localecode="es-bo" value="http://www.ibm.com/bo-es/?lnk=fcc">Bolivia - Spanish</option><option data-localecode="en-bw" value="http://www.ibm.com/bw-en/?lnk=fcc">Botswana - English</option><option data-localecode="pt-br" value="http://www.ibm.com/br-pt/?lnk=fcc">Brazil - Portuguese</option><option data-localecode="en-bn" value="http://www.ibm.com/bn-en/?lnk=fcc">Brunei Darussalam - English</option><option data-localecode="bg-bg" value="http://www.ibm.com/bg-bg/?lnk=fcc">Bulgaria - Bulgarian</option><option data-localecode="en-bg" value="http://www.ibm.com/bg-en/?lnk=fcc">Bulgaria - English</option><option data-localecode="fr-bf" value="http://www.ibm.com/bf-fr/?lnk=fcc">Burkina Faso - French</option><option data-localecode="en-kh" value="http://www.ibm.com/kh-en/?lnk=fcc">Cambodia - English</option><option data-localecode="en-cm" value="http://www.ibm.com/cm-en/?lnk=fcc">Cameroon - English</option><option data-localecode="fr-cm" value="http://www.ibm.com/cm-fr/?lnk=fcc">Cameroon - French</option><option data-localecode="en-ca" value="http://www.ibm.com/ca-en/?lnk=fcc">Canada - English</option><option data-localecode="fr-ca" value="http://www.ibm.com/ca-fr/?lnk=fcc">Canada - French</option><option data-localecode="en-ky" value="http://www.ibm.com/ky-en/?lnk=fcc">Cayman Islands - English</option><option data-localecode="fr-td" value="http://www.ibm.com/td-fr/?lnk=fcc">Chad - French</option><option data-localecode="es-cl" value="http://www.ibm.com/cl-es/?lnk=fcc">Chile - Spanish</option><option data-localecode="zh-cn" value="http://www.ibm.com/cn-zh/?lnk=fcc">China - Chinese (Simplified)</option><option data-localecode="es-co" value="http://www.ibm.com/co-es/?lnk=fcc">Colombia - Spanish</option><option data-localecode="fr-cg" value="http://www.ibm.com/cg-fr/?lnk=fcc">Congo - French</option><option data-localecode="fr-cd" value="http://www.ibm.com/cd-fr/?lnk=fcc">Congo, The Democratic Republic of the - French</option><option data-localecode="es-cr" value="http://www.ibm.com/cr-es/?lnk=fcc">Costa Rica - Spanish</option><option data-localecode="hr-hr" value="http://www.ibm.com/hr-hr/?lnk=fcc">Croatia - Croatian</option><option data-localecode="en-hr" value="http://www.ibm.com/hr-en/?lnk=fcc">Croatia - English</option><option data-localecode="en-cw" value="http://www.ibm.com/cw-en/?lnk=fcc">Curacao - English</option><option data-localecode="en-cy" value="http://www.ibm.com/cy-en/?lnk=fcc">Cyprus - English</option><option data-localecode="cs-cz" value="http://www.ibm.com/cz-cs/?lnk=fcc">Czech Republic - Czech</option><option data-localecode="en-cz" value="http://www.ibm.com/cz-en/?lnk=fcc">Czech Republic - English</option><option data-localecode="da-dk" value="http://www.ibm.com/dk-da/?lnk=fcc">Denmark - Danish</option><option data-localecode="en-dk" value="http://www.ibm.com/dk-en/?lnk=fcc">Denmark - English</option><option data-localecode="en-dm" value="http://www.ibm.com/dm-en/?lnk=fcc">Dominica - English</option><option data-localecode="es-ec" value="http://www.ibm.com/ec-es/?lnk=fcc">Ecuador - Spanish</option><option data-localecode="en-eg" value="http://www.ibm.com/eg-en/?lnk=fcc">Egypt - English</option><option data-localecode="en-ee" value="http://www.ibm.com/ee-en/?lnk=fcc">Estonia - English</option><option data-localecode="et-ee" value="http://www.ibm.com/ee-et/?lnk=fcc">Estonia - Estonian</option><option data-localecode="en-et" value="http://www.ibm.com/et-en/?lnk=fcc">Ethiopia - English</option><option data-localecode="en-fi" value="http://www.ibm.com/fi-en/?lnk=fcc">Finland - English</option><option data-localecode="fi-fi" value="http://www.ibm.com/fi-fi/?lnk=fcc">Finland - Finnish</option><option data-localecode="fr-fr" value="http://www.ibm.com/fr-fr/?lnk=fcc">France - French</option><option data-localecode="fr-ga" value="http://www.ibm.com/ga-fr/?lnk=fcc">Gabon - French</option><option data-localecode="de-de" value="http://www.ibm.com/de-de/?lnk=fcc">Germany - German</option><option data-localecode="en-gh" value="http://www.ibm.com/gh-en/?lnk=fcc">Ghana - English</option><option data-localecode="en-gr" value="http://www.ibm.com/gr-en/?lnk=fcc">Greece - English</option><option data-localecode="el-gr" value="http://www.ibm.com/gr-el/?lnk=fcc">Greece - Greek</option><option data-localecode="en-gd" value="http://www.ibm.com/gd-en/?lnk=fcc">Grenada - English</option><option data-localecode="en-gy" value="http://www.ibm.com/gy-en/?lnk=fcc">Guyana - English</option><option data-localecode="en-hk" value="http://www.ibm.com/hk-en/?lnk=fcc">Hong Kong S.A.R. of China - English</option><option data-localecode="en-hu" value="http://www.ibm.com/hu-en/?lnk=fcc">Hungary - English</option><option data-localecode="hu-hu" value="http://www.ibm.com/hu-hu/?lnk=fcc">Hungary - Hungarian</option><option data-localecode="en-in" value="http://www.ibm.com/in-en/?lnk=fcc">India - English</option><option data-localecode="en-id" value="http://www.ibm.com/id-en/?lnk=fcc">Indonesia - English</option><option data-localecode="en-iq" value="http://www.ibm.com/iq-en/?lnk=fcc">Iraq - English</option><option data-localecode="en-ie" value="http://www.ibm.com/ie-en/?lnk=fcc">Ireland - English</option><option data-localecode="en-il" value="http://www.ibm.com/il-en/?lnk=fcc">Israel - English</option><option data-localecode="he-il" value="http://www.ibm.com/il-he/?lnk=fcc">Israel - Hebrew</option><option data-localecode="it-it" value="http://www.ibm.com/it-it/?lnk=fcc">Italy - Italian</option><option data-localecode="fr-ci" value="http://www.ibm.com/ci-fr/?lnk=fcc">Ivory Coast - French</option><option data-localecode="en-jm" value="http://www.ibm.com/jm-en/?lnk=fcc">Jamaica - English</option><option data-localecode="ja-jp" value="http://www.ibm.com/jp-ja/?lnk=fcc">Japan - Japanese</option><option data-localecode="en-jo" value="http://www.ibm.com/jo-en/?lnk=fcc">Jordan - English</option><option data-localecode="en-kz" value="http://www.ibm.com/kz-en/?lnk=fcc">Kazakhstan - English</option><option data-localecode="kk-kz" value="http://www.ibm.com/kz-kk/?lnk=fcc">Kazakhstan - Kazakh</option><option data-localecode="en-ke" value="http://www.ibm.com/ke-en/?lnk=fcc">Kenya - English</option><option data-localecode="ko-kr" value="http://www.ibm.com/kr-ko/?lnk=fcc">Korea, Republic of - Korean</option><option data-localecode="en-kw" value="http://www.ibm.com/kw-en/?lnk=fcc">Kuwait - English</option><option data-localecode="en-lv" value="http://www.ibm.com/lv-en/?lnk=fcc">Latvia - English</option><option data-localecode="lv-lv" value="http://www.ibm.com/lv-lv/?lnk=fcc">Latvia - Latvian</option><option data-localecode="en-lb" value="http://www.ibm.com/lb-en/?lnk=fcc">Lebanon - English</option><option data-localecode="en-ly" value="http://www.ibm.com/ly-en/?lnk=fcc">Libya - English</option><option data-localecode="en-lt" value="http://www.ibm.com/lt-en/?lnk=fcc">Lithuania - English</option><option data-localecode="lt-lt" value="http://www.ibm.com/lt-lt/?lnk=fcc">Lithuania - Lithuanian</option><option data-localecode="fr-mg" value="http://www.ibm.com/mg-fr/?lnk=fcc">Madagascar - French</option><option data-localecode="en-mw" value="http://www.ibm.com/mw-en/?lnk=fcc">Malawi - English</option><option data-localecode="en-my" value="http://www.ibm.com/my-en/?lnk=fcc">Malaysia - English</option><option data-localecode="en-mu" value="http://www.ibm.com/mu-en/?lnk=fcc">Mauritius - English</option><option data-localecode="fr-mu" value="http://www.ibm.com/mu-fr/?lnk=fcc">Mauritius - French</option><option data-localecode="es-mx" value="http://www.ibm.com/mx-es/?lnk=fcc">Mexico - Spanish</option><option data-localecode="en-ms" value="http://www.ibm.com/ms-en/?lnk=fcc">Montserrat - English</option><option data-localecode="fr-ma" value="http://www.ibm.com/ma-fr/?lnk=fcc">Morocco - French</option><option data-localecode="pt-mz" value="http://www.ibm.com/mz-pt/?lnk=fcc">Mozambique - Portuguese</option><option data-localecode="en-na" value="http://www.ibm.com/na-en/?lnk=fcc">Namibia - English</option><option data-localecode="en-np" value="http://www.ibm.com/np-en/?lnk=fcc">Nepal - English</option><option data-localecode="nl-nl" value="http://www.ibm.com/nl-nl/?lnk=fcc">Netherlands - Dutch</option><option data-localecode="en-nl" value="http://www.ibm.com/nl-en/?lnk=fcc">Netherlands - English</option><option data-localecode="en-nz" value="http://www.ibm.com/nz-en/?lnk=fcc">New Zealand - English</option><option data-localecode="fr-ne" value="http://www.ibm.com/ne-fr/?lnk=fcc">Niger - French</option><option data-localecode="en-ng" value="http://www.ibm.com/ng-en/?lnk=fcc">Nigeria - English</option><option data-localecode="en-no" value="http://www.ibm.com/no-en/?lnk=fcc">Norway - English</option><option data-localecode="no-no" value="http://www.ibm.com/no-no/?lnk=fcc">Norway - Norwegian</option><option data-localecode="en-om" value="http://www.ibm.com/om-en/?lnk=fcc">Oman - English</option><option data-localecode="en-pk" value="http://www.ibm.com/pk-en/?lnk=fcc">Pakistan - English</option><option data-localecode="es-py" value="http://www.ibm.com/py-es/?lnk=fcc">Paraguay - Spanish</option><option data-localecode="es-pe" value="http://www.ibm.com/pe-es/?lnk=fcc">Peru - Spanish</option><option data-localecode="en-ph" value="http://www.ibm.com/ph-en/?lnk=fcc">Philippines - English</option><option data-localecode="pl-pl" value="http://www.ibm.com/pl-pl/?lnk=fcc">Poland - Polish</option><option data-localecode="en-pt" value="http://www.ibm.com/pt-en/?lnk=fcc">Portugal - English</option><option data-localecode="pt-pt" value="http://www.ibm.com/pt-pt/?lnk=fcc">Portugal - Portuguese</option><option data-localecode="en-qa" value="http://www.ibm.com/qa-en/?lnk=fcc">Qatar - English</option><option data-localecode="en-ro" value="http://www.ibm.com/ro-en/?lnk=fcc">Romania - English</option><option data-localecode="ro-ro" value="http://www.ibm.com/ro-ro/?lnk=fcc">Romania - Romanian</option><option data-localecode="ru-ru" value="http://www.ibm.com/ru-ru/?lnk=fcc">Russian Federation - Russian</option><option data-localecode="en-kn" value="http://www.ibm.com/kn-en/?lnk=fcc">Saint Kitts and Nevis - English</option><option data-localecode="en-lc" value="http://www.ibm.com/lc-en/?lnk=fcc">Saint Lucia - English</option><option data-localecode="en-vc" value="http://www.ibm.com/vc-en/?lnk=fcc">Saint Vincent and the Grenadines - English</option><option data-localecode="ar-sa" value="http://www.ibm.com/sa-ar/?lnk=fcc">Saudi Arabia - Arabic</option><option data-localecode="en-sa" value="http://www.ibm.com/sa-en/?lnk=fcc">Saudi Arabia - English</option><option data-localecode="fr-sn" value="http://www.ibm.com/sn-fr/?lnk=fcc">Senegal - French</option><option data-localecode="en-rs" value="http://www.ibm.com/rs-en/?lnk=fcc">Serbia - English</option><option data-localecode="sr-rs" value="http://www.ibm.com/rs-sr/?lnk=fcc">Serbia - Serbian</option><option data-localecode="fr-sc" value="http://www.ibm.com/sc-fr/?lnk=fcc">Seychelles - French</option><option data-localecode="en-sl" value="http://www.ibm.com/sl-en/?lnk=fcc">Sierra Leone - English</option><option data-localecode="en-sg" value="http://www.ibm.com/sg-en/?lnk=fcc">Singapore - English</option><option data-localecode="en-sk" value="http://www.ibm.com/sk-en/?lnk=fcc">Slovakia - English</option><option data-localecode="sk-sk" value="http://www.ibm.com/sk-sk/?lnk=fcc">Slovakia - Slovak</option><option data-localecode="en-si" value="http://www.ibm.com/si-en/?lnk=fcc">Slovenia - English</option><option data-localecode="sl-si" value="http://www.ibm.com/si-sl/?lnk=fcc">Slovenia - Slovenian</option><option data-localecode="en-za" value="http://www.ibm.com/za-en/?lnk=fcc">South Africa - English</option><option data-localecode="es-es" value="http://www.ibm.com/es-es/?lnk=fcc">Spain - Spanish</option><option data-localecode="en-lk" value="http://www.ibm.com/lk-en/?lnk=fcc">Sri Lanka - English</option><option data-localecode="en-sr" value="http://www.ibm.com/sr-en/?lnk=fcc">Suriname - English</option><option data-localecode="en-se" value="http://www.ibm.com/se-en/?lnk=fcc">Sweden - English</option><option data-localecode="sv-se" value="http://www.ibm.com/se-sv/?lnk=fcc">Sweden - Swedish</option><option data-localecode="fr-ch" value="http://www.ibm.com/ch-fr/?lnk=fcc">Switzerland - French</option><option data-localecode="de-ch" value="http://www.ibm.com/ch-de/?lnk=fcc">Switzerland - German</option><option data-localecode="zh-tw" value="http://www.ibm.com/tw-zh/?lnk=fcc">Taiwan - Chinese (Traditional)</option><option data-localecode="en-tz" value="http://www.ibm.com/tz-en/?lnk=fcc">Tanzania, United Republic of - English</option><option data-localecode="en-th" value="http://www.ibm.com/th-en/?lnk=fcc">Thailand - English</option><option data-localecode="en-tt" value="http://www.ibm.com/tt-en/?lnk=fcc">Trinidad and Tobago - English</option><option data-localecode="fr-tn" value="http://www.ibm.com/tn-fr/?lnk=fcc">Tunisia - French</option><option data-localecode="tr-tr" value="http://www.ibm.com/tr-tr/?lnk=fcc">Turkey - Turkish</option><option data-localecode="en-tc" value="http://www.ibm.com/tc-en/?lnk=fcc">Turks and Caicos Islands - English</option><option data-localecode="en-ug" value="http://www.ibm.com/ug-en/?lnk=fcc">Uganda - English</option><option data-localecode="en-ua" value="http://www.ibm.com/ua-en/?lnk=fcc">Ukraine - English</option><option data-localecode="uk-ua" value="http://www.ibm.com/ua-uk/?lnk=fcc">Ukraine - Ukrainian</option><option data-localecode="ar-ae" value="http://www.ibm.com/ae-ar/?lnk=fcc">United Arab Emirates - Arabic</option><option data-localecode="en-ae" value="http://www.ibm.com/ae-en/?lnk=fcc">United Arab Emirates - English</option><option data-localecode="en-uk" value="http://www.ibm.com/uk-en/?lnk=fcc">United Kingdom - English</option><option data-localecode="es-uy" value="http://www.ibm.com/uy-es/?lnk=fcc">Uruguay - Spanish</option><option data-localecode="en-uz" value="http://www.ibm.com/uz-en/?lnk=fcc">Uzbekistan - English</option><option data-localecode="uz-uz" value="http://www.ibm.com/uz-uz/?lnk=fcc">Uzbekistan - Uzbek</option><option data-localecode="es-ve" value="http://www.ibm.com/ve-es/?lnk=fcc">Venezuela - Spanish</option><option data-localecode="en-vn" value="http://www.ibm.com/vn-en/?lnk=fcc">Vietnam - English</option><option data-localecode="vi-vn" value="http://www.ibm.com/vn-vi/?lnk=fcc">Vietnam - Vietnamese</option><option data-localecode="en-vg" value="http://www.ibm.com/vg-en/?lnk=fcc">Virgin Islands, British - English</option><option data-localecode="en-ye" value="http://www.ibm.com/ye-en/?lnk=fcc">Yemen - English</option><option data-localecode="en-zm" value="http://www.ibm.com/zm-en/?lnk=fcc">Zambia - English</option><option data-localecode="en-zw" value="http://www.ibm.com/zw-en/?lnk=fcc">Zimbabwe - English</option></optgroup></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-urfb-container"><span class="select2-selection__rendered" id="select2-urfb-container" title="United States - English">United States - English</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></div>
-				</div>
-			</div>
-		</div>
-	</footer>
-</div><!-- #page -->
-
-<div class="gdpr-overlay"></div>
-<div class="gdpr gdpr-privacy-preferences">
-	<div class="gdpr-wrapper">
-		<form method="post" class="gdpr-privacy-preferences-frm" action="https://developer.ibm.com/mainframe/wp-admin/admin-post.php">
-			<input type="hidden" name="action" value="gdpr_update_privacy_preferences">
-			<input type="hidden" id="update-privacy-preferences-nonce" name="update-privacy-preferences-nonce" value="7e1e09930f"><input type="hidden" name="_wp_http_referer" value="/mainframe/products/record-generator-for-java/">			<header>
-				<div class="gdpr-box-title">
-					<h3>Privacy Preference Center</h3>
-					<span class="gdpr-close"></span>
-				</div>
-			</header>
-			<div class="gdpr-mobile-menu">
-				<button type="button">Options</button>
-			</div>
-			<div class="gdpr-content">
-				<ul class="gdpr-tabs">
-					<li><button type="button" class="gdpr-tab-button gdpr-active" data-target="gdpr-consent-management">Consent Management</button></li>
-														</ul>
-				<div class="gdpr-tab-content">
-					<div class="gdpr-consent-management gdpr-active">
-						<header>
-							<h4>Consent Management</h4>
-						</header>
-						<div class="gdpr-info">
-							<p></p>
-													</div>
-					</div>
-														</div>
-				<input type="hidden" name="all_cookies" value="[]">
-			</div>
-			<footer>
-				<input type="submit" value="Save Preferences">
-							</footer>
-		</form>
-	</div>
-</div>
-
-<div class="gdpr gdpr-general-confirmation gdpr-delete-confirmation">
-	<div class="gdpr-wrapper">
-		<header>
-			<div class="gdpr-box-title">
-				<h3>Close your account?</h3>
-				<span class="gdpr-close"></span>
-			</div>
-		</header>
-		<div class="gdpr-content">
-			<p>Your account will be closed and all data will be permanently deleted and cannot be recovered. Are you sure?</p>
-		</div>
-		<footer>
-			<button class="gdpr-delete-account">Continue</button>
-			<button class="gdpr-cancel">Cancel</button>
-		</footer>
-	</div>
-</div>
-
-<script>
-        jQuery(document).ready(function($){
-          var dcName = 'mainframe';
-          // $('a').each(function(){
-          //   if(this.href.match('bluemix.net')){
-          //     if(this.search){
-          //       this.href = this.href + '&cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
-          //     }else{
-          //       this.href = this.href + '?cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
-          //     }
-          //   }
-          // });
-
-          jQuery('a[href*="bluemix.net"]').each(function(){
-            if(this.search){
-              this.href = this.href + '&cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
-            }else{
-              this.href = this.href + '?cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
-            }
-          });
-
+        jQuery('a[href*="bluemix.net"]').each(function() {
+          if (this.search) {
+            this.href =
+              this.href + "&cm_sp=dw-bluemix-_-" + dcName + "-_-devcenter";
+          } else {
+            this.href =
+              this.href + "?cm_sp=dw-bluemix-_-" + dcName + "-_-devcenter";
+          }
         });
-      </script><script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/navigation.js"></script>
-<script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/skip-link-focus-fix.js"></script>
-<script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/tactic.js"></script>
-<script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/tacticbindlinks.js"></script>
-<script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/new-tab.min.js"></script>
-<script type="text/javascript" src="./IBM-Record-Generator-for-Java_files/wp-embed.min.js"></script>
+      });
+    </script>
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/navigation.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/skip-link-focus-fix.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/tactic.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/tacticbindlinks.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/new-tab.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./IBM-Record-Generator-for-Java_files/wp-embed.min.js"
+    ></script>
 
-<script>
-	/* this is where we are going to control the main menu */
-	function changeMenu(links) {
-		IBMCore.common.module.masthead.editProfileMenu({
-			action: "replace",
-			links: links
-		});
-	}
+    <script>
+      /* this is where we are going to control the main menu */
+      function changeMenu(links) {
+        IBMCore.common.module.masthead.editProfileMenu({
+          action: "replace",
+          links: links,
+        });
+      }
 
-	var setMainMenu = function(){
-					var userLinks = [{
-				title: "My IBM",
-				url: "https://myibm.ibm.com/dashboard/?lnk=mmi"
-			},
-			{
-				title: "My developerWorks",
-				url: "https://developer.ibm.com/mydeveloperworks"
-			},
-			{
-				title: "Communities",
-				url: "//www.ibm.com/developerworks/community/groups/service/html/mycommunities?lang=en"
-			},
-			{
-				title: "Settings",
-				url: "//www.ibm.com/developerworks/community/news/?lang=en"
-			},
-			{
-				title: "Sign Out",
-				url: "https://developer.ibm.com/mainframe/wp-login.php?action=logout&amp;_wpnonce=b379020856&d=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fproducts%2Frecord-generator-for-java&lang=en_US"
-			}
-					];
-			IBMCore.common.module.masthead.showProfileLinkSignedin({
-              linkContents: "",
-              linkAlt: "Signed in as CompilerCloudServices IBM",
-              backgroundImage: "",
-              type: "default"
-                });
-			IBMCore.common.module.masthead.showProfileLinkContents();
-				changeMenu(userLinks);
-	}
+      var setMainMenu = function() {
+        var userLinks = [
+          {
+            title: "My IBM",
+            url: "https://myibm.ibm.com/dashboard/?lnk=mmi",
+          },
+          {
+            title: "My developerWorks",
+            url: "https://developer.ibm.com/mydeveloperworks",
+          },
+          {
+            title: "Communities",
+            url:
+              "//www.ibm.com/developerworks/community/groups/service/html/mycommunities?lang=en",
+          },
+          {
+            title: "Settings",
+            url: "//www.ibm.com/developerworks/community/news/?lang=en",
+          },
+          {
+            title: "Sign Out",
+            url:
+              "https://developer.ibm.com/mainframe/wp-login.php?action=logout&amp;_wpnonce=b379020856&d=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fproducts%2Frecord-generator-for-java&lang=en_US",
+          },
+        ];
+        IBMCore.common.module.masthead.showProfileLinkSignedin({
+          linkContents: "",
+          linkAlt: "Signed in as CompilerCloudServices IBM",
+          backgroundImage: "",
+          type: "default",
+        });
+        IBMCore.common.module.masthead.showProfileLinkContents();
+        changeMenu(userLinks);
+      };
 
-	IBMCore.common.module.masthead.subscribe("profileMenuReady", "customjs", setMainMenu);
-</script>
-<script>
-		(function($) {
-			$(document).ready(function(){
-				/* prevent the # links in the main menu from firing */
-				$('.ibm-sitenav-menu-list #primary-menu a').on('click.stopFakeLinks',function(e){
-					$this = $(this);
-					if($this.attr('href') === "#"){
-						return false;
-					}
-				});
+      IBMCore.common.module.masthead.subscribe(
+        "profileMenuReady",
+        "customjs",
+        setMainMenu
+      );
+    </script>
+    <script>
+      (function($) {
+        $(document).ready(function() {
+          /* prevent the # links in the main menu from firing */
+          $(".ibm-sitenav-menu-list #primary-menu a").on(
+            "click.stopFakeLinks",
+            function(e) {
+              $this = $(this);
+              if ($this.attr("href") === "#") {
+                return false;
+              }
+            }
+          );
 
-				/* bind the feedback click evnet */
-				jQuery('#dw-footer .ibm-feedbacklink a').on("click", function(evt) {
-			        evt.preventDefault();
-			        var iframeWidth = 970;
-			        if (window.innerWidth < 900) {
-			            iframeWidth = window.innerWidth - 80
-			        }
-			        IBMCore.common.widget.surveyccfintercept.initFeedback({
-			            survey: {
-			                height: 700,
-			                id: "web-exp",
-			                metaData: "",
-			                type: "medallia",
-			                width: iframeWidth
-			            }
-			        })
-			   });
-				//testing out the alpha helper
-				$('[data-alpha]').each(function(i){
-					$elm = $(this);
-					var bg = $elm.css('backgroundColor').replace(/[rgb(]/g,'').replace(/ /g,'').replace(/[)]/g,'');
-					var alpha = $elm.data('alpha')/100;
-					$elm.css("cssText", "background-color: rgba("+bg+","+alpha+") !important;");
-				})
-				//testing out the panel slider
-				$('.pn-sliding-panels').each(function(i){
-					$elm = $(this);
-					//get the width of the active panel
-					var activeWidth = $elm.data('openamount'),
-						panelCount = $elm.data('panelcount'),
-						inactiveWidth = ((100 - activeWidth) / (panelCount-1));
-					//set the first slide as active - later, allow it to be set
-					$elm.find('.pn-panel').each(function(i,item){
-						$panel = $(item);
-						$panel.data('closedwidth',inactiveWidth);
-						$panel.data('openwidth',activeWidth);
-						if(i == 0){
-							$panel.addClass('pn-panel__active').css({width:activeWidth+'%'});
-						}else{
-							$panel.css({width:inactiveWidth+'%'});
-						}
-					});
+          /* bind the feedback click evnet */
+          jQuery("#dw-footer .ibm-feedbacklink a").on("click", function(evt) {
+            evt.preventDefault();
+            var iframeWidth = 970;
+            if (window.innerWidth < 900) {
+              iframeWidth = window.innerWidth - 80;
+            }
+            IBMCore.common.widget.surveyccfintercept.initFeedback({
+              survey: {
+                height: 700,
+                id: "web-exp",
+                metaData: "",
+                type: "medallia",
+                width: iframeWidth,
+              },
+            });
+          });
+          //testing out the alpha helper
+          $("[data-alpha]").each(function(i) {
+            $elm = $(this);
+            var bg = $elm
+              .css("backgroundColor")
+              .replace(/[rgb(]/g, "")
+              .replace(/ /g, "")
+              .replace(/[)]/g, "");
+            var alpha = $elm.data("alpha") / 100;
+            $elm.css(
+              "cssText",
+              "background-color: rgba(" + bg + "," + alpha + ") !important;"
+            );
+          });
+          //testing out the panel slider
+          $(".pn-sliding-panels").each(function(i) {
+            $elm = $(this);
+            //get the width of the active panel
+            var activeWidth = $elm.data("openamount"),
+              panelCount = $elm.data("panelcount"),
+              inactiveWidth = (100 - activeWidth) / (panelCount - 1);
+            //set the first slide as active - later, allow it to be set
+            $elm.find(".pn-panel").each(function(i, item) {
+              $panel = $(item);
+              $panel.data("closedwidth", inactiveWidth);
+              $panel.data("openwidth", activeWidth);
+              if (i == 0) {
+                $panel
+                  .addClass("pn-panel__active")
+                  .css({ width: activeWidth + "%" });
+              } else {
+                $panel.css({ width: inactiveWidth + "%" });
+              }
+            });
 
-					$elm.on('click.slide','.pn-panel',function(e){
-						$this = $(this);
-						//console.info('clicked')
-						if($this.hasClass('pn-panel__active')){
-							//allow for the links in the active panel to be clicked
-							//console.info('im open, let the links through')
-						}else{
-							e.preventDefault();
-							//set the width of the currently active panel to the closed amount
-							var $active = $this.parents('.pn-sliding-panels').find('.pn-panel__active');
-								$active.css({width:$active.data('closedwidth')+'%'}).removeClass('pn-panel__active');
-							$this.addClass('pn-panel__active').css({width:$this.data('openwidth')+'%'});
-						}
+            $elm.on("click.slide", ".pn-panel", function(e) {
+              $this = $(this);
+              //console.info('clicked')
+              if ($this.hasClass("pn-panel__active")) {
+                //allow for the links in the active panel to be clicked
+                //console.info('im open, let the links through')
+              } else {
+                e.preventDefault();
+                //set the width of the currently active panel to the closed amount
+                var $active = $this
+                  .parents(".pn-sliding-panels")
+                  .find(".pn-panel__active");
+                $active
+                  .css({ width: $active.data("closedwidth") + "%" })
+                  .removeClass("pn-panel__active");
+                $this
+                  .addClass("pn-panel__active")
+                  .css({ width: $this.data("openwidth") + "%" });
+              }
+            });
+          });
+        });
+      })(jQuery);
+    </script>
 
-					})
-				});
-
-			})
-		})( jQuery );
-	</script>
-
-	
-
-
-<div id="ibm-overlay-backdrop"></div><div class="pn-modal-overlay" style="display: none;"></div><div class="pn-modal" style="display: none;"><div class="pn-modal-wrap"><div class="pn-modal-hd">Header Here</div><div class="pn-modal-bd"></div><div class="pn-modal-ft"></div><a href="https://developer.ibm.com/mainframe/products/record-generator-for-java/#" class="pn-modal-close">x</a></div></div><div id="ibm-mobilemenu-screen"></div></body></html>
+    <div id="ibm-overlay-backdrop"></div>
+    <div class="pn-modal-overlay" style="display: none;"></div>
+    <div class="pn-modal" style="display: none;">
+      <div class="pn-modal-wrap">
+        <div class="pn-modal-hd">Header Here</div>
+        <div class="pn-modal-bd"></div>
+        <div class="pn-modal-ft"></div>
+        <a
+          href="https://developer.ibm.com/mainframe/products/record-generator-for-java/#"
+          class="pn-modal-close"
+          >x</a
+        >
+      </div>
+    </div>
+    <div id="ibm-mobilemenu-screen"></div>
+  </body>
+</html>
