@@ -1268,6 +1268,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
     <link href="./eclipse-tools_files/www.css" rel="stylesheet" />
     <link href="./eclipse-tools_files/grid-fluid.css" rel="stylesheet" />
     <link href="./eclipse-tools_files/tables.css" rel="stylesheet" />
+    <link href="./index.css" rel="stylesheet" />
 
     <script type="text/javascript">
       IBMCore.common.util.config.set({
@@ -4147,6 +4148,50 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                     >How do I decide?</a
                                   >
                                 </p>
+                                <div
+                                  class="ibm-common-overlay"
+                                  data-widget="overlay"
+                                  id="aquamodal"
+                                >
+                                  <h2>Aqua release train version</h2>
+                                  <p>
+                                    IBM Explorer for z/OS Aqua (or simply Aqua)
+                                    is a continuous delivery release train
+                                    platform that brings together a set of
+                                    Eclipse-based mainframe development tools
+                                    and offerings in order to provide z/OS
+                                    application developers and system
+                                    programmers an easy way to install, deploy
+                                    and maintain our IBM Eclipse-based products.
+                                  </p>
+
+                                  <h3 class="ibm-h4">
+                                    What is the difference between the versions
+                                    of Aqua?
+                                  </h3>
+
+                                  <p>
+                                    Each version of Aqua is based on a different
+                                    version of Eclipse. New features and
+                                    products will be integrated with newer
+                                    versions of Aqua while the previous versions
+                                    will remain in support mode moving forward.
+                                  </p>
+                                  <h3 class="ibm-h4">
+                                    Can I upgrade an Aqua environment directly
+                                    to another version?
+                                  </h3>
+                                  <p>
+                                    It is not possible to install plug-ins and
+                                    tools onto an Aqua environment that is from
+                                    a different Aqua version since each version
+                                    is based on a specific Eclipse iteration. To
+                                    move from one Aqua version to another (eg.
+                                    Aqua 3.0 to Aqua 3.1 or Aqua 3.2), you will
+                                    need a fresh environment and from there you
+                                    can bring over the workspace data.
+                                  </p>
+                                </div>
                                 <div class="ibm-fluid">
                                   <div
                                     id="step2-32"
@@ -4323,6 +4368,85 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                     >How do I decide?</a
                                   >
                                 </p>
+                                <div
+                                  class="ibm-common-overlay"
+                                  data-widget="overlay"
+                                  id="methodmodal"
+                                >
+                                  <h2>Aqua tools packaging formats</h2>
+                                  <p>
+                                    The IBM Aqua products can be installed using
+                                    two different packaging formats:
+                                    <span class="ibm-bold"
+                                      >IBM Installation Manager</span
+                                    >
+                                    or <span class="ibm-bold">Eclipse p2</span>.
+                                  </p>
+
+                                  <h3 class="ibm-h4">
+                                    IBM Installation Manager (IM)
+                                  </h3>
+
+                                  <p>
+                                    IBM Installation Manager is IBM’s solution
+                                    for managing Eclipse-based tools such as
+                                    Aqua tools. You install a separate utility
+                                    (IBM Installation Manager) that keeps track
+                                    of your installed Eclipse-based tools and is
+                                    able to modify and extend those tools. Some
+                                    Aqua tools must be installed using IBM
+                                    Installation Manager — they are not
+                                    available via Eclipse p2.
+                                  </p>
+
+                                  <h3 class="ibm-h4">Eclipse p2</h3>
+
+                                  <p>
+                                    Eclipse p2 is an installation technology
+                                    built into Eclipse tools. It can be accessed
+                                    using the built-in ‘Install New Software’
+                                    option. It can often be the quickest way to
+                                    get going, though not all Aqua tools are
+                                    available via Eclipse p2.
+                                  </p>
+
+                                  <h3 class="ibm-h4">Making a choice</h3>
+
+                                  <p>
+                                    When choosing the packaging format, ask
+                                    these questions:
+                                  </p>
+
+                                  <ul>
+                                    <li>
+                                      Are all the tools I want to install
+                                      together supported by this packaging
+                                      format? Also consider tools you may want
+                                      to install in the same Eclipse in future.
+                                      Once you start to create an Eclipse with
+                                      one of these methods, it’s important to
+                                      continue to use the same method if you
+                                      extend it. This avoids the package
+                                      managers getting confused, resulting in
+                                      errors. You can see which packaging
+                                      formats support which tools in the table
+                                      of all tools.
+                                    </li>
+                                    <li>
+                                      Do you have an existing enterprise
+                                      deployment tool that you will use for
+                                      rollout? Does it already have a way of
+                                      supporting IBM Installation Manager or
+                                      Eclipse p2?
+                                    </li>
+                                    <li>
+                                      Do you just want to try out a tool
+                                      quickly? Using Eclipse p2 will get you
+                                      going faster.
+                                    </li>
+                                  </ul>
+                                </div>
+
                                 <div class="ibm-fluid">
                                   <div
                                     id="step3-im"
