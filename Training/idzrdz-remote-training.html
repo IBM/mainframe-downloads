@@ -1,0 +1,3104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://developer.ibm.com/mainframe/idzrdz-remote-training/ -->
+<html
+  lang="en-US"
+  prefix="og: http://ogp.me/ns#"
+  style=""
+  class="applicationcache geolocation history postmessage svg websockets localstorage sessionstorage websqldatabase webworkers hashchange pointerevents canvas audio canvastext video webgl cssgradients multiplebgs opacity rgba inlinesvg hsla supports svgclippaths smil no-touchevents fontface generatedcontent textshadow cssanimations backgroundsize borderimage borderradius boxshadow csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox flexboxlegacy cssreflections csstransforms csstransforms3d csstransitions indexeddb indexeddb-deletedatabase js ibm-v18 ibm-cxtype-4g hires mac chrome chrome8 webkit webkit5 ibm-grid-xlarge"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- SITE MON : START (DO NOT DELETE) -->
+    <!-- developerWorks monitoring token -->
+    <!-- SITE MON : END (DO NOT DELETE) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- v18 meta -->
+    <meta name="geo.country" content="ZZ" />
+    <meta name="dcterms.rights" content="� Copyright IBM Corp. 2016" />
+    <meta name="dcterms.date" content="2016-07-18" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index, follow" />
+    <link rel="shortcut icon" href="https://www.ibm.com/favicon.ico" />
+
+    <!-- end of v18 meta -->
+
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link
+      rel="pingback"
+      href="https://developer.ibm.com/mainframe/xmlrpc.php"
+    />
+    <script>
+      digitalData = {
+        page: {
+          category: {
+            primaryCategory: "SOFDCMFDZZ",
+            ibm: [],
+          },
+          pageInfo: {
+            effectiveDate: "2016-07-18",
+            expiryDate: "2020-07-18",
+            language: "en-US",
+            publishDate: "2017-09-27",
+            publisher: "IBM Corporation",
+            version: "v18",
+            pageID: "",
+            ibm: {
+              contentDelivery: "HTML",
+              contentProducer: "IBM Northstar Template Generator 2.0",
+              country: "ZZ",
+              industry: "ZZ",
+              owner: "Jamie Pickett\/Boulder\/IBM",
+              siteID: "DWNEXT",
+              subject: "SW700",
+              type: "SW700",
+              cmClientID: "50200000| DWNEXT",
+              encoding: "utf8",
+              encodingRaw: "utf-8",
+              title: "Mainframe DEV",
+              contentType: "page",
+              wpid: "46",
+              topics: "",
+              contentArea: "",
+            },
+            metrics: [],
+            keywords: "",
+            description:
+              "Mainframe DEV - Enterprise Modernization and Mainframe Development",
+          },
+          attributes: [],
+        },
+        event_coordinator: [],
+        isLoaded: true,
+        user: {
+          profile: [],
+          segment: {},
+        },
+      };
+    </script>
+    <title>IDz/RDz Remote Training - Mainframe DEV</title>
+
+    <!-- This site is optimized with the Yoast SEO plugin v9.0.2 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta
+      name="description"
+      content="IDz/RDz remote training led by IBM expert instructors is currently offered in 2020 and requires no registration to attend."
+    />
+    <link
+      rel="canonical"
+      href="https://developer.ibm.com/mainframe/idzrdz-remote-training/"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="IDz/RDz Remote Training - Mainframe DEV"
+    />
+    <meta
+      property="og:description"
+      content="IDz/RDz remote training led by IBM expert instructors is currently offered in 2020 and requires no registration to attend."
+    />
+    <meta
+      property="og:url"
+      content="https://developer.ibm.com/mainframe/idzrdz-remote-training/"
+    />
+    <meta property="og:site_name" content="Mainframe DEV" />
+    <meta
+      property="og:image"
+      content="https://developer.ibm.com/mainframe/wp-content/uploads/sites/46/2019/02/idzrdzhero-1.png"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://developer.ibm.com/mainframe/wp-content/uploads/sites/46/2019/02/idzrdzhero-1.png"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https:\/\/schema.org",
+        "@type": "Organization",
+        "url": "https:\/\/developer.ibm.com\/mainframe\/",
+        "sameAs": [],
+        "@id": "https:\/\/developer.ibm.com\/mainframe\/#organization",
+        "name": "IBM",
+        "logo": ""
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https:\/\/schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@id": "https:\/\/developer.ibm.com\/mainframe\/",
+              "name": "Home"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@id": "https:\/\/developer.ibm.com\/mainframe\/idzrdz-remote-training\/",
+              "name": "IDz\/RDz Remote Training"
+            }
+          }
+        ]
+      }
+    </script>
+    <!-- / Yoast SEO plugin. -->
+
+    <link rel="dns-prefetch" href="https://1.www.s81c.com/" />
+    <link rel="dns-prefetch" href="https://www.ibm.com/" />
+    <link rel="dns-prefetch" href="https://s.w.org/" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Mainframe DEV » Feed"
+      href="https://developer.ibm.com/mainframe/feed/"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Mainframe DEV » Comments Feed"
+      href="https://developer.ibm.com/mainframe/comments/feed/"
+    />
+    <meta
+      name="segment"
+      property="developerWorks (developerWorks)"
+      producttitle="developerWorks"
+      value="Mainframe DEV (developerWorks)"
+    />
+    <script type="text/javascript">
+      window._wpemojiSettings = {
+        baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/",
+        ext: ".png",
+        svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/",
+        svgExt: ".svg",
+        source: {
+          concatemoji:
+            "\/\/dw1.s81c.com\/dw\/wp-includes\/js\/wp-emoji-release.min.js",
+        },
+      };
+      !(function(a, b, c) {
+        function d(a, b) {
+          var c = String.fromCharCode;
+          l.clearRect(0, 0, k.width, k.height),
+            l.fillText(c.apply(this, a), 0, 0);
+          var d = k.toDataURL();
+          l.clearRect(0, 0, k.width, k.height),
+            l.fillText(c.apply(this, b), 0, 0);
+          var e = k.toDataURL();
+          return d === e;
+        }
+        function e(a) {
+          var b;
+          if (!l || !l.fillText) return !1;
+          switch (((l.textBaseline = "top"), (l.font = "600 32px Arial"), a)) {
+            case "flag":
+              return (
+                !(b = d(
+                  [55356, 56826, 55356, 56819],
+                  [55356, 56826, 8203, 55356, 56819]
+                )) &&
+                ((b = d(
+                  [
+                    55356,
+                    57332,
+                    56128,
+                    56423,
+                    56128,
+                    56418,
+                    56128,
+                    56421,
+                    56128,
+                    56430,
+                    56128,
+                    56423,
+                    56128,
+                    56447,
+                  ],
+                  [
+                    55356,
+                    57332,
+                    8203,
+                    56128,
+                    56423,
+                    8203,
+                    56128,
+                    56418,
+                    8203,
+                    56128,
+                    56421,
+                    8203,
+                    56128,
+                    56430,
+                    8203,
+                    56128,
+                    56423,
+                    8203,
+                    56128,
+                    56447,
+                  ]
+                )),
+                !b)
+              );
+            case "emoji":
+              return (
+                (b = d(
+                  [55358, 56760, 9792, 65039],
+                  [55358, 56760, 8203, 9792, 65039]
+                )),
+                !b
+              );
+          }
+          return !1;
+        }
+        function f(a) {
+          var c = b.createElement("script");
+          (c.src = a),
+            (c.defer = c.type = "text/javascript"),
+            b.getElementsByTagName("head")[0].appendChild(c);
+        }
+        var g,
+          h,
+          i,
+          j,
+          k = b.createElement("canvas"),
+          l = k.getContext && k.getContext("2d");
+        for (
+          j = Array("flag", "emoji"),
+            c.supports = { everything: !0, everythingExceptFlag: !0 },
+            i = 0;
+          i < j.length;
+          i++
+        )
+          (c.supports[j[i]] = e(j[i])),
+            (c.supports.everything = c.supports.everything && c.supports[j[i]]),
+            "flag" !== j[i] &&
+              (c.supports.everythingExceptFlag =
+                c.supports.everythingExceptFlag && c.supports[j[i]]);
+        (c.supports.everythingExceptFlag =
+          c.supports.everythingExceptFlag && !c.supports.flag),
+          (c.DOMReady = !1),
+          (c.readyCallback = function() {
+            c.DOMReady = !0;
+          }),
+          c.supports.everything ||
+            ((h = function() {
+              c.readyCallback();
+            }),
+            b.addEventListener
+              ? (b.addEventListener("DOMContentLoaded", h, !1),
+                a.addEventListener("load", h, !1))
+              : (a.attachEvent("onload", h),
+                b.attachEvent("onreadystatechange", function() {
+                  "complete" === b.readyState && c.readyCallback();
+                })),
+            (g = c.source || {}),
+            g.concatemoji
+              ? f(g.concatemoji)
+              : g.wpemoji && g.twemoji && (f(g.twemoji), f(g.wpemoji)));
+      })(window, document, window._wpemojiSettings);
+    </script>
+    <script
+      src="./idzrdz-remote-training_files/wp-emoji-release.min.js"
+      type="text/javascript"
+      defer=""
+    ></script>
+    <style type="text/css">
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="gdpr-css"
+      href="./idzrdz-remote-training_files/gdpr-public.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="tab-styles-css"
+      href="./idzrdz-remote-training_files/tab-styles.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="home-v17-styles-css"
+      href="./idzrdz-remote-training_files/home.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="rotatingtweets-css"
+      href="./idzrdz-remote-training_files/style.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="dwboomer-style-css"
+      href="./idzrdz-remote-training_files/style(1).css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="dashicons-css"
+      href="./idzrdz-remote-training_files/dashicons.min.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="pagepost_css-css"
+      href="./idzrdz-remote-training_files/pagepost.css"
+      type="text/css"
+      media="all"
+    />
+    <style id="pagepost_css-inline-css" type="text/css">
+      div#modules .ibm-show-hide h2 {
+        font-size: 1.1em;
+      }
+
+      table th {
+        font-weight: bold !important;
+      }
+
+      img.headerimg {
+        width: 100%;
+        margin-top: -60px;
+        display: inline-block;
+      }
+
+      span.apac,
+      span.eur,
+      span.americas {
+        display: inline-block;
+        width: 100%;
+        font-weight: 500;
+        font-size: 0.9em;
+        padding-left: 10px;
+        line-height: 1.2;
+      }
+
+      span.apac {
+        border-left: 6px solid #da1e28;
+        color: #da1e28;
+      }
+      span.eur {
+        border-left: 6px solid #0062ff;
+        color: #0062ff;
+      }
+      span.americas {
+        border-left: 6px solid #242a2e;
+        color: #242a2e;
+      }
+
+      span.date {
+        font-weight: 600;
+      }
+
+      span.idz-exp {
+        color: #4178be;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="pnext.utils-css"
+      href="./idzrdz-remote-training_files/pnext.utils.css"
+      type="text/css"
+      media="all"
+    />
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/www.js"
+    ></script>
+    <style></style>
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/jquery.cycle.all.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/rotating_tweet.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/dyntabs.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/masonry.js"
+    ></script>
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var GDPR = {
+        ajaxurl:
+          "https:\/\/developer.ibm.com\/mainframe\/wp-admin\/admin-ajax.php",
+        aborting: "Aborting",
+        is_user_logged_in: "",
+        privacy_page_id: "0",
+      };
+      /* ]]> */
+    </script>
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/gdpr-public.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/tab-dropdown.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/mainframe.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/pnext.utils.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/ida_stats.js"
+    ></script>
+    <link
+      rel="https://api.w.org/"
+      href="https://developer.ibm.com/mainframe/wp-json/"
+    />
+    <link
+      rel="EditURI"
+      type="application/rsd+xml"
+      title="RSD"
+      href="https://developer.ibm.com/mainframe/xmlrpc.php?rsd"
+    />
+    <link
+      rel="wlwmanifest"
+      type="application/wlwmanifest+xml"
+      href="https://developer.ibm.com/mainframe/wp-includes/wlwmanifest.xml"
+    />
+    <meta name="generator" content="WordPress 4.9.9" />
+    <link rel="shortlink" href="https://developer.ibm.com/mainframe/?p=9219" />
+    <link
+      rel="alternate"
+      type="application/json+oembed"
+      href="https://developer.ibm.com/mainframe/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fidzrdz-remote-training%2F"
+    />
+    <link
+      rel="alternate"
+      type="text/xml+oembed"
+      href="https://developer.ibm.com/mainframe/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fidzrdz-remote-training%2F&amp;format=xml"
+    />
+
+    <link href="./idzrdz-remote-training_files/www.css" rel="stylesheet" />
+    <link
+      href="./idzrdz-remote-training_files/grid-fluid.css"
+      rel="stylesheet"
+    />
+    <link href="./idzrdz-remote-training_files/tables.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+      IBMCore.common.util.config.set({
+        masthead: {
+          type: "alternate",
+        },
+        greeting: { enabled: false },
+        footer: {
+          type: "alternate",
+          socialLinks: {
+            enabled: false,
+          },
+        },
+        survey: { global_percent: 0 },
+      });
+    </script>
+    <style id="ibm-masthead-hidelinks">
+      @media screen and (max-width: 457px) {
+        .ibm-masthead-categories,
+        #ibm-megamenu-sections {
+          display: none;
+        }
+      }
+    </style>
+    <style id="ibm-sitenav-menu-hidelinks">
+      @media screen and (max-width: 1075px) {
+        .ibm-sitenav-menu-container .ibm-sitenav-menu-list > ul > li {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 1076px) {
+        .ibm-mobilemenu-sitenavmenu > ul > li {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    id="ibm-com"
+    class="page-template page-template-page-templates page-template-empty-container page-template-page-templatesempty-container-php page page-id-9219 ibm-com ibm-type group-blog ibm-sitenav-menu"
+  >
+    <style>
+      .code_p_announcement .code_content__wrap {
+        background: #4178be;
+        position: relative;
+        overflow: hidden;
+        padding-right: 3rem;
+      }
+      .code_p_announcement .code_content__wrap p {
+        display: table;
+        width: auto;
+        margin: 0 auto;
+        padding: 1rem 0.5rem;
+        color: #ffffff;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.125rem;
+        letter-spacing: 0.16px;
+        word-break: break-word;
+        text-decoration: none;
+      }
+      .code_p_announcement .code_content__wrap p .ibm-btn-sec.ibm-btn-white {
+        margin-left: 0.5rem;
+        text-decoration: none;
+        padding: 0.75rem;
+        cursor: pointer;
+        font-size: 0.875rem;
+      }
+      .code_p_announcement .code_content__wrap .announce_link {
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 1rem 0;
+      }
+    </style>
+    <div style="display:none">page-templates/empty-container.php</div>
+    <!--div id="page" class="site"-->
+    <div id="ibm-top" class="ibm-landing-page">
+      <a
+        class="skip-link screen-reader-text"
+        href="https://developer.ibm.com/mainframe/idzrdz-remote-training/#main"
+        >Skip to content</a
+      >
+
+      <!-- MASTHEAD_BEGIN -->
+      <div
+        id="ibm-masthead"
+        role="banner"
+        aria-label="IBM"
+        class="ibm-mhtype-minimal"
+      >
+        <div id="ibm-mast-options">
+          <ul role="toolbar" aria-labelledby="ibm-masthead">
+            <li id="ibm-geo" role="presentation">
+              <a href="http://www.ibm.com/planetwide/select/selector.html"
+                >United States</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div id="ibm-universal-nav" class="">
+          <div id="ibm-home">
+            <a href="http://www.ibm.com/us-en/?lnk=m">IBM�</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ibm-mobilemenu ibm-hide"
+        id="ibm-burger-menu-container"
+        aria-labelledby="ibm-burgermenu-a11y"
+        role="dialog"
+        tabindex="0"
+      >
+        <p class="ibm-hide" id="ibm-burgermenu-a11y">Site navigation</p>
+        <div class="ibm-mobilemenu-close">
+          <p class="ibm-icononly ibm-fright ibm-ind-link ibm-nospacing">
+            <a
+              class="ibm-close-link"
+              href="https://developer.ibm.com/mainframe/idzrdz-remote-training/?lnk=hm#"
+              >Close</a
+            >
+          </p>
+        </div>
+        <div class="ibm-mobilemenu-section ibm-mobilemenu-sitenavmenu">
+          <ul id="primary-menu" class="menu">
+            <li class="ibm-mobile-section-heading ibm-mobile-sitename">
+              <a href="https://developer.ibm.com/mainframe/?lnk=hm" rel="home"
+                >Mainframe DEV</a
+              >
+            </li>
+            <li
+              id="menu-item-1540"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1540"
+            >
+              <a href="https://developer.ibm.com/mainframe?lnk=hm" tabindex="0"
+                >Home</a
+              >
+            </li>
+            <li
+              id="menu-item-4064"
+              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4064"
+            >
+              <a
+                href="https://developer.ibm.com/mainframe/products/downloads/?lnk=hm"
+                tabindex="-1"
+                >Downloads</a
+              >
+            </li>
+            <li
+              id="menu-item-16086"
+              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16086"
+            >
+              <a
+                href="https://developer.ibm.com/mainframe/products/devops-acceleration-program/training/?lnk=hm"
+                tabindex="-1"
+                >Training</a
+              >
+            </li>
+            <li
+              id="menu-item-14411"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14411"
+            >
+              <a
+                href="https://developer.ibm.com/mainframe/products/documentation/?lnk=hm"
+                tabindex="-1"
+                >Documentation</a
+              >
+              <ul class="sub-menu">
+                <li
+                  id="menu-item-14412"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14412"
+                >
+                  <a
+                    href="https://developer.ibm.com/mainframe/products/documentation/kc/?lnk=hm"
+                    ><span>IBM KCCI (Local)</span></a
+                  >
+                </li>
+                <li
+                  id="menu-item-14413"
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14413"
+                >
+                  <a href="https://www.ibm.com/support/knowledgecenter/?lnk=hm"
+                    ><span>IBM Knowledge Center</span></a
+                  >
+                </li>
+                <li
+                  id="menu-item-22185"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22185"
+                >
+                  <a
+                    href="https://developer.ibm.com/mainframe/products/host-configuration-assistant-for-z-development/?lnk=hm"
+                    ><span
+                      >Host Configuration Assistant for Z Development</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li
+              id="menu-item-31"
+              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"
+            >
+              <a
+                href="https://developer.ibm.com/mainframe/blog/?lnk=hm"
+                tabindex="-1"
+                >Blogs</a
+              >
+            </li>
+            <li
+              id="menu-item-9254"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9254"
+            >
+              <a
+                href="https://developer.ibm.com/mainframe/announcements/?lnk=hm"
+                tabindex="-1"
+                >Announcements</a
+              >
+              <ul class="sub-menu">
+                <li
+                  id="menu-item-13727"
+                  class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13727"
+                >
+                  <a
+                    href="https://developer.ibm.com/mainframe/category/announcements/release-notes/ibm-z-os-explorer-aqua/?lnk=hm"
+                    ><span>Release notes for Aqua</span></a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li
+              id="menu-item-386"
+              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"
+            >
+              <a
+                href="https://developer.ibm.com/mainframe/events/?lnk=hm"
+                tabindex="-1"
+                >Events</a
+              >
+            </li>
+            <li
+              id="menu-item-33"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"
+            >
+              <a
+                href="https://developer.ibm.com/answers/smartspace/mainframe/?lnk=hm"
+                tabindex="-1"
+                >Forum</a
+              >
+            </li>
+            <li
+              id="menu-item-51"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51"
+            >
+              <a
+                href="https://developer.ibm.com/mainframe/videos?lnk=hm"
+                tabindex="-1"
+                >Videos</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="ibm-mobilemenu-section">
+          <ul class="ibm-mobilemenu-mhlinks" aria-label="Discover IBM">
+            <li>
+              <div
+                data-widget="showhide"
+                data-type="panel"
+                class="ibm-show-hide ibm-widget-processed"
+              >
+                <h2>
+                  <a href="javascript:void();">Products &amp; Solutions</a>
+                </h2>
+                <div class="ibm-container-body" style="display: none;">
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/products?lnk=hmhpmps_bupr&amp;lnk2=link"
+                        ><span>Top products &amp; platforms</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/industries?lnk=hmhpmps_buin&amp;lnk2=link"
+                        ><span>Industries</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/artificial-intelligence?lnk=hmhpmps_buai&amp;lnk2=link"
+                        ><span>Artificial intelligence</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/blockchain?lnk=hmhpmps_bubc&amp;lnk2=link"
+                        ><span>Blockchain</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/automation?lnk=hmhpmps_buau&amp;lnk2=link"
+                        ><span>Business automation</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/business-operations?lnk=hmhpmps_buop&amp;lnk2=link"
+                        ><span>Business operations</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/cloud/products?lnk=hmhpmps_bucl&amp;lnk2=link"
+                        ><span>Cloud computing</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/analytics?lnk=hmhpmps_buda&amp;lnk2=link"
+                        ><span>Data &amp; Analytics</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/it-infrastructure/?lnk=hmhpmps_buit&amp;lnk2=link"
+                        ><span>IT infrastructure</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/security?lnk=hmhpmps_buse&amp;lnk2=link"
+                        ><span>Security</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/supply-chain?lnk=hmhpmps_busc&amp;lnk2=link"
+                        ><span>Supply chain</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/financing?lnk=hmhpmps_bufi&amp;lnk2=link"
+                        ><span
+                          >Payment plans for Products &amp; Solutions</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/products?lnk=hmhpmps_buall&amp;lnk2=link"
+                        ><span>View all products</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                data-widget="showhide"
+                data-type="panel"
+                class="ibm-show-hide ibm-widget-processed"
+              >
+                <h2>
+                  <a href="javascript:void();">Services &amp; Consulting</a>
+                </h2>
+                <div class="ibm-container-body" style="display: none;">
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/services/process?lnk=hmhpmsc_bups&amp;lnk2=link"
+                        ><span>Business process services</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/services/ibmix/?lnk=hmhpmsc_budbs&amp;lnk2=link"
+                        ><span>Design &amp; business strategy</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/services/?lnk=hmhpmsc_buhs&amp;lnk2=link"
+                        ><span>Hybrid multicloud services</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/talent-management?lnk=hmhpmsc_buta&amp;lnk2=link"
+                        ><span>Talent &amp; transformation</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/services/applications?lnk=hmhpmsc_buas&amp;lnk2=link"
+                        ><span>Application services</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/security/services?lnk=hmhpmsc_buse&amp;lnk2=link"
+                        ><span>Security services</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/services/technology-support?lnk=hmhpmsc_busv&amp;lnk2=link"
+                        ><span>Services for tech support</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/financing/solutions/it-services-financing?lnk=hmhpmsc_bufi&amp;lnk2=link"
+                        ><span
+                          >Payment plans for Services &amp; Consulting</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/services?lnk=hmhpmsc_buall&amp;lnk2=link"
+                        ><span>View all services</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                data-widget="showhide"
+                data-type="panel"
+                class="ibm-show-hide ibm-widget-processed"
+              >
+                <h2><a href="javascript:void();">Learn &amp; Support</a></h2>
+                <div class="ibm-container-body" style="display: none;">
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/support?lnk=hmhpmls_busu&amp;lnk2=link"
+                        ><span>Support</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/support/knowledgecenter/?lnk=hmhpmls_budc&amp;lnk2=link"
+                        ><span>Documentation</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://developer.ibm.com/?lnk=hmhpmls_bude&amp;lnk2=link"
+                        ><span>Developer education</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/training/?lnk=hmhpmls_butr&amp;lnk2=link"
+                        ><span>Training</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/blogs/?lnk=hmhpmls_bure&amp;lnk2=link"
+                        ><span>Resources</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/cloud/learn?lnk=hmhpmls_buwi&amp;lnk2=link"
+                        ><span>What is...</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                data-widget="showhide"
+                data-type="panel"
+                class="ibm-show-hide ibm-widget-processed"
+              >
+                <h2><a href="javascript:void();">Explore more</a></h2>
+                <div class="ibm-container-body" style="display: none;">
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/partnerworld/public?lnk=hmhpmex_bupa&amp;lnk2=link"
+                        ><span>Partners</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.research.ibm.com/?lnk=hmhpmex_bure&amp;lnk2=link"
+                        ><span>IBM Research</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/ibm/us/en?lnk=hmhpmex_buab&amp;lnk2=link"
+                        ><span>About IBM</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                data-widget="showhide"
+                data-type="panel"
+                class="ibm-show-hide ibm-widget-processed"
+              >
+                <h2><a href="javascript:void();">COVID-19</a></h2>
+                <div class="ibm-container-body" style="display: none;">
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/redirect-marketplace/impact/covid-19/business-solutions?lnk=hm"
+                        ><span>Business solutions</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.ibm.com/redirect-marketplace/impact/covid-19/?lnk=hm"
+                        ><span>Science and technology</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://newsroom.ibm.com/COVID-19?lnk=hmhpmcov_ns&amp;lnk2=link"
+                        ><span>News and resources</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ibm-mhplaceholder ibm-hide"></div>
+      <!-- MASTHEAD_END -->
+      <div id="ibm-content-wrapper">
+        <header role="banner" aria-labelledby="ibm-pagetitle-h1">
+          <!-- MASTHEAD_SITENAV_BEGIN -->
+          <div class="ibm-sitenav-menu-container" data-widgetprocessed="true">
+            <div class="ibm-sitenav-menu-list">
+              <ul id="primary-menu" class="menu">
+                <li
+                  id="menu-item-386"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"
+                >
+                  <a href="../whatisnew.html" tabindex="-1">What's New</a>
+                </li>
+                <li
+                  id="menu-item-4064"
+                  class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-1533 menu-item-4064"
+                >
+                  <a href="../index.html" tabindex="-1">Downloads</a>
+                </li>
+
+                <li
+                  id="menu-item-16086"
+                  class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-16082 current_page_item menu-item-16086"
+                >
+                  <a href="Training.html" tabindex="-1">Training</a>
+                </li>
+
+                <li
+                  id="menu-item-14411"
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14411"
+                >
+                  <a href="../kc.html" tabindex="-1">Documentation</a>
+                  <ul class="sub-menu">
+                    <li
+                      id="menu-item-14412"
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14412"
+                    >
+                      <a href="../kc.html">IBM KCCI (Local)</a>
+                    </li>
+                    <li
+                      id="menu-item-14413"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14413"
+                    >
+                      <a href="https://www.ibm.com/support/knowledgecenter/"
+                        >IBM Knowledge Center</a
+                      >
+                    </li>
+                    <li
+                      id="menu-item-22185"
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22185"
+                    >
+                      <a href="../host-configuration-assistant.html"
+                        >Host Configuration Assistant for Z Development</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- MASTHEAD_SITENAV_END -->
+        </header>
+        <style>
+          #ibm-com .gsc-adBlock {
+            display: none !important;
+          }
+        </style>
+        <div id="content" class="site-content">
+          <div class="ibm-fluid content-area-restricted pnpagepost">
+            <header class="pagepost-entry-header">
+              <h1 class="entry-title">IDz/RDz Remote Training</h1>
+            </header>
+            <!-- .entry-header -->
+            <div id="primary" class="content-area">
+              <main id="main" class="site-main" role="main" aria-label="">
+                <div class="entry-content">
+                  <!--Because the_content() works only inside a WP Loop -->
+                  <img
+                    class="headerimg"
+                    src="./idzrdz-remote-training_files/idzrdzhero-1.png"
+                  />
+
+                  <h2>Overview</h2>
+                  <p>
+                    This year we are presenting several iterations of the
+                    complete (no-charge) IDz Entry Level Training courses, along
+                    with Experienced User topics such as
+                    <strong>
+                      Code Review, Code Coverage, Integration with Open Source
+                      DevOps tooling, etc.</strong
+                    >
+                    <br /><br />
+                    The <strong> Entry Level Training</strong> consists of
+                    multiple hour-long hands-on-workshop modules that are
+                    delivered through
+                    <strong>
+                      interactive, instructor-led web-conferences
+                    </strong>
+                    ... an extremely effective training venue utilizing open
+                    Q&amp;A, flexible class delivery, remote-mentoring, greater
+                    absorption of the material, etc.
+                    <br /><br />
+                    These sessions cover all of the skills &amp; knowledge
+                    needed to master IDz, enabling you for high-productivity
+                    z/OS COBOL application work with the tools. Please note that
+                    there is no need to register for any of the classes. Simply
+                    follow the
+                    <strong>"Getting Started Notes" </strong> instructions
+                    below. <br /><br />Also note that you may attend any session
+                    you'd like - from any iteration at any time.
+                    <span class="idz-exp"
+                      ><strong>
+                        However the Entry Level classes are designed as
+                        sequenced educational content, with materials that build
+                        upon previous topics.</strong
+                      ></span
+                    >
+                    It is recommended that you proceed through the courses from
+                    Module-1 thru Module-9 (see details below on the individual
+                    module topics).
+                  </p>
+                  <hr />
+                  <h2>Getting Started Notes</h2>
+                  <ul>
+                    <li>
+                      Each of the Entry Level classes is (roughly) one hour in
+                      length - and there is
+                      <strong>no</strong>
+                      enrollment needed.
+                      <ul>
+                        <li>
+                          You will need to provide the instructor with your
+                          email address during the first module - in order to
+                          communicate questions, assignments, tips/techniques,
+                          errata, etc.
+                        </li>
+                        <li>
+                          <strong
+                            >There is a short workshop setup process needed for
+                            the hands-on labs.
+                          </strong>
+                          See the table below for details- and please try to
+                          finish this before attending Module 1
+                          <a
+                            href="https://developer.ibm.com/mainframe/idzrdz-remote-training/#class-setup"
+                            >here</a
+                          >.
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <strong
+                        >The WebEx (web conference link) for all classes</strong
+                      >
+                      is:
+                      <a
+                        target="_blank"
+                        href="https://ibm.webex.com/meet/jsayles"
+                        >https://ibm.webex.com/meet/jsayles</a
+                      >, audio is provided through phone or VOIP
+                    </li>
+                    <li>
+                      Additional details on each Module are listed at the bottom
+                    </li>
+                    <li>
+                      Typically the instructor will be available 15 minutes
+                      before each session - to assist with individual questions
+                      &amp; answers
+                    </li>
+                  </ul>
+
+                  <h3>Important</h3>
+                  <p>
+                    <strong
+                      >It is imperative that when you participate in the Web
+                      Conference you put your phone on mute and leave it on mute
+                      throughout the training</strong
+                    >
+                  </p>
+                  <ul>
+                    <li>
+                      There will be dozens of developers participating in each
+                      class
+                    </li>
+                    <li>
+                      Background noise/talking/etc interferes with the learning
+                      and is distracting
+                    </li>
+                    <li>
+                      You are encouraged to use the WebEx chat feature to ask
+                      any/all questions throughout the training session
+                    </li>
+                    <li>
+                      Note also that you must turn your PC/Laptop camera off
+                      during class - for the same reasons
+                    </li>
+                  </ul>
+                  <hr />
+                  <h2 id="class-setup">Setup</h2>
+                  <p>
+                    For entry level hand's-on learning - download these files
+                    and follow the setup instructions in the table:
+                  </p>
+
+                  <table>
+                    <thead>
+                      <tr>
+                        <th width="30%">Download URL</th>
+                        <th>Files &amp; Setup Instructions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a
+                            target="_blank"
+                            href="https://community.ibm.com/community/user/ibmz-and-linuxone/viewdocument/education-workspace?CommunityKey=b0dae4a8-74eb-44ac-86c7-90f3cd32909a&amp;tab=librarydocuments"
+                            >https://community.ibm.com/community/user/ibmz-and-linuxone/viewdocument/education-workspace?CommunityKey=b0dae4a8-74eb-44ac-86c7-90f3cd32909a&amp;tab=librarydocuments
+                          </a>
+                        </td>
+                        <td>
+                          <strong>1. Education Workspace - for class. </strong
+                          >Download and unzip this file onto your PC. It
+                          contains all of the programs/copybooks/JCL/etc. that
+                          are referenced in the hands-on exercises.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a
+                            target="_blank"
+                            href="https://community.ibm.com/community/user/ibmz-and-linuxone/viewdocument/labspdf?CommunityKey=b0dae4a8-74eb-44ac-86c7-90f3cd32909a&amp;tab=librarydocuments"
+                            >https://community.ibm.com/community/user/ibmz-and-linuxone/viewdocument/labspdf?CommunityKey=b0dae4a8-74eb-44ac-86c7-90f3cd32909a&amp;tab=librarydocuments
+                          </a>
+                        </td>
+                        <td>
+                          <strong>2. Class Exercises for each Module. </strong
+                          >Download this file into the same directory as the
+                          class education PDFs.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a
+                            target="_blank"
+                            href="https://community.ibm.com/community/user/ibmz-and-linuxone/viewdocument/pdfs-for-the-entry-level-training-m?CommunityKey=b0dae4a8-74eb-44ac-86c7-90f3cd32909a&amp;tab=librarydocuments"
+                            >https://community.ibm.com/community/user/ibmz-and-linuxone/viewdocument/pdfs-for-the-entry-level-training-m?CommunityKey=b0dae4a8-74eb-44ac-86c7-90f3cd32909a&amp;tab=librarydocuments</a
+                          >
+                        </td>
+                        <td>
+                          <strong>3. Class learning documents (PDFs) </strong
+                          >Download and unzip these files into a directory. You
+                          will use this as IDz reference material throughout the
+                          class.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <br />
+                  <hr />
+
+                  <h2>
+                    IDz/ADFz/RDz Entry-Level and Experienced User Training
+                    Schedule
+                  </h2>
+                </div>
+                <hr />
+                <hr />
+                <table
+                  class="ibm-data-table ibm-no-border ibm-no-highlight ibm-padding-small"
+                  style="width:100%;"
+                >
+                  <thead>
+                    <tr>
+                      <th width="30%">Date &amp; Time</th>
+                      <th width="70%">Topic</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span class="date"
+                          >Thursday June 4th - 1:00 - 2:00 PM Eastern</span
+                        >
+                      </td>
+                      <td>
+                        <strong
+                          >IDz Entry-Level Training Module 6 - the ISPF 3.x Data
+                          Set Utilities&nbsp;</strong
+                        >
+                        <br />
+                        This module instructs on the data set utility features
+                        of IDz that are available from the ISPF 3.x dialogs:
+                        <strong
+                          >File allocation, File rename, File delete, Library
+                          compress, VSAM File create, GDG Model and GDG Data Set
+                          create </strong
+                        >. Batch Job management and interactive CLIST/REXX
+                        support is also part of Module 6. An introduction to
+                        Menu Manager is presented
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="date"
+                          >Thursday June 11th - 1:00 PM - 2:00 PM Eastern</span
+                        >
+                      </td>
+                      <td>
+                        <strong
+                          >IDz Entry-Level Training Module 7&nbsp;- MVS
+                          Subprojects
+                        </strong>
+                        <br />
+                        Learn how to use this convenient &amp; powerful IDz
+                        feature to organize and manage individual PDS members
+                        and individual QSAM files on a per-project bases. MVS
+                        Subprojects are also utilized with SCM access and
+                        Embedded SQL code/test/tune.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="date"
+                          >June 17th - Tech-Demo – Z DevOps using Git and
+                          Jenkins Pipeline- 1:00 - 2:00 PM Eastern</span
+                        >
+                      </td>
+                      <td>
+                        <strong
+                          >Z DevOps using Git and Jenkins Pipeline
+                        </strong>
+                        This session will demonstrate how IBM Z DevOps tools, in
+                        conjunction with open source tools such as Git and
+                        Jenkins, progress the continuous integration, continuous
+                        testing and continuous delivery in the z/OS operating
+                        environment. In order to demonstrate continuous delivery
+                        capabilities, this session will showcase a Jenkins
+                        pipeline integrated with IBM tools for the build
+                        process, unit testing (with the new zUnit
+                        functionality), and deployment of code to a CICS
+                        environment (using UrbanCode Deploy). A standard
+                        development scenario is broken down into steps; 1. Use
+                        IBM DevOps tools to locate and identify faulty code 2.
+                        Make the appropriate fixes 3. Compile/bind/link using a
+                        new build automation tool (DBB) that integrates with a
+                        Git and Jenkins pipeline on z/OS. 4. Push the changes to
+                        a Git repository.<br /><br />
+                        For more information about this session and register
+                        follow this link:
+                        https://webinars.on24.com/Systems/DemoZDevOps
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="date"
+                          >Thursday June 18th - 1:00 PM - 2:00 PM Eastern</span
+                        >
+                      </td>
+                      <td>
+                        <strong
+                          >IDz Entry-Level Training Module 8&nbsp;- DB2/SQL
+                        </strong>
+                        <br />
+                        IDz's world-class features for working with DB2
+                        programs: Understanding your logical and physical data
+                        model (entities &amp; their relationships), modifying
+                        DB2 test table values and coding/testing SQL: Using
+                        SPUFI files, Interactive SQL, and coding Embedded SQL
+                        statements directly into COBOL and PL/I programs, then
+                        running and using Visual Explain on the statements.
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <span class="date"
+                          >Thursday June 25th - 1:00 PM - 2:00 PM Eastern</span
+                        >
+                      </td>
+                      <td>
+                        <strong
+                          >IDz Entry-Level Training Module 9&nbsp;- COBOL
+                          Program Debuging &amp; Code Coverage
+                        </strong>
+                        <br />
+                        Batch &amp; Online debugging features and techniques,
+                        including JCL (<strong
+                          >TEST statementCode Coverage</strong
+                        >
+                        - both for batch and online (CICS) test-quality
+                        analysis. <br /><br />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="date"
+                          >July 13 - 9:00 AM - 10:00 Eastern</span
+                        >
+                      </td>
+                      <td>
+                        <span class="idz-exp"
+                          ><strong
+                            >** Summer/Autumn 2020 IDz/ADFz Entry Level Training
+                            Begins: Monday Classes **
+                          </strong></span
+                        ><strong
+                          ><br />Module 1&nbsp;- IDz/Eclipse Introduction for
+                          ISPF Developers</strong
+                        >
+                        <br />Class overview, Workspace installation &amp;
+                        customization, IDz Terms &amp; Concepts &amp; Eclipse
+                        Navigation for ISPF Developers, DevOps Tooling overview,
+                        Split-Screen, Use of multi-window'd views, Program
+                        Control Flow, Bookmarks for ISPF-Labels and more.
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <span class="date"
+                          >July 20th - 9:00 AM - 10:00 AM Eastern
+                        </span>
+                      </td>
+                      <td>
+                        <strong
+                          >IDz Entry-Level Training Module 2&nbsp;- IDz Editing
+                          and Code Development Tools &amp; Techniques
+                        </strong>
+                        <br />
+                        Overview of IDz code editors &amp; productivity
+                        techniques, ISPF emulation: Command line commands/Prefix
+                        area commands, Hot Key definitions, Editing source with
+                        embedded Hex characters, JCL editing, IDz's source
+                        download and program model, and Content Assist
+                        ("look-ahead typing")<br />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="date"
+                          >July 27th, 9:00 AM - 10:00 AM Eastern</span
+                        >
+                      </td>
+                      <td>
+                        <strong
+                          >IDz Entry Level Training - Module 3 - Program
+                          Analysis Tools</strong
+                        >
+                        <br />ISPF Search techniques (expanded), IDz graphical
+                        tools for: Logic Flow and program execution analysis,
+                        Graphical &amp; declarative tools for Data Flow and
+                        impact analysis (within a single program), Various built
+                        in language Filters. <br />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="date"
+                          >August 3rd - 9:00 AN - 10:00 Eastern</span
+                        >
+                      </td>
+                      <td>
+                        <strong
+                          >IDz Entry-Level Training Module 4&nbsp;- Mainframe
+                          Connect, File Navigation &amp; Remote Search
+                        </strong>
+                        <br />Part 1 of the high-value tools in the Remote
+                        Systems view; Connecting to an LPAR, Preferences,
+                        Dataset Navigation, Remote z/OS File and Library Member
+                        Search options - including REGEX searching thru z/OS
+                        resources, Leveraging the Search Results view
+                        functionality and other productivity options.
+                        <br />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="date"
+                          >August 10th, 9:00 AM - 10:00 AM Eastern</span
+                        >
+                      </td>
+                      <td>
+                        <strong
+                          >IDz Entry-Level Training Module 5 - Dataset Access
+                          and Organization</strong
+                        >
+                        <br />Learn to utilize MVS File Filters and Retrieve
+                        Data Set for effective organization and access of z/OS
+                        resources. Create, configuring and customize Property
+                        Groups for SYSLIB (COPY and INCLUDE search path
+                        definitions), PROC Search Path and Called Module Search
+                        Path definitions Utilize Property Groups with: Show
+                        Dependencies and Remote Syntax Check.
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <span class="date"
+                          >August 17th, 9:00 AM - 10:00 AM Eastern</span
+                        >
+                      </td>
+                      <td>
+                        <strong
+                          >IDz Entry-Level Training Module 6 - the ISPF 3.x Data
+                          Set Utilities&nbsp;</strong
+                        >
+                        <br />
+                        This module instructs on the data set utility features
+                        of IDz that are available from the ISPF 3.x dialogs:
+                        <strong
+                          >File allocation, File rename, File delete, Library
+                          compress, VSAM File create, GDG Model and GDG Data Set
+                          create </strong
+                        >. Batch Job management and interactive CLIST/REXX
+                        support is also part of Module 6. An introduction to
+                        Menu Manager is presented
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="date"
+                          >August 20th and 21st - 9:00 AM - 11:00 AM
+                          Eastern</span
+                        >
+                      </td>
+                      <td>
+                        <span class="idz-exp"
+                          ><strong
+                            >** Application Discovery and Delivery Intelligence
+                            (ADDI) **
+                          </strong>
+                        </span>
+                        <br /><br />
+                        ADDI is a static source analysis solution for
+                        application modernization. It uses cognitive
+                        technologies to analyze mainframe applications to
+                        quickly discover and understand interdependencies and
+                        impacts of change. It is a bundle of IBM Application
+                        Discovery and IBM Application Delivery Intelligence.
+                        ADDI install-bases use the technology to:
+                        <ul>
+                          <li>
+                            Transform and renew applications more efficiently
+                            and productively.
+                          </li>
+                          <li>
+                            Capitalize on time-tested mainframe code to engage
+                            the API economy.
+                          </li>
+                          <li>
+                            Accelerate application transformation of IBM Z®
+                            hybrid cloud environment.
+                          </li>
+                          <ul>
+                            <br />
+                            If you have ADDI installed, attend this class to
+                            learn how to use the product. If you don't have ADDI
+                            installed attend this as a technical "deep-dive" on
+                            this critical IBM App-Dev solution.<strong>
+                              Instructor: David Hawreluk
+                            </strong>
+                            - dhawrel@us.ibm.com
+                            <br />
+                            <br />
+                            <strong>
+                              Note that this session will use the following URL:
+                              https://ibm.webex.com/join/dhawrel - and will
+                              require
+                              <a
+                                href="https://ibm.webex.com/ibm/j.php?RGID=r126fabb6a9a222256e7e69c42a61c469"
+                                rel="noopener"
+                                target="_blank"
+                                >Registration</a
+                              ></strong
+                            >
+                          </ul>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="date"
+                          >August 24th - 9:00 AM - 10:00 AM Eastern</span
+                        >
+                      </td>
+                      <td>
+                        <strong
+                          >IDz Entry-Level Training Module 7&nbsp;- MVS
+                          Subprojects
+                        </strong>
+                        <br />
+                        Learn how to use this convenient &amp; powerful IDz
+                        feature to organize and manage individual PDS members
+                        and individual QSAM files on a per-project bases. MVS
+                        Subprojects are also utilized with SCM access and
+                        Embedded SQL code/test/tune.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="date"
+                          >August 31st - 9:00 AM - 10:00 AM Eastern</span
+                        >
+                      </td>
+                      <td>
+                        <strong
+                          >IDz Entry-Level Training Module 8&nbsp;- DB2/SQL
+                        </strong>
+                        <br />
+                        IDz's world-class features for working with DB2
+                        programs: Understanding your logical and physical data
+                        model (entities &amp; their relationships), modifying
+                        DB2 test table values and coding/testing SQL: Using
+                        SPUFI files, Interactive SQL, and coding Embedded SQL
+                        statements directly into COBOL and PL/I programs, then
+                        running and using Visual Explain on the statements.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="date"
+                          >September 14th - 9:00 AM - 10:00 AM Eastern</span
+                        >
+                      </td>
+                      <td>
+                        <span class="idz-exp"
+                          ><strong
+                            >Training Module 9&nbsp;- Debug and Code Coverage
+                            **Note September 14th date**</strong
+                          > </span
+                        ><br />
+                        Batch &amp; Online debugging features and techniques,
+                        including JCL to launch Debug, program animation
+                        features, break points, variable monitors/changing
+                        variable values dynamically, Record &amp; Playback. An
+                        introduction to IDz Code Coverage - both for batch and
+                        online (CICS) test-quality analysis. <br /><br />
+                        <strong> <br /> </strong>
+                      </td>
+                    </tr>
+
+                    <!--
+
+  <tr>
+        <td>
+            <span class="date">June 23rd - Productivity Tools Tuesdays- 9:00 AM - 10:00 AM Eastern</span>
+        </td>
+        <td>
+            <strong>Integrating IDz with CA-Endevor through CARMA</strong> This presentation describes the use of IBM's CARMA tooling to allow access to program code maintained in an Endevor repository.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">January 22 - 9:00 AM - 10:00  Eastern</span>
+        </td>
+        <td>
+            <span class="idz-exp"><strong>** First Iteration of 2020 IDz Entry Level Training Begins: Wednesday Sessions ** </span>Module 1 - IDz/Eclipse Introduction for ISPF Developers</strong>
+            <br>Class overview, Workspace installation & customization, IDz Terms & Concepts & Eclipse Navigation for ISPF Developers, DevOps Tooling overview, Split-Screen, Use of multi-window'd views, Program Control Flow, Bookmarks for ISPF-Labels and more.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">January 29 - 9:00 AM - 10:00 AM Eastern </span>
+        </td>
+        <td>
+            <strong>IDz Entry-Level Training Module 2 - IDz Editing and Code Development Tools & Techniques </strong> <br> Overview of IDz code editors & productivity techniques, ISPF emulation: Command line commands/Prefix area commands, Hot Key definitions, Editing source with embedded Hex characters, JCL editing, IDz's source download and program model, and Content Assist ("look-ahead typing")<br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">February 4, 9:00 AM - 10:30 AM Eastern</span>
+        </td>
+        <td>
+            <h4>IDz Experienced Training: Program Edit & Analyze - Hidden Gems</h4>
+            <br>This session reviews the Eclipse & ISPF Editing techniques + program search & analytics presented in the Entry Level training modules 2, 3 & 4- then goes on to cover more in-depth uses of the IDz tooling, in production workflow patterns.
+        </td>
+    </tr>
+
+
+     <tr>
+        <td>
+            <span class="date">March 31st - Productivity Tools Tuesdays- 9:00 AM - 10:45 AM Eastern</span>
+        </td>
+        <td>
+            <strong>Making the most of IDz’s Local & Remote Search </strong> This session covers most of IDz's file search options; Remote Search - both from Remote Systems & Remote z/OS "File" Search - (using the SuperC MVS utility) - most of the Search Result productivity options - including saving & reusing search queries, exporting search results, and many others. Also covered is IDz's internal file search & Filtering options - for editing productivity.
+        </td>
+    </tr>
+
+
+     <tr>
+        <td>
+            <span class="date">April 1st - Demo – Z DevOps using Git and Jenkins Pipeline- 1:00 - 2:30 PM Eastern</span>
+        </td>
+        <td>
+            <strong>Z DevOps using Git and Jenkins Pipeline </strong> This session will demonstrate how IBM Z DevOps tools, in conjunction with open source tools such as Git and Jenkins, progress the continuous integration, continuous testing and continuous delivery in the z/OS operating environment. In order to demonstrate continuous delivery capabilities, this session will showcase a Jenkins pipeline integrated with IBM tools for the build process, unit testing (with the new zUnit functionality), and deployment of code to a CICS environment (using UrbanCode Deploy). A standard development scenario is broken down into steps; 1. Use IBM DevOps tools to locate and identify faulty code 2. Make the appropriate fixes 3. Compile/bind/link using a new build automation tool (DBB) that integrates with a Git and Jenkins pipeline on z/OS. 4. Push the changes to a Git repository.<br><br>
+For more information about this session and register follow this link: https://ibm-zcouncil.com/events/zdevops-1apr20/
+
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>
+            <span class="date">April 6th - 11th Hour IDz/ADFz Tech Enablement Jam - 11:00 AM - 11:45 AM Eastern</span>
+        </td>
+        <td>
+            <span class="idz-exp"><strong>** Open Q&A Forum + IDz Visual Debug ** </strong></span> This new series of events provides  interactive Q&A (think "a jam session") on <strong> how-to questions </strong> involving the IDz & ADFz development tooling and your work. We will end today's session with a short tech-demo of IDz's <strong> Visual Debug </strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">April 8th- 9:00 AM - 10:00  Eastern</span>
+        </td>
+        <td>
+            <span class="idz-exp"><strong>** Q2 Wednesday 2020 IDz Entry Level Training Sessions Begin ** </span>Module 1 - IDz/Eclipse Introduction for ISPF Developers</strong>
+            <br>Class overview, Workspace installation & customization, IDz Terms & Concepts & Eclipse Navigation for ISPF Developers, DevOps Tooling overview, Split-Screen, Use of multi-window'd views, Program Control Flow, Bookmarks for ISPF-Labels and more.
+        </td>
+    </tr>
+
+
+>
+
+    <tr>
+        <td>
+            <span class="date">February 10 - 9:00 AM - 10:00  Eastern</span>
+        </td>
+        <td>
+            <span class="idz-exp"><strong>** Second Iteration of 2020 IDz Entry Level Training Begins: Monday Classes ** </span><br>Module 1 - IDz/Eclipse Introduction for ISPF Developers</strong>
+            <br>Class overview, Workspace installation & customization, IDz Terms & Concepts & Eclipse Navigation for ISPF Developers, DevOps Tooling overview, Split-Screen, Use of multi-window'd views, Program Control Flow, Bookmarks for ISPF-Labels and more.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <span class="date">February 12, 9:00 AM - 10:00 AM Eastern</span>
+        </td>
+        <td>
+            <strong>IDz Entry-Level Training Module 4 - Mainframe Connect, File Navigation & Remote Search </strong>
+            <br>Part 1 of the high-value tools in the Remote Systems view; Connecting to an LPAR, Preferences, Dataset Navigation, Remote z/OS File and Library Member Search options - including REGEX searching thru z/OS resources, Leveraging the Search Results view functionality and other productivity options.
+<br>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <span class="date">November 13, 9:00 AM - 10:00 AM EDT</span>
+        </td>
+        <td>
+            <strong>IDz Entry Level Training - Module 3 - Program Analysis Tools</strong>
+            <br>ISPF Search techniques (review), IDz graphical tools for: Logic Flow and program execution analysis, Graphical & declarative tools for Data Flow and impact analysis (within a single program).
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">November 18  - 9:00 AM EST</span>
+        </td>
+        <td>
+            <strong>IDz Entry-Level Training Module 8 - DB2/SQL </strong> <br> IDz's world-class features for understanding your logical and physical data model (entities & their relationships), modifying DB2 test table values and coding/testing SQL:  Using SPUFI files, Interactive SQL, and coding Embedded SQL statements directly into COBOL and PL/I programs, then running and using Visual Explain on the statements.  <br><br>
+<strong> *** This Monday Entry Level Training Module uses the following Webex: </strong> <a href="https://ibm.webex.com/join/christopher.sayles">https://ibm.webex.com/join/christopher.sayles</a> <br><br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">November 20, 9:00 AM EDT</span>
+        </td>
+        <td>
+            <strong>IDz Entry-Level Training Module 4 - Mainframe Connect, File Navigation & Remote Search Options</strong>
+            <br>Part 1 of the tools in the Remote Systems view; Connecting to an LPAR, Preferences, Dataset Navigation, Remote z/OS File and Library Member Search options - including REGEX searching thru z/OS resources, Leveraging the Search Results view functionality.
+            options
+        </td>
+    </tr>
+ 
+<tr>
+        <td>
+            <span class="date">April 16th - 11th Hour IDz/ADFz Tech Enablement Jam - 11:00 AM - 11:45 AM Eastern</span>
+        </td>
+        <td>
+            <span class="idz-exp"><strong>** Open Q&A Forum + ABEND Resolution - Background tools & techniques **</strong></span> Thursday's interactive Q&A/jam session on IDz & ADFz and your z/OS application development work. <br><br>We will end today's session with a  discussion about the MVS ABENDS - understanding the Sxxn codes, Root cause analysis (typical programming causes for ABENDs) and a short <strong> Fault Analyzer </strong> demonstration. This session is aimed squarely at getting more out of IDz in Production Support and Application Maintenance work.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">April 20th - Monday Classes 9:00 AM - 10:00 AM Eastern</span>
+        </td>
+        <td>
+            <strong>This is the rescheduled iteration of IDz Entry-Level Training Module 9 - Debug & Code Coverage </strong> <br> Batch & Online debugging features and techniques, including JCL to launch Debug, program animation features, break points, variable monitors/changing variable values dynamically, Record & Playback and an introduction to Code Coverage.
+        </td>
+    </tr>
+
+<tr>
+        <td>
+            <span class="date">April 20th - 11th Hour IDz/ADFz Tech Enablement Jam - 11:00 AM - 11:45 AM Eastern</span>
+        </td>
+        <td>
+            <span class="idz-exp"><strong>** What's new with the IBM Debugger ** </strong></span> This special session focuses on recently released tooling work on the IDz Debugger and Debug Profiles - supporting a new COBOL v6 language feature - and simplifying the U.I. (really really really simplifying the U.I.).<br><br> For more information or to prepare for this session follow this url: https://developer.ibm.com/mainframe/2020/03/13/whats-new-in-ibm-z-os-debugger-v14-2-2/
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">April 22nd - 9:00 AM - 10:00 AM Eastern</span>
+        </td>
+        <td>
+            <strong>IDz Entry Level Training - Module 3 - Program Analysis Tools</strong>
+            <br>ISPF Search techniques (review), IDz graphical tools for: Logic Flow and program execution analysis, Graphical & declarative tools for Data Flow and impact analysis (within a single program).
+        </td>
+    </tr>
+<tr>
+        <td>
+            <span class="date">April 23rd - 11th Hour IDz/ADFz Tech Enablement Jam - 11:00 AM - 11:PM Eastern</span>
+        </td>
+        <td>
+            <span class="idz-exp"><strong>** Open Q&A Forum + Dependency Based Build (DBB) ** </strong></span> Thursday's interactive Q&A/jam session on IDz & ADFz and your z/OS application development work. <br><br>Brice Small will end today's session with a demo/discussion on IDz's Dependency Based Build <strong>DBB</strong> - Tooling, Coding & Testing batch job work. <br><br>For an introduction to DBB see: https://developer.ibm.com/mainframe/products/ibm-dependency-based-build/ 
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">May 4th - 11th Hour IDz/ADFz Tech Enablement Jam - 11:00 AM - 12:00 PM Eastern</span>
+        </td>
+        <td>
+            <span class="idz-exp"><strong>** Code Coverage Deep Dive ** </strong></span> A special deep-dive presentation on IDz's Code Coverage tooling. <strong> Alan Boxall </strong> (IBM's Code Coverage Primary Architect) & Jon Sayles will take you through the use Code Coverage to provide quality assurance measures to your testing processes.
+<br><br>Topics include:<br>
+<ul><li>Code Coverage Overview, Terms & Concepts and product requirements</li>
+<li>Invoking Code Coverage with standard result reports</li>
+<li>Customizing the reports and exporting them to distributed platforms as well as z/OS</li>
+<li>Code Coverage run-time options</li>
+<li>Q&A with Alan (Code Coverage feedback) </li></ul>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <span class="date">May 6th - 9:00 AM - 10:00 AM Eastern</span>
+        </td>
+        <td>
+            <strong>IDz Entry-Level Training Module 5 - Dataset Access and Organization</strong>
+            <br>Learn to utilize MVS File Filters and Retrieve Data Set for effective organization and access of z/OS resources. Create, configuring and customize <Strong>Property Groups for SYSLIB </strong>(COPY and INCLUDE search path definitions), PROC Search Path and Called Module Search Path definitions Utilize Property Groups with: Show Dependencies and Remote Syntax Check.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <span class="date">Thursday May 7th -1:00 PM - 2:00 PM Eastern </span>
+        </td>
+        <td>
+            <strong>IDz Entry-Level Training Module 2 - IDz Editing and Code Development Tools & Techniques </strong> Overview of IDz code editors & productivity techniques, ISPF emulation: Command line commands/Prefix area commands, Hot Key definitions, Editing source with embedded Hex characters, JCL editing, IDz's source download and program model, and Content Assist ("look-ahead typing")<br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">May 12th - Productivity Tools Tuesdays- 9:00 AM - 10:30 AM Eastern</span>
+        </td>
+        <td>
+            <strong>Duplicate Code Detection</strong> This session presents IDz's new Duplicate Code Detection feature - which integrates a dedicated analytic engine formulated for detecting duplicate program logic into IDz's source code search tooling - allowing you to expose duplicate code:<br>
+<ul>
+<li>Files hosted in an SCM - such as Git</li>
+<li>Files stored locally</li></ul>
+This technology has been one of the most frequently requested IDz enhancements over the years - and the implementation is both efficient (1/10th of a second to search 100K LOC) and elegant, providing for the harvesting and refactoring, versioning and sharing of duplicate code.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <span class="date">May 13th - 9:00 AM - 10:00 AM Eastern</span>
+        </td>
+        <td>
+            <strong>IDz Entry-Level Training Module 6 - the ISPF 3.x Data Set Utilities </strong>  <br> This module instructs on the data set utility features of IDz that are available from the ISPF 3.x dialogs: <strong>File allocation, File rename, File delete, Library compress, VSAM File create, GDG Model and GDG Data Set create </strong>. Batch Job management and interactive CLIST/REXX support is also part of Module 6. An introduction to Menu Manager is presented
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date"> Thursday - May 14th - 1:00 PM - 2:00 PM Eastern</span>
+        </td>
+        <td>
+            <strong>IDz Entry Level Training - Module 3 - Program Analysis Tools</strong>
+            <br>ISPF Search techniques (review), IDz graphical tools for: Logic Flow and program execution analysis, Graphical & declarative tools for Data Flow and impact analysis (within a single program).
+        </td>
+    </tr>
+     <tr>
+        <td>
+            <span class="date">May 14th and 15th - 9:00 AM - 11:00 AM Eastern</span>
+        </td>
+        <td>
+            <span class="idz-exp"><strong>** Application Discovery and Delivery Intelligence (ADDI) ** </strong> </span> <br><BR> ADDI is a static source analysis solution for application modernization. It uses cognitive technologies to analyze mainframe applications to quickly discover and understand interdependencies and impacts of change. It is a bundle of IBM Application Discovery and IBM Application Delivery Intelligence. ADDI install-bases use the technology to:
+<UL><LI>Transform and renew applications more efficiently and productively.</LI>
+<LI>Capitalize on time-tested mainframe code to engage the API economy.</LI>
+<LI>Accelerate application transformation of IBM Z® hybrid cloud environment.</LI><UL><br>
+If you have ADDI installed, attend this class to learn how to use the product.  If you don't have ADDI installed attend this as a technical "deep-dive" on this critical IBM App-Dev solution.<strong> Instructor: David Hawreluk </strong> - dhawrel@us.ibm.com <br> <br> <strong> Note that this session will use the following URL:  https://ibm.webex.com/join/dhawrel </strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">May 20th - 9:00 AM - 10:00 AM Eastern</span>
+        </td>
+        <td>
+            <strong>IDz Entry-Level Training Module 7 - MVS Subprojects </strong>  <br>  Learn how to use this convenient & powerful IDz feature to organize and manage individual PDS members and individual QSAM files on a per-project bases. MVS Subprojects are also utilized with SCM access and Embedded SQL code/test/tune.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">May 20th - 1:00 PM - 2:30 PM Eastern</span>
+        </td>
+        <td>
+            <strong>IDz Z DevOps using zUnit (Unit Test), Git and Jenkins</strong>  <br> A deep-dive technical demo which presents the integration points between IDz for doing DevOps work with modern open-source DevOps tooling. <br><br>
+During this session we will demonstrate how IBM zUnit, and open source tools like Gitand Jenkins help the continuous integration, continuous testing, and continuous delivery in the z/OS space.<br>
+<hr>
+Our scenario is a COBOL/CICS/DB2 application that uses z/OS Connect and needs updates. The demonstration has two parts:<br>
+<strong>PART 1 </strong> The developer uses IBM zUnit to record a COBOL/CICS/DB2 interaction via z/OS Connect and run test cases.
+As part of code maintenance, the developer unintentionally “breaks” the program and realizes the error by executing the zUnit test case with an unsuccessful result.<br><br>
+<strong>PART2</strong> Another developer fixes the code, performs a IBM DBB User Build, running zUnit and Code Coverage and pushing to deploy phase using Jenkins and IBM UrbanCode Deploy(UCD). <br><br>
+<strong>Register here to attend: https://ibm-zcouncil.com/events/zdevops_5_20_2020 </strong><br><br>
+
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>
+            <span class="date">May 26th - Productivity Tools Tuesdays- 9:00 AM - 10:30 AM Eastern</span>
+        </td>
+        <td>
+            <strong>IDz Tools & Plugins for the IMS Developer</strong> This session presents a short recap of the MFS Map Editor - then demonstrates the IMS Explorer plugin - which provides the means to understand/analyze DBDs and PSBs - as well as Browse & Edit DL/I segment data directly, thru a spreadsheet/table style user interface.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <span class="date">May 27th - 9:00 AM - 10:00 AM Eastern</span>
+        </td>
+        <td>
+            <strong>IDz Entry-Level Training Module 8 - DB2/SQL </strong> <br> IDz's world-class Data Tools - for understanding your logical and physical data model (entities & their relationships), for modifying DB2 test table values and for coding/testing SQL:  Using SPUFI files, Interactive SQL, and coding Embedded SQL statements directly into COBOL and PL/I programs, then running and using Visual Explain on the statements.  
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">Thursday May 28th - 1:00 PM - 2:00 PM Eastern</span>
+        </td>
+        <td>
+            <strong>IDz Entry-Level Training Module 5 - Dataset Access and Organization</strong>
+            <br>Learn to utilize MVS File Filters and Retrieve Data Set for effective organization and access of z/OS resources. Create, configuring and customize <Strong>Property Groups for SYSLIB </strong>(COPY and INCLUDE search path definitions), PROC Search Path and Called Module Search Path definitions Utilize Property Groups with: Show Dependencies and Remote Syntax Check.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <span class="date">June 3rd - 9:00 AM - 10:00 AM Eastern</span>
+        </td>
+        <td>
+            <strong>IDz Entry-Level Training Module 9 - COBOL Program Debuging & Code Coverage </strong> <br> Batch & Online debugging features and techniques, including JCL (<strong>TEST statement</strong) to launch Debug Tool, program animation features, break points, variable/field monitors; viewing & changing variable values dynamically, Record & Playback. An introduction to IDz <strong>Code Coverage</strong> - both for batch and online (CICS) test-quality analysis.  <br><br>
+        </td>
+    </tr>
+<tr>
+        <td>
+            <span class="date">April 27th - 11th Hour IDz/ADFz Tech Enablement Jam - 11:00 AM - 11:45 AM Eastern</span>
+        </td>
+        <td>
+            <span class="idz-exp"><strong>** Open Q&A Forum + eGit" </strong></span> Monday's interactive Q&A/jam session on IDz & ADFz and your z/OS application development work. <br><br>Brice Small will end today's session with a demo using <strong> eGit </strong> IDz's packaged Git integration with various Git repository tools & products.<br><br>For an introduction to eGit see: https://www.youtube.com/watch?v=Nlr2vXKgtgE
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <span class="date">April 28th - Productivity Tools Tuesdays- 9:00 AM - 10:30 AM Eastern</span>
+        </td>
+        <td>
+            <strong>The BMS & MFS Map Editors </strong> This session covers the use of IDz's map editing software - which allows you to develop 3270 BMS (CICS) and MFS (IMS TM) screens using graphical tools and techniques - as opposed to coding in assembler-macro language.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <span class="date">April 29th - 9:00 AM - 10:00 AM Eastern</span>
+        </td>
+        <td>
+            <strong>IDz Entry-Level Training Module 4 - Mainframe Connect, File Navigation & Remote Search </strong>
+            <br>Part 1 of the high-value tools in the Remote Systems view; Connecting to an LPAR, Preferences, Dataset Navigation, Remote z/OS File and Library Member Search options - including REGEX searching thru z/OS resources, Leveraging the Search Results view functionality and other productivity options.
+<br>
+        </td>
+    </tr>
+
+<tr>
+        <td>
+            <span class="date">April 30th - 11th Hour IDz/ADFz Tech Enablement Jam - 11:00 AM - 11:45 AM Eastern</span>
+        </td>
+        <td>
+            <span class="idz-exp"><strong>** Open Q&A Forum + DB2/SQL Development Tools & Techniques ** </strong></span> Thursday's interactive Q&A/jam session on IDz & ADFz and your z/OS application development work. <br><br>We will end today's session with a demo/discussion on the various tools for doing DB2/SQL coding & testing: <br>
+<ul><li>Running SPUFI from IDz</li>
+<li>Interactive SQL Coding and Templates</li>
+<li>Graphical SQL Development Tools</li>
+<li>Embedded SQL Development Techniques</li>
+<li>File Manager - Running SQL statements and DB2 Commands</li></ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">Thursday April 30th - 1:00 PM - 2:00 PM Eastern</span>
+        </td>
+        <td>
+            <span class="idz-exp"><strong>** Thursday 1:00 PM Eastern IDz Entry Level Training Sessions - For Pacific, Mountain and Central timezones ** </span><br><br>Module 1 - IDz/Eclipse Introduction for ISPF Developers</strong>
+            <br>Class overview, Workspace installation & customization, IDz Terms & Concepts & Eclipse Navigation for ISPF Developers, DevOps Tooling overview, Split-Screen, Use of multi-window'd views, Program Control Flow, Bookmarks for ISPF-Labels and more.
+        </td>
+    </tr>
+ <tr>
+        <td>
+            <span class="date">June 9th - Productivity Tools Tuesdays- 9:00 AM - 11:00 AM Eastern</span>
+        </td>
+        <td>
+            <strong>IDz & Data Studio Tooling for SQL & Embedded SQL Code/Test</strong> This presentation is a comprehensive look at the functionality & techniques of the IDz Data Tools for doing production-quality DB2 and SQL development work; 1. Analyzing and Understanding your Data Model. 2. Modifying the contents of tables & views. 3. Coding, Testing and Tuning interactive & Embedded SQL. Additionally, some of the DBA tooling (RUNSTATS, Create/Alter/Extract/Load tables) will be presented.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">December 17, 9:00 AM EDT</span>
+        </td>
+        <td>
+            <h4>IDz Experienced Training: Code Review</h4>  <br> Learn how to improve application code quality by running programs thru a static analysis tool that detects statements which break corporate policy for: Naming Convention, COBOL 5, Performance efficiency and "Maintain-ability". <br><br> Learn how to run Code review; Interactively, against an entire PDS (in one operation), in Batch/JCL - and using a Baseline.Time-permitting, learn the initial techniques for writing custom code review rules.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <span class="date">December 18, 9:00 AM EDT</span>
+        </td>
+        <td>
+            <strong>IDz Entry-Level Training Module 7 - MVS Subprojects </strong>  <br>  Learn how to use this convenient & powerful IDz feature to organize and manage individual PDS members and individual QSAM files on a per-project bases. MVS Subprojects are also utilized with SCM access and Embedded SQL code/test/tune.
+        </td>
+    </tr>
+<tr>
+        <td>
+            <span class="date">April 9th - 11th Hour IDz/ADFz Tech Enablement Jam - 11:00 AM - 11:45 AM Eastern</span>
+        </td>
+        <td>
+            <span class="idz-exp"><strong>** Open Q&A Forum + Host Connection Emulator's Macro Recorder **</strong></span> Thursday's interactive Q&A/jam session on <strong> how-to questions involving the IDz & ADFz development tooling and your z/OS application development work </strong> We will end today's session with a short tech-demo of the IDz <strong>Host Connection Emulator's macro recorder </strong> - for capturing user keystrokes (IMS TM & CICS online regression testing) - or ISPF repetitive development tasks.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <span class="date"><strong> Postponed to April 13th 9:00 AM - 10:00 AM Class</strong></span>
+        </td>
+        <td>
+            <strong>IDz Entry-Level Training Module 9 - Debug & Code Coverage has been rescheduled to April 20th </strong> <br>
+        </td>
+    </tr>
+<tr>
+        <td>
+            <span class="date">April 13th - 11th Hour IDz/ADFz Tech Enablement Jam - 11:00 AM - 11:45 AM Eastern</span>
+        </td>
+        <td>
+            <span class="idz-exp"><strong>** Open Q&A Forum + Trick out your perspectives - or - Why not just stay in Debug? ** </strong></span> Monday's interactive Q&A/jam session on how-to questions involving the IDz & ADFz development tooling and your z/OS application development work. We will end today's session with a short tech-demo/discussion about the use of <strong> Eclipse perspective customization </strong> - for max IDz productivity.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <span class="date">April 14th - Productivity Tools Tuesdays - 9:00 AM - 10:30 AM Eastern</span>
+        </td>
+        <td>
+            <strong>The IBM Use-As-Is Snippets – for Entry Level COBOL as well as for experienced z/OS developers</strong> <br> This session will describe the "use-as-is**" Snippets provided by IBM for COBOL, Assembler, JCL, MVS Utilities & DB2/SQL programming. These snippets can form the basis of a functional Reusable Code Library - where you create standard/templated statements, code patterns & model program skeletons. <strong>** use-as-is implies that there is no IBM Level 2 Support associated with the code in these Snippets.</strong>
+        </td>
+    </tr>
+
+</table>
+<hr>
+<h2>Entry Level Training: Getting Started Notes</h2>
+<ul>
+    <li>Each of the Entry Level classes is (roughly) one hour in length - and there is
+        <strong>no</strong>
+        enrollment needed. 
+        <ul>
+            <li>You will need to provide the instructor with your email address during the first module - in order to communicate questions, assignments, tips/techniques, errata, etc.</li>
+            <li><strong>There is a short workshop setup process needed for the hands-on labs. </strong> See the table below for details- and please try to finish this before attending Module 1
+                <a href="#class-setup">here</a>.</li>
+        </ul>
+    </li>
+
+    <li><strong>The WebEx (web conference link) for all classes</strong> is: 
+        <a target="_blank" href="https://ibm.webex.com/meet/jsayles">https://ibm.webex.com/meet/jsayles</a>, audio is
+        provided through phone or VOIP
+    </li>
+    <li>Additional details on each Module are listed at the bottom</li>
+    <li>Typically the instructor will be available 15 minutes before each session - to assist with individual questions
+        & answers</li>
+</ul>
+
+<h3>Important</h3>
+<p><strong>It is imperative that when you participate in the Web Conference you put your phone on mute and leave it on mute throughout the training</strong></p>
+<ul>
+    <li>There will be dozens of developers participating in each class</li>
+    <li>Background noise/talking/etc interferes with the learning and is distracting</li>
+    <li>You are encouraged to use the WebEx chat feature to ask any/all questions throughout the training session</li>
+    <li>Note also that you must turn your PC/Laptop camera off during class - for the same reasons</li>
+</ul>
+<hr>
+<h2 id="class-setup">Setup</h2>
+<p>For entry level hand's-on learning - download these files and follow the setup instructions in the table:</p>
+
+<table>
+    <thead>
+
+        <th width="30%">Download URL</th>
+        <th>Files & Setup Instructions</th>
+    </thead>
+    <tr>
+        <td>
+            <a target="_blank"
+                href="https://www.ibm.com/developerworks/community/files/app#/file/1ed3c290-b89b-4716-ac8a-042b9f0ff731">https://www.ibm.com/developerworks/community/files/app#/file/1ed3c290-b89b-4716-ac8a-042b9f0ff731
+            </a>
+        </td>
+        <td>
+            <strong>1. Class education PDFs.
+            </strong>Unzip these files into a directory.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a target="_blank"
+                href="https://www.ibm.com/developerworks/community/files/app#/file/5143ec92-6834-40a5-b51e-194a7d154211">https://www.ibm.com/developerworks/community/files/app#/file/5143ec92-6834-40a5-b51e-194a7d154211
+            </a>
+        </td>
+        <td>
+            <strong>2. Class Exercises for each Module.
+            </strong>Download this file into the same directory as the class education PDFs.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a target="_blank"
+                href="https://www.ibm.com/developerworks/community/files/app#/file/15c1414c-2dee-4ecd-a036-525f50233b61">https://www.ibm.com/developerworks/community/files/app#/file/15c1414c-2dee-4ecd-a036-525f50233b61</a>
+        </td>
+        <td>
+            <strong>3. IDz Education Workspace
+            </strong>Download and unzip this file. It contains all of the programs/copybooks/JCL that are referenced in
+            the exercises.
+        </td>
+    </tr>
+</table>
+<br>
+<!-- 
+<h2>IDz Experienced Training & Enablement Schedule</h2>
+<p>A series of technical enablement sessions for experienced IDz users. These web-conferences and product demonstrations
+    extend the information presented in the Entry-Level program. They provide ways to leverage your investment in IDz
+    technology - improving productivity - and application quality.
+</p>
+
+<table>
+    <thead>
+        <th width="15%">Dates</th>
+        <th width="25%">Times (EST)</th>
+        <th>Topic/Session Description</th>
+    </thead>
+
+    <tr>
+        <td>May 14, 21, 28</td>
+        <td>9:00 AM - 10:00 AM</td>
+        <td>
+            <strong>Open Q&A</strong>
+            - An open technical Q&A forum where you can bring questions - especially "How To" questions and requests for
+            IBM to discuss or show techniques & tooling</td>
+    </tr> -->
+                    <!--     
+    <tr>
+        <td>January 21</td>
+        <td>9:00 AM - 10:30 AM</td>
+        <td>
+            <strong>Menu Manager</strong>
+            - Use IDz's built-in Menu Manager tooling to extend the Context Menu feature-set by accessing TSO Commands,
+            REXX Execs and CLISTS</td>
+    </tr>
+    <tr>
+        <td>February 19th</td>
+        <td>9:00 AM - 10:30 AM</td>
+        <td>
+            <strong>Advanced DB2 Tooling</strong>
+            - Take advantage of IDz's integration with Data Studio tooling. Visual Explain, Content Assist/Snippets &
+            Templates for developing statements. Note that this session will also provide value for your IDz Client
+            environment if you don't have Data Studio installed.</td>
+    </tr>
+    <tr>
+        <td>February 26th</td>
+        <td>9:00 AM - 10:30 AM</td>
+        <td>
+            <strong>Advanced Editing and Productivity Tooling</strong>
+            - Using little-known IDz features to promote COBOL, PL/I, JCL and Assembler coding productivity, Eclipse
+            features, Auto-comment,
+            <strong>Code Formatting</strong>
+            - Internal File Search, Regex, Local History, etc.</td>
+    </tr>
+    <tr>
+        <td>March 5th</td>
+        <td>9:00 AM - 10:00 AM</td>
+        <td>
+            <strong>Working with PL/I</strong>
+            - The IDz tooling for PL/I is extensive. This session will cover features for: Code Analysis, Editing, and
+            Debug.
+            <i class="highlight">Note - this session does not require prior IDz experience.</i>
+        </td>
+    </tr>
+    <tr>
+        <td>March 12th</td>
+        <td>9:00 AM - 10:30 AM</td>
+        <td>
+            <strong>IDz "Office Hours"</strong>
+            - IDz "Office Hours" - An open Q&A session - where you can ask any technical How-To question - about any
+            IDz/ADFz/RDz topic: Source & Data Access, Analyzing Code, Organizing Code, Build, Menu Manager, Working with
+            SQL, IMS & DB2 resources, Running CLISTS/REXX Execs, Editing, Managing Batch Jobs...
+        </td>
+    </tr>
+    <tr>
+        <td>March 19th</td>
+        <td>9:00 AM - 11:00 AM</td>
+        <td>
+            <strong>Working With Assembler</strong>
+            - Use the LPEX Assembler feature-set to analyze, code, assemble and Debug HLASM and BAL programs - including
+            supporting Macros and copy libraries.
+            <i class="highlight">Note - this session does not require prior IDz experience.</i>
+        </td>
+    </tr>
+    <tr>
+        <td>March 26th</td>
+        <td>9:00 AM - 9:45 AM</td>
+        <td>
+            <strong>Fault Analyzer</strong>
+            - Use the ADFz Fault Analyzer tool to access and research MVS ABEND information and Hyper-link to source
+            files.
+        </td>
+    </tr>
+    <tr>
+        <td>April 2nd</td>
+        <td>9:00 AM - 10:30 AM</td>
+        <td>
+            <strong>Exploiting Search</strong>
+            - Learn to exploit the IDz Remote and Remote File Search - REGEX, Compound Search Results, Save Search As...
+            and Save Search Results.</td>
+    </tr>
+
+    <tr>
+        <td>April 9th</td>
+        <td>9:00 AM - 10:30 AM</td>
+        <td>
+            <h4>Software Analyzer/Code Review - Code Quality Tools</h4>
+            - Learn how to utilize the built-in Code Quality tooling of IDz's Software Analyzer - for PL/I & COBOL.
+            Topics: Tools, Usage, Creating Custom Rules
+        </td>
+    </tr>
+    <tr>
+        <td>April 16th</td>
+        <td>9:00 AM - 9:45 AM</td>
+        <td>
+            <strong>ISPF Edit Macros</strong>
+            - Learn how to incorporate existing Edit Macros as commands within your LPEX Editing sessions - improving
+            the value of your IDz/Eclipse workbench with familiar ISPF tools.</td>
+    </tr>
+    <tr>
+        <td>April 23rd</td>
+        <td>9:00 AM - 10:30 AM</td>
+        <td>
+            <strong>* New * Using Eclipse & IDz Local Workstation Projects and Development Techniques</strong>
+            - Improve your productivity by exploiting the feature/function/tooling of IDz/Eclipse using Local
+            Workstation projects for: File organization, Analyze, Edit, Local build, Search, Utilize Bookmarks
+            effectively in Project workflow, Organize resources & assets into Local and Remote folders that are linked
+            (pointers) to your existing and Internet-based doc</td>
+    </tr>
+    <tr>
+        <td>April 30th</td>
+        <td>9:00 AM - 10:00 AM</td>
+        <td>
+            <strong>* New * IDz for the Mac</strong>
+            - Learn the differences between IDz/Windows & IDz/Mac: U.I. - Feature/Function, limitations, installation &
+            product integration
+        </td>
+    </tr>
+
+    <tr>
+        <td>May 6th<br>May 7th<br>May 8th</td>
+        <td>9:00 AM->10:30 AM Monday<br>9:00 AM->10:00 Tuesday & Wednesday</td>
+        <td>
+            <strong>* New * Introduction to Git for ISPF Developers</strong>
+            - This course presents the Git distributed SCM tool to veteran ISPF developers who will be using Git as part
+            of a DevOps initiative. The content is split up into 3 one-hour sessions:<br><strong>Monday</strong>
+            Terms/Concepts/Vocabulary and Techniques<br><strong>Tuesday:</strong> Branching and
+            Merging<br><strong>Wednesday</strong> Working with Remote Repositories <br>
+            There are hands-on labs for each session. If you wish to do these Git labs you will need access to a working
+            Git Repository: <br> Free Git environments such as: GitHub for Windows, Katacoda, Instruqt, or your
+            company's own Git Server. <br> The labs utilize a <strong>Command Line Interface</strong> to the Git
+            Repository</td>
+    </tr> -->
+                  </tbody>
+                </table>
+
+                <div id="modules" class="ibm-margin-top-2">
+                  <h2>
+                    Entry-Level Training - Individual Module/Class Agenda
+                    (Details)
+                  </h2>
+                  <!-- m1-->
+                  <div
+                    data-widget="showhide"
+                    data-type="panel"
+                    class="ibm-show-hide ibm-widget-processed"
+                  >
+                    <h2>
+                      <a href="javascript:void();"
+                        >Module 1: The RDz Workbench and introduction to Eclipse
+                        for ISPF Developers</a
+                      >
+                    </h2>
+                    <div class="ibm-container-body" style="display: none;">
+                      <ul>
+                        <li>
+                          Terms, concepts, Navigation and analogies for ISPF
+                          programmers
+                        </li>
+                        <li>Context Menu</li>
+                        <li>Split Screen/Multi-windowed views</li>
+                        <li>Program Control Flow</li>
+                        <li>
+                          Accessing program sources in the Education Workspace
+                        </li>
+                        <li>
+                          Optional topics:
+                          <ul>
+                            <li>Bookmarks</li>
+                            <li>
+                              Modifying Preferences
+                              <ul>
+                                <li>Colors</li>
+                                <li>Paging Controls</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- m2-->
+                  <div
+                    data-widget="showhide"
+                    data-type="panel"
+                    class="ibm-show-hide ibm-widget-processed"
+                  >
+                    <h2>
+                      <a href="javascript:void();"
+                        >Module 2: Editing Program Source</a
+                      >
+                    </h2>
+                    <div class="ibm-container-body" style="display: none;">
+                      <ul>
+                        <li>
+                          ISPF/LPEX emulation
+                          <ul>
+                            <li>PF Keys</li>
+                            <li>Command Line commands</li>
+                            <li>Prefix Area commands</li>
+                          </ul>
+                        </li>
+                        <li>Hot Key Definitions</li>
+                        <li>Content Assist</li>
+                        <li>Hex Editing</li>
+                        <li>Editing JCL</li>
+                        <li>The internal COBOL program model</li>
+                        <li>Source formatting</li>
+                        <li>
+                          Optional topics - time permitting:
+                          <ul>
+                            <li>
+                              Reusable code features:
+                              <ul type="square">
+                                <li>Code Templates</li>
+                                <li>Code Snippets</li>
+                              </ul>
+                            </li>
+                            <li>Local History</li>
+                            <li>The Java/Eclipse COBOL Editor</li>
+                            <li>Autocomment</li>
+                            <li>Regular Expressions and ISPF "Find/Replace"</li>
+                            <li>
+                              Edit Preferences - time permitting:
+                              <ul type="square">
+                                <li>Keyboard Mapping</li>
+                                <li>Defining new Hotkeys</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- m2-->
+                  <div
+                    data-widget="showhide"
+                    data-type="panel"
+                    class="ibm-show-hide ibm-widget-processed"
+                  >
+                    <h2>
+                      <a href="javascript:void();"
+                        >Module 3: Analyzing COBOL Programs</a
+                      >
+                    </h2>
+                    <div class="ibm-container-body" style="display: none;">
+                      <ul>
+                        <li>Search: Both ISPF and Ctrl+F</li>
+                        <li>Advanced Tooling - Context menu options</li>
+                        <li>Procedural (execution) flow analysis</li>
+                        <li>Data flow analysis</li>
+                        <li>Regular Expressions</li>
+                        <li>Code Filtering</li>
+                        <li>
+                          Optional Topics - time permitting:
+                          <ul>
+                            <li>Software Analyzer/Code Review</li>
+                            <li>Code Formatting</li>
+                            <li>Searching with Regular Expressions</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div
+                    data-widget="showhide"
+                    data-type="panel"
+                    class="ibm-show-hide ibm-widget-processed"
+                  >
+                    <h2>
+                      <a href="javascript:void();"
+                        >Module 4: Introduction to RDz Remote Systems’
+                        Features</a
+                      >
+                    </h2>
+                    <div class="ibm-container-body" style="display: none;">
+                      <ul>
+                        <li>Connecting to host systems</li>
+                        <li>
+                          Navigating
+                          <ul>
+                            <li>Thru your personal TSO files</li>
+                            <li>Within large libraries</li>
+                          </ul>
+                        </li>
+                        <li>
+                          Remote Search options
+                          <ul>
+                            <li>Java Search</li>
+                            <li>ISRSUPC (SuperC) Search</li>
+                            <li>Using Regular Expressions</li>
+                            <li>
+                              Search Result Options
+                              <ul type="square">
+                                <li>Export</li>
+                                <li>Reuse Searches</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    data-widget="showhide"
+                    data-type="panel"
+                    class="ibm-show-hide ibm-widget-processed"
+                  >
+                    <h2>
+                      <a href="javascript:void();"
+                        >Module 5: Dataset Access and Organization</a
+                      >
+                    </h2>
+                    <div class="ibm-container-body" style="display: none;">
+                      <ul>
+                        <li>z/OS File System Mapping</li>
+                        <li>
+                          MVS File Filters
+                          <ul>
+                            <li>Simple</li>
+                            <li>Compound</li>
+                          </ul>
+                        </li>
+                        <li>
+                          Retrieve Datasets
+                          <ul>
+                            <li>Concepts</li>
+                            <li>Managing the Retrieved Datasets queue</li>
+                          </ul>
+                        </li>
+                        <li>
+                          Property Groups
+                          <ul>
+                            <li>Concepts</li>
+                            <li>SYSLIB</li>
+                            <li>JCL tab options</li>
+                          </ul>
+                        </li>
+                        <li>
+                          Optional:
+                          <ul type="square">
+                            <li>Property Groups for:</li>
+                            <li>Opening PROCs</li>
+                            <li>Opening Called Subroutines</li>
+                            <li>SQL syntax checking</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    data-widget="showhide"
+                    data-type="panel"
+                    class="ibm-show-hide ibm-widget-processed"
+                  >
+                    <h2>
+                      <a href="javascript:void();"
+                        >Module 6: ISPF 3.x Options, Batch Job Submission &amp;
+                        Management</a
+                      >
+                    </h2>
+                    <div class="ibm-container-body" style="display: none;">
+                      <ul>
+                        <li>
+                          ISPF 3.x Functionality
+                          <ul>
+                            <li>Allocating, Deleting and Renaming Datasets</li>
+                            <li>Migrated files</li>
+                            <li>Copy</li>
+                            <li>Compress</li>
+                          </ul>
+                        </li>
+                        <li>Working with GDGs and VSAM files</li>
+                        <li>
+                          Copy/Paste (Drag &amp; Drop) Datasets
+                          <ul>
+                            <li>Mainframe &gt; PC &gt; Mainframe</li>
+                            <li>Within an LPAR</li>
+                            <li>Across LPARs</li>
+                          </ul>
+                        </li>
+                        <li>
+                          Submitting and managing jobs
+                          <ul>
+                            <li>Job Filtering</li>
+                            <li>JES options</li>
+                          </ul>
+                        </li>
+                        <li>
+                          SDSF commands (if preparation has been done to setup
+                          Menu Manager actions):
+                          <ul>
+                            <li>XDC actions</li>
+                            <li>Change Class/Priority</li>
+                          </ul>
+                        </li>
+                        <li>Host Connection Emulator</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    data-widget="showhide"
+                    data-type="panel"
+                    class="ibm-show-hide ibm-widget-processed"
+                  >
+                    <h2>
+                      <a href="javascript:void();">Module 7: MVS Subprojects</a>
+                    </h2>
+                    <div class="ibm-container-body" style="display: none;">
+                      <ul>
+                        <li>Concepts and vocabulary</li>
+                        <li>Creating z/OS Projects and MVS Subprojects</li>
+                        <li>Working out of MVS Subprojects</li>
+                        <li>Usage best practices</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    data-widget="showhide"
+                    data-type="panel"
+                    class="ibm-show-hide ibm-widget-processed"
+                  >
+                    <h2>
+                      <a href="javascript:void();"
+                        >Module 8: The DB2 and SQL Data Tools</a
+                      >
+                    </h2>
+                    <div class="ibm-container-body" style="display: none;">
+                      <ul>
+                        <li>Connecting/filtering SCHEMA</li>
+                        <li>
+                          Discovering DB2:
+                          <ul>
+                            <li>Tables/Views/Indexes</li>
+                            <li>Relationships</li>
+                          </ul>
+                        </li>
+                        <li>
+                          SQL Code/Test
+                          <ul>
+                            <li>Interactive SQL</li>
+                            <li>Graphical SQL</li>
+                            <li>
+                              Coding/Testing/Running/Tuning Embedded SQL -
+                              during a COBOL or PL/I program editing session
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          DB2 Table/View Manipulation:
+                          <ul>
+                            <li>Browse</li>
+                            <li>Edit</li>
+                            <li>Row/Column Table Subsetting</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    data-widget="showhide"
+                    data-type="panel"
+                    class="ibm-show-hide ibm-widget-processed"
+                  >
+                    <h2>
+                      <a href="javascript:void();"
+                        >Module 9: Debugging z/OS COBOL Applications using
+                        IDz/RDz</a
+                      >
+                    </h2>
+                    <div class="ibm-container-body" style="display: none;">
+                      <ul>
+                        <li>Terms &amp; Concepts</li>
+                        <li>Batch Debug-Compilation directives</li>
+                        <li>Invoking with CEEOPTS/TEST</li>
+                        <li>
+                          Controlling execution
+                          <ul>
+                            <li>Run to</li>
+                            <li>Step (various options)</li>
+                            <li>Context Menu: Run To/Jump To lines</li>
+                          </ul>
+                        </li>
+                        <li>
+                          Break points
+                          <ul>
+                            <li>Line</li>
+                            <li>Conditional</li>
+                            <li>Entry</li>
+                          </ul>
+                        </li>
+                        <li>
+                          Working with data values during Debug:
+                          <ul>
+                            <li>Hover</li>
+                            <li>Changing values dynamically</li>
+                            <li>View/Edit values in Hex</li>
+                          </ul>
+                        </li>
+                        <li>Combining Debug (dynamic) with Static Analysis</li>
+                        <li>
+                          Debugging CICS (if using IBM Debug Tool and DTCN)
+                        </li>
+                        <li>Code Coverage</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <span class="date">February 19, 9:00 AM - 10:00 AM </span>
+
+                  <strong
+                    >IDz Entry-Level Training Module 5 - Dataset
+                    Access/Organization and Property Groups</strong
+                  >
+                  <br />Learn to utilize MVS File Filters and Retrieve Data Set
+                  for effective organization and access of z/OS resources.
+                  Create, configuring and customize Property Groups for SYSLIB
+                  (COPY and INCLUDE search path definitions), PROC Search Path
+                  and Called Module Search Path definitions Utilize Property
+                  Groups with: Show Dependencies and Remote Syntax Check. <br />
+
+                  <span class="date"
+                    >Feb 24th - Monday Classes - 9:00 AM - 10:00 AM Eastern
+                  </span>
+
+                  <strong
+                    >IDz Entry-Level Training Module 2&nbsp;- IDz Editing and
+                    Code Development Tools &amp; Techniques
+                  </strong>
+                  <br />
+                  Overview of IDz code editors &amp; productivity techniques,
+                  ISPF emulation: Command line commands/Prefix area commands,
+                  Hot Key definitions, Editing source with embedded Hex
+                  characters, JCL editing, IDz's source download and program
+                  model, and Content Assist ("look-ahead typing")<br />
+
+                  <span class="date"
+                    >February 26, 9:00 AM - 10:00 AM Eastern</span
+                  >
+
+                  <strong
+                    >IDz Entry-Level Training Module 6 - the ISPF 3.x Data Set
+                    Utilities&nbsp;</strong
+                  >
+                  <br />
+                  This module introduces the data set management and utility
+                  features of IDz that are available from the ISPF Dialogs in
+                  =3.X:
+                  <strong
+                    >File allocation, File rename, File delete, Library
+                    compress, VSAM File create, GDG Model and GDG Data Set
+                    create </strong
+                  >. Batch Job management and interactive CLIST/REXX support is
+                  also part of Module 6. An introduction to Menu Manager is
+                  presented <br />
+
+                  <span class="date"
+                    >March 2, Monday Classes 9:00 AM - 10:00 AM Eastern</span
+                  >
+
+                  <strong
+                    >IDz Entry Level Training - Module 3 - Program Analysis
+                    Tools</strong
+                  >
+                  <br />ISPF Search techniques (expanded), IDz graphical tools
+                  for: Logic Flow and program execution analysis, Graphical
+                  &amp; declarative tools for Data Flow and impact analysis
+                  (within a single program), Various built in language Filters.
+                  <br />
+
+                  <span class="date">March 4, 9:00 AM - 10:00 AM Eastern</span>
+
+                  <strong
+                    >IDz Entry-Level Training Module 7&nbsp;- MVS Subprojects
+                  </strong>
+                  <br />
+                  Learn how to use this convenient &amp; powerful IDz feature to
+                  organize and manage individual PDS members and individual QSAM
+                  files on a per-project bases. MVS Subprojects are also
+                  utilized with SCM access and Embedded SQL code/test/tune.
+
+                  <!-- Page Content -->
+                </div>
+              </main>
+              <!-- #main -->
+            </div>
+            <!-- #primary -->
+          </div>
+          <!-- /pn-columns -->
+        </div>
+        <!-- #content -->
+      </div>
+      <!-- end of ibm-content-wrapper -->
+
+      <p
+        class="ibm-ind-link ibm-nospacing ibm-icononly ibm-btt-auto ibm-hidden-small"
+      >
+        <a
+          class="ibm-nospacing ibm-top-link"
+          aria-label="Back to top"
+          href="https://developer.ibm.com/mainframe/idzrdz-remote-training/#top"
+          tabindex="0"
+          >Back to top</a
+        >
+      </p>
+
+      <footer role="contentinfo" aria-label="IBM" id="themeFooter">
+        <div id="boomer-footer" class="boomer_footer_menu"></div>
+        <div id="dw-footer" class="ibm-alternate ibm-padding-normal">
+          <div class="ibm-columns ibm-padding-bottom-0"></div>
+        </div>
+      </footer>
+    </div>
+    <!-- #page -->
+
+    <div class="gdpr-overlay"></div>
+    <div class="gdpr gdpr-privacy-preferences">
+      <div class="gdpr-wrapper">
+        <form
+          method="post"
+          class="gdpr-privacy-preferences-frm"
+          action="https://developer.ibm.com/mainframe/wp-admin/admin-post.php"
+        >
+          <input
+            type="hidden"
+            name="action"
+            value="gdpr_update_privacy_preferences"
+          />
+          <input
+            type="hidden"
+            id="update-privacy-preferences-nonce"
+            name="update-privacy-preferences-nonce"
+            value="d46bdb5362"
+          /><input
+            type="hidden"
+            name="_wp_http_referer"
+            value="/mainframe/idzrdz-remote-training/"
+          />
+          <header>
+            <div class="gdpr-box-title">
+              <h3>Privacy Preference Center</h3>
+              <span class="gdpr-close"></span>
+            </div>
+          </header>
+          <div class="gdpr-mobile-menu">
+            <button type="button">Options</button>
+          </div>
+          <div class="gdpr-content">
+            <ul class="gdpr-tabs">
+              <li>
+                <button
+                  type="button"
+                  class="gdpr-tab-button gdpr-active"
+                  data-target="gdpr-consent-management"
+                >
+                  Consent Management
+                </button>
+              </li>
+            </ul>
+            <div class="gdpr-tab-content">
+              <div class="gdpr-consent-management gdpr-active">
+                <header>
+                  <h4>Consent Management</h4>
+                </header>
+                <div class="gdpr-info">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <input type="hidden" name="all_cookies" value="[]" />
+          </div>
+          <footer>
+            <input type="submit" value="Save Preferences" />
+          </footer>
+        </form>
+      </div>
+    </div>
+
+    <div class="gdpr gdpr-general-confirmation gdpr-delete-confirmation">
+      <div class="gdpr-wrapper">
+        <header>
+          <div class="gdpr-box-title">
+            <h3>Close your account?</h3>
+            <span class="gdpr-close"></span>
+          </div>
+        </header>
+        <div class="gdpr-content">
+          <p>
+            Your account will be closed and all data will be permanently deleted
+            and cannot be recovered. Are you sure?
+          </p>
+        </div>
+        <footer>
+          <button class="gdpr-delete-account">Continue</button>
+          <button class="gdpr-cancel">Cancel</button>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      jQuery(document).ready(function($) {
+        var dcName = "mainframe";
+        // $('a').each(function(){
+        //   if(this.href.match('bluemix.net')){
+        //     if(this.search){
+        //       this.href = this.href + '&cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
+        //     }else{
+        //       this.href = this.href + '?cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
+        //     }
+        //   }
+        // });
+
+        jQuery('a[href*="bluemix.net"]').each(function() {
+          if (this.search) {
+            this.href =
+              this.href + "&cm_sp=dw-bluemix-_-" + dcName + "-_-devcenter";
+          } else {
+            this.href =
+              this.href + "?cm_sp=dw-bluemix-_-" + dcName + "-_-devcenter";
+          }
+        });
+      });
+    </script>
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/navigation.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/skip-link-focus-fix.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/tactic.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/tacticbindlinks.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/new-tab.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./idzrdz-remote-training_files/wp-embed.min.js"
+    ></script>
+
+    <script>
+      /* this is where we are going to control the main menu */
+      function changeMenu(links) {
+        IBMCore.common.module.masthead.editProfileMenu({
+          action: "replace",
+          links: links,
+        });
+      }
+
+      var setMainMenu = function() {
+        var userLinks = [
+          {
+            title: "My IBM",
+            url: "https://myibm.ibm.com/dashboard/?lnk=mmi",
+          },
+          {
+            title: "Sign In",
+            url:
+              "https://developer.ibm.com/sso/login?d=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fidzrdz-remote-training&lang=en_US",
+          },
+          {
+            title: "Register",
+            url:
+              "https://developer.ibm.com/sso/register?lang=en_US&d=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fidzrdz-remote-training",
+          },
+        ];
+        changeMenu(userLinks);
+      };
+
+      IBMCore.common.module.masthead.subscribe(
+        "profileMenuReady",
+        "customjs",
+        setMainMenu
+      );
+    </script>
+    <script>
+      (function($) {
+        $(document).ready(function() {
+          /* prevent the # links in the main menu from firing */
+          $(".ibm-sitenav-menu-list #primary-menu a").on(
+            "click.stopFakeLinks",
+            function(e) {
+              $this = $(this);
+              if ($this.attr("href") === "#") {
+                return false;
+              }
+            }
+          );
+
+          /* bind the feedback click evnet */
+          jQuery("#dw-footer .ibm-feedbacklink a").on("click", function(evt) {
+            evt.preventDefault();
+            var iframeWidth = 970;
+            if (window.innerWidth < 900) {
+              iframeWidth = window.innerWidth - 80;
+            }
+            IBMCore.common.widget.surveyccfintercept.initFeedback({
+              survey: {
+                height: 700,
+                id: "web-exp",
+                metaData: "",
+                type: "medallia",
+                width: iframeWidth,
+              },
+            });
+          });
+          //testing out the alpha helper
+          $("[data-alpha]").each(function(i) {
+            $elm = $(this);
+            var bg = $elm
+              .css("backgroundColor")
+              .replace(/[rgb(]/g, "")
+              .replace(/ /g, "")
+              .replace(/[)]/g, "");
+            var alpha = $elm.data("alpha") / 100;
+            $elm.css(
+              "cssText",
+              "background-color: rgba(" + bg + "," + alpha + ") !important;"
+            );
+          });
+          //testing out the panel slider
+          $(".pn-sliding-panels").each(function(i) {
+            $elm = $(this);
+            //get the width of the active panel
+            var activeWidth = $elm.data("openamount"),
+              panelCount = $elm.data("panelcount"),
+              inactiveWidth = (100 - activeWidth) / (panelCount - 1);
+            //set the first slide as active - later, allow it to be set
+            $elm.find(".pn-panel").each(function(i, item) {
+              $panel = $(item);
+              $panel.data("closedwidth", inactiveWidth);
+              $panel.data("openwidth", activeWidth);
+              if (i == 0) {
+                $panel
+                  .addClass("pn-panel__active")
+                  .css({ width: activeWidth + "%" });
+              } else {
+                $panel.css({ width: inactiveWidth + "%" });
+              }
+            });
+
+            $elm.on("click.slide", ".pn-panel", function(e) {
+              $this = $(this);
+              //console.info('clicked')
+              if ($this.hasClass("pn-panel__active")) {
+                //allow for the links in the active panel to be clicked
+                //console.info('im open, let the links through')
+              } else {
+                e.preventDefault();
+                //set the width of the currently active panel to the closed amount
+                var $active = $this
+                  .parents(".pn-sliding-panels")
+                  .find(".pn-panel__active");
+                $active
+                  .css({ width: $active.data("closedwidth") + "%" })
+                  .removeClass("pn-panel__active");
+                $this
+                  .addClass("pn-panel__active")
+                  .css({ width: $this.data("openwidth") + "%" });
+              }
+            });
+          });
+        });
+      })(jQuery);
+    </script>
+
+    <div id="ibm-overlay-backdrop"></div>
+    <div class="pn-modal-overlay" style="display: none;"></div>
+    <div class="pn-modal" style="display: none;">
+      <div class="pn-modal-wrap">
+        <div class="pn-modal-hd">Header Here</div>
+        <div class="pn-modal-bd"></div>
+        <div class="pn-modal-ft"></div>
+        <a
+          href="https://developer.ibm.com/mainframe/idzrdz-remote-training/#"
+          class="pn-modal-close"
+          >x</a
+        >
+      </div>
+    </div>
+    <div id="ibm-mobilemenu-screen"></div>
+  </body>
+</html>
