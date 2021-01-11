@@ -11104,21 +11104,31 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
         canIM = !0,
         selectedListThreshold = 7,
         goingForward = !1;
+      // function detectOS() {
+      //   var osConfirm,
+      //     operatingSystemCheck = $("html");
+      //   return (
+      //     (osConfirm = operatingSystemCheck.hasClass("mac")
+      //       ? "mac"
+      //       : operatingSystemCheck.hasClass("win")
+      //       ? "win"
+      //       : operatingSystemCheck.hasClass("linux")
+      //       ? "linux"
+      //       : "win"),
+      //     DEBUG && console.log(osConfirm),
+      //     osConfirm
+      //   );
+      // }
+      
       function detectOS() {
-        var osConfirm,
-          operatingSystemCheck = $("html");
-        return (
-          (osConfirm = operatingSystemCheck.hasClass("mac")
-            ? "mac"
-            : operatingSystemCheck.hasClass("win")
-            ? "win"
-            : operatingSystemCheck.hasClass("linux")
-            ? "linux"
-            : "win"),
-          DEBUG && console.log(osConfirm),
-          osConfirm
-        );
+        let userAgent = window.navigator.userAgent.toLowerCase();
+        if (userAgent.indexOf('mac') !== -1)
+          return 'mac';
+        if (userAgent.indexOf('linux') !== -1 || userAgent.indexOf('x11') !== -1)
+          return 'linux';
+        return 'win';
       }
+      
       function calculatePrereqs(productsArray) {
         var prereq_pid;
         (prereqArray.length = 0) < productsArray.length &&
