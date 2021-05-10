@@ -2691,7 +2691,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                             applications for z/OS® environments.
                                           </div>
                                         </td>
-                                        <td>3.1</td>
+                                        <td>3.1, 3.2</td>
 
                                         <!-- <td>IBM Explorer for z/OS</td>-->
                                         <td>
@@ -4723,7 +4723,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                               Select
                                             </button>
                                           </div>
-                                          <p>
+                                          <p id="step4-p2-exist-subtext">
                                             I want to extend an existing
                                             instance of Eclipse I have installed
                                             on my machine.
@@ -6812,6 +6812,49 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                               </tr>
                                             </thead>
                                             <tbody>
+                                              <tr data-repo-pid="adfz">
+                                                <td>
+                                                  IBM Application Delivery
+                                                  Foundation for z/OS<br />
+                                                  <ul>
+                                                    This package includes the
+                                                    following products:
+                                                    <li>
+                                                      IBM Application
+                                                      Performance Analyzer for
+                                                      z/OS
+                                                    </li>
+                                                    <li>IBM Debug for z/OS</li>
+                                                    <li>
+                                                      IBM Developer for z/OS
+                                                    </li>
+                                                    <li>
+                                                      IBM Fault Analyzer for
+                                                      z/OS
+                                                    </li>
+                                                    <li>
+                                                      IBM File Manager for z/OS
+                                                    </li>
+                                                  </ul>
+                                                </td>
+                                                <td
+                                                  data-showhide="aquaVersion"
+                                                  data-aqua-version="3.2"
+                                                >
+                                                  <p
+                                                    class="ibm-ind-link ibm-icononly"
+                                                  >
+                                                    <a
+                                                      target="_blank"
+                                                      data-linktype="download"
+                                                      data-eventpage="Wizard"
+                                                      data-eventlabel="IM Repo Zip (Wizard) - ADFZ"
+                                                      class="ibm-download-link"
+                                                      href="https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/aqua3.2/direct/adfz.im.repo_photon.zip"
+                                                    ></a>
+                                                  </p>
+                                                </td>
+                                              </tr>
                                               <tr data-repo-pid="zosexplorer">
                                                 <td>
                                                   IBM Explorer for z/OS<span
@@ -8943,13 +8986,10 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                       </li>
                                     </ol>
                                     <div class="notice">
-                                      If your existing Eclipse was packaged with
-                                      a version of RSE (Remote System Explorer),
-                                      you may run into a version conflict during
-                                      installation.
+                                      If you experience any problem with RSE (Remote System Explorer), please refer to this section:
                                       <ul>
                                         <li>
-                                          To resolve this error, check "Show
+                                          To resolve the error, check "Show
                                           original error and build my own
                                           solution" and "Remove items already
                                           installed" when the Install
@@ -12555,7 +12595,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             pid: "adfz",
             aqua_30: !1,
             aqua_31: !0,
-            aqua_32: !1,
+            aqua_32: !0,
             p2: !1,
             im: !0,
             repozip: !1,
@@ -12564,6 +12604,14 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           },
         },
         aquaProductVersions_32 = {
+          adfz: {
+            name: "IBM Application Delivery Foundation for z/OS",
+            version: "",
+            aquastack: "3.2",
+            im_32: !0,
+            path: "",
+            pid: "",
+          },
           pa: {
             name: "IBM® CICS Performance Analyzer®",
             version: "5.4.0.6",
@@ -13492,6 +13540,22 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             showP2(p2MethodEnabled()),
             showIM(IMMethodEnabled());
         } else if (2 == stepNumber) {
+          let aquaVersionText = "";
+          switch (aquaVersion) {
+            case 3.0:
+              aquaVersionText = "Aqua 3.0 (Eclipse Luna)";
+              break;
+            case 3.1:
+              aquaVersionText = "Aqua 3.1 (Eclipse Neon)";
+              break;
+            case 3.2:
+              aquaVersionText = "Aqua 3.2 (Eclipse Photon)";
+              break;
+            default:
+              aquaVersionText = "Aqua Eclipse";
+          }
+          let step4P2ExistSubtext = "I want to extend an existing " + aquaVersionText + " instance I have installed on my machine.";
+          
           if (($("#step-4 div.ibm-hide").hide(), "" != selectedMethod)) {
             $("#s4-" + selectedMethod).show();
             var method_string = "";
@@ -13505,7 +13569,8 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                     ? "IBM Installation Manager (V1.8.5.1)"
                     : "IBM Installation Manager")
               : (selectedMethod = "P2") && (method_string = "Eclipse p2"),
-              $("#outliner-install-method").text(method_string);
+              $("#outliner-install-method").text(method_string),
+              $("#step4-p2-exist-subtext").text(step4P2ExistSubtext);
           } else (isValid = !1), alert(error_noMethod);
           showIMStartingPoint(aquaVersion);
         } else if (3 == stepNumber) {
@@ -13748,6 +13813,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           : ($(".select-products-list-generic").show(),
             $(".select-products-list").hide());
       }
+      
       $(document).ready(function() {
         (operatingSystem = detectOS()),
           initCopyToClipboardBtn(),
