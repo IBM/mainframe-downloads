@@ -2691,7 +2691,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                             applications for z/OS® environments.
                                           </div>
                                         </td>
-                                        <td>3.1</td>
+                                        <td>3.1, 3.2</td>
 
                                         <!-- <td>IBM Explorer for z/OS</td>-->
                                         <td>
@@ -6812,6 +6812,49 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                               </tr>
                                             </thead>
                                             <tbody>
+                                              <tr data-repo-pid="adfz">
+                                                <td>
+                                                  IBM Application Delivery
+                                                  Foundation for z/OS<br />
+                                                  <ul>
+                                                    This package includes the
+                                                    following products:
+                                                    <li>
+                                                      IBM Application
+                                                      Performance Analyzer for
+                                                      z/OS
+                                                    </li>
+                                                    <li>IBM Debug for z/OS</li>
+                                                    <li>
+                                                      IBM Developer for z/OS
+                                                    </li>
+                                                    <li>
+                                                      IBM Fault Analyzer for
+                                                      z/OS
+                                                    </li>
+                                                    <li>
+                                                      IBM File Manager for z/OS
+                                                    </li>
+                                                  </ul>
+                                                </td>
+                                                <td
+                                                  data-showhide="aquaVersion"
+                                                  data-aqua-version="3.2"
+                                                >
+                                                  <p
+                                                    class="ibm-ind-link ibm-icononly"
+                                                  >
+                                                    <a
+                                                      target="_blank"
+                                                      data-linktype="download"
+                                                      data-eventpage="Wizard"
+                                                      data-eventlabel="IM Repo Zip (Wizard) - ADFZ"
+                                                      class="ibm-download-link"
+                                                      href="https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/aqua3.2/direct/adfz.im.repo_photon.zip"
+                                                    ></a>
+                                                  </p>
+                                                </td>
+                                              </tr>
                                               <tr data-repo-pid="zosexplorer">
                                                 <td>
                                                   IBM Explorer for z/OS<span
@@ -12555,7 +12598,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             pid: "adfz",
             aqua_30: !1,
             aqua_31: !0,
-            aqua_32: !1,
+            aqua_32: !0,
             p2: !1,
             im: !0,
             repozip: !1,
@@ -12564,6 +12607,14 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           },
         },
         aquaProductVersions_32 = {
+          adfz: {
+            name: "IBM Application Delivery Foundation for z/OS",
+            version: "",
+            aquastack: "3.2",
+            im_32: !0,
+            path: "",
+            pid: "",
+          },
           pa: {
             name: "IBM® CICS Performance Analyzer®",
             version: "5.4.0.6",
@@ -13748,6 +13799,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           : ($(".select-products-list-generic").show(),
             $(".select-products-list").hide());
       }
+      
       $(document).ready(function() {
         (operatingSystem = detectOS()),
           initCopyToClipboardBtn(),
