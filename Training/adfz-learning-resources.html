@@ -1373,6 +1373,13 @@
           </ul>
           <p><a href="./idzrdz-remote-training.html" target="_blank" rel="noopener"><strong>Information about the IBM (no-charge) public training classes</strong></a></p>          
           <p>Consider adding a link to this page to your Workspace. As more blogs, PDFs and recordings are produced, this page will be updated to include them.</p>
+          
+          <button id="expand-collapse-all-btn" 
+            class="next-btn selection-btn ibm-btn-blue-50 ibm-btn-pri"
+            style="margin: 40px 0px 40px 0px;"
+          >Expand All</button>
+          
+          <!-- Expandable List Starts -->
           <h2><strong>IDz and Eclipse - Source Editing, Options and Techniques</strong></h2>
           <div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed">
           <h2><a href="javascript:void();">&nbsp; Overview - Terms and Concepts</a></h2>
@@ -1689,6 +1696,8 @@
           </ul>
           </div>
           </div>
+          <!-- Expandable List Ends -->
+          
           <div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed">
           <div class="ibm-container-body">
           <ul></ul>
@@ -2136,6 +2145,28 @@
                   .css({ width: $this.data("openwidth") + "%" });
               }
             });
+          });
+        });
+      })(jQuery);
+    </script>
+    
+    <!-- JS code snippet to control the Expand All / Collpase All effect -->
+    <script>
+      (function($) {
+        $(document).ready(function() {
+          var expandCollapseBtn = jQuery("#expand-collapse-all-btn");
+          expandCollapseBtn.on("click", function(evt) {
+            if (expandCollapseBtn.text() === 'Expand All') {
+              jQuery(".ibm-show-hide > h2").addClass("ibm-showing");
+              jQuery(".ibm-show-hide > h2 > a").addClass("ibm-show-active");
+              jQuery(".ibm-container-body").css({"display": ""});
+              expandCollapseBtn.text("Collapse All");
+            } else {
+              jQuery(".ibm-show-hide > h2").removeClass("ibm-showing");
+              jQuery(".ibm-show-hide > h2 > a").removeClass("ibm-show-active");
+              jQuery(".ibm-container-body").css({"display": "none"});
+              expandCollapseBtn.text("Expand All");
+            }
           });
         });
       })(jQuery);
