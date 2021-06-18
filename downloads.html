@@ -3844,7 +3844,7 @@
                                   </p>
                                 </div>
                                 <a
-                                  href="https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&li_formnum=L-JYZG-BY2LVA&accepted_url=https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/wazi/vscode/1.2.1/L-JYZG-BY2LVA_Wazi_Developer_for_VSCode_V1.2.1_IPLA.zip"
+                                  href="https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&li_formnum=L-JYZG-C3FKVD&accepted_url=https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/wazi/vscode/1.2.5/L-JYZG-C3FKVD_Wazi_Developer_for_VSCode_V1.2.5_IPLA.zip"
                                   target="_blank"
                                   class="badge im"
                                   >VSCode</a
@@ -6940,7 +6940,7 @@
                                     <a
                                       class="badge im"
                                       target="_blank"
-                                      href="https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&li_formnum=L-JYZG-BY2LVA&accepted_url=https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/wazi/vscode/1.2.1/L-JYZG-BY2LVA_Wazi_Developer_for_VSCode_V1.2.1_IPLA.zip"
+                                      href="https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&li_formnum=L-JYZG-C3FKVD&accepted_url=https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/wazi/vscode/1.2.5/L-JYZG-C3FKVD_Wazi_Developer_for_VSCode_V1.2.5_IPLA.zip"
                                       >VSCode</a
                                     >
                                     <a
@@ -7069,8 +7069,6 @@
                               Please follow the Knowledge Center instruction to deploy Wazi Developer for Workspaces.
                             </li>
                           </ul>
-
-                          <br />
                         </div>
                         <script>
                           $(document).ready(function() {
@@ -7107,8 +7105,126 @@
                                 ).addClass("ibm-styled-input");
                               },
                             });
+                            
+                            $("#zvtp-table").DataTable({
+                              paging: false,
+                              language: {
+                                searchPlaceholder: "eg. zVTP",
+                                zeroRecords: "Nothing found",
+                                infoEmpty: "Nothing found",
+                                infoFiltered:
+                                  "(filtered from _MAX_ total records)",
+                                search: "Filter:",
+                              },
+                              initComplete: function() {
+                                $(
+                                  ".dataTables_filter input[type=search]"
+                                ).addClass("ibm-styled-input");
+                              },
+                            });
                           });
                         </script>
+                        
+                        
+                        <!-- zVTP Table Start -->
+                        <div id="zvtp">
+                          <h2 id="zvtp-header" class="ibm-margin-top-r2">
+                            IBM Z Virtual Test Platform
+                          </h2>
+                          <div
+                            id="zvtp_table_wrapper"
+                            class="dataTables_wrapper no-footer"
+                          >
+                            <div
+                              id="zvtp_table_filter"
+                              class="dataTables_filter"
+                            ></div>
+                            <table
+                              id="zvtp-table"
+                              data-paging="false"
+                              data-col-reorder="false"
+                              data-info="false"
+                              data-ordering="false"
+                              data-searching="true"
+                              class="ibm-data-table ibm-no-border ibm-no-highlight ibm-padding-small mf-product-table dataTable no-footer"
+                              data-order='[[0,"asc"]]'
+                              role="grid"
+                            >
+                              <thead>
+                                <tr role="row">
+                                  <th
+                                    data-orderable="true"
+                                    data-searchable="true"
+                                    class="sorting_disabled"
+                                    rowspan="1"
+                                    colspan="1"
+                                    width="40%"
+                                  >
+                                    Product Name
+                                  </th>
+                                  <th
+                                    data-orderable="false"
+                                    title="Product Version"
+                                    data-searchable="true"
+                                    class="sorting_disabled"
+                                    rowspan="1"
+                                    colspan="1"
+                                    width="30%"
+                                  >
+                                    Version
+                                  </th>
+                                  <th
+                                    data-orderable="false"
+                                    title="Download"
+                                    data-searchable="true"
+                                    class="sorting_disabled"
+                                    rowspan="1"
+                                    colspan="1"
+                                    width="30%"
+                                  >
+                                    Downloads
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr role="row" class="odd">
+                                  <td>
+                                    <a
+                                      href="#"
+                                      >IBM Z VTP Viewer</a
+                                    >
+                                  </td>
+                                  <td>2.0</td>
+                                  <td>
+                                    <a
+                                      class="badge im"
+                                      href="https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/zvtp/viewer/IBM-ZVTP-Viewer-2.0.0.zip"
+                                      >Download</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                  <td>
+                                    <a
+                                      href="#"
+                                      >IBM Distribution for Galasa</a
+                                    >
+                                  </td>
+                                  <td>1.0</td>
+                                  <td>
+                                    <a
+                                      class="badge im"
+                                      href="https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/zvtp/galasa/IBM-Distribution-For-Galasa-1.0.0.zip"
+                                      >Download</a
+                                    >
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <br />
+                        </div>
+                        
 
                         <!-- overlays -->
                         <!-- IDZ standalone -->
