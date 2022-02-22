@@ -1277,9 +1277,9 @@
                       </p>
 
                       <p>
-                        IBM Dependency Based Build is included in IBM Developer
-                        for z/OS Enterprise Edition and is also available as a standalone
-                        product.
+                        IBM Dependency Based Build is included in IBM Developer for z/OS Enterprise Edition 
+                        <b>(IDzEE) and IBM Wazi for Red Hat® CodeReady Workspaces</b>
+                        . It is also available as a standalone product.
                       </p>
                       <div class="ibm-left">
                         <iframe
@@ -1397,18 +1397,118 @@
                             >
                           </p>
                           <p>
-                            You can use Product ID 5655-AC5 or product name to
-                            search for IBM Developer for z/OS Enterprise Edition. For how to
-                            order products in Shopz, see
+                            To search for IBM Developer for z/OS Enterprise Edition in Shopz, select <b>z/OS-ServerPac</b> as the 
+                            <b>Package type</b> and <b>MVS - Application Development</b> as the <b>Group</b>. Then, type 5755-AC5 
+                            in the <b>Product ID</b> field or <b>IBM Dev for z/OS Ent Ed</b>. in the <b>Product description</b> field.
+                          </p>
+                          <p>
+                            You download an SMP/E installable component. To install it, follow the instructions in the
                             <a
-                              href="https://www-03.ibm.com/software/shopzseries/ShopzSeries_public.wss?action=guide"
+                              href="https://www.ibm.com/docs/en/SS6T76_latest/program_directory/hbgz110.html"
                               rel="noopener"
                               target="_blank"
-                              >Shopz User's Guide</a
+                              >Program Directory for IBM Dependency Based Build</a
                             >.
                           </p>
                         </li>
+                        
+                        <li id="download_codeready">
+                          <h4>As part of IBM Wazi for Red Hat® CodeReady Workspaces</h4>
+                          <p>
+                            <a
+                              href="https://www.ibm.com/software/passportadvantage/"
+                              >Download via Passport Advantage</a
+                            >
+                          </p>
+                          <p>
+                            DBB can be downloaded as a host component of IBM Wazi for Red Hat® CodeReady 
+                            Workspaces. You can download it on its own or along with other Wazi host components. 
+                            For explanations on how to download DBB on its own, refer to the explanations 
+                            in “As a standalone product”. The following explanations apply when you download DBB 
+                            along with other Wazi host components.
+                          </p>
+                          <ol>
+                            <li>
+                              Select <b>Software Downloads and Media Access.</b>
+                            </li>
+                            <li>
+                              Select <b>Program offering</b> and <b>agreement number</b> and click <b>Continue</b>.
+                            </li>
+                            <li>
+                              In the <b>Download software</b> tab, select the version of the Wazi host components to download. 
+                              To find the appropriate version, you have the following two options:
+                              <br>* Enter the part number in the <b>Part number</b> field. This number is version 
+                              specific (M03Y8EN for Wazi host components V1.4.0 for example). 
+                              <br>* Enter <b>Wazi Developer</b> in the <b>Part description</b> field. All the versions 
+                              of IBM Wazi Developer for Red Hat CodeReady Workspaces will be displayed. Select the 
+                              appropriate version that includes <b>Code Installation</b>.
+                            </li>
+                            <li>
+                              Select <b>IBM Dependency Based Build Toolkit</b>, along with other components.
+                            </li>
+                            <li>
+                              Optionally, you can click the alphabetical order list to display and view the product by name.
+                            </li>
+                            <li>
+                              When the host components are selected, leave the default download values and click <b>Download</b>.
+                            </li>
+                          </ol>
+                          <br>
+                          <p>
+                            You download an SMP/E installable component. To install it, follow the instructions in the 
+                            Program
+                            <a
+                              href="https://www.ibm.com/docs/en/SS6T76_latest/program_directory/hbgz110.html"
+                              rel="noopener"
+                              target="_blank"
+                              >Directory for IBM Dependency Based Build</a
+                            >.
+                          </p>
+                        </li>
+                        
                         <li id="download_standalone">
+                          <h4>As a standalone product</h4>
+                          <p>
+                            <a
+                              href="https://www.ibm.com/software/passportadvantage/"
+                              >Download via Passport Advantage</a
+                            >
+                          </p>
+                          <ol>
+                            <li>
+                              Select <b>Software Downloads and Media Access.</b>
+                            </li>
+                            <li>
+                              Select <b>Program offering</b> and <b>agreement number</b> and click <b>Continue</b>.
+                            </li>
+                            <li>
+                              In the <b>Download software</b> tab, select the DBB toolkit version to download. 
+                              To find the DBB toolkit version, you have the following two options:
+                              <br>* Enter the DBB part number in the <b>Part number</b> field. This number is 
+                              version specific (CC83BEN for DBB V1.1.0 for example).  
+                              <br>* Enter <b>Dependency Based Build</b> in the <b>Part description</b> field. All the 
+                              versions of the DBB toolkit will be displayed. Select the appropriate version.                             
+                            </li>
+                            <li>
+                              Optionally, you can click the alphabetical order list to display and view the product by name.
+                            </li>
+                            <li>
+                              When the DBB toolkit version is selected, leave the default download values and click <b>Download</b>.
+                            </li>
+                          </ol>
+                          <br>
+                          <p>
+                            You download an SMP/E installable component. To install it, follow the instructions in the 
+                            <a
+                              href="https://www.ibm.com/docs/en/SS6T76_latest/program_directory/hbgz110.html"
+                              rel="noopener"
+                              target="_blank"
+                              >Program Directory for IBM Dependency Based Build</a
+                            >.
+                          </p>
+                        </li>
+                        
+                        <li id="download_standalone_trial">
                           <h4>As a trial for standalone</h4>
                           <p>
                             <a
@@ -1432,13 +1532,13 @@
                             <li>
                               Extract the toolkit to <code>/var/dbb</code> by
                               using a command such as:
+                              <br>
                               <code
-                                >tar -C /var/dbb -xovf
-                                dbb-ztoolkit-trial.tar</code
+                                >tar -C /var/dbb -xovf dbb-ztoolkit-trial.tar</code
                               >
                             </li>
                           </ol>
-                          <p></p>
+                          <br>
                         </li>
                       </ul>
                       
@@ -1459,12 +1559,16 @@
                           Toolkit
                           <ul>
                             <li>
-                              <a href="#download_idzee"
-                                >As a part of IBM IDzEE (via Shop z)</a
-                              >
+                              <a href="#download_idzee">As a part of IBM IDzEE (via Shop z)</a>
                             </li>
                             <li>
-                              <a href="#download_standalone">As a standalone</a>
+                              <a href="#download_codeready">As part of IBM Wazi for Red Hat® CodeReady Workspaces</a>
+                            </li>
+                            <li>
+                              <a href="#download_standalone">As a standalone product</a>
+                            </li>
+                            <li>
+                              <a href="#download_standalone_trial">As a trial for standalone</a>
                             </li>
                           </ul>
                         </li>
