@@ -70,7 +70,7 @@
       },
     };
   </script>
-  
+
   <script>
     function getHeaderOffset() {
       var offset = 0;
@@ -388,6 +388,7 @@
   </script>
   <style id="ibm-masthead-hidelinks">
     @media screen and (max-width: 457px) {
+
       .ibm-masthead-categories,
       #ibm-megamenu-sections {
         display: none;
@@ -400,6 +401,7 @@
         display: none;
       }
     }
+
     @media screen and (min-width: 1075.9875411987305px) {
       .ibm-mobilemenu-sitenavmenu>ul>li {
         display: none;
@@ -441,37 +443,37 @@
        as if someone was typing in each search term by hand. 
     */
 
-    function resetFilters(){
+    function resetFilters() {
       // set all filters to off
-      var techFilters=document.getElementById("technology-list")
-      for(let i = 0; i < techFilters.children.length; i ++){
-        if(techFilters.children[i].children[0].value == "on"){
+      var techFilters = document.getElementById("technology-list")
+      for (let i = 0; i < techFilters.children.length; i++) {
+        if (techFilters.children[i].children[0].value == "on") {
           toggleSelection(techFilters.children[i].children[0])
         }
       }
-      var personaFilters=document.getElementById("persona-list")
-      for(let i = 0; i < personaFilters.children.length; i ++){
-        if(personaFilters.children[i].children[0].value == "on"){
+      var personaFilters = document.getElementById("persona-list")
+      for (let i = 0; i < personaFilters.children.length; i++) {
+        if (personaFilters.children[i].children[0].value == "on") {
           toggleSelection(personaFilters.children[i].children[0])
         }
       }
-      var resourceFilters=document.getElementById("resource-list")
-      for(let i = 0; i < resourceFilters.children.length; i ++){
-        if(resourceFilters.children[i].children[0].value == "on"){
+      var resourceFilters = document.getElementById("resource-list")
+      for (let i = 0; i < resourceFilters.children.length; i++) {
+        if (resourceFilters.children[i].children[0].value == "on") {
           toggleSelection(resourceFilters.children[i].children[0])
         }
       }
       // undrop drop downs 
       var techDropDown = document.getElementById("technology-toggle")
-      if(techDropDown.value == "on"){
+      if (techDropDown.value == "on") {
         toggleDropdown(techDropDown)
       }
       var personaDropDown = document.getElementById("persona-toggle")
-      if(personaDropDown.value == "on"){
+      if (personaDropDown.value == "on") {
         toggleDropdown(personaDropDown)
       }
       var resourceDropDown = document.getElementById("resource-toggle")
-      if(resourceDropDown.value == "on"){
+      if (resourceDropDown.value == "on") {
         toggleDropdown(resourceDropDown)
       }
       // clear filter box contents
@@ -479,7 +481,7 @@
       searchbox.value = ''
       searchbox.dispatchEvent(new Event("keyup"))
     }
-    function toggleFilter(myFilter){
+    function toggleFilter(myFilter) {
       //checks if we're togging a drop-down or toggling a selection, and calls the appropriate function
       if (myFilter.getAttribute("class").includes("toggle-button")) {
         toggleDropdown(myFilter) //Technology filters dropdown, Persona filters dropdown, and Resource filters dropdown
@@ -487,8 +489,8 @@
         toggleSelection(myFilter) //specific technologies / personas / resources, such as ADDI, or IDE Specialist, or Tutorials
       }
     }
-    
-    function collapseSection(myFilter){
+
+    function collapseSection(myFilter) {
       //both the toggle dropdown button and the collapse section button share the same ID
       //the collapse section button's appearnce doesn't need to change, because it gets hidden
       //the collapse section button is only visible when the toggle dropdown button's value is on 
@@ -497,14 +499,14 @@
       var otherFilter = document.getElementById(myFilter.getAttribute("id"))
       toggleDropdown(otherFilter)
     }
-    
+
     function toggleDropdown(myFilter) {
       //handles displaying or hiding the contents within each drop down 
       var whichFilter = myFilter.getAttribute("id").slice(0, -7)
       var filterList = document.getElementById(whichFilter + "-list")
       if (myFilter.value == "off" || myFilter.value == undefined) { //if displaying drop down contents 
         //update the button
-        myFilter.setAttribute("class","ibm-chevron-up-link toggle-button selected")
+        myFilter.setAttribute("class", "ibm-chevron-up-link toggle-button selected")
         myFilter.value = "on"
         //make each selection filter visible and determine how long the dropdown will be when fully revealed
         let size = 80 //baseline starting height
@@ -516,7 +518,7 @@
         document.getElementById(whichFilter + "-card").style.height = size + "px"
       } else { //if hiding drop down contents 
         //update the button
-        myFilter.setAttribute("class","ibm-chevron-down-link toggle-button unselected")
+        myFilter.setAttribute("class", "ibm-chevron-down-link toggle-button unselected")
         myFilter.value = "off"
         //hide each selection filter 
         for (let i = 0; i < filterList.children.length; i++) {
@@ -560,6 +562,18 @@
       //trigger an event to ahve the searchbox update the search results
       searchbox.dispatchEvent(new Event("keyup"))
     }
+
+    //used for abstract textbox visibility
+    function toggleAbstract(item){
+      var textbox = item.parentNode.children[2]
+      if( textbox.style.display == "none"){
+        textbox.style.display="block"
+        item.setAttribute("class", "ibm-chevron-up-link abstract-toggle-button selected")
+      } else {
+        textbox.style.display = "none"
+        item.setAttribute("class", "ibm-chevron-down-link abstract-toggle-button unselected")
+      }
+    }
   </script>
 </head>
 
@@ -572,6 +586,7 @@
       overflow: hidden;
       padding-right: 3rem;
     }
+
     .code_p_announcement .code_content__wrap p {
       display: table;
       width: auto;
@@ -585,6 +600,7 @@
       word-break: break-word;
       text-decoration: none;
     }
+
     .code_p_announcement .code_content__wrap p .ibm-btn-sec.ibm-btn-white {
       margin-left: 0.5rem;
       text-decoration: none;
@@ -592,25 +608,30 @@
       cursor: pointer;
       font-size: 0.875rem;
     }
+
     .code_p_announcement .code_content__wrap .announce_link {
       display: block;
       text-decoration: none;
       cursor: pointer;
       padding: 1rem 0;
     }
-    .filter_button{
+
+    .filter_button {
       width: 100%;
       padding: 5px 5px;
       text-align: center;
       text-decoration: none;
     }
+
     .dataTables_filter {
       display: none;
     }
-    h3 > .toggle-button{
+
+    h3>.toggle-button {
       width: 10%;
       min-width: 5%;
     }
+
     .toggle-button {
       width: 100%;
       padding: 5px 5px;
@@ -619,11 +640,18 @@
       float: right;
       margin-top: 0px;
     }
+
     ul.sub-menu {
       list-style-type: none;
       margin-top: 7px;
       margin-bottom: 7px;
       padding: 0;
+    }
+
+    .abstract-text{
+      padding-top: 5px;
+      padding-left: 5px;
+      width: 140%;
     }
   </style>
   <div style="display:none">page-templates/empty.php</div>
@@ -1145,12 +1173,12 @@
                     <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
                       <div class="ibm-card" style="height: 80px; min-width: 300px;" id="technology-card">
                         <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
+                          <h3 class="ibm-h3" onclick="toggleFilter(document.getElementById('technology-toggle'))">
                             Technology Filters
-                            <a href="javascript:void(0);" class="ibm-chevron-down-link toggle-button unselected" value="off" 
-                              id="technology-toggle" onclick="toggleFilter(this)">
+                            <a href="javascript:void(0);" class="ibm-chevron-down-link toggle-button unselected"
+                              value="off" id="technology-toggle">
                             </a>
-                          </h3>                      
+                          </h3>
                           <ul class="sub-menu" id="technology-list">
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="addi-button"
@@ -1159,14 +1187,14 @@
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="azure_devops-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="azure_devops-button" onclick="toggleFilter(this)">
                                 Azure DevOps
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="code_coverage-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="code_coverage-button" onclick="toggleFilter(this)">
                                 Code Coverage
                               </button>
                             </li>
@@ -1177,8 +1205,8 @@
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="deployment-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="deployment-button" onclick="toggleFilter(this)">
                                 Deployment
                               </button>
                             </li>
@@ -1201,8 +1229,8 @@
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="github_actions-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="github_actions-button" onclick="toggleFilter(this)">
                                 GitHub Actions
                               </button>
                             </li>
@@ -1213,8 +1241,8 @@
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="gitlab_ci-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="gitlab_ci-button" onclick="toggleFilter(this)">
                                 GitLab CI
                               </button>
                             </li>
@@ -1237,8 +1265,8 @@
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="packaging-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="packaging-button" onclick="toggleFilter(this)">
                                 Packaging
                               </button>
                             </li>
@@ -1266,7 +1294,7 @@
                                 Testing
                               </button>
                             </li>
-                            
+
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="ucd-button"
                                 onclick="toggleFilter(this)">
@@ -1286,8 +1314,8 @@
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="wazi_analyze-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="wazi_analyze-button" onclick="toggleFilter(this)">
                                 Wazi Analyze
                               </button>
                             </li>
@@ -1304,7 +1332,7 @@
                               </button>
                             </li>
                             <li style="display: none;">
-                              <a href="javascript:void(0);" class="ibm-chevron-up-link toggle-button selected" 
+                              <a href="javascript:void(0);" class="ibm-chevron-up-link toggle-button selected"
                                 id="technology-toggle" onclick="collapseSection(this)">
                               </a>
                             </li>
@@ -1316,63 +1344,63 @@
                     <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
                       <div class="ibm-card" style="height: 80px; min-width: 300px;" id="persona-card">
                         <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
+                          <h3 class="ibm-h3" onclick="toggleFilter(document.getElementById('persona-toggle'))">
                             Persona Filters
-                            <a href="javascript:void(0);" class="ibm-chevron-down-link toggle-button unselected" value="off" 
-                              id="persona-toggle" onclick="toggleFilter(this)">
+                            <a href="javascript:void(0);" class="ibm-chevron-down-link toggle-button unselected"
+                              value="off" id="persona-toggle">
                             </a>
                           </h3>
                           <ul class="sub-menu" id="persona-list">
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="architect-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="architect-button" onclick="toggleFilter(this)">
                                 Architect
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="build_specialist-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="build_specialist-button" onclick="toggleFilter(this)">
                                 Build Specialist
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="deployment_specialist-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="deployment_specialist-button" onclick="toggleFilter(this)">
                                 Deployment Specialist
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="ide_specialist-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="ide_specialist-button" onclick="toggleFilter(this)">
                                 IDE Specialist
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="middleware_specialist-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="middleware_specialist-button" onclick="toggleFilter(this)">
                                 Middleware Specialist
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="migration_specialist-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="migration_specialist-button" onclick="toggleFilter(this)">
                                 Migration Specialist
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="pipeline_specialist-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="pipeline_specialist-button" onclick="toggleFilter(this)">
                                 Pipeline Specialist
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="test_specialist-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="test_specialist-button" onclick="toggleFilter(this)">
                                 Test Specialist
                               </button>
                             </li>
                             <li style="display:none;">
-                              <a href="javascript:void(0);" class="ibm-chevron-up-link toggle-button selected" 
+                              <a href="javascript:void(0);" class="ibm-chevron-up-link toggle-button selected"
                                 id="persona-toggle" onclick="collapseSection(this)">
                               </a>
                             </li>
@@ -1384,69 +1412,69 @@
                     <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
                       <div class="ibm-card" style="height: 80px; min-width: 300px;" id="resource-card">
                         <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
+                          <h3 class="ibm-h3" onclick="toggleFilter(document.getElementById('resource-toggle'))">
                             Resource Filters
-                            <a href="javascript:void(0);" class="ibm-chevron-down-link toggle-button unselected" value="off" 
-                              id="resource-toggle" onclick="toggleFilter(this)">
+                            <a href="javascript:void(0);" class="ibm-chevron-down-link toggle-button unselected"
+                              value="off" id="resource-toggle" >
                             </a>
                           </h3>
                           <ul class="sub-menu" id="resource-list">
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="demo_videos_resource-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="demo_videos_resource-button" onclick="toggleFilter(this)">
                                 Demo Videos
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="design_resource-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="design_resource-button" onclick="toggleFilter(this)">
                                 Design
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="getting_started_resource-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="getting_started_resource-button" onclick="toggleFilter(this)">
                                 Getting Started
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="orchestrators_resource-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="orchestrators_resource-button" onclick="toggleFilter(this)">
                                 Orchestrators
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="tools_resource-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="tools_resource-button" onclick="toggleFilter(this)">
                                 Tools
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="tutorials_resource-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="tutorials_resource-button" onclick="toggleFilter(this)">
                                 Tutorials
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="webinars_resource-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="webinars_resource-button" onclick="toggleFilter(this)">
                                 Webinars
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="whitepapers_resource-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="whitepapers_resource-button" onclick="toggleFilter(this)">
                                 Whitepapers
                               </button>
                             </li>
                             <li style="display: none;">
-                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" id="zappbuild_resource-button"
-                                onclick="toggleFilter(this)">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="zappbuild_resource-button" onclick="toggleFilter(this)">
                                 zAppBuild
                               </button>
                             </li>
                             <li style="display: none;">
-                              <a href="javascript:void(0);" class="ibm-chevron-up-link toggle-button selected" 
+                              <a href="javascript:void(0);" class="ibm-chevron-up-link toggle-button selected"
                                 id="resource-toggle" onclick="collapseSection(this)">
                               </a>
                             </li>
@@ -1462,7 +1490,7 @@
             </div>
           </div>
         </div>
-        
+
         <script type="text/javascript" src="./resources_files/moment.js"></script>
         <script type="text/javascript" src="./resources_files/datatables.min.js"></script>
         <div class="ibm-background-neutral-white-30">
@@ -1472,7 +1500,7 @@
                 <h2 class="ibm-h2 ibm-padding-top-0 ibm-padding-bottom-1 ibm-textcolor-blue-50">
                   Search Results
                 </h2>
-                <p>
+                <p id="search-results_subheader">
                   Item results from filter selections
                 </p>
               </div>
@@ -1485,15 +1513,15 @@
                     data-order='[[2,"desc"]]' role="grid">
                     <thead>
                       <tr role="row">
-                        <th width="60%" class="sorting_asc" tabindex="0" aria-controls="languagestable" rowspan="1"
+                        <th width="70%" class="sorting_asc" tabindex="0" aria-controls="languagestable" rowspan="1"
                           colspan="1" aria-sort="ascending" aria-label="Resource Name">
                           Resource Name
                         </th>
-                        <th width="20%" class="sorting_asc" tabindex="1" aria-controls="languagestable" rowspan="1"
+                        <th width="15%" class="sorting_asc" tabindex="1" aria-controls="languagestable" rowspan="1"
                           colspan="1" aria-sort="ascending" aria-label="Resource Type">
                           Resource Type
                         </th>
-                        <th width="20%" class="sorting_asc" tabindex="2" aria-controls="languagestable" rowspan="1"
+                        <th width="15%" class="sorting_asc" tabindex="2" aria-controls="languagestable" rowspan="1"
                           colspan="1" aria-sort="ascending" aria-label="Date">
                           Date (YYYY-MM)
                         </th>
@@ -1505,8 +1533,20 @@
                           <a target="_blank" href="https://www.ibm.com/support/pages/node/6538618">
                             Migrating from IBM Engineering Workflow Management (EWM) to GIT
                           </a>
-                          
-                          
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                              value="off" onclick="toggleAbstract(this)" >
+                            </a>
+                          <span class="abstract-text" style="display:none;">
+                            A migration project can be a very challenging and time-consuming task. 
+                            It can also cause grief in the future if some files are corrupted. 
+                            Because these problems could potentially be discovered months or years after the migration, 
+                            it could become a nightmare to correct them. Therefore, the migration must be secured 
+                            to get the assurance that all source files are correctly transferred and if not,
+                            we should at least have a report listing of inconsistent files.
+                            Developing a set of "one off" scripts and procedures for a one-time migration is time
+                            consuming when there is already an existing set of scripts and procedures.
+                            This document proposes a recipe to address this scenario.
+                          </span>
                           <span class="ibm-hide keywords">tutorials_resource</span>
                           <span class="ibm-hide keywords">Migration_Specialist</span>
                           <span class="ibm-hide keywords">EWM</span>
@@ -1525,9 +1565,24 @@
                       </tr>
                       <tr role="row" class="odd">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102810">
+                          <a target="_blank"
+                            href="https://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102810">
                             Packaging and Deployment Strategies in Open and Modern CI/CD Pipelines
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            Standardizing and streamlining are the two tenets on which an Enterprise's DevOps transformation is built 
+                            upon. This transformation can support cloud-native development workflows and isolation capabilities for 
+                            mainframe development, but it raises specific requirements to the software development and delivery 
+                            processes. Because standardization is underpinned by open and modern technologies, the adoption of these 
+                            elements will be a core focus of our discussion. In this second publication we explore two areas of the 
+                            software development pipeline: packaging and deployment of traditional mainframe applications. Here we'll 
+                            discuss the importance of decoupling as a way to foster Continuous Integration and Continuous Deployment 
+                            practices, by introducing application component repositories, adoption processes, decoupling build, 
+                            packaging and deployment from each other and work with an artefact repository.
+                          </span>
                           <span class="ibm-hide keywords">whitepapers_resource</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
@@ -1549,9 +1604,25 @@
                       </tr>
                       <tr role="row" class="even">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102772">
+                          <a target="_blank"
+                            href="https://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102772">
                             Develop Mainframe Software with Open and Modern Source Code Managers
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            Git, being the de-facto standard version control system in the open source community, enterprise customers 
+                            are looking into git as their approach to modernize their mainframe development pipeline, to consolidate 
+                            into one single SCM and Enterprise DevOps pipeline. This paper provides guidance how the principles of 
+                            mainframe software development can be taken into account by a modern SCMs like git, benefit from isolation 
+                            techniques like branching and integrate development activities within and across teams through merge and 
+                            consolidation workflows. IBM Dependency Based Build provides the necessary capabilities of dependency 
+                            analysis and build scripting to automate the build process driven through a pipeline coordinator like 
+                            Jenkins. The purpose is to review relevant areas required when moving to a modern SCM, comparing them and 
+                            providing explanations. There will be an emphasis on how an existing mainframe application can be 
+                            componentized and how it's interfaces can be described and managed with git.
+                          </span>
                           <span class="ibm-hide keywords">whitepapers_resource</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
@@ -1575,6 +1646,12 @@
                           <a target="_blank" href="https://www.ibm.com/support/pages/node/6517452">
                             GitHub Actions and IBM Dependency Based Build Integration
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            Install, configure, and run a GitHub Actions pipeline using IBM Dependency Based Build (DBB) and Git on z/OS
+                          </span>
                           <span class="ibm-hide keywords">getting_started_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Github_Actions</span>
@@ -1594,9 +1671,19 @@
                       </tr>
                       <tr role="row" class="even">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://www.ibm.com/support/knowledgecenter/SSMQ4D_3.0.0/documentation/welcome.html">
+                          <a target="_blank"
+                            href="https://www.ibm.com/support/knowledgecenter/SSMQ4D_3.0.0/documentation/welcome.html">
                             Using IBM Dependency Based Build (DBB) with Scripted Deployments
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            IBM® Record Generator for Java™ V3.0 provides a stand-alone utility that generates Java helper classes based 
+                            on the associated-data (ADATA) files produced from compiling COBOL copybooks or assembler DSECTs. These Java 
+                            helper classes can then be used in a Java applications to marshal data to and from the COBOL or assembler 
+                            language-specific record structures.
+                          </span>
                           <span class="ibm-hide keywords">getting_started_resource</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
@@ -1621,6 +1708,14 @@
                           <a target="_blank" href="https://www.ibm.com/support/pages/node/6422813">
                             Azure DevOps and IBM Dependency Based Build Integration
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            This is a primer on Azure DevOps and DBB based Pipelines running on z/OS. The purpose of this document is 
+                            to help you get started with building Azure DevOps Pipelines that run Git based IBM Dependency Based Builds 
+                            (DBB) on z/OS.
+                          </span>
                           <span class="ibm-hide keywords">getting_started_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Azure_DevOps</span>
@@ -1644,6 +1739,17 @@
                           <a target="_blank" href="https://www.ibm.com/support/pages/node/6439539">
                             UCD - A Primer for DBB Based Builds
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            These notes outline the basic steps to create a simple Continuous Deployment pipeline using IBM's 
+                            Urban Code Deploy (UCD). With UCD you design logical models of real-world business applications and the 
+                            environments that they are deployed too. The central object of a model is the Application. It contains 
+                            components, processes, and environment definitions as a logical group. Applications can be a mix of z/OS 
+                            and non-z/OS components with rules to promote incremental changes through Development, QA, and Production 
+                            environments.
+                          </span>
                           <span class="ibm-hide keywords">getting_started_resource</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
@@ -1664,9 +1770,16 @@
                       </tr>
                       <tr role="row" class="odd">
                         <td class="sorting_1">
-                          <a target="_blank" href="http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/TD106440">
+                          <a target="_blank"
+                            href="http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/TD106440">
                             POC Cookbook - Building a modern pipeline in Mainframe
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            Install, configure, and run a POC using Git, DBB, Jenkins and IDz
+                          </span>
                           <span class="ibm-hide keywords">tutorials_resource</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
@@ -1690,9 +1803,23 @@
 
                       <tr role="row" class="even">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://developer.ibm.com/tutorials/build-a-pipeline-with-gitlab-ci-dbb-and-ucd/">
+                          <a target="_blank"
+                            href="https://developer.ibm.com/tutorials/build-a-pipeline-with-gitlab-ci-dbb-and-ucd/">
                             Build a pipeline with GitLab CI, IBM Dependency Based Build, and IBM UrbanCode Deploy
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            GitLab CI (Continuous Integration) is a service included in GitLab. It brings the DevOps best practices into 
+                            the application development phase. When developers deliver code modifications, it triggers a pipeline that 
+                            automatically builds, tests, and deploys the application into the target environment. This tutorial focuses 
+                            on how you can use GitLab CI to build a Continuous Integration / Continuous Deployment (CI/CD) pipeline. In 
+                            GitLab, you can define a project that combines a Git repository with CI/CD pipeline features. In this 
+                            tutorial, you will learn how to configure GitLab CI for a CI/CD pipeline that includes builds with IBM 
+                            Dependency Based Build (DBB), packaging and deploy phases with IBM UrbanCode Deploy (UCD), automated unit 
+                            testing with the zUnit feature of IBM Developer for z/OS (IDz), and code coverage and code review with IDz.
+                          </span>
                           <span class="ibm-hide keywords">tutorials_resource</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
@@ -1721,9 +1848,24 @@
 
                       <tr role="row" class="odd">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://developer.ibm.com/tutorials/build-a-pipeline-with-jenkins-dependency-based-build-and-urbancode-deploy/">
+                          <a target="_blank"
+                            href="https://developer.ibm.com/tutorials/build-a-pipeline-with-jenkins-dependency-based-build-and-urbancode-deploy/">
                             Build a Pipeline with Jenkins, DBB and UCD
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            This tutorial shows how to configure UrbanCode® Deploy (UCD) and Jenkins to build a pipeline that 
+                            streamlines the development of applications up to the deployment phase. This tutorial also covers how to 
+                            include automated unit testing, code coverage, and IBM Developer for z/OS (IDz) code review in the pipeline 
+                            by using the zUnit feature of Developer for z/OS®. The sample application for this tutorial is GenApp, the 
+                            IBM® standard CICS® application. After the configuration steps, this tutorial shows how to quickly test the 
+                            configuration by starting a Jenkins build that runs a Dependency Based Build (DBB) build. This build will 
+                            create a version in the client UCD, upload the binary files to Artifactory, and deploy the application via 
+                            UCD, using the binary files in Artifactory. Then, for unit testing and code coverage, this tutorial shows 
+                            how to configure and run zUnit test cases from the pipeline.
+                          </span>
                           <span class="ibm-hide keywords">tutorials_resource</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
@@ -1749,6 +1891,13 @@
                           <a target="_blank" href="https://github.com/IBM/dbb-zappbuild/wiki">
                             zAppBuild wiki - Recipes to customize the zAppBuild framework
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            The purpose of the wiki is to document additional recipes in context of zAppBuild, which might not apply to 
+                            all the users and were not implemented in the zAppBuild sample.
+                          </span>
                           <span class="ibm-hide keywords">zappbuild_resource</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">DBB</span>
@@ -1770,6 +1919,15 @@
                           <a target="_blank" href="https://www.ibm.com/support/pages/node/6457275">
                             DBB zAppBuild Introduction and Custom Version Maintenance Strategy
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            This Techdoc provides an introduction to the DBB-zAppBuild build framework, which leverages the 
+                            IBM Dependency Based Build APIs and infrastructure. Additionally, it gives guidance on how to maintain a 
+                            customized version of the build framework at your on-premise git provider, e.q. How to obtain the latest 
+                            feature which got added to the official sample.
+                          </span>
                           <span class="ibm-hide keywords">zappbuild_resource</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
@@ -1793,6 +1951,17 @@
                           <a target="_blank" href="https://www.ibm.com/support/pages/node/6427617">
                             Advanced Build and Migration recipes with DBB and zAppBuild
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            When migrating to a modern CI/CD pipeline based on Git and IBM Dependency Based Build, specific build 
+                            configurations and migration scenarios may appear. This document outlines such situations and describes 
+                            the following recipes for zAppBuild:
+                              1. Forcing files to be built
+                              2. Scanning scenarios when migrating to git
+                              3. Managing pipeline builds for feature branches
+                          </span>
                           <span class="ibm-hide keywords">zappbuild_resource</span>
                           <span class="ibm-hide keywords">Migration_Specialist</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
@@ -1818,6 +1987,15 @@
                           <a target="_blank" href="https://www.ibm.com/support/pages/node/6476944">
                             A Recipe to Publish Shared Copybooks as part of the Deployment Process
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            When migrating to a distributed version control system like Git, a workflow to manage shared copybooks or 
+                            shared interfaces in general needs to be established. This publication discusses a scenario which requires 
+                            to publish shared copybooks as part of the deployment process - even across infrastructure boundaries. The 
+                            sample implementation is based on IBM UrbanCode Deploy.
+                          </span>
                           <span class="ibm-hide keywords">design_resource</span>
                           <span class="ibm-hide keywords">Architect</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
@@ -1838,9 +2016,19 @@
 
                       <tr role="row" class="even">
                         <td class="sorting_1">
-                          <a target="_blank" href="http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/TD106441">
+                          <a target="_blank"
+                            href="http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/TD106441">
                             Integrating Unit Tests into an open and modern CI/CD pipeline
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            Using features in Dependency Based Build (DBB), IBM Developer for z/OS (IDz) and the zAppBuild framework 
+                            (https://github.com/IBM/dbb-zappbuild), zUnit tests along with Code Coverage can be integrated into a 
+                            CI/CD pipeline. This Techdoc explains the necessary configuration and step-by-step workflow to using zUnit 
+                            in a pipeline.
+                          </span>
                           <span class="ibm-hide keywords">design_resource</span>
                           <span class="ibm-hide keywords">Test_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
@@ -1868,6 +2056,16 @@
                           <a target="_blank" href="https://www.ibm.com/support/pages/node/6381788">
                             Managing the build scope in IBM DBB builds with IBM zAppBuild
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            Managing the build configuration for an application which has dependencies over multiple repositories can 
+                            be a challenge, when using Git as the new SCM in Mainframe world. This document describes different 
+                            scenarios to implement specific build scopes depending on development practices and applications' 
+                            requirements, while providing the necessary configuration for the build process to be successfully performed 
+                            by the zAppBuild framework.
+                          </span>
                           <span class="ibm-hide keywords">design_resource</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
@@ -1887,9 +2085,21 @@
                       </tr>
                       <tr role="row" class="even">
                         <td class="sorting_1">
-                          <a target="_blank" href="http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102827">
+                          <a target="_blank"
+                            href="http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102827">
                             Integrating IBM z/OS platform in CI/CD pipelines with Gitlab
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            In the Continuous Integration area, orchestrators play a critical role in running pipelines, managing the 
+                            various tasks that must be performed to build applications. Among popular DevOps solutions, GitLab proposes 
+                            an extension of their Source Code Management solution with the GitLab CI/CD feature. This paper provides 
+                            guidance on how to set up a GitLab runner to integrate z/OS platforms into GitLab CI/CD pipelines. It also 
+                            proposes sample configurations to implement pipelines with GitLab CI/CD feature and extend them with IBM Z 
+                            DevOps capabilities.
+                          </span>
                           <span class="ibm-hide keywords">orchestrators_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Gitlab</span>
@@ -1912,6 +2122,17 @@
                           <a target="_blank" href="https://www.ibm.com/support/pages/node/6355797">
                             Setting up the CI Pipeline Agent on IBM Z as a Started Task
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            Orchestrators play a critical role in Continuous Integration pipelines, managing the various tasks that must 
+                            be performed to build applications. Many CI orchestrators rely on a server/agent architecture, where the 
+                            server distributes work to the target agents running on build environments. For CI builds of mainframe 
+                            applications, the agent generally needs to be installed on z/OS. This paper provides guidance how to setup 
+                            the CI pipeline agent on IBM z/OS as a Started Task. The recently included appendix describes the security 
+                            definitions to leverage RACF keyrings for validating the certificate presented by the CI server.
+                          </span>
                           <span class="ibm-hide keywords">orchestrators_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Middleware_Specialist</span>
@@ -1933,6 +2154,16 @@
                           <a target="_blank" href="https://www.ibm.com/support/pages/node/6354897">
                             Managing git credentials in Jenkins to access the central git provider
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            Running a Jenkins agent on IBM Z Unix System Services adds the topic about encodings to the list of 
+                            considerations for your pipeline setup. Starting with the Jenkins git client plugin version 3.0 onwards, 
+                            you may encounter an issue logging into your remote git provider from the Jenkins agent when managing the 
+                            git credentials within Jenkins. This document explains the different scenarios of managing credentials in 
+                            general and provides direction to solve the encoding issue.
+                          </span>
                           <span class="ibm-hide keywords">orchestrators_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Jenkins</span>
@@ -1955,6 +2186,14 @@
                           <a target="_blank" href="https://www.ibm.com/support/pages/node/6366801">
                             Setup your Groovy Development Environment in IDz
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            This How-To document explains the required steps to install the Groovy Development Tools into IBM Developer 
+                            for z Systems (IDz). Additionally, it describes the required setup to leverage the Groovy Development Tools 
+                            to develop IBM Dependency Based Build (DBB) groovy scripts - along with the published Java Doc of the DBB API.
+                          </span>
                           <span class="ibm-hide keywords">tools_resource</span>
                           <span class="ibm-hide keywords">IDE_Specialist</span>
                           <span class="ibm-hide keywords">Groovy</span>
@@ -1974,9 +2213,23 @@
                       </tr>
                       <tr role="row" class="even">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://community.ibm.com/community/user/ibmz-and-linuxone/viewdocument/how-rabobank-understands-complex-ap?CommunityKey=b0dae4a8-74eb-44ac-86c7-90f3cd32909a&tab=librarydocuments">
+                          <a target="_blank"
+                            href="https://community.ibm.com/community/user/ibmz-and-linuxone/viewdocument/how-rabobank-understands-complex-ap?CommunityKey=b0dae4a8-74eb-44ac-86c7-90f3cd32909a&tab=librarydocuments">
                             How Rabobank understands complex application changes while creating an integrated pipeline
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            As a global financial leader from Netherlands, Rabobank has been looking out for solutions to deliver 
+                            business agility with harmonized, integrated pipelines. In 2020, IBM Z DevOps deployment program (DPO) 
+                            guided the Bank to create, build, and deploy using IBM Z Application Discovery and Delivery Intelligence 
+                            (ADDI) for their development projects. Now ADDI is in production with 150 users in Rabobank, using key 
+                            functionalities such as impact analysis for complex changes in the development cycle. IBM Z Application 
+                            Discovery and Delivery Intelligence (ADDI) was established for organizations to use cognitive technologies 
+                            to analyze mainframe applications and quickly understand interdependencies of changes. The DPO deployment 
+                            program is an exclusive support access to seamless onboarding.
+                          </span>
                           <span class="ibm-hide keywords">webinars_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
@@ -1996,9 +2249,21 @@
 
                       <tr role="row" class="odd">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://mediacenter.ibm.com/playlist/dedicated/189147203/1_a6b565o4/1_djnxx05v">
+                          <a target="_blank"
+                            href="https://mediacenter.ibm.com/playlist/dedicated/189147203/1_a6b565o4/1_djnxx05v">
                             Open Mainframe Virtual Summit - Gitlab & Z DevOps CI/CD Pipeline
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            When it comes to continuous integration (CI), orchestrators play a critical role in executing pipelines, 
+                            managing various tasks that must be performed to build applications. Among the popular DevOps solutions, 
+                            GitLab offers a complete end to end solution for the entire DevSecOps lifecycle, prominent of which includes 
+                            GitLab CI. Join this session to hear from GitLab and IBM experts to understand the benefits of integrating 
+                            GitLab into your DevOps solution, and see how it's done. Presented by Abubakar Siddiq Ango (GitLab), 
+                            Gatien Dupre (IBM) and Mathieu Dalbin (IBM)
+                          </span>
                           <span class="ibm-hide keywords">webinars_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
@@ -2017,9 +2282,25 @@
                       </tr>
                       <tr role="row" class="even">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://community.ibm.com/community/user/ibmz-and-linuxone/viewdocument/ibm-z-devops-village-session-seven-1?CommunityKey=b0dae4a8-74eb-44ac-86c7-90f3cd32909a&tab=librarydocuments">
+                          <a target="_blank"
+                            href="https://community.ibm.com/community/user/ibmz-and-linuxone/viewdocument/ibm-z-devops-village-session-seven-1?CommunityKey=b0dae4a8-74eb-44ac-86c7-90f3cd32909a&tab=librarydocuments">
                             IBM Z DevOps Village - DAP Overview & Testing Demo
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            In this session we welcome Shabbir Moledina, Dennis Behm, and David Rice. Shabbir Moledina is the manager of
+                            the IBM Z DevOps Acceleration Team and has been with IBM for 15 years. Dennis Behm is an IT Specialist, and 
+                            a member for the IBM Z DevOps Acceleration Team, working with clients to adopt CI/CD practices on the 
+                            mainframe. He has been with IBM for more than 15 years. David Rice is a member of the IBM Z DevOps 
+                            Acceleration Team. He works with customers to integrating testing into their build process while developing 
+                            tools to improve user experience. Dennis and David will discuss how ZUnit Tests can be stored in a modern 
+                            SCM (like Git), and will explain how tests can automatically be executed in a Jenkins and IBM Dependecy 
+                            Based Build based CI/CD pipeline. Shabbir will provide an overview of the DevOps Acceleration Program, and 
+                            explain how the DevOps Acceleration Team (DAT) engages with customers to provide expert technical guidance 
+                            in their implementation of an automated CI/CD pipeline.
+                          </span>
                           <span class="ibm-hide keywords">webinars_resource</span>
                           <span class="ibm-hide keywords">Architect</span>
                           <span class="ibm-hide keywords">Test_Specialist</span>
@@ -2040,9 +2321,18 @@
 
                       <tr role="row" class="odd">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://community.ibm.com/community/user/ibmz-and-linuxone/viewdocument/migration-made-easy-host-sclm-to?CommunityKey=b0dae4a8-74eb-44ac-86c7-90f3cd32909a&amp;tab=librarydocuments">
+                          <a target="_blank"
+                            href="https://community.ibm.com/community/user/ibmz-and-linuxone/viewdocument/migration-made-easy-host-sclm-to?CommunityKey=b0dae4a8-74eb-44ac-86c7-90f3cd32909a&amp;tab=librarydocuments">
                             Migration made easy –host SCLM to Git on Z
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            Learn from the experts on how to easily migrate from Software Configuration and Library Manager (SCLM) to Git on IBM Z. The SCLM product offering is IBM’s ISPF-based SCM component that runs on z/OS®. Because mainframe software development started well before modern SCM concepts emerged, existing mainframe-based SCMs lack some of the agile lifecycle capabilities that enable full parallel development.
+                            To create systems that are responsive to the market, businesses are required to break down silos separating technologies, operations, and development. To achieve this, enterprises need an automated delivery pipeline that integrates all activities and provide uniform processes (e.g. using work-items, performing reviews, auditing approvals, etc.) to be extended across multiple platforms, including IBM Z.
+                            IBM recommends migrating from SCLM to Git using the SCLM Migration toolkit. The Z Open Development with Dependency Based Build (DBB) and Git as SCM provides developers with full isolation, parallel development and integration into an automated DevOps pipeline. Watch this webinar to learn more about how IBM is making it easier to migrate from SCLM to DBB-Git.
+                          </span>
                           <span class="ibm-hide keywords">webinars_resource</span>
                           <span class="ibm-hide keywords">Migration_Specialist</span>
                           <span class="ibm-hide keywords">SCLM</span>
@@ -2061,9 +2351,27 @@
                       </tr>
                       <tr role="row" class="even">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://mediacenter.ibm.com/media/E2E+DevOps+Pipeline+wit+GitLab/1_gds3ux8t">
+                          <a target="_blank"
+                            href="https://mediacenter.ibm.com/media/E2E+DevOps+Pipeline+wit+GitLab/1_gds3ux8t">
                             E2E DevOps Pipeline with GitLab
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            The end-to-end DevOps pipeline is composed of several major phases representing the application lifecycle, 
+                            from the Coding stage to the Monitoring stage. It combines the best practices and toolset for development 
+                            and operations, to speed up the delivery lifecycle while enhancing the quality of applications and reducing 
+                            risks of failures. In this video, we will demonstrate an implementation of this pipeline with a Mainframe 
+                            application. You will see a wide variety of products integrated together and complementing one another to 
+                            create an automated CI/CD pipeline. From IBM Z Operational Analytics (IZOA) in the monitoring phase to 
+                            UrbanCode Deploy (UCD) in the release and deploy phase, you will see how all these products interact with 
+                            one another as we go through the various phases in the DevOps loop. Through different personas 
+                            (Developer, Team Lead, Operations Engineer) working together to resolve an identified issue, you will also 
+                            discover how Application Discovery and Delivery Intelligence (ADDI), Wazi Analyze, IBM Developer for Z (IDz) 
+                            and Dependency Based Build (DBB) can bring value to your users in the different phases of the end-to-end 
+                            DevOps pipeline.
+                          </span>
                           <span class="ibm-hide keywords">demo_videos_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
@@ -2087,9 +2395,24 @@
 
                       <tr role="row" class="odd">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://mediacenter.ibm.com/media/GitLab+and+IBM+Wazi+Analyze/1_sswpedog">
+                          <a target="_blank"
+                            href="https://mediacenter.ibm.com/media/GitLab+and+IBM+Wazi+Analyze/1_sswpedog">
                             GitLab and IBM Wazi Analyze
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            GitLab can be integrated with IBM Z DevOps solutions to cover various aspects of Mainframe application 
+                            development. Among these zDevOps solutions, IBM® Wazi Analyze can be integrated in GitLab CI/CD pipelines, 
+                            to provide developers with additional insights into the structure of COBOL, PL/1 and Assembler applications 
+                            on the mainframe. Wazi Analyze is a containerized solution that helps developers better understand the 
+                            relationships between z/OS artifacts in an application. It can be used to perform an impact analysis when 
+                            planning for a modification, as well as for verification of the results after the change has been completed. 
+                            This video highlights the integration of Gitlab with IBM Z DevOps products (such as IDz) and demonstrates the 
+                            benefits of Wazi Analyze in a change scenario within a COBOL application. Find out more about IBM Wazi Analyze 
+                            by visiting https://www.ibm.com/products/wazi-developer/details.
+                          </span>
                           <span class="ibm-hide keywords">demo_videos_resource</span>
                           <span class="ibm-hide keywords">IDE_Specialist</span>
                           <span class="ibm-hide keywords">Gitlab</span>
@@ -2109,9 +2432,17 @@
                       </tr>
                       <tr role="row" class="even">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://mediacenter.ibm.com/playlist/details/1_5rk6keyi/categoryId/189147203">
+                          <a target="_blank"
+                            href="https://mediacenter.ibm.com/playlist/details/1_5rk6keyi/categoryId/189147203">
                             Automated Testing Playlist - Featuring “how to” videos on zUnit, ZD&T and Code Coverage
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            This Playlist contains short “how to” videos covering several Testing products/tools such as 
+                            Virtual Test Platform (VTP), ZD&T, ZUnit and Code Coverage.
+                          </span>
                           <span class="ibm-hide keywords">demo_videos_resource</span>
                           <span class="ibm-hide keywords">Test_Specialist</span>
                           <span class="ibm-hide keywords">ZD&T</span>
@@ -2132,9 +2463,23 @@
 
                       <tr role="row" class="odd">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://mediacenter.ibm.com/media/Using+Microsoft+Azure+and+IBM+DevOps+Tools+in+a+CI+CD+Pipeline/1_yg96ykgv">
+                          <a target="_blank"
+                            href="https://mediacenter.ibm.com/media/Using+Microsoft+Azure+and+IBM+DevOps+Tools+in+a+CI+CD+Pipeline/1_yg96ykgv">
                             Using Microsoft Azure and IBM DevOps Tools in a CI/CD Pipeline - IDz
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            Azure DevOps is a Software as a service (SaaS) platform from Microsoft that provides an end-to-end DevOps 
+                            toolchain for developing and deploying software.  This video demonstrates how it integrates with IBM Z 
+                            DevOps products and offerings such as IBM Developer for z/OS (IDz), Dependency Based Build (DBB) and 
+                            Urbancode Deploy (UCD) as a great option for orchestrating a DevOps toolchain. The key features of Azure 
+                            DevOps are Boards, Pipelines, Repos and Artifacts; some of which are shown during the course of this 
+                            recording. This video demonstrates how you can use Azure DevOps to build and release a z/OS COBOL 
+                            application by integrating with products from the IBM Z DevOps portfolio such as IDz, DBB and UCD in a 
+                            CI/CD pipeline.
+                          </span>
                           <span class="ibm-hide keywords">demo_videos_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
@@ -2155,9 +2500,22 @@
                       </tr>
                       <tr role="row" class="even">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://mediacenter.ibm.com/media/Using+Azure+DevOps+CI+CD+Pipelines+to+Build+a+z+OS+COBOL+Application/1_fd9q6gqc">
+                          <a target="_blank"
+                            href="https://mediacenter.ibm.com/media/Using+Azure+DevOps+CI+CD+Pipelines+to+Build+a+z+OS+COBOL+Application/1_fd9q6gqc">
                             Using Azure DevOps CI/CD Pipelines to Build a z/OS COBOL Application - VS Code
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            Azure DevOps is a Software as a service (SaaS) platform from Microsoft that provides an end-to-end DevOps 
+                            toolchain for developing and deploying software. It also integrates with IBM Z DevOps products/offerings 
+                            such as IBM Developer for z/OS (IDz), Dependency Based Build (DBB) & Urbancode Deploy (UCD) and is a great 
+                            option for orchestrating a DevOps toolchain. The key features of Azure DevOps are Boards, Pipelines, Repos 
+                            and Artifacts; some of which are shown during the course of this recording. This video demonstrates how you 
+                            can use Azure DevOps to build and release a z/OS COBOL application by integrating with the DBB product from 
+                            the IBM Z DevOps portfolio.
+                          </span>
                           <span class="ibm-hide keywords">demo_videos_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">IDE_Specialist</span>
@@ -2179,9 +2537,22 @@
 
                       <tr role="row" class="odd">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://mediacenter.ibm.com/media/GitLab+and+IBM+Z+DevOps+SolutionsB+Overview/1_oxj8eseu">
+                          <a target="_blank"
+                            href="https://mediacenter.ibm.com/media/GitLab+and+IBM+Z+DevOps+SolutionsB+Overview/1_oxj8eseu">
                             GitLab and IBM Z DevOps Solutions: Overview
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            GitLab is an integrated DevOps platform, which fundamentally transforms the way Development, Security, and 
+                            Ops teams collaborate to build and deploy software. From idea to production, GitLab helps teams optimize the 
+                            development cycle by decreasing time to market and increasing developer productivity through the 
+                            implementation of DevSecOps best practice.GitLab enables collaboration by providing features to manage 
+                            issues and milestones through dashboards. These features allow the team to organize their tasks into groups, 
+                            projects, epics and issue boards. This video highlights some aspects of the management of Mainframe 
+                            applications lifecycle, with IBM Z DevOps solutions (such as IDz and DBB) and GitLab.
+                          </span>
                           <span class="ibm-hide keywords">demo_videos_resource</span>
                           <span class="ibm-hide keywords">Architect</span>
                           <span class="ibm-hide keywords">Gitlab</span>
@@ -2202,9 +2573,19 @@
                       </tr>
                       <tr role="row" class="even">
                         <td class="sorting_1">
-                          <a target="_blank" href="https://mediacenter.ibm.com/media/GitLab+and+IBM+Z+DevOps+SolutionsB+CI+CD+Pipeline/1_qjtm421u">
+                          <a target="_blank"
+                            href="https://mediacenter.ibm.com/media/GitLab+and+IBM+Z+DevOps+SolutionsB+CI+CD+Pipeline/1_qjtm421u">
                             GitLab and IBM Z DevOps Solutions: CI/CD Pipeline
                           </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            IBM Z DevOps solutions and GitLab can complement each other to provide a complete experience for a modern 
+                            development methodology on Mainframe. This video demonstrates the CI/CD feature of GitLab that allows the 
+                            execution of pipelines in a close relationship with repositories. It shows how to integrate some of the 
+                            IBM Z DevOps products (IBM Developer for z/OS, DBB and UrbanCode Deploy), into GitLab CI/CD pipelines.
+                          </span>
                           <span class="ibm-hide keywords">demo_videos_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Gitlab</span>
@@ -2252,992 +2633,246 @@
           </div>
         </div>
 
-        <!--
 
-        <div class="">
-          <div class="ibm-fluid ibm-padding-bottom-r1 ibm-padding-top-r1">
-            <div>
-              <div class="ibm-col-12-3 ibm-col-medium-12-12">
-                <h2 class="ibm-h2 ibm-padding-top-0 ibm-padding-bottom-1 ibm-textcolor-blue-50">
-                  Whitepapers
-                </h2>
-                <p>
-                  What is a whitepaper
-                </p>
-              </div>
-              <div class="ibm-col-12-9 ibm-col-medium-12-12 ">
-                <div class="ibm-textcolor-default ibm-padding-top-0 ibm-padding-bottom-0">
-                  <div class="ibm-columns ibm-fluid ibm-widget-processed ibm-sameheight-processed"
-                    data-items=".ibm-card" data-widget="setsameheight">
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            Packaging and Deployment Strategies in Open and
-                            Modern CI/CD Pipelines
-                          </h3>
-                          <p>
-                            Whitepaper
-                          </p>
-                          <p>Jan 2020</p>
-                          <table>
-                            <tr>
-                              <th style="padding: 5px">"tag 1"</th>
-                              <th style="padding: 5px">"tag 2"</th>
-                              <th style="padding: 5px">"tag 3"</th>
-                            </tr>
-                          </table>
-                          <br>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102810';"
-                              class="ibm-btn-pri 
-                                     ibm-btn-teal-50">
-                              More info
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            Develop Mainframe Software with Open and Modern
-                            Source Code Managers
-                          </h3>
-                          <p>Oct 2018</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102772';"
-                              class="ibm-btn-pri
-                            ibm-btn-teal-50">
-                              More info
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="ibm-background-neutral-white-30">
-          <div class="ibm-fluid ibm-padding-bottom-r1 ibm-padding-top-r1">
-            <div>
-              <div class="ibm-col-12-3 ibm-col-medium-12-12">
-                <h2 class="ibm-h2 ibm-padding-top-0 ibm-padding-bottom-1 ibm-textcolor-blue-50">
-                  Getting Started
-                </h2>
-                <p>
-                  What falls under this category
-                </p>
-              </div>
-              <div class="ibm-col-12-9 ibm-col-medium-12-12 ">
-                <div class="ibm-textcolor-default ibm-padding-top-0 ibm-padding-bottom-0">
-                  <div class="ibm-columns ibm-fluid ibm-widget-processed ibm-sameheight-processed"
-                    data-items=".ibm-card" data-widget="setsameheight">
+        <!-- #page -->
 
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            GitHub Actions and IBM Dependency Based Build Integration
-                          </h3>
-                          <p>Nov 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://www.ibm.com/support/pages/node/6517452';" class="ibm-btn-pri
-                                            ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            Using IBM Dependency Based Build (DBB) with Scripted Deployments
-                          </h3>
-                          <p>Nov 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://www.ibm.com/support/pages/node/6517450';" class="ibm-btn-pri
-                                          ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            Azure DevOps and IBM Dependency Based Build Integration
-                          </h3>
-                          <p>May 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://www.ibm.com/support/pages/node/6422813';" class="ibm-btn-pri
-                                          ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            UCD - A Primer for DBB Based Builds
-                          </h3>
-                          <p>May 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://www.ibm.com/support/pages/node/6439539';" class="ibm-btn-pri
-                                          ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="">
-          <div class="ibm-fluid ibm-padding-bottom-r1 ibm-padding-top-r1">
-            <div>
-              <div class="ibm-col-12-3 ibm-col-medium-12-12">
-                <h2 class="ibm-h2 ibm-padding-top-0 ibm-padding-bottom-1 ibm-textcolor-blue-50">
-                  Tutorials
-                </h2>
-                <p>
-                  Follow along step by step
-                </p>
-              </div>
-              <div class="ibm-col-12-9 ibm-col-medium-12-12 ">
-                <div class="ibm-textcolor-default ibm-padding-top-0 ibm-padding-bottom-0">
-                  <div class="ibm-columns ibm-fluid ibm-widget-processed ibm-sameheight-processed"
-                    data-items=".ibm-card" data-widget="setsameheight">
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            POC Cookbook - Building a modern pipeline in
-                            Mainframe
-                          </h3>
-                          <p>May 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/TD106440';"
-                              class="ibm-btn-pri
-                                          ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            Build a pipeline with GitLab CI, IBM Dependency Based Build, and IBM UrbanCode Deploy
-                          </h3>
-                          <p>May 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://developer.ibm.com/tutorials/build-a-pipeline-with-gitlab-ci-dbb-and-ucd/';"
-                              class="ibm-btn-pri
-                                          ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            Build a Pipeline with Jenkins, DBB and UCD
-                          </h3>
-                          <p>Jan 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://developer.ibm.com/tutorials/build-a-pipeline-with-jenkins-dependency-based-build-and-urbancode-deploy/';"
-                              class="ibm-btn-pri
-                                          ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="ibm-background-neutral-white-30">
-          <div class="ibm-fluid ibm-padding-bottom-r1 ibm-padding-top-r1">
-            <div>
-              <div class="ibm-col-12-3 ibm-col-medium-12-12">
-                <h2 class="ibm-h2 ibm-padding-top-0 ibm-padding-bottom-1 ibm-textcolor-blue-50">
-                  zAppBuild
-                </h2>
-                <p>
-                  Placeholder Text
-                </p>
-              </div>
-              <div class="ibm-col-12-9 ibm-col-medium-12-12 ">
-                <div class="ibm-textcolor-default ibm-padding-top-0 ibm-padding-bottom-0">
-
-                  <div class="ibm-columns ibm-fluid ibm-widget-processed ibm-sameheight-processed"
-                    data-items=".ibm-card" data-widget="setsameheight">
-
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            zAppBuild wiki - Recipes to customize the zAppBuild framework
-                          </h3>
-                          <p>Nov 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://github.com/IBM/dbb-zappbuild/wiki';" class="ibm-btn-pri
-                                          ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            DBB zAppBuild Introduction and Custom Version Maintenance Strategy
-                          </h3>
-                          <p>May 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://www.ibm.com/support/pages/node/6457275';" class="ibm-btn-pri
-                                        ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            Advanced Build and Migration recipes with DBB and zAppBuild
-                          </h3>
-                          <p>Mar 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://www.ibm.com/support/pages/node/6427617';" class="ibm-btn-pri
-                                            ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="">
-          <div class="ibm-fluid ibm-padding-bottom-r1 ibm-padding-top-r1">
-            <div>
-              <div class="ibm-col-12-3 ibm-col-medium-12-12">
-                <h2 class="ibm-h2 ibm-padding-top-0 ibm-padding-bottom-1 ibm-textcolor-blue-50">
-                  Design
-                </h2>
-                <p>
-                  Placeholder Text
-                </p>
-              </div>
-              <div class="ibm-col-12-9 ibm-col-medium-12-12 ">
-                <div class="ibm-textcolor-default ibm-padding-top-0 ibm-padding-bottom-0">
-
-                  <div class="ibm-columns ibm-fluid ibm-widget-processed ibm-sameheight-processed"
-                    data-items=".ibm-card" data-widget="setsameheight">
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            A Recipe to Publish Shared Copybooks as part of the Deployment Process
-                          </h3>
-                          <p>Aug 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://www.ibm.com/support/pages/node/6476944';" class="ibm-btn-pri
-                                        ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            Integrating Unit Tests into an open and modern
-                            CI/CD pipeline
-                          </h3>
-                          <p>Mar 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/TD106441';"
-                              class="ibm-btn-pri
-                                            ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            Managing the build scope in IBM DBB builds with IBM zAppBuild
-                          </h3>
-                          <p>Feb 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://www.ibm.com/support/pages/node/6381788';" class="ibm-btn-pri
-                                            ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="ibm-background-neutral-white-30">
-          <div class="ibm-fluid ibm-padding-bottom-r1 ibm-padding-top-r1">
-            <div>
-              <div class="ibm-col-12-3 ibm-col-medium-12-12">
-                <h2 class="ibm-h2 ibm-padding-top-0 ibm-padding-bottom-1 ibm-textcolor-blue-50">
-                  Orchestrators
-                </h2>
-                <p>
-                  Placeholder Text
-                </p>
-              </div>
-              <div class="ibm-col-12-9 ibm-col-medium-12-12 ">
-                <div class="ibm-textcolor-default ibm-padding-top-0 ibm-padding-bottom-0">
-
-                  <div class="ibm-columns ibm-fluid ibm-widget-processed ibm-sameheight-processed"
-                    data-items=".ibm-card" data-widget="setsameheight">
-
-
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            Integrating IBM z/OS platform in CI/CD pipelines with
-                            Gitlab
-                          </h3>
-                          <p>Dec 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102827';"
-                              class="ibm-btn-pri ibm-btn-teal-50">
-                              More info
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            Setting up the CI Pipeline Agent on IBM Z as a Started Task
-                          </h3>
-                          <p>Dec 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://www.ibm.com/support/pages/node/6355797';"
-                              class="ibm-btn-pri ibm-btn-teal-50">
-                              More info
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            Managing git credentials in Jenkins to access the
-                            central git provider
-                          </h3>
-                          <p>Feb 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://www.ibm.com/support/pages/node/6354897';"
-                              class="ibm-btn-pri ibm-btn-teal-50">
-                              More info
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="">
-          <div class="ibm-fluid ibm-padding-bottom-r1 ibm-padding-top-r1">
-            <div>
-              <div class="ibm-col-12-3 ibm-col-medium-12-12">
-                <h2 class="ibm-h2 ibm-padding-top-0 ibm-padding-bottom-1 ibm-textcolor-blue-50">
-                  Tools
-                </h2>
-                <p>
-                  Placeholder Text
-                </p>
-              </div>
-              <div class="ibm-col-12-9 ibm-col-medium-12-12 ">
-                <div class="ibm-textcolor-default ibm-padding-top-0 ibm-padding-bottom-0">
-
-                  <div class="ibm-columns ibm-fluid ibm-widget-processed ibm-sameheight-processed"
-                    data-items=".ibm-card" data-widget="setsameheight">
-
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 241.4px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            Setup your Groovy Development Environment in IDz
-                          </h3>
-                          <p>Feb 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a onclick="location.href='https://www.ibm.com/support/pages/node/6366801';" class="ibm-btn-pri
-                                            ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="ibm-background-neutral-white-30">
-          <div class="ibm-fluid ibm-padding-bottom-r1 ibm-padding-top-r1">
-            <div>
-              <div class="ibm-col-12-3 ibm-col-medium-12-12">
-                <h2 class="ibm-h2 ibm-padding-top-0 ibm-padding-bottom-1 ibm-textcolor-blue-50">
-                  Webinars
-                </h2>
-                <p>
-                  Placeholder Text
-                </p>
-              </div>
-              <div class="ibm-col-12-9 ibm-col-medium-12-12 ">
-                <div class="ibm-textcolor-default ibm-padding-top-0 ibm-padding-bottom-0">
-                  <div class="ibm-columns ibm-fluid ibm-widget-processed ibm-sameheight-processed"
-                    data-items=".ibm-card" data-widget="setsameheight">
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 224px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            How Rabobank understands complex application changes while creating an integrated pipeline
-                          </h3>
-                          <p>Jun 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a href="https://community.ibm.com/community/user/ibmz-and-linuxone/viewdocument/how-rabobank-understands-complex-ap?CommunityKey=b0dae4a8-74eb-44ac-86c7-90f3cd32909a&tab=librarydocuments"
-                              class="ibm-btn-pri
-                                            ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 224px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            Open Mainframe Virtual Summit - Gitlab & Z DevOps CI/CD Pipeline
-                          </h3>
-                          <p>Feb 2021</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a href="https://mediacenter.ibm.com/playlist/dedicated/189147203/1_a6b565o4/1_djnxx05v"
-                              class="ibm-btn-pri
-                                            ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 224px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            IBM Z DevOps Village - DAP Overview & Testing Demo
-                          </h3>
-                          <p>Dec 2020</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a href="https://community.ibm.com/community/user/ibmz-and-linuxone/viewdocument/ibm-z-devops-village-session-seven-1?CommunityKey=b0dae4a8-74eb-44ac-86c7-90f3cd32909a&tab=librarydocuments"
-                              class="ibm-btn-pri
-                                            ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                      <div class="ibm-card" style="height: 182.2px;">
-                        <div class="ibm-card__content">
-                          <h3 class="ibm-h3">
-                            Migration made easy –host SCLM to Git on Z
-                          </h3>
-                          <p>Jul 2019</p>
-                        </div>
-                        <div class="ibm-card__bottom">
-                          <p class="ibm-btn-row">
-                            <a href="https://community.ibm.com/community/user/ibmz-and-linuxone/viewdocument/migration-made-easy-host-sclm-to?CommunityKey=b0dae4a8-74eb-44ac-86c7-90f3cd32909a&amp;tab=librarydocuments"
-                              class="ibm-btn-pri
-                                            ibm-btn-teal-50">More info</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="">
-          <div class="ibm-fluid ibm-padding-bottom-r1 ibm-padding-top-r1">
-            <div>
-              <div class="ibm-col-12-3 ibm-col-medium-12-12">
-                <h2 class="ibm-h2 ibm-padding-top-0 ibm-padding-bottom-1 ibm-textcolor-blue-50">
-                  Demo Videos
-                </h2>
-                <p>
-                  Placeholder Text
-                </p>
-              </div>
-            </div>
-            <div class="ibm-col-12-9 ibm-col-medium-12-12 ">
-              <div class="ibm-textcolor-default ibm-padding-top-0 ibm-padding-bottom-0">
-                <div class="ibm-columns ibm-fluid ibm-widget-processed ibm-sameheight-processed" data-items=".ibm-card" data-widget="setsameheight">
-                  <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                    <div class="ibm-card" style="height: 182.2px;">
-                      <div class="ibm-card__content">
-                        <h3 class="ibm-h3">
-                          E2E DevOps Pipeline with GitLab
-                        </h3>
-                        <p>Oct 2021</p>
-                      </div>
-                      <div class="ibm-card__bottom">
-                        <p class="ibm-btn-row">
-                          <a href="https://mediacenter.ibm.com/media/E2E+DevOps+Pipeline+wit+GitLab/1_gds3ux8t" class="ibm-btn-pri
-                                          ibm-btn-teal-50">More info</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                    <div class="ibm-card" style="height: 182.2px;">
-                      <div class="ibm-card__content">
-                        <h3 class="ibm-h3">
-                          GitLab and IBM Wazi Analyze
-                        </h3>
-                        <p>Jul 2021</p>
-                      </div>
-                      <div class="ibm-card__bottom">
-                        <p class="ibm-btn-row">
-                          <a href="https://mediacenter.ibm.com/media/GitLab+and+IBM+Wazi+Analyze/1_sswpedog" class="ibm-btn-pri
-                                          ibm-btn-teal-50">More info</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                    <div class="ibm-card" style="height: 182.2px;">
-                      <div class="ibm-card__content">
-                        <h3 class="ibm-h3">
-                          Automated Testing Playlist - Featuring “how to” videos on zUnit, ZD&T and Code Coverage
-                        </h3>
-                        <p>Jun 2021</p>
-                      </div>
-                      <div class="ibm-card__bottom">
-                        <p class="ibm-btn-row">
-                          <a href="https://mediacenter.ibm.com/playlist/details/1_5rk6keyi/categoryId/189147203" class="ibm-btn-pri
-                                          ibm-btn-teal-50">More info</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                    <div class="ibm-card" style="height: 182.2px;">
-                      <div class="ibm-card__content">
-                        <h3 class="ibm-h3">
-                          Using Microsoft Azure and IBM DevOps Tools in a CI/CD Pipeline - IDz
-                        </h3>
-                        <p>Jun 2021</p>
-                      </div>
-                      <div class="ibm-card__bottom">
-                        <p class="ibm-btn-row">
-                          <a href="https://mediacenter.ibm.com/media/Using+Microsoft+Azure+and+IBM+DevOps+Tools+in+a+CI+CD+Pipeline/1_yg96ykgv"
-                            class="ibm-btn-pri
-                                            ibm-btn-teal-50">More info</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                    <div class="ibm-card" style="height: 182.2px;">
-                      <div class="ibm-card__content">
-                        <h3 class="ibm-h3">
-                          Using Azure DevOps CI/CD Pipelines to Build a z/OS COBOL Application - VS Code
-                        </h3>
-                        <p>May 2021</p>
-                      </div>
-                      <div class="ibm-card__bottom">
-                        <p class="ibm-btn-row">
-                          <a href="https://mediacenter.ibm.com/media/Using+Azure+DevOps+CI+CD+Pipelines+to+Build+a+z+OS+COBOL+Application/1_fd9q6gqc"
-                            class="ibm-btn-pri
-                                            ibm-btn-teal-50">More info</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                    <div class="ibm-card" style="height: 182.2px;">
-                      <div class="ibm-card__content">
-                        <h3 class="ibm-h3">
-                          GitLab and IBM Z DevOps Solutions: Overview
-                        </h3>
-                        <p>Mar 2021</p>
-                      </div>
-                      <div class="ibm-card__bottom">
-                        <p class="ibm-btn-row">
-                          <a href="https://mediacenter.ibm.com/media/GitLab+and+IBM+Z+DevOps+SolutionsB+Overview/1_oxj8eseu"
-                            class="ibm-btn-pri
-                                            ibm-btn-teal-50">More info</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ibm-col-12-4 ibm-col-medium-12-6 ibm-col-sm-12-12">
-                    <div class="ibm-card" style="height: 182.2px;">
-                      <div class="ibm-card__content">
-                        <h3 class="ibm-h3">
-                          GitLab and IBM Z DevOps Solutions: CI/CD Pipeline
-                        </h3>
-                        <p>Mar 2021</p>
-                      </div>
-                      <div class="ibm-card__bottom">
-                        <p class="ibm-btn-row">
-                          <a href="https://mediacenter.ibm.com/media/GitLab+and+IBM+Z+DevOps+SolutionsB+CI+CD+Pipeline/1_qjtm421u"
-                            class="ibm-btn-pri
-                                            ibm-btn-teal-50">More info</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <p class="ibm-ind-link ibm-nospacing ibm-icononly ibm-btt-auto ibm-hidden-small">
-              <a class="ibm-nospacing ibm-top-link" aria-label="Back to top"
-                href="https://developer.ibm.com/mainframe/products/devops-acceleration-program/resources/#top"
-                tabindex="0">Back to top</a>
-            </p>
-
-            <footer role="contentinfo" aria-label="IBM" id="themeFooter">
-              <div id="boomer-footer" class="boomer_footer_menu"></div>
-              <div id="dw-footer" class="ibm-alternate ibm-padding-normal">
-                <div class="ibm-columns ibm-padding-bottom-0"></div>
-              </div>
-            </footer>
-          </div>
-
-        </div>
-
-
-          
-        -->
-          <!-- #page -->
-
-          <div class="gdpr-overlay"></div>
-          <div class="gdpr gdpr-privacy-preferences">
-            <div class="gdpr-wrapper">
-              <form method="post" class="gdpr-privacy-preferences-frm"
-                action="https://developer.ibm.com/mainframe/wp-admin/admin-post.php">
-                <input type="hidden" name="action" value="gdpr_update_privacy_preferences" />
-                <input type="hidden" id="update-privacy-preferences-nonce" name="update-privacy-preferences-nonce"
-                  value="1567fa1b44" /><input type="hidden" name="_wp_http_referer"
-                  value="/mainframe/products/devops-acceleration-program/resources/" />
-                <header>
-                  <div class="gdpr-box-title">
-                    <h3>Privacy Preference Center</h3>
-                    <span class="gdpr-close"></span>
-                  </div>
-                </header>
-                <div class="gdpr-mobile-menu">
-                  <button type="button">Options</button>
-                </div>
-                <div class="gdpr-content">
-                  <ul class="gdpr-tabs">
-                    <li>
-                      <button type="button" class="gdpr-tab-button gdpr-active" data-target="gdpr-consent-management">
-                        Consent Management
-                      </button>
-                    </li>
-                  </ul>
-                  <div class="gdpr-tab-content">
-                    <div class="gdpr-consent-management gdpr-active">
-                      <header>
-                        <h4>Consent Management</h4>
-                      </header>
-                      <div class="gdpr-info">
-                        <p></p>
-                      </div>
-                    </div>
-                  </div>
-                  <input type="hidden" name="all_cookies" value="[]" />
-                </div>
-                <footer>
-                  <input type="submit" value="Save Preferences" />
-                </footer>
-              </form>
-            </div>
-          </div>
-
-          <div class="gdpr gdpr-general-confirmation gdpr-delete-confirmation">
-            <div class="gdpr-wrapper">
+        <div class="gdpr-overlay"></div>
+        <div class="gdpr gdpr-privacy-preferences">
+          <div class="gdpr-wrapper">
+            <form method="post" class="gdpr-privacy-preferences-frm"
+              action="https://developer.ibm.com/mainframe/wp-admin/admin-post.php">
+              <input type="hidden" name="action" value="gdpr_update_privacy_preferences" />
+              <input type="hidden" id="update-privacy-preferences-nonce" name="update-privacy-preferences-nonce"
+                value="1567fa1b44" /><input type="hidden" name="_wp_http_referer"
+                value="/mainframe/products/devops-acceleration-program/resources/" />
               <header>
                 <div class="gdpr-box-title">
-                  <h3>Close your account?</h3>
+                  <h3>Privacy Preference Center</h3>
                   <span class="gdpr-close"></span>
                 </div>
               </header>
+              <div class="gdpr-mobile-menu">
+                <button type="button">Options</button>
+              </div>
               <div class="gdpr-content">
-                <p>
-                  Your account will be closed and all data will be permanently deleted
-                  and cannot be recovered. Are you sure?
-                </p>
+                <ul class="gdpr-tabs">
+                  <li>
+                    <button type="button" class="gdpr-tab-button gdpr-active" data-target="gdpr-consent-management">
+                      Consent Management
+                    </button>
+                  </li>
+                </ul>
+                <div class="gdpr-tab-content">
+                  <div class="gdpr-consent-management gdpr-active">
+                    <header>
+                      <h4>Consent Management</h4>
+                    </header>
+                    <div class="gdpr-info">
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" name="all_cookies" value="[]" />
               </div>
               <footer>
-                <button class="gdpr-delete-account">Continue</button>
-                <button class="gdpr-cancel">Cancel</button>
+                <input type="submit" value="Save Preferences" />
               </footer>
-            </div>
+            </form>
           </div>
+        </div>
 
-          <script>
-            jQuery(document).ready(function ($) {
-              var dcName = "mainframe";
-              // $('a').each(function(){
-              //   if(this.href.match('bluemix.net')){
-              //     if(this.search){
-              //       this.href = this.href + '&cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
-              //     }else{
-              //       this.href = this.href + '?cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
-              //     }
-              //   }
-              // });
+        <div class="gdpr gdpr-general-confirmation gdpr-delete-confirmation">
+          <div class="gdpr-wrapper">
+            <header>
+              <div class="gdpr-box-title">
+                <h3>Close your account?</h3>
+                <span class="gdpr-close"></span>
+              </div>
+            </header>
+            <div class="gdpr-content">
+              <p>
+                Your account will be closed and all data will be permanently deleted
+                and cannot be recovered. Are you sure?
+              </p>
+            </div>
+            <footer>
+              <button class="gdpr-delete-account">Continue</button>
+              <button class="gdpr-cancel">Cancel</button>
+            </footer>
+          </div>
+        </div>
 
-              jQuery('a[href*="bluemix.net"]').each(function () {
-                if (this.search) {
-                  this.href =
-                    this.href + "&cm_sp=dw-bluemix-_-" + dcName + "-_-devcenter";
-                } else {
-                  this.href =
-                    this.href + "?cm_sp=dw-bluemix-_-" + dcName + "-_-devcenter";
+        <script>
+          jQuery(document).ready(function ($) {
+            var dcName = "mainframe";
+            // $('a').each(function(){
+            //   if(this.href.match('bluemix.net')){
+            //     if(this.search){
+            //       this.href = this.href + '&cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
+            //     }else{
+            //       this.href = this.href + '?cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
+            //     }
+            //   }
+            // });
+
+            jQuery('a[href*="bluemix.net"]').each(function () {
+              if (this.search) {
+                this.href =
+                  this.href + "&cm_sp=dw-bluemix-_-" + dcName + "-_-devcenter";
+              } else {
+                this.href =
+                  this.href + "?cm_sp=dw-bluemix-_-" + dcName + "-_-devcenter";
+              }
+            });
+          });
+        </script>
+        <script type="text/javascript" src="./resources_files/navigation.js"></script>
+        <script type="text/javascript" src="./resources_files/skip-link-focus-fix.js"></script>
+        <script type="text/javascript" src="./resources_files/tactic.js"></script>
+        <script type="text/javascript" src="./resources_files/tacticbindlinks.js"></script>
+        <script type="text/javascript" src="./resources_files/new-tab.min.js"></script>
+        <script type="text/javascript" src="./resources_files/wp-embed.min.js"></script>
+
+        <script>
+          /* this is where we are going to control the main menu */
+          function changeMenu(links) {
+            IBMCore.common.module.masthead.editProfileMenu({
+              action: "replace",
+              links: links,
+            });
+          }
+
+          var setMainMenu = function () {
+            var userLinks = [
+              {
+                title: "My IBM",
+                url: "https://myibm.ibm.com/dashboard/?lnk=mmi",
+              },
+              {
+                title: "Sign In",
+                url:
+                  "https://developer.ibm.com/sso/login?d=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fproducts%2Fdevops-acceleration-program%2Fresources&lang=en_US",
+              },
+              {
+                title: "Register",
+                url:
+                  "https://developer.ibm.com/sso/register?lang=en_US&d=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fproducts%2Fdevops-acceleration-program%2Fresources",
+              },
+            ];
+            changeMenu(userLinks);
+          };
+
+          IBMCore.common.module.masthead.subscribe(
+            "profileMenuReady",
+            "customjs",
+            setMainMenu
+          );
+        </script>
+        <script>
+          (function ($) {
+            $(document).ready(function () {
+              /* prevent the # links in the main menu from firing */
+              $(".ibm-sitenav-menu-list #primary-menu a").on(
+                "click.stopFakeLinks",
+                function (e) {
+                  $this = $(this);
+                  if ($this.attr("href") === "#") {
+                    return false;
+                  }
                 }
+              );
+
+              /* bind the feedback click evnet */
+              jQuery("#dw-footer .ibm-feedbacklink a").on("click", function (evt) {
+                evt.preventDefault();
+                var iframeWidth = 970;
+                if (window.innerWidth < 900) {
+                  iframeWidth = window.innerWidth - 80;
+                }
+                IBMCore.common.widget.surveyccfintercept.initFeedback({
+                  survey: {
+                    height: 700,
+                    id: "web-exp",
+                    metaData: "",
+                    type: "medallia",
+                    width: iframeWidth,
+                  },
+                });
+              });
+              //testing out the alpha helper
+              $("[data-alpha]").each(function (i) {
+                $elm = $(this);
+                var bg = $elm
+                  .css("backgroundColor")
+                  .replace(/[rgb(]/g, "")
+                  .replace(/ /g, "")
+                  .replace(/[)]/g, "");
+                var alpha = $elm.data("alpha") / 100;
+                $elm.css(
+                  "cssText",
+                  "background-color: rgba(" + bg + "," + alpha + ") !important;"
+                );
+              });
+              //testing out the panel slider
+              $(".pn-sliding-panels").each(function (i) {
+                $elm = $(this);
+                //get the width of the active panel
+                var activeWidth = $elm.data("openamount"),
+                  panelCount = $elm.data("panelcount"),
+                  inactiveWidth = (100 - activeWidth) / (panelCount - 1);
+                //set the first slide as active - later, allow it to be set
+                $elm.find(".pn-panel").each(function (i, item) {
+                  $panel = $(item);
+                  $panel.data("closedwidth", inactiveWidth);
+                  $panel.data("openwidth", activeWidth);
+                  if (i == 0) {
+                    $panel
+                      .addClass("pn-panel__active")
+                      .css({ width: activeWidth + "%" });
+                  } else {
+                    $panel.css({ width: inactiveWidth + "%" });
+                  }
+                });
+
+                $elm.on("click.slide", ".pn-panel", function (e) {
+                  $this = $(this);
+                  //console.info('clicked')
+                  if ($this.hasClass("pn-panel__active")) {
+                    //allow for the links in the active panel to be clicked
+                    //console.info('im open, let the links through')
+                  } else {
+                    e.preventDefault();
+                    //set the width of the currently active panel to the closed amount
+                    var $active = $this
+                      .parents(".pn-sliding-panels")
+                      .find(".pn-panel__active");
+                    $active
+                      .css({ width: $active.data("closedwidth") + "%" })
+                      .removeClass("pn-panel__active");
+                    $this
+                      .addClass("pn-panel__active")
+                      .css({ width: $this.data("openwidth") + "%" });
+                  }
+                });
               });
             });
-          </script>
-          <script type="text/javascript" src="./resources_files/navigation.js"></script>
-          <script type="text/javascript" src="./resources_files/skip-link-focus-fix.js"></script>
-          <script type="text/javascript" src="./resources_files/tactic.js"></script>
-          <script type="text/javascript" src="./resources_files/tacticbindlinks.js"></script>
-          <script type="text/javascript" src="./resources_files/new-tab.min.js"></script>
-          <script type="text/javascript" src="./resources_files/wp-embed.min.js"></script>
+          })(jQuery);
+        </script>
 
-          <script>
-            /* this is where we are going to control the main menu */
-            function changeMenu(links) {
-              IBMCore.common.module.masthead.editProfileMenu({
-                action: "replace",
-                links: links,
-              });
-            }
-
-            var setMainMenu = function () {
-              var userLinks = [
-                {
-                  title: "My IBM",
-                  url: "https://myibm.ibm.com/dashboard/?lnk=mmi",
-                },
-                {
-                  title: "Sign In",
-                  url:
-                    "https://developer.ibm.com/sso/login?d=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fproducts%2Fdevops-acceleration-program%2Fresources&lang=en_US",
-                },
-                {
-                  title: "Register",
-                  url:
-                    "https://developer.ibm.com/sso/register?lang=en_US&d=https%3A%2F%2Fdeveloper.ibm.com%2Fmainframe%2Fproducts%2Fdevops-acceleration-program%2Fresources",
-                },
-              ];
-              changeMenu(userLinks);
-            };
-
-            IBMCore.common.module.masthead.subscribe(
-              "profileMenuReady",
-              "customjs",
-              setMainMenu
-            );
-          </script>
-          <script>
-            (function ($) {
-              $(document).ready(function () {
-                /* prevent the # links in the main menu from firing */
-                $(".ibm-sitenav-menu-list #primary-menu a").on(
-                  "click.stopFakeLinks",
-                  function (e) {
-                    $this = $(this);
-                    if ($this.attr("href") === "#") {
-                      return false;
-                    }
-                  }
-                );
-
-                /* bind the feedback click evnet */
-                jQuery("#dw-footer .ibm-feedbacklink a").on("click", function (evt) {
-                  evt.preventDefault();
-                  var iframeWidth = 970;
-                  if (window.innerWidth < 900) {
-                    iframeWidth = window.innerWidth - 80;
-                  }
-                  IBMCore.common.widget.surveyccfintercept.initFeedback({
-                    survey: {
-                      height: 700,
-                      id: "web-exp",
-                      metaData: "",
-                      type: "medallia",
-                      width: iframeWidth,
-                    },
-                  });
-                });
-                //testing out the alpha helper
-                $("[data-alpha]").each(function (i) {
-                  $elm = $(this);
-                  var bg = $elm
-                    .css("backgroundColor")
-                    .replace(/[rgb(]/g, "")
-                    .replace(/ /g, "")
-                    .replace(/[)]/g, "");
-                  var alpha = $elm.data("alpha") / 100;
-                  $elm.css(
-                    "cssText",
-                    "background-color: rgba(" + bg + "," + alpha + ") !important;"
-                  );
-                });
-                //testing out the panel slider
-                $(".pn-sliding-panels").each(function (i) {
-                  $elm = $(this);
-                  //get the width of the active panel
-                  var activeWidth = $elm.data("openamount"),
-                    panelCount = $elm.data("panelcount"),
-                    inactiveWidth = (100 - activeWidth) / (panelCount - 1);
-                  //set the first slide as active - later, allow it to be set
-                  $elm.find(".pn-panel").each(function (i, item) {
-                    $panel = $(item);
-                    $panel.data("closedwidth", inactiveWidth);
-                    $panel.data("openwidth", activeWidth);
-                    if (i == 0) {
-                      $panel
-                        .addClass("pn-panel__active")
-                        .css({ width: activeWidth + "%" });
-                    } else {
-                      $panel.css({ width: inactiveWidth + "%" });
-                    }
-                  });
-
-                  $elm.on("click.slide", ".pn-panel", function (e) {
-                    $this = $(this);
-                    //console.info('clicked')
-                    if ($this.hasClass("pn-panel__active")) {
-                      //allow for the links in the active panel to be clicked
-                      //console.info('im open, let the links through')
-                    } else {
-                      e.preventDefault();
-                      //set the width of the currently active panel to the closed amount
-                      var $active = $this
-                        .parents(".pn-sliding-panels")
-                        .find(".pn-panel__active");
-                      $active
-                        .css({ width: $active.data("closedwidth") + "%" })
-                        .removeClass("pn-panel__active");
-                      $this
-                        .addClass("pn-panel__active")
-                        .css({ width: $this.data("openwidth") + "%" });
-                    }
-                  });
-                });
-              });
-            })(jQuery);
-          </script>
-
-          <div id="ibm-overlay-backdrop"></div>
-          <div class="pn-modal-overlay" style="display: none;"></div>
-          <div class="pn-modal" style="display: none;">
-            <div class="pn-modal-wrap">
-              <div class="pn-modal-hd">Header Here</div>
-              <div class="pn-modal-bd"></div>
-              <div class="pn-modal-ft"></div>
-              <a href="https://developer.ibm.com/mainframe/products/devops-acceleration-program/resources/#"
-                class="pn-modal-close">
-                x
-              </a>
-            </div>
+        <div id="ibm-overlay-backdrop"></div>
+        <div class="pn-modal-overlay" style="display: none;"></div>
+        <div class="pn-modal" style="display: none;">
+          <div class="pn-modal-wrap">
+            <div class="pn-modal-hd">Header Here</div>
+            <div class="pn-modal-bd"></div>
+            <div class="pn-modal-ft"></div>
+            <a href="https://developer.ibm.com/mainframe/products/devops-acceleration-program/resources/#"
+              class="pn-modal-close">
+              x
+            </a>
           </div>
-          <div id="ibm-mobilemenu-screen"></div>
+        </div>
+        <div id="ibm-mobilemenu-screen"></div>
 </body>
 
 </html>
