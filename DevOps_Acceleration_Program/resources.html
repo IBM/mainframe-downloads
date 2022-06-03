@@ -1273,6 +1273,12 @@
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="migration_resource-button" onclick="toggleFilter(this)">
+                                Migration
+                              </button>
+                            </li>
+                            <li style="display: none;">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
                                 id="orchestrators_resource-button" onclick="toggleFilter(this)">
                                 Orchestrators
                               </button>
@@ -1297,8 +1303,8 @@
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
-                                id="whitepapers_resource-button" onclick="toggleFilter(this)">
-                                Whitepapers
+                                id="whitepapers/TechDocs_resource-button" onclick="toggleFilter(this)">
+                                Whitepapers/TechDocs
                               </button>
                             </li>
                             <li style="display: none;">
@@ -1351,11 +1357,11 @@
                     data-order='[[2,"desc"]]' role="grid">
                     <thead>
                       <tr role="row">
-                        <th width="70%" class="sorting_asc" tabindex="0" aria-controls="languagestable" rowspan="1"
+                        <th width="55%" class="sorting_asc" tabindex="0" aria-controls="languagestable" rowspan="1"
                           colspan="1" aria-sort="ascending" aria-label="Resource Name">
                           Resource Name
                         </th>
-                        <th width="15%" class="sorting_asc" tabindex="1" aria-controls="languagestable" rowspan="1"
+                        <th width="30%" class="sorting_asc" tabindex="1" aria-controls="languagestable" rowspan="1"
                           colspan="1" aria-sort="ascending" aria-label="Resource Type">
                           Resource Type
                         </th>
@@ -1396,7 +1402,39 @@
                         </td>
                       </tr>
                       -->
-                      
+                      <tr role="row">
+                        <td class="sorting_1">
+                          <a target="_blank"
+                            href="https://www.ibm.com/support/pages/node/6591177">
+                            Managing the code page conversion when migrating z/OS source files to Git
+                          </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            Migrating source code files from z/OS to Git can be a challenge when it comes to code page conversion and managing specific EBCDIC characters. 
+                            This document describes the code page conversion process during the migration of source code files from z/OS to Git and provides hints and tips to ensure a successful migration leveraging IBM Dependency Based Build.
+                          </span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
+                          <span class="ibm-hide keywords">architect</span>
+                          <span class="ibm-hide keywords">build_specialist</span>
+                          <span class="ibm-hide keywords">Migration_Specialist</span>
+                          <span class="ibm-hide keywords">Azure_DevOps_technology</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
+                          <span class="ibm-hide keywords">Github_technology</span>
+                          <span class="ibm-hide keywords">Gitlab_technology</span>
+                        </td>
+                        <td>
+                          <p>
+                            Whitepapers / TechDocs & Migration
+                          </p>
+                        </td>
+                        <td>
+                          <p>
+                            2022-06
+                          </p>
+                        </td>
+                      </tr>
                       <tr role="row">
                         <td class="sorting_1">
                           <a target="_blank"
@@ -1410,13 +1448,14 @@
                             This is a primer on how to build a z/OS DevOps pipeline using an orchestrator that has SSH capabilities.
                           </span>
                           <span class="ibm-hide keywords">orchestrators_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">DBB_technology</span>
                           <span class="ibm-hide keywords">security</span>
                         </td>
                         <td>
                           <p>
-                            Orchestrator
+                            Orchestrator & Whitepapers / TechDocs
                           </p>
                         </td>
                         <td>
@@ -1540,7 +1579,7 @@
                           </a>
                           <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
                               value="off" onclick="toggleAbstract(this)" >
-                            </a>
+                          </a>
                           <span class="abstract-text" style="display:none;">
                             A migration project can be a very challenging and time-consuming task. 
                             It can also cause grief in the future if some files are corrupted. 
@@ -1553,13 +1592,14 @@
                             This document proposes a recipe to address this scenario.
                           </span>
                           <span class="ibm-hide keywords">tutorials_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Migration_Specialist</span>
                           <span class="ibm-hide keywords">EWM_technology</span>
                           <span class="ibm-hide keywords">Git_technology</span>
                         </td>
                         <td>
                           <p>
-                            Tutorial
+                            Tutorial & Whitepapers / TechDocs
                           </p>
                         </td>
                         <td>
@@ -1588,7 +1628,7 @@
                             practices, by introducing application component repositories, adoption processes, decoupling build, 
                             packaging and deployment from each other and work with an artefact repository.
                           </span>
-                          <span class="ibm-hide keywords">whitepapers_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
                           <span class="ibm-hide keywords">Packaging_technology</span>
@@ -1598,7 +1638,7 @@
                         </td>
                         <td>
                           <p>
-                            Whitepapers
+                            Whitepapers / TechDocs 
                           </p>
                         </td>
                         <td>
@@ -1628,7 +1668,7 @@
                             providing explanations. There will be an emphasis on how an existing mainframe application can be 
                             componentized and how it's interfaces can be described and managed with git.
                           </span>
-                          <span class="ibm-hide keywords">whitepapers_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
                           <span class="ibm-hide keywords">SCM_technology</span>
@@ -1637,7 +1677,7 @@
                         </td>
                         <td>
                           <p>
-                            Whitepapers
+                            Whitepapers / TechDocs 
                           </p>
                         </td>
                         <td>
@@ -1658,6 +1698,7 @@
                             Install, configure, and run a GitHub Actions pipeline using IBM Dependency Based Build (DBB) and Git on z/OS
                           </span>
                           <span class="ibm-hide keywords">getting_started_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Github_Actions_technology</span>
                           <span class="ibm-hide keywords">Github_technology</span>
@@ -1665,7 +1706,7 @@
                         </td>
                         <td>
                           <p>
-                            Getting Started
+                            Getting Started & Whitepapers / TechDocs
                           </p>
                         </td>
                         <td>
@@ -1687,6 +1728,7 @@
                             This primer outlines a basic z/OS configuration with DBB/Git and a customer-built Continuous Deployment process using IBM's sample starter scripts.
                           </span>
                           <span class="ibm-hide keywords">getting_started_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">DBB_technology</span>
@@ -1696,7 +1738,7 @@
                         </td>
                         <td>
                           <p>
-                            Getting Started
+                            Getting Started & Whitepapers / TechDocs
                           </p>
                         </td>
                         <td>
@@ -1719,6 +1761,7 @@
                             (DBB) on z/OS.
                           </span>
                           <span class="ibm-hide keywords">getting_started_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Azure_DevOps_technology</span>
                           <span class="ibm-hide keywords">DBB_technology</span>
@@ -1726,7 +1769,7 @@
                         </td>
                         <td>
                           <p>
-                            Getting Started
+                            Getting Started & Whitepapers / TechDocs
                           </p>
                         </td>
                         <td>
@@ -1753,6 +1796,7 @@
                             environments.
                           </span>
                           <span class="ibm-hide keywords">getting_started_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">UCD_technology</span>
@@ -1761,7 +1805,7 @@
                         </td>
                         <td>
                           <p>
-                            Getting Started
+                            Getting Started & Whitepapers / TechDocs
                           </p>
                         </td>
                         <td>
@@ -1931,6 +1975,7 @@
                             feature which got added to the official sample.
                           </span>
                           <span class="ibm-hide keywords">zappbuild_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
                           <span class="ibm-hide keywords">DBB_technology</span>
@@ -1938,7 +1983,7 @@
                         </td>
                         <td>
                           <p>
-                            zAppBuild
+                            Whitepapers / TechDocs & zAppBuild
                           </p>
                         </td>
                         <td>
@@ -1965,6 +2010,8 @@
                               3. Managing pipeline builds for feature branches
                           </span>
                           <span class="ibm-hide keywords">zappbuild_resource</span>
+                          <span class="ibm-hide keywords">migration_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Migration_Specialist</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
@@ -1974,7 +2021,7 @@
                         </td>
                         <td>
                           <p>
-                            zAppBuild
+                            Migration, Whitepapers / TechDocs, & zAppBuild
                           </p>
                         </td>
                         <td>
@@ -1999,6 +2046,7 @@
                             sample implementation is based on IBM UrbanCode Deploy.
                           </span>
                           <span class="ibm-hide keywords">design_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Architect</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
                           <span class="ibm-hide keywords">UCD_technology</span>
@@ -2006,7 +2054,7 @@
                         </td>
                         <td>
                           <p>
-                            Design
+                            Design & Whitepapers / TechDocs
                           </p>
                         </td>
                         <td>
@@ -2069,6 +2117,7 @@
                             by the zAppBuild framework.
                           </span>
                           <span class="ibm-hide keywords">design_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
                           <span class="ibm-hide keywords">Git_technology</span>
@@ -2076,7 +2125,7 @@
                         </td>
                         <td>
                           <p>
-                            Design
+                            Design & Whitepapers / TechDocs
                           </p>
                         </td>
                         <td>
@@ -2103,13 +2152,14 @@
                             DevOps capabilities.
                           </span>
                           <span class="ibm-hide keywords">orchestrators_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Gitlab_technology</span>
                           <span class="ibm-hide keywords">Gitlab_CI_technology</span>
                         </td>
                         <td>
                           <p>
-                            Orchestrator
+                            Orchestrator & Whitepapers / TechDocs
                           </p>
                         </td>
                         <td>
@@ -2136,13 +2186,14 @@
                             definitions to leverage RACF keyrings for validating the certificate presented by the CI server.
                           </span>
                           <span class="ibm-hide keywords">orchestrators_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Middleware_Specialist</span>
                           <span class="ibm-hide keywords">Jenkins_technology</span>
                         </td>
                         <td>
                           <p>
-                            Orchestrator
+                            Orchestrator & Whitepapers / TechDocs
                           </p>
                         </td>
                         <td>
@@ -2167,13 +2218,14 @@
                             general and provides direction to solve the encoding issue.
                           </span>
                           <span class="ibm-hide keywords">orchestrators_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Jenkins_technology</span>
                           <span class="ibm-hide keywords">Security_technology</span>
                         </td>
                         <td>
                           <p>
-                            Orchestrator
+                            Orchestrator & Whitepapers / TechDocs
                           </p>
                         </td>
                         <td>
@@ -2197,6 +2249,7 @@
                             to develop IBM Dependency Based Build (DBB) groovy scripts - along with the published Java Doc of the DBB API.
                           </span>
                           <span class="ibm-hide keywords">tools_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">IDE_Specialist</span>
                           <span class="ibm-hide keywords">Groovy_technology</span>
                           <span class="ibm-hide keywords">IDz_technology</span>
@@ -2204,7 +2257,7 @@
                         </td>
                         <td>
                           <p>
-                            Tools
+                            Tools & Whitepapers / TechDocs
                           </p>
                         </td>
                         <td>
