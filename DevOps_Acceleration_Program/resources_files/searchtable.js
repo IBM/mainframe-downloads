@@ -67,13 +67,11 @@ function resetFilters() {
   var searchbox = document.getElementById("languagestable_wrapper").children[1].firstChild.firstChild.lastChild
   searchbox.value = ''
   searchbox.dispatchEvent(new Event("keyup"))
-
-
-  //reset result counter 
-  //Item results from filter selections
+  //reset result counter and selected filters 
   var resultCountDisplay = document.getElementById("search-results_subheader")
   resultCountDisplay.innerText = "Item results from filter selections"
-
+  var selectedFilters = document.getElementById("search-filters_subheader")
+  selectedFilters.innerText = "Selected Filters: N/A"
 }
 function toggleFilter(myFilter) {
 
