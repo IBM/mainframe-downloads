@@ -335,7 +335,6 @@
   </style>
   <link rel="stylesheet" id="pnext.utils-css" href="./resources_files/pnext.utils.css" type="text/css" media="all" />
   <script type="text/javascript" src="./resources_files/www.js"></script>
-  <style></style>
   <script type="text/javascript" src="./resources_files/jquery.cycle.all.min.js"></script>
   <script type="text/javascript" src="./resources_files/rotating_tweet.js"></script>
   <script type="text/javascript" src="./resources_files/dyntabs.js"></script>
@@ -408,172 +407,8 @@
       }
     }
   </style>
-  <script type="text/javascript">
-
-    /*
-    
-    Written by John Nemec (@john.nemec-3359)
-
-    What does all this code do?
-      It handles the dropdown menus, filter selection, and populating the search results table
-
-    resetFilters() is intended to have all filters and search results the same as when the page is first loaded
-      this means having no filters selected, all dropdown menus collapsed, and the search results table filled
-
-    toggleFilter(myFilter) is intended to be called whenever a toggle button is pressed, and determines the next function
-    to be called
-      if a dropdown toggle button is pressed, it will call the toggleDropdown(filter) function
-      if a filter selection toggle button is pressed, it will call the toggleSelection(filter) function 
-
-    collapseSection(myFilter) is inteded to be used to collapse a dropdown section via the collapse section button
-      it barely needs to be a funciton, and only exists for the sake of organization & code clarity 
-
-    toggleDropdown(myFilter) is intended to expand and contract the 3 dropdown menus when toggled
-      it handles adjusting visibility of elements contained within the drop down, and adjusting the height of 
-      the dropdown card element itself 
-
-    toggleSelection(myFilter) is intended to toggle a filter selection toggle button on and off, and update the search results table 
-    accordingly 
-      it will update the filter selection toggle button's apperance, and call either toggleVisibilityOn(filter) or 
-      toggleVisbilityOff(filter) depending on if a filter selection is being toggled on or off 
-
-    toggleVisbilityOn(filter) and toggleVisbilityOff(filter) are intended to update the search terms used to populate the 
-    search results table, and refresh the table 
-      these functions work by adding or removing words from a hidden searchbox, and triggering an event on the search box,
-       as if someone was typing in each search term by hand. 
-    */
-
-    function resetFilters() {
-      // set all filters to off
-      var techFilters = document.getElementById("technology-list")
-      for (let i = 0; i < techFilters.children.length; i++) {
-        if (techFilters.children[i].children[0].value == "on") {
-          toggleSelection(techFilters.children[i].children[0])
-        }
-      }
-      var personaFilters = document.getElementById("persona-list")
-      for (let i = 0; i < personaFilters.children.length; i++) {
-        if (personaFilters.children[i].children[0].value == "on") {
-          toggleSelection(personaFilters.children[i].children[0])
-        }
-      }
-      var resourceFilters = document.getElementById("resource-list")
-      for (let i = 0; i < resourceFilters.children.length; i++) {
-        if (resourceFilters.children[i].children[0].value == "on") {
-          toggleSelection(resourceFilters.children[i].children[0])
-        }
-      }
-      // undrop drop downs 
-      var techDropDown = document.getElementById("technology-toggle")
-      if (techDropDown.value == "on") {
-        toggleDropdown(techDropDown)
-      }
-      var personaDropDown = document.getElementById("persona-toggle")
-      if (personaDropDown.value == "on") {
-        toggleDropdown(personaDropDown)
-      }
-      var resourceDropDown = document.getElementById("resource-toggle")
-      if (resourceDropDown.value == "on") {
-        toggleDropdown(resourceDropDown)
-      }
-      // clear filter box contents
-      var searchbox = document.getElementById("languagestable_wrapper").children[1].firstChild.firstChild.lastChild
-      searchbox.value = ''
-      searchbox.dispatchEvent(new Event("keyup"))
-    }
-    function toggleFilter(myFilter) {
-      //checks if we're togging a drop-down or toggling a selection, and calls the appropriate function
-      if (myFilter.getAttribute("class").includes("toggle-button")) {
-        toggleDropdown(myFilter) //Technology filters dropdown, Persona filters dropdown, and Resource filters dropdown
-      } else {
-        toggleSelection(myFilter) //specific technologies / personas / resources, such as ADDI, or IDE Specialist, or Tutorials
-      }
-    }
-
-    function collapseSection(myFilter) {
-      //both the toggle dropdown button and the collapse section button share the same ID
-      //the collapse section button's appearnce doesn't need to change, because it gets hidden
-      //the collapse section button is only visible when the toggle dropdown button's value is on 
-      //therefore, we can just get the toggle dropdown button and use toggleDropdown() on it 
-      //the only reason this function exists is to make the function call in the HTML code simpler 
-      var otherFilter = document.getElementById(myFilter.getAttribute("id"))
-      toggleDropdown(otherFilter)
-    }
-
-    function toggleDropdown(myFilter) {
-      //handles displaying or hiding the contents within each drop down 
-      var whichFilter = myFilter.getAttribute("id").slice(0, -7)
-      var filterList = document.getElementById(whichFilter + "-list")
-      if (myFilter.value == "off" || myFilter.value == undefined) { //if displaying drop down contents 
-        //update the button
-        myFilter.setAttribute("class", "ibm-chevron-up-link toggle-button selected")
-        myFilter.value = "on"
-        //make each selection filter visible and determine how long the dropdown will be when fully revealed
-        let size = 80 //baseline starting height
-        for (let i = 0; i < filterList.children.length; i++) {
-          filterList.children[i].style.display = "block"
-          size += 41
-        }
-        //set the height of the dropdown
-        document.getElementById(whichFilter + "-card").style.height = size + "px"
-      } else { //if hiding drop down contents 
-        //update the button
-        myFilter.setAttribute("class", "ibm-chevron-down-link toggle-button unselected")
-        myFilter.value = "off"
-        //hide each selection filter 
-        for (let i = 0; i < filterList.children.length; i++) {
-          filterList.children[i].style.display = "none"
-        }
-        //set the height of the dropdown 
-        document.getElementById(whichFilter + "-card").style.height = "80px"
-      }
-    }
-    function toggleSelection(myFilter) {
-      //handle toggling between having a selection filter on or off
-      if (myFilter.value == "off") {
-        //update the button's apperance and value
-        myFilter.setAttribute("class", "ibm-btn-pri ibm-btn-teal-50 filter_button selected");
-        myFilter.value = "on"
-        myFilter.style.backgroundColor = "#002d9c" //blue 80
-        //add filter to search 
-        toggleVisibilityOn(myFilter.getAttribute("id").slice(0, -7))
-      } else {
-        //update the button's apperance and value
-        myFilter.setAttribute("class", "ibm-btn-pri ibm-btn-teal-50 filter_button unselected");
-        myFilter.value = "off"
-        myFilter.style.backgroundColor = "#008571" //specified in www.css, even though that's not IBM Teal 50
-        //remove filter from search
-        toggleVisibilityOff(myFilter.getAttribute("id").slice(0, -7))
-      }
-    }
-    function toggleVisibilityOn(filter) {
-      //find the searchbox
-      var searchbox = document.getElementById("languagestable_wrapper").children[1].firstChild.firstChild.lastChild
-      //add the filter to the searchbox's search terms
-      searchbox.value += filter + " "
-      //trigger an event to have the searchbox update the search results 
-      searchbox.dispatchEvent(new Event("keyup"))
-    }
-    function toggleVisibilityOff(filter) {
-      //find the searchbox 
-      var searchbox = document.getElementById("languagestable_wrapper").children[1].firstChild.firstChild.lastChild
-      //remove the filter from the searchbox's search terms
-      searchbox.value = searchbox.value.replace(filter + " ", '')
-      //trigger an event to ahve the searchbox update the search results
-      searchbox.dispatchEvent(new Event("keyup"))
-    }
-
-    //used for abstract textbox visibility
-    function toggleAbstract(item){
-      var textbox = item.parentNode.children[2]
-      if( textbox.style.display == "none"){
-        textbox.style.display="block"
-        item.setAttribute("class", "ibm-chevron-up-link abstract-toggle-button selected")
-      } else {
-        textbox.style.display = "none"
-        item.setAttribute("class", "ibm-chevron-down-link abstract-toggle-button unselected")
-      }
-    }
+  <script type="text/javascript" src="./resources_files/searchtable.js">
+    //logic for filters, dropdowns, and search result table 
   </script>
 </head>
 
@@ -651,7 +486,6 @@
     .abstract-text{
       padding-top: 5px;
       padding-left: 5px;
-      width: 140%;
     }
   </style>
   <div style="display:none">page-templates/empty.php</div>
@@ -1182,151 +1016,151 @@
                           <ul class="sub-menu" id="technology-list">
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="addi-button" onclick="toggleFilter(this)">
+                                id="addi_technology-button" onclick="toggleFilter(this)">
                                 ADDI
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
-                                id="azure_devops-button" onclick="toggleFilter(this)">
+                                id="azure_devops_technology-button" onclick="toggleFilter(this)">
                                 Azure DevOps
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
-                                id="code_coverage-button" onclick="toggleFilter(this)">
+                                id="code_coverage_technology-button" onclick="toggleFilter(this)">
                                 Code Coverage
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="dbb-button" onclick="toggleFilter(this)">
+                                id="dbb_technology-button" onclick="toggleFilter(this)">
                                 DBB
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
-                                id="deployment-button" onclick="toggleFilter(this)">
+                                id="deployment_technology-button" onclick="toggleFilter(this)">
                                 Deployment
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="ewm-button" onclick="toggleFilter(this)">
+                                id="ewm_technology-button" onclick="toggleFilter(this)">
                                 EWM
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="git-button" onclick="toggleFilter(this)">
+                                id="git_technology-button" onclick="toggleFilter(this)">
                                 Git
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="github-button" onclick="toggleFilter(this)">
+                                id="github_technology-button" onclick="toggleFilter(this)">
                                 GitHub
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
-                                id="github_actions-button" onclick="toggleFilter(this)">
+                                id="github_actions_technology-button" onclick="toggleFilter(this)">
                                 GitHub Actions
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="gitlab-button" onclick="toggleFilter(this)">
+                                id="gitlab_technology-button" onclick="toggleFilter(this)">
                                 GitLab
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
-                                id="gitlab_ci-button" onclick="toggleFilter(this)">
+                                id="gitlab_ci_technology-button" onclick="toggleFilter(this)">
                                 GitLab CI
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="groovy-button" onclick="toggleFilter(this)">
+                                id="groovy_technology-button" onclick="toggleFilter(this)">
                                 Groovy
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="idz-button" onclick="toggleFilter(this)">
+                                id="idz_technology-button" onclick="toggleFilter(this)">
                                 IDz
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="jenkins-button" onclick="toggleFilter(this)">
+                                id="jenkins_technology-button" onclick="toggleFilter(this)">
                                 Jenkins
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
-                                id="packaging-button" onclick="toggleFilter(this)">
+                                id="packaging_technology-button" onclick="toggleFilter(this)">
                                 Packaging
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="sclm-button" onclick="toggleFilter(this)">
+                                id="sclm_technology-button" onclick="toggleFilter(this)">
                                 SCLM
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="scm-button" onclick="toggleFilter(this)">
+                                id="scm_technology-button" onclick="toggleFilter(this)">
                                 SCM
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="security-button" onclick="toggleFilter(this)">
+                                id="security_technology-button" onclick="toggleFilter(this)">
                                 Security
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="testing-button" onclick="toggleFilter(this)">
+                                id="testing_technology-button" onclick="toggleFilter(this)">
                                 Testing
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="ucd-button" onclick="toggleFilter(this)">
+                                id="ucd_technology-button" onclick="toggleFilter(this)">
                                 UCD
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="vscode-button" onclick="toggleFilter(this)">
+                                id="vscode_technology-button" onclick="toggleFilter(this)">
                                 VS Code
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="vtp-button" onclick="toggleFilter(this)">
+                                id="vtp_technology-button" onclick="toggleFilter(this)">
                                 VTP
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
-                                id="wazi_analyze-button" onclick="toggleFilter(this)">
+                                id="wazi_analyze_technology-button" onclick="toggleFilter(this)">
                                 Wazi Analyze
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="zd&t-button" onclick="toggleFilter(this)">
+                                id="zd&t_technology-button" onclick="toggleFilter(this)">
                                 ZD&T
                               </button>
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off" 
-                                id="zunit-button" onclick="toggleFilter(this)">
+                                id="zunit_technology-button" onclick="toggleFilter(this)">
                                 ZUnit
                               </button>
                             </li>
@@ -1438,6 +1272,12 @@
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
+                                id="migration_resource-button" onclick="toggleFilter(this)">
+                                Migration
+                              </button>
+                            </li>
+                            <li style="display: none;">
+                              <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
                                 id="orchestrators_resource-button" onclick="toggleFilter(this)">
                                 Orchestrators
                               </button>
@@ -1462,8 +1302,8 @@
                             </li>
                             <li style="display: none;">
                               <button class="ibm-btn-pri ibm-btn-teal-50 filter_button" value="off"
-                                id="whitepapers_resource-button" onclick="toggleFilter(this)">
-                                Whitepapers
+                                id="whitepapers/TechDocs_resource-button" onclick="toggleFilter(this)">
+                                Whitepapers/TechDocs
                               </button>
                             </li>
                             <li style="display: none;">
@@ -1495,13 +1335,17 @@
         <div class="ibm-background-neutral-white-30">
           <div class="ibm-fluid ibm-padding-bottom-r1 ibm-padding-top-r1">
             <div>
-              <div class="ibm-col-12-3 ibm-col-medium-12-12">
+              <div class="ibm-col-12-3 ibm-col-medium-12-12" style="width:100%">
                 <h2 class="ibm-h2 ibm-padding-top-0 ibm-padding-bottom-1 ibm-textcolor-blue-50">
                   Search Results
                 </h2>
                 <p id="search-results_subheader">
                   Item results from filter selections
                 </p>
+                <p id="search-filters_subheader">
+                  Selected Filters: N/A
+                </p>
+
               </div>
               <div class="textwidget">
                 <div id="languagestable_wrapper" class="dataTables_wrapper no-footer">
@@ -1512,13 +1356,13 @@
                     data-order='[[2,"desc"]]' role="grid">
                     <thead>
                       <tr role="row">
-                        <th width="70%" class="sorting_asc" tabindex="0" aria-controls="languagestable" rowspan="1"
+                        <th width="55%" class="sorting_asc" tabindex="0" aria-controls="languagestable" rowspan="1"
                           colspan="1" aria-sort="ascending" aria-label="Resource Name">
                           Resource Name
                         </th>
-                        <th width="15%" class="sorting_asc" tabindex="1" aria-controls="languagestable" rowspan="1"
+                        <th width="30%" class="sorting_asc" tabindex="1" aria-controls="languagestable" rowspan="1"
                           colspan="1" aria-sort="ascending" aria-label="Resource Type">
-                          Resource Type
+                          Resource Type(s)
                         </th>
                         <th width="15%" class="sorting_asc" tabindex="2" aria-controls="languagestable" rowspan="1"
                           colspan="1" aria-sort="ascending" aria-label="Date">
@@ -1526,7 +1370,7 @@
                         </th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody id='resources-table'>
                       <!-- HTML Skeleton for new resource entry -->
                       <!-- 
                       <tr role="row">
@@ -1557,7 +1401,40 @@
                         </td>
                       </tr>
                       -->
-                      
+                      <tr role="row">
+                        <td class="sorting_1">
+                          <a target="_blank"
+                            href="https://www.ibm.com/support/pages/node/6591177">
+                            Managing the code page conversion when migrating z/OS source files to Git
+                          </a>
+                          <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
+                            value="off" onclick="toggleAbstract(this)" >
+                          </a>
+                          <span class="abstract-text" style="display:none;">
+                            Migrating source code files from z/OS to Git can be a challenge when it comes to code page conversion and managing specific EBCDIC characters. 
+                            This document describes the code page conversion process during the migration of source code files from z/OS to Git and provides hints and tips to ensure a successful migration leveraging IBM Dependency Based Build.
+                          </span>
+                          <span class="ibm-hide keywords">migration_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
+                          <span class="ibm-hide keywords">architect</span>
+                          <span class="ibm-hide keywords">build_specialist</span>
+                          <span class="ibm-hide keywords">Migration_Specialist</span>
+                          <span class="ibm-hide keywords">Azure_DevOps_technology</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
+                          <span class="ibm-hide keywords">Github_technology</span>
+                          <span class="ibm-hide keywords">Gitlab_technology</span>
+                        </td>
+                        <td>
+                          <p>
+                            Whitepapers/TechDocs & Migration
+                          </p>
+                        </td>
+                        <td>
+                          <p>
+                            2022-06
+                          </p>
+                        </td>
+                      </tr>
                       <tr role="row">
                         <td class="sorting_1">
                           <a target="_blank"
@@ -1571,13 +1448,14 @@
                             This is a primer on how to build a z/OS DevOps pipeline using an orchestrator that has SSH capabilities.
                           </span>
                           <span class="ibm-hide keywords">orchestrators_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
-                          <span class="ibm-hide keywords">DBB</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
                           <span class="ibm-hide keywords">security</span>
                         </td>
                         <td>
                           <p>
-                            Orchestrator
+                            Orchestrator & Whitepapers/TechDocs
                           </p>
                         </td>
                         <td>
@@ -1618,7 +1496,7 @@
                           </span>
                           <span class="ibm-hide keywords">webinars_resource</span>
                           <span class="ibm-hide keywords">Architect</span>
-                          <span class="ibm-hide keywords">Gitlab</span>
+                          <span class="ibm-hide keywords">Gitlab_technology</span>
                         </td>
                         <td>
                           <p>
@@ -1648,8 +1526,8 @@
                           </span>
                           <span class="ibm-hide keywords">demo_videos_resource</span>
                           <span class="ibm-hide keywords">IDE_Specialist</span>
-                          <span class="ibm-hide keywords">DBB</span>
-                          <span class="ibm-hide keywords">VSCode</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
+                          <span class="ibm-hide keywords">VSCode_technology</span>
                         </td>
                         <td>
                           <p>
@@ -1679,9 +1557,9 @@
                           <span class="ibm-hide keywords">design_resource</span>
                           <span class="ibm-hide keywords">Architect</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
-                          <span class="ibm-hide keywords">GitHub</span>
-                          <span class="ibm-hide keywords">Gitlab</span>
-                          <span class="ibm-hide keywords">Git</span>
+                          <span class="ibm-hide keywords">GitHub_technology</span>
+                          <span class="ibm-hide keywords">Gitlab_technology</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
                         </td>
                         <td>
                           <p>
@@ -1701,7 +1579,7 @@
                           </a>
                           <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
                               value="off" onclick="toggleAbstract(this)" >
-                            </a>
+                          </a>
                           <span class="abstract-text" style="display:none;">
                             A migration project can be a very challenging and time-consuming task. 
                             It can also cause grief in the future if some files are corrupted. 
@@ -1714,13 +1592,14 @@
                             This document proposes a recipe to address this scenario.
                           </span>
                           <span class="ibm-hide keywords">tutorials_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Migration_Specialist</span>
-                          <span class="ibm-hide keywords">EWM</span>
-                          <span class="ibm-hide keywords">Git</span>
+                          <span class="ibm-hide keywords">EWM_technology</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
                         </td>
                         <td>
                           <p>
-                            Tutorial
+                            Tutorial & Whitepapers/TechDocs
                           </p>
                         </td>
                         <td>
@@ -1749,17 +1628,17 @@
                             practices, by introducing application component repositories, adoption processes, decoupling build, 
                             packaging and deployment from each other and work with an artefact repository.
                           </span>
-                          <span class="ibm-hide keywords">whitepapers_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
-                          <span class="ibm-hide keywords">Packaging</span>
-                          <span class="ibm-hide keywords">Deployment</span>
-                          <span class="ibm-hide keywords">UCD</span>
-                          <span class="ibm-hide keywords">Git</span>
+                          <span class="ibm-hide keywords">Packaging_technology</span>
+                          <span class="ibm-hide keywords">Deployment_technology</span>
+                          <span class="ibm-hide keywords">UCD_technology</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
                         </td>
                         <td>
                           <p>
-                            Whitepapers
+                            Whitepapers / TechDocs 
                           </p>
                         </td>
                         <td>
@@ -1789,16 +1668,16 @@
                             providing explanations. There will be an emphasis on how an existing mainframe application can be 
                             componentized and how it's interfaces can be described and managed with git.
                           </span>
-                          <span class="ibm-hide keywords">whitepapers_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
-                          <span class="ibm-hide keywords">SCM</span>
-                          <span class="ibm-hide keywords">Git</span>
-                          <span class="ibm-hide keywords">DBB</span>
+                          <span class="ibm-hide keywords">SCM_technology</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
                         </td>
                         <td>
                           <p>
-                            Whitepapers
+                            Whitepapers/TechDocs 
                           </p>
                         </td>
                         <td>
@@ -1819,14 +1698,15 @@
                             Install, configure, and run a GitHub Actions pipeline using IBM Dependency Based Build (DBB) and Git on z/OS
                           </span>
                           <span class="ibm-hide keywords">getting_started_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
-                          <span class="ibm-hide keywords">Github_Actions</span>
-                          <span class="ibm-hide keywords">Github</span>
-                          <span class="ibm-hide keywords">DBB</span>
+                          <span class="ibm-hide keywords">Github_Actions_technology</span>
+                          <span class="ibm-hide keywords">Github_technology</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
                         </td>
                         <td>
                           <p>
-                            Getting Started
+                            Getting Started & Whitepapers/TechDocs
                           </p>
                         </td>
                         <td>
@@ -1848,16 +1728,17 @@
                             This primer outlines a basic z/OS configuration with DBB/Git and a customer-built Continuous Deployment process using IBM's sample starter scripts.
                           </span>
                           <span class="ibm-hide keywords">getting_started_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
-                          <span class="ibm-hide keywords">DBB</span>
-                          <span class="ibm-hide keywords">Deployment</span>
-                          <span class="ibm-hide keywords">Packaging</span>
-                          <span class="ibm-hide keywords">Git</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
+                          <span class="ibm-hide keywords">Deployment_technology</span>
+                          <span class="ibm-hide keywords">Packaging_technology</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
                         </td>
                         <td>
                           <p>
-                            Getting Started
+                            Getting Started & Whitepapers/TechDocs
                           </p>
                         </td>
                         <td>
@@ -1880,14 +1761,15 @@
                             (DBB) on z/OS.
                           </span>
                           <span class="ibm-hide keywords">getting_started_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
-                          <span class="ibm-hide keywords">Azure_DevOps</span>
-                          <span class="ibm-hide keywords">DBB</span>
-                          <span class="ibm-hide keywords">Git</span>
+                          <span class="ibm-hide keywords">Azure_DevOps_technology</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
                         </td>
                         <td>
                           <p>
-                            Getting Started
+                            Getting Started & Whitepapers/TechDocs
                           </p>
                         </td>
                         <td>
@@ -1914,20 +1796,21 @@
                             environments.
                           </span>
                           <span class="ibm-hide keywords">getting_started_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
-                          <span class="ibm-hide keywords">UCD</span>
-                          <span class="ibm-hide keywords">DBB</span>
-                          <span class="ibm-hide keywords">Git</span>
+                          <span class="ibm-hide keywords">UCD_technology</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
                         </td>
                         <td>
                           <p>
-                            Getting Started
+                            Getting Started & Whitepapers/TechDocs
                           </p>
                         </td>
                         <td>
                           <p>
-                            2021-05
+                            2022-06
                           </p>
                         </td>
                       </tr>
@@ -1947,10 +1830,10 @@
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Middleware_Specialist</span>
-                          <span class="ibm-hide keywords">DBB</span>
-                          <span class="ibm-hide keywords">Git</span>
-                          <span class="ibm-hide keywords">Jenkins</span>
-                          <span class="ibm-hide keywords">IDz</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
+                          <span class="ibm-hide keywords">Jenkins_technology</span>
+                          <span class="ibm-hide keywords">IDz_technology</span>
                         </td>
                         <td>
                           <p>
@@ -1987,15 +1870,15 @@
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
-                          <span class="ibm-hide keywords">Gitlab</span>
-                          <span class="ibm-hide keywords">Gitlab_CI</span>
-                          <span class="ibm-hide keywords">DBB</span>
-                          <span class="ibm-hide keywords">UCD</span>
-                          <span class="ibm-hide keywords">Packaging</span>
-                          <span class="ibm-hide keywords">Deployment</span>
-                          <span class="ibm-hide keywords">Git</span>
-                          <span class="ibm-hide keywords">Jenkins</span>
-                          <span class="ibm-hide keywords">IDz</span>
+                          <span class="ibm-hide keywords">Gitlab_technology</span>
+                          <span class="ibm-hide keywords">Gitlab_CI_technology</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
+                          <span class="ibm-hide keywords">UCD_technology</span>
+                          <span class="ibm-hide keywords">Packaging_technology</span>
+                          <span class="ibm-hide keywords">Deployment_technology</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
+                          <span class="ibm-hide keywords">Jenkins_technology</span>
+                          <span class="ibm-hide keywords">IDz_technology</span>
                         </td>
                         <td>
                           <p>
@@ -2033,9 +1916,9 @@
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
-                          <span class="ibm-hide keywords">Jenkins</span>
-                          <span class="ibm-hide keywords">DBB</span>
-                          <span class="ibm-hide keywords">UCD</span>
+                          <span class="ibm-hide keywords">Jenkins_technology</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
+                          <span class="ibm-hide keywords">UCD_technology</span>
                         </td>
                         <td>
                           <p>
@@ -2063,7 +1946,7 @@
                           </span>
                           <span class="ibm-hide keywords">zappbuild_resource</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
-                          <span class="ibm-hide keywords">DBB</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
                         </td>
                         <td>
                           <p>
@@ -2092,14 +1975,15 @@
                             feature which got added to the official sample.
                           </span>
                           <span class="ibm-hide keywords">zappbuild_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
-                          <span class="ibm-hide keywords">DBB</span>
-                          <span class="ibm-hide keywords">Git</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
                         </td>
                         <td>
                           <p>
-                            zAppBuild
+                            Whitepapers/TechDocs & zAppBuild
                           </p>
                         </td>
                         <td>
@@ -2126,16 +2010,18 @@
                               3. Managing pipeline builds for feature branches
                           </span>
                           <span class="ibm-hide keywords">zappbuild_resource</span>
+                          <span class="ibm-hide keywords">migration_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Migration_Specialist</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
-                          <span class="ibm-hide keywords">DBB</span>
-                          <span class="ibm-hide keywords">Git</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
                         </td>
                         <td>
                           <p>
-                            zAppBuild
+                            Migration, Whitepapers/TechDocs, & zAppBuild
                           </p>
                         </td>
                         <td>
@@ -2160,14 +2046,15 @@
                             sample implementation is based on IBM UrbanCode Deploy.
                           </span>
                           <span class="ibm-hide keywords">design_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Architect</span>
                           <span class="ibm-hide keywords">Deployment_Specialist</span>
-                          <span class="ibm-hide keywords">UCD</span>
-                          <span class="ibm-hide keywords">Git</span>
+                          <span class="ibm-hide keywords">UCD_technology</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
                         </td>
                         <td>
                           <p>
-                            Design
+                            Design & Whitepapers/TechDocs
                           </p>
                         </td>
                         <td>
@@ -2196,11 +2083,11 @@
                           <span class="ibm-hide keywords">Test_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
-                          <span class="ibm-hide keywords">Testing</span>
-                          <span class="ibm-hide keywords">Code_Coverage</span>
-                          <span class="ibm-hide keywords">ZUnit</span>
-                          <span class="ibm-hide keywords">DBB</span>
-                          <span class="ibm-hide keywords">IDz</span>
+                          <span class="ibm-hide keywords">Testing_technology</span>
+                          <span class="ibm-hide keywords">Code_Coverage_technology</span>
+                          <span class="ibm-hide keywords">ZUnit_technology</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
+                          <span class="ibm-hide keywords">IDz_technology</span>
                         </td>
                         <td>
                           <p>
@@ -2230,14 +2117,15 @@
                             by the zAppBuild framework.
                           </span>
                           <span class="ibm-hide keywords">design_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Build_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
-                          <span class="ibm-hide keywords">Git</span>
-                          <span class="ibm-hide keywords">DBB</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
                         </td>
                         <td>
                           <p>
-                            Design
+                            Design & Whitepapers/TechDocs
                           </p>
                         </td>
                         <td>
@@ -2264,13 +2152,14 @@
                             DevOps capabilities.
                           </span>
                           <span class="ibm-hide keywords">orchestrators_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
-                          <span class="ibm-hide keywords">Gitlab</span>
-                          <span class="ibm-hide keywords">Gitlab_CI</span>
+                          <span class="ibm-hide keywords">Gitlab_technology</span>
+                          <span class="ibm-hide keywords">Gitlab_CI_technology</span>
                         </td>
                         <td>
                           <p>
-                            Orchestrator
+                            Orchestrator & Whitepapers/TechDocs
                           </p>
                         </td>
                         <td>
@@ -2297,13 +2186,14 @@
                             definitions to leverage RACF keyrings for validating the certificate presented by the CI server.
                           </span>
                           <span class="ibm-hide keywords">orchestrators_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Middleware_Specialist</span>
-                          <span class="ibm-hide keywords">Jenkins</span>
+                          <span class="ibm-hide keywords">Jenkins_technology</span>
                         </td>
                         <td>
                           <p>
-                            Orchestrator
+                            Orchestrator & Whitepapers/TechDocs
                           </p>
                         </td>
                         <td>
@@ -2328,13 +2218,14 @@
                             general and provides direction to solve the encoding issue.
                           </span>
                           <span class="ibm-hide keywords">orchestrators_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
-                          <span class="ibm-hide keywords">Jenkins</span>
-                          <span class="ibm-hide keywords">Security</span>
+                          <span class="ibm-hide keywords">Jenkins_technology</span>
+                          <span class="ibm-hide keywords">Security_technology</span>
                         </td>
                         <td>
                           <p>
-                            Orchestrator
+                            Orchestrator & Whitepapers/TechDocs
                           </p>
                         </td>
                         <td>
@@ -2358,14 +2249,15 @@
                             to develop IBM Dependency Based Build (DBB) groovy scripts - along with the published Java Doc of the DBB API.
                           </span>
                           <span class="ibm-hide keywords">tools_resource</span>
+                          <span class="ibm-hide keywords">whitepapers/TechDocs_resource</span>
                           <span class="ibm-hide keywords">IDE_Specialist</span>
-                          <span class="ibm-hide keywords">Groovy</span>
-                          <span class="ibm-hide keywords">IDz</span>
-                          <span class="ibm-hide keywords">DBB</span>
+                          <span class="ibm-hide keywords">Groovy_technology</span>
+                          <span class="ibm-hide keywords">IDz_technology</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
                         </td>
                         <td>
                           <p>
-                            Tools
+                            Tools & Whitepapers/TechDocs
                           </p>
                         </td>
                         <td>
@@ -2396,7 +2288,7 @@
                           <span class="ibm-hide keywords">webinars_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
-                          <span class="ibm-hide keywords">ADDI</span>
+                          <span class="ibm-hide keywords">ADDI_technology</span>
                         </td>
                         <td>
                           <p>
@@ -2430,7 +2322,7 @@
                           <span class="ibm-hide keywords">webinars_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
-                          <span class="ibm-hide keywords">Gitlab</span>
+                          <span class="ibm-hide keywords">Gitlab_technology</span>
                         </td>
                         <td>
                           <p>
@@ -2467,8 +2359,8 @@
                           <span class="ibm-hide keywords">webinars_resource</span>
                           <span class="ibm-hide keywords">Architect</span>
                           <span class="ibm-hide keywords">Test_Specialist</span>
-                          <span class="ibm-hide keywords">Testing</span>
-                          <span class="ibm-hide keywords">ZUnit</span>
+                          <span class="ibm-hide keywords">Testing_technology</span>
+                          <span class="ibm-hide keywords">ZUnit_technology</span>
                         </td>
                         <td>
                           <p>
@@ -2498,8 +2390,8 @@
                           </span>
                           <span class="ibm-hide keywords">webinars_resource</span>
                           <span class="ibm-hide keywords">Migration_Specialist</span>
-                          <span class="ibm-hide keywords">SCLM</span>
-                          <span class="ibm-hide keywords">Git</span>
+                          <span class="ibm-hide keywords">SCLM_technology</span>
+                          <span class="ibm-hide keywords">Git_technology</span>
                         </td>
                         <td>
                           <p>
@@ -2538,11 +2430,11 @@
                           <span class="ibm-hide keywords">demo_videos_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
-                          <span class="ibm-hide keywords">Gitlab</span>
-                          <span class="ibm-hide keywords">Gitlab_CI</span>
-                          <span class="ibm-hide keywords">IDz</span>
-                          <span class="ibm-hide keywords">DBB</span>
-                          <span class="ibm-hide keywords">UCD</span>
+                          <span class="ibm-hide keywords">Gitlab_technology</span>
+                          <span class="ibm-hide keywords">Gitlab_CI_technology</span>
+                          <span class="ibm-hide keywords">IDz_technology</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
+                          <span class="ibm-hide keywords">UCD_technology</span>
                         </td>
                         <td>
                           <p>
@@ -2578,9 +2470,9 @@
                           </span>
                           <span class="ibm-hide keywords">demo_videos_resource</span>
                           <span class="ibm-hide keywords">IDE_Specialist</span>
-                          <span class="ibm-hide keywords">Gitlab</span>
-                          <span class="ibm-hide keywords">Gitlab_CI</span>
-                          <span class="ibm-hide keywords">Wazi_Analyze</span>
+                          <span class="ibm-hide keywords">Gitlab_technology</span>
+                          <span class="ibm-hide keywords">Gitlab_CI_technology</span>
+                          <span class="ibm-hide keywords">Wazi_Analyze_technology</span>
                         </td>
                         <td>
                           <p>
@@ -2608,10 +2500,10 @@
                           </span>
                           <span class="ibm-hide keywords">demo_videos_resource</span>
                           <span class="ibm-hide keywords">Test_Specialist</span>
-                          <span class="ibm-hide keywords">ZD&T</span>
-                          <span class="ibm-hide keywords">ZUnit</span>
-                          <span class="ibm-hide keywords">VTP</span>
-                          <span class="ibm-hide keywords">Code_Coverage</span>
+                          <span class="ibm-hide keywords">ZD&T_technology</span>
+                          <span class="ibm-hide keywords">ZUnit_technology</span>
+                          <span class="ibm-hide keywords">VTP_technology</span>
+                          <span class="ibm-hide keywords">Code_Coverage_technology</span>
                         </td>
                         <td>
                           <p>
@@ -2647,9 +2539,9 @@
                           <span class="ibm-hide keywords">demo_videos_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">Architect</span>
-                          <span class="ibm-hide keywords">Azure_DevOps</span>
-                          <span class="ibm-hide keywords">IDz</span>
-                          <span class="ibm-hide keywords">DBB</span>
+                          <span class="ibm-hide keywords">Azure_DevOps_technology</span>
+                          <span class="ibm-hide keywords">IDz_technology</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
                         </td>
                         <td>
                           <p>
@@ -2683,9 +2575,9 @@
                           <span class="ibm-hide keywords">demo_videos_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
                           <span class="ibm-hide keywords">IDE_Specialist</span>
-                          <span class="ibm-hide keywords">Azure_DevOps</span>
-                          <span class="ibm-hide keywords">VSCode</span>
-                          <span class="ibm-hide keywords">DBB</span>
+                          <span class="ibm-hide keywords">Azure_DevOps_technology</span>
+                          <span class="ibm-hide keywords">VSCode_technology</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
                         </td>
                         <td>
                           <p>
@@ -2719,10 +2611,10 @@
                           </span>
                           <span class="ibm-hide keywords">demo_videos_resource</span>
                           <span class="ibm-hide keywords">Architect</span>
-                          <span class="ibm-hide keywords">Gitlab</span>
-                          <span class="ibm-hide keywords">Gitlab_CI</span>
-                          <span class="ibm-hide keywords">DBB</span>
-                          <span class="ibm-hide keywords">IDz</span>
+                          <span class="ibm-hide keywords">Gitlab_technology</span>
+                          <span class="ibm-hide keywords">Gitlab_CI_technology</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
+                          <span class="ibm-hide keywords">IDz_technology</span>
                         </td>
                         <td>
                           <p>
@@ -2752,11 +2644,11 @@
                           </span>
                           <span class="ibm-hide keywords">demo_videos_resource</span>
                           <span class="ibm-hide keywords">Pipeline_Specialist</span>
-                          <span class="ibm-hide keywords">Gitlab</span>
-                          <span class="ibm-hide keywords">Gitlab_CI</span>
-                          <span class="ibm-hide keywords">IDz</span>
-                          <span class="ibm-hide keywords">DBB</span>
-                          <span class="ibm-hide keywords">UCD</span>
+                          <span class="ibm-hide keywords">Gitlab_technology</span>
+                          <span class="ibm-hide keywords">Gitlab_CI_technology</span>
+                          <span class="ibm-hide keywords">IDz_technology</span>
+                          <span class="ibm-hide keywords">DBB_technology</span>
+                          <span class="ibm-hide keywords">UCD_technology</span>
                         </td>
                         <td>
                           <p>
