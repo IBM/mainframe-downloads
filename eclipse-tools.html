@@ -12591,7 +12591,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_31: !0,
             aqua_32: !0,
             p2: !0,
-            im: !0,
+            im: !1,
             repozip: !0,
             repozip_link: "",
             prereq: "zosexplorer",
@@ -13667,7 +13667,13 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           
           // Identify Debug IM install - which should be unavailable to users
           if (cannotUseIM.includes('debug')) {
-            thefollow += '<br><span style="padding-left: 30px;">(Note: with IM install, IBM Debug for z/OS is shipped as part of IBM Developer for z/OS.)</span><br>'
+            let debugInstallInfoLink = ""
+            if (aquaVersion == "3.1") {
+              debugInstallInfoLink = "See <a href='https://www.ibm.com/docs/en/debug-for-zos/14.2?topic=installing-debug-zos-eclipse-ide' target='_blank'><strong>here</strong></a> for more information on how to install IBM Debug for z/OS 14.2.x"
+            } else if (aquaVersion == "3.2") {
+              debugInstallInfoLink = "See <a href='https://www.ibm.com/docs/en/debug-for-zos/15.0?topic=installing-debug-zos-eclipse-ide' target='_blank'><strong>here</strong></a> for more information on how to install IBM Debug for z/OS 15.0.x"
+            }
+            thefollow += '<br><span><p style="padding-left: 30px;">(Note: with IM install, IBM Debug for z/OS is shipped as part of IBM Developer for z/OS. ' + debugInstallInfoLink + ')</p></span>'
           }
           
           (setStringNow = (thefollow, arrayToUL(cannotUseIM))), $("#cannotuseimdiv").html(thefollow + setStringNow);
@@ -14006,13 +14012,19 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
               $(".prerequisite-span, .prerequisite-notice").show()),
             DEBUG && console.log(productsListArray),
             $.each(productsListArray, function(key, value) {
+              let debugInstallInfoLink = ""
+              if (aquaVersion == "3.1") {
+                debugInstallInfoLink = "See <a href='https://www.ibm.com/docs/en/debug-for-zos/14.2?topic=installing-debug-zos-eclipse-ide' target='_blank'><strong>here</strong></a> for more information on how to install IBM Debug for z/OS 14.2.x"
+              } else if (aquaVersion == "3.2") {
+                debugInstallInfoLink = "See <a href='https://www.ibm.com/docs/en/debug-for-zos/15.0?topic=installing-debug-zos-eclipse-ide' target='_blank'><strong>here</strong></a> for more information on how to install IBM Debug for z/OS 15.0.x"
+              }
               "debug" == value
                 ? ((listHTML += "<li>" + aquaProducts[value].name),
                   console.log(aquaVersion + ", " + selectedMethod),
-                  ("3.1" == aquaVersion &&
-                    "p2" == selectedMethod.toLowerCase()) ||
-                    (listHTML +=
-                      " (through IBM Developer for z/OS, <a href='./Blogs/installation-of-ibm-developer-for-z-systems-and-ibm-debug-for-z-systems.html' target='_blank'><strong>more details</strong></a>)</li>"))
+                  // ("3.1" == aquaVersion && "p2" == selectedMethod.toLowerCase())
+                  // || 
+                  (listHTML += " (" + debugInstallInfoLink + ")")
+                  )
                 : 0 <= $.inArray(value, p2_platforms) && "P2" == selectedMethod
                 ? "zod" == value &&
                   productsListArray.includes("cicsexplorer") &&
