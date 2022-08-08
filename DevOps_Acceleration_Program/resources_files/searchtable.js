@@ -110,6 +110,14 @@ function toggleDropdown(myFilter) {
     //set the height of the dropdown
     document.getElementById(whichFilter + "-card").style.height = size + "px"
 
+    document.documentElement.style.setProperty('--filter-height', size + "px")
+
+    //@keyframes dropdownExpand {
+    //  from {height: ;}
+    //  to {}
+    //}
+
+
 
   } else { //if hiding drop down contents 
     //update the button
@@ -121,6 +129,8 @@ function toggleDropdown(myFilter) {
     }
     //set the height of the dropdown 
     document.getElementById(whichFilter + "-card").style.height = "80px"
+
+    document.documentElement.style.setProperty('--filter-height', "80px")
   }
 }
 function toggleSelection(myFilter) {

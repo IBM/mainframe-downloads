@@ -415,6 +415,36 @@
 <body id="ibm-com"
   class="page-template page-template-page-templates page-template-empty page-template-page-templatesempty-php page page-id-17659 page-child parent-pageid-17162 ibm-com ibm-type group-blog ibm-sitenav-menu">
   <style>
+
+    :root {
+      --filter-height: 800px;
+    }
+
+    @keyframes dropdownExpand {
+      from {height: 80px;}
+      to {height: var(--filter-height);}
+    }
+
+    @keyframes dropdownCollapse {
+      from {height: var(--filter-height);}
+      to {height: 80px;}
+    }
+
+    #technology-card {
+      animation-duration: 4s;
+      animation-name: dropdownExpand;
+    }
+
+    .ibm-chevron-up-link .toggle-button .selected {
+      animation-duration: 4s;
+      animation-name: dropdownExpand;
+    }
+
+    .ibm-chevron-down-link .toggle-button .unselected {
+      animation-duration: 4s;
+      animation-name: dropdownCollapse;
+    }
+
     .code_p_announcement .code_content__wrap {
       background: #4178be;
       position: relative;
