@@ -105,18 +105,14 @@ function toggleDropdown(myFilter) {
     let size = 80 //baseline starting height
     for (let i = 0; i < filterList.children.length; i++) {
       filterList.children[i].style.display = "block"
-      size += 41
+      filterList.children[i].setAttribute("class","ibm-ibm-btn-pri ibm-btn-teal-50 filter_button fadein")
+      size += 44
     }
     //set the height of the dropdown
-    document.getElementById(whichFilter + "-card").style.height = size + "px"
-
+    
     document.documentElement.style.setProperty('--filter-height', size + "px")
-
-    //@keyframes dropdownExpand {
-    //  from {height: ;}
-    //  to {}
-    //}
-
+    document.getElementById(whichFilter + "-card").setAttribute("class","ibm-card expand")
+    document.getElementById(whichFilter + "-card").style.height = size + "px"
 
 
   } else { //if hiding drop down contents 
@@ -126,11 +122,12 @@ function toggleDropdown(myFilter) {
     //hide each selection filter 
     for (let i = 0; i < filterList.children.length; i++) {
       filterList.children[i].style.display = "none"
+      filterList.children[i].setAttribute("class","ibm-ibm-btn-pri ibm-btn-teal-50 filter_button fadeout")
     }
     //set the height of the dropdown 
+    document.getElementById(whichFilter + "-card").setAttribute("class","ibm-card collapse")
     document.getElementById(whichFilter + "-card").style.height = "80px"
 
-    document.documentElement.style.setProperty('--filter-height', "80px")
   }
 }
 function toggleSelection(myFilter) {

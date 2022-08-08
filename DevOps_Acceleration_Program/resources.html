@@ -417,32 +417,40 @@
   <style>
 
     :root {
-      --filter-height: 800px;
+      --filter-height: 80px;
     }
 
-    @keyframes dropdownExpand {
+    @keyframes fadeIn {
+      from {opacity: 0.0;} 
+      to {opacity: 1.0;}
+    }
+
+    .fadein {
+      animation-duration: 0.5s;
+      animation-name: fadeIn;
+      animation-direction: normal;
+    }
+
+    .fadeout {
+      animation-duration: 0.5s;
+      animation-name: fadeIn;
+      animation-direction: reverse;
+    }
+
+    @keyframes dropdownAnim {
       from {height: 80px;}
       to {height: var(--filter-height);}
     }
 
-    @keyframes dropdownCollapse {
-      from {height: var(--filter-height);}
-      to {height: 80px;}
+    .expand {
+      animation-duration: 0.5s;
+      animation-name: dropdownAnim;
+      animation-direction: normal;
     }
-
-    #technology-card {
-      animation-duration: 4s;
-      animation-name: dropdownExpand;
-    }
-
-    .ibm-chevron-up-link .toggle-button .selected {
-      animation-duration: 4s;
-      animation-name: dropdownExpand;
-    }
-
-    .ibm-chevron-down-link .toggle-button .unselected {
-      animation-duration: 4s;
-      animation-name: dropdownCollapse;
+    .collapse {
+      animation-duration: 0.5s;
+      animation-name: dropdownAnim;
+      animation-direction: reverse;
     }
 
     .code_p_announcement .code_content__wrap {
