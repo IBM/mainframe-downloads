@@ -416,10 +416,18 @@
   class="page-template page-template-page-templates page-template-empty page-template-page-templatesempty-php page page-id-17659 page-child parent-pageid-17162 ibm-com ibm-type group-blog ibm-sitenav-menu">
   <style>
 
+    /*
+      :root allows us to have a shared variable in CSS and JS 
+      this is used to set the height of the expanded drop-downs correctly 
+    */
     :root {
       --filter-height: 80px;
     }
 
+
+    /*
+    keyframes and classes to expand and contract / collapse the drop-downs
+    */
     @keyframes dropdownExpand {
       from {height: 80px;}
       to {height: var(--filter-height);}
@@ -440,6 +448,9 @@
       animation-name: dropdownCollapse;
     }
 
+    /*
+    keyframes and classes to fade in and fade out the filter buttons 
+    */
     @keyframes fadeIn {
       from {opacity: 0.0;} 
       to {opacity: 1.0;}

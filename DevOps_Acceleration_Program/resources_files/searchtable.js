@@ -104,16 +104,16 @@ function toggleDropdown(myFilter) {
     //make each selection filter visible and determine how long the dropdown will be when fully revealed
     let size = 80 //baseline starting height
     for (let i = 0; i < filterList.children.length; i++) {
+      //trigger the animation, and make sure animation stays
+      filterList.children[i].setAttribute("class","ibm-ibm-btn-pri ibm-btn-teal-50 filter_button fadein")
       filterList.children[i].style.display = "block"
       filterList.children[i].style.opacity = "1.0"
-      filterList.children[i].setAttribute("class","ibm-ibm-btn-pri ibm-btn-teal-50 filter_button fadein")
       size += 44
     }
-    //set the height of the dropdown
-    
-    document.documentElement.style.setProperty('--filter-height', size + "px")
-    document.getElementById(whichFilter + "-card").setAttribute("class","ibm-card expand")
-    document.getElementById(whichFilter + "-card").style.height = size + "px"
+    //set the height of the dropdown and trigger the animation 
+    document.documentElement.style.setProperty('--filter-height', size + "px") //update the CSS varible 
+    document.getElementById(whichFilter + "-card").setAttribute("class","ibm-card expand") //trigger the animation
+    document.getElementById(whichFilter + "-card").style.height = size + "px" //set the height so it stays
 
 
   } else { //if hiding drop down contents 
@@ -122,17 +122,18 @@ function toggleDropdown(myFilter) {
     myFilter.value = "off"
     //hide each selection filter 
     for (let i = 0; i < filterList.children.length; i++) {
+      //trigger the animation and set the opacity so the animation stays 
       filterList.children[i].setAttribute("class","ibm-ibm-btn-pri ibm-btn-teal-50 filter_button fadeout")
       filterList.children[i].style.opacity = "0.0"
     }
-
+    //delay setting the display style to none until after the animation plays
     setTimeout(function() {
       for (let i = 0; i < filterList.children.length; i++) {
        filterList.children[i].style.display = "none"
       }
     }, 250);
-    
-    //set the height of the dropdown 
+
+    //set the height of the dropdown and trigger the animation 
     document.getElementById(whichFilter + "-card").setAttribute("class","ibm-card collapse")
     document.getElementById(whichFilter + "-card").style.height = "80px"
 
