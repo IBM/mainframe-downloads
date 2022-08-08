@@ -420,37 +420,51 @@
       --filter-height: 80px;
     }
 
+    @keyframes dropdownExpand {
+      from {height: 80px;}
+      to {height: var(--filter-height);}
+    }
+
+    @keyframes dropdownCollapse {
+      from {height: var(--filter-height);}
+      to {height: 80px;}
+    }
+
+    .expand {
+      animation-duration: 0.5s;
+      animation-name: dropdownExpand;
+    }
+
+    .collapse {
+      animation-duration: 0.5s;
+      animation-name: dropdownCollapse;
+    }
+
     @keyframes fadeIn {
       from {opacity: 0.0;} 
       to {opacity: 1.0;}
     }
 
+    @keyframes fadeOut {
+      from {opacity: 1.0;} 
+      to {opacity: 0.0;}
+    }
+
     .fadein {
-      animation-duration: 0.5s;
+      animation-duration: 0.25s;
       animation-name: fadeIn;
-      animation-direction: normal;
     }
 
     .fadeout {
-      animation-duration: 0.5s;
-      animation-name: fadeIn;
-      animation-direction: reverse;
+      animation-duration: 0.25s;
+      animation-name: fadeOut;
     }
 
-    @keyframes dropdownAnim {
-      from {height: 80px;}
-      to {height: var(--filter-height);}
-    }
-
-    .expand {
-      animation-duration: 0.5s;
-      animation-name: dropdownAnim;
-      animation-direction: normal;
-    }
-    .collapse {
-      animation-duration: 0.5s;
-      animation-name: dropdownAnim;
-      animation-direction: reverse;
+    .filter_button {
+      width: 100%;
+      padding: 5px 5px;
+      text-align: center;
+      text-decoration: none;
     }
 
     .code_p_announcement .code_content__wrap {
@@ -489,12 +503,7 @@
       padding: 1rem 0;
     }
 
-    .filter_button {
-      width: 100%;
-      padding: 5px 5px;
-      text-align: center;
-      text-decoration: none;
-    }
+    
 
     .dataTables_filter {
       display: none;
