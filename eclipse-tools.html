@@ -12884,7 +12884,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           },
           rtc: {
             name: "IBM Engineering Workflow Management (Formerly RTC)",
-            version: "7.0.2 (requires IM 1.9.1.1 or later)",
+            version: "7.0.2 iFix 15 (requires IM 1.9.1.1 or later)",
             aquastack: "3.2",
             im_32: !0,
             path: "",
@@ -14018,6 +14018,18 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
               } else if (aquaVersion == "3.2") {
                 debugInstallInfoLink = "See <a href='https://www.ibm.com/docs/en/debug-for-zos/15.0?topic=installing-debug-zos-eclipse-ide' target='_blank'><strong>here</strong></a> for more information on how to install IBM Debug for z/OS 15.0.x"
               }
+
+              // ------ Workaround for RTC 7.0.2 iFix15 ------
+              /*
+                Note: 1. This workaround should be removed when the compatibility issue is fixed.
+                      2. When this is removed, also remove var "rtc_technote_link" from the code section below.
+              */
+              let rtc_technote_link = ""
+              if (aquaVersion == "3.2" && value == "rtc") {
+                rtc_technote_link = " <br><span>(See <strong><a href='https://www.ibm.com/support/pages/node/6608648' target='_blank'>here</a></strong> for a known compatibility issue between IDz 15.0.x and EWM 7.0.2 iFix 15.)</span>"
+              }
+              // ------ RTC workaround ends ------
+
               "debug" == value
                 ? ((listHTML += "<li>" + aquaProducts[value].name),
                   console.log(aquaVersion + ", " + selectedMethod),
@@ -14029,7 +14041,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                 ? "zod" == value &&
                   productsListArray.includes("cicsexplorer") &&
                   (listHTML += "<li>" + aquaProducts[value].name + "</li>")
-                : (listHTML += "<li>" + aquaProducts[value].name + "</li>");
+                : (listHTML += "<li>" + aquaProducts[value].name + rtc_technote_link + "</li>");
             });
         }
         "" != listHTML
