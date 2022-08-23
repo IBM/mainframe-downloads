@@ -12702,7 +12702,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             im: !0,
             repozip: !0,
             repozip_link: "",
-            prereq: "zosexplorer",
+            prereq: "idz",
           },
           jhc: {
             name: "IBM Monitoring and Diagnostics Tools - Health Center",
@@ -14027,7 +14027,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                 debugInstallInfoLink = "See <a href='https://www.ibm.com/docs/en/debug-for-zos/15.0?topic=installing-debug-zos-eclipse-ide' target='_blank'><strong>here</strong></a> for more information on how to install IBM Debug for z/OS 15.0.x"
               }
 
-              // ------ Workaround for RTC 7.0.2 iFix15 ------
+              // >>>>>> RTC 7.0.2 iFix15 workaround starts here >>>>>>
               /*
                 Note: 1. This workaround should be removed when the compatibility issue is fixed.
                       2. When this is removed, also remove var "rtc_technote_link" from the code section below.
@@ -14036,7 +14036,16 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
               if (aquaVersion == "3.2" && value == "rtc") {
                 rtc_technote_link = " <br><span>(See <strong><a href='https://www.ibm.com/support/pages/node/6608648' target='_blank'>here</a></strong> for a known compatibility issue between IDz 15.0.x and EWM 7.0.2 iFix 15.)</span>"
               }
-              // ------ RTC workaround ends ------
+              // <<<<<< RTC 7.0.2 iFix15 workaround ends here <<<<<<
+
+
+              // >>>>>> JCLx workaround starts here >>>>>>
+              /* Note: When this workaround is removed, also remove variable "jclx_note" from the code section below. */
+              let jclx_note = ""
+              if (aquaVersion == "3.2" && value == "jclx") {
+                jclx_note = " (Note: the product has dependency on IBM Developer for z/OS V15.0.x)"
+              }
+              // <<<<<< JCLx workaround ends here<<<<<<
 
               "debug" == value
                 ? ((listHTML += "<li>" + aquaProducts[value].name),
@@ -14049,7 +14058,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                 ? "zod" == value &&
                   productsListArray.includes("cicsexplorer") &&
                   (listHTML += "<li>" + aquaProducts[value].name + "</li>")
-                : (listHTML += "<li>" + aquaProducts[value].name + rtc_technote_link + "</li>");
+                : (listHTML += "<li>" + aquaProducts[value].name + rtc_technote_link + jclx_note + "</li>");
             });
         }
         "" != listHTML
