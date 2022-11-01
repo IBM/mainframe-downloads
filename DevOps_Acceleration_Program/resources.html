@@ -2224,18 +2224,20 @@
                       <tr role="row">
                         <td class="sorting_1">
                           <a target="_blank" href="https://www.ibm.com/support/pages/node/6427617">
-                            Advanced Build and Migration recipes with DBB and zAppBuild
+                            Recipes for migrating applications to a DBB based pipeline
                           </a>
                           <a href="javascript:void(0);" class="ibm-chevron-down-link abstract-toggle-button unselected"
                             value="off" onclick="toggleAbstract(this)" >
                           </a>
                           <span class="abstract-text" style="display:none;">
-                            When migrating to a modern CI/CD pipeline based on Git and IBM Dependency Based Build, specific build 
-                            configurations and migration scenarios may appear. This document outlines such situations and describes 
-                            the following recipes for zAppBuild:
-                              1. Forcing files to be built
-                              2. Scanning scenarios when migrating to git
-                              3. Managing pipeline builds for feature branches
+                            When migrating an existing application from the legacy SCM to the new git and DBB based pipeline, 
+                            DBB's metadata repository for dependencies and build results needs to be initialized to be able to 
+                            benefit from the automated impact resolution of the build framework implementation.
+                            <br>
+                            <br>
+                            This document provides a checklist of various activities during the migration helping the reader 
+                            in their own planning and focuses on two approaches to initialize the dependency data and 
+                            build result history in the DBB metadata store.
                           </span>
                           <span class="ibm-hide keywords">zappbuild_resource</span>
                           <span class="ibm-hide keywords">migration_resource</span>
