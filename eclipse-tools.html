@@ -5502,14 +5502,17 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                       </li>
                                       <li>Review and accept the licenses.</li>
                                       <li>
-                                        On the following screen select the
+                                        In the next step, select the
                                         <em
                                           >"Use the existing package group"</em
                                         >
-                                        radial button.<br /><img
+                                        radial button.
+                                        <!--
+                                        <br /><img
                                           src="./eclipse-tools_files/im-extending-existing-installation@2x.png"
                                           alt="Extending an existing IM installation"
                                         />
+                                        -->
                                       </li>
                                       <li>
                                         Continue to follow the instructions to
@@ -17006,6 +17009,17 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
               }),
               newArray.sort(sortByProductName);
           } else newArray = copyofProductsArray;
+
+          // >>>>>> Aqua 3.3 Debug IM workaround >>>>>>
+          // Debug requires z/OS Explorer as a prerequisite to be installed together.
+          if (aquaVersion == "3.3" 
+              && selectedMethod.toLowerCase() == 'im' 
+              && newArray.includes("debug")
+              && !newArray.includes("zosexplorer")) {
+            newArray.push('zosexplorer')
+          }
+          // <<<<<< Workaround ends <<<<<<
+
           (repoTableArray = productsArray.slice(0)),
             DEBUG && console.log("showhide repotable: " + repoTableArray),
             (productsListArray = newArray),
@@ -17030,6 +17044,8 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                 debugInstallInfoLink = "(See <a href='https://www.ibm.com/docs/en/debug-for-zos/14.2?topic=installing-debug-zos-eclipse-ide' target='_blank'><strong>here</strong></a> for more information on how to install IBM Debug for z/OS 14.2.x)"
               } else if (aquaVersion == "3.2") {
                 debugInstallInfoLink = "(See <a href='https://www.ibm.com/docs/en/debug-for-zos/15.0?topic=installing-debug-zos-eclipse-ide' target='_blank'><strong>here</strong></a> for more information on how to install IBM Debug for z/OS 15.0.x)"
+              } else if (aquaVersion == "3.3" && selectedMethod.toLowerCase() == 'im') {
+                debugInstallInfoLink = "(Prerequisites to be installed together: IBM Explorer for z/OS)"
               }
 
               // >>>>>> RTC 7.0.2 iFix15 workaround starts here >>>>>>
@@ -17053,12 +17069,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
               // <<<<<< JCLx workaround ends here<<<<<<
 
               "debug" == value
-                ? ((listHTML += "<li>" + aquaProducts[value].name),
-                  console.log(aquaVersion + ", " + selectedMethod),
-                  // ("3.1" == aquaVersion && "p2" == selectedMethod.toLowerCase())
-                  // || 
-                  (listHTML += " " + debugInstallInfoLink)
-                  )
+                ? ((listHTML += "<li>" + aquaProducts[value].name), (listHTML += " " + debugInstallInfoLink))
                 : 0 <= $.inArray(value, p2_platforms) && "P2" == selectedMethod
                 ? "zod" == value &&
                   productsListArray.includes("cicsexplorer") &&
