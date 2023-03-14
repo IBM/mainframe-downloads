@@ -4662,6 +4662,12 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                             <!-- remove for December release !-->
                                           </ul>
                                         </div>
+                                        <div class="ibm-hide idz-16x-im-warning warning-notice">
+                                          Please note the following products require IBM Installation Manager V1.9.2.3 or higher:
+                                          <ul>
+                                            <li>IBM Developer for z/OS 16.0.x</li>
+                                          </ul>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -16634,6 +16640,12 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
         (selectedArray.includes("idz") || selectedArray.includes("debug"))
           ? $(".idz-142").show()
           : $(".idz-142").hide(),
+          DEBUG && console.log("aqv " + aquaVersion);
+        
+        aquaVersion == "3.3" &&
+        (selectedArray.includes("idz"))
+          ? $(".idz-16x-im-warning").show()
+          : $(".idz-16x-im-warning").hide(),
           DEBUG && console.log("aqv " + aquaVersion);
       }
       function showIMStartingPoint(aquaVersion) {
