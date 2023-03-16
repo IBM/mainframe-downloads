@@ -3381,7 +3381,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                             delivered work.
                                           </div>
                                         </td>
-                                        <td>3.1, 3.2</td>
+                                        <td>3.1, 3.2, 3.3</td>
                                         <td>
                                           <span
                                             title="Available via IBM Installation Manager"
@@ -4662,11 +4662,9 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                             <!-- remove for December release !-->
                                           </ul>
                                         </div>
-                                        <div class="ibm-hide idz-16x-im-warning warning-notice">
-                                          Please note the following products require IBM Installation Manager V1.9.2.3 or higher:
-                                          <ul>
-                                            <li>IBM Developer for z/OS 16.0.x</li>
-                                          </ul>
+                                        <div class="ibm-hide aqua33-im-warning warning-notice">
+                                          <span class='ibm-icon-nolink ibm-information-link ibm-textcolor-blue-50'></span>
+                                          Please note IBM Installation Manager V1.9.2.3 or higher is required.
                                         </div>
                                       </div>
                                     </div>
@@ -15414,7 +15412,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_30: !0,
             aqua_31: !0,
             aqua_32: !0,
-            aqua_33: !1,
+            aqua_33: !0,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -15544,7 +15542,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_30: !1,
             aqua_31: !0,
             aqua_32: !0,
-            aqua_33: !1,
+            aqua_33: !0,
             p2: !1,
             im: !0,
             repozip: !1,
@@ -15627,7 +15625,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           },
           rtc: {
             name: "IBM Engineering Workflow Management (Formerly RTC)",
-            version: "",
+            version: "7.0.2 iFix 20",
             aquastack: "3.3",
             im_33: !1,
             path: "",
@@ -16642,10 +16640,9 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           : $(".idz-142").hide(),
           DEBUG && console.log("aqv " + aquaVersion);
         
-        aquaVersion == "3.3" &&
-        (selectedArray.includes("idz"))
-          ? $(".idz-16x-im-warning").show()
-          : $(".idz-16x-im-warning").hide(),
+        aquaVersion == "3.3"
+          ? $(".aqua33-im-warning").show()
+          : $(".aqua33-im-warning").hide(),
           DEBUG && console.log("aqv " + aquaVersion);
       }
       function showIMStartingPoint(aquaVersion) {
