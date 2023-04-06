@@ -17057,6 +17057,16 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                 debugInstallInfoLink = "(Prerequisites to be installed together: IBM Explorer for z/OS)"
               }
 
+              // >>>>>> IDz update install info starts >>>>>>
+              let idzUpdateInfo = ""
+              if (value == "idz" && aquaVersion == "3.2") {
+                idzUpdateInfo = "(See <a href='https://www.ibm.com/docs/en/developer-for-zos/15.0?topic=zos-updating-client' target='_blank'><strong>here</strong></a> for more information on how to update the client to a new release)"
+              } else if (value == "idz" && aquaVersion == "3.3") {
+                idzUpdateInfo = "(See <a href='https://www.ibm.com/docs/en/developer-for-zos/16.0?topic=zos-updating-client' target='_blank'><strong>here</strong></a> for more information on how to update the client to a new release)"
+              }
+              // <<<<<< IDz update install info ends <<<<<<
+
+
               // >>>>>> RTC 7.0.2 iFix15 workaround starts here >>>>>>
               /*
                 Note: 1. This workaround should be removed when the compatibility issue is fixed.
@@ -17064,7 +17074,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
               */
               let rtc_technote_link = ""
               if (aquaVersion == "3.2" && value == "rtc") {
-                rtc_technote_link = " <br><span>(See <strong><a href='https://www.ibm.com/support/pages/node/6608648' target='_blank'>here</a></strong> for a known compatibility issue between IDz 15.0.x and EWM 7.0.2 iFix 15.)</span>"
+                rtc_technote_link = "<br><span>(See <strong><a href='https://www.ibm.com/support/pages/node/6608648' target='_blank'>here</a></strong> for a known compatibility issue between IDz 15.0.x and EWM 7.0.2 iFix 15.)</span>"
               }
               // <<<<<< RTC 7.0.2 iFix15 workaround ends here <<<<<<
 
@@ -17073,7 +17083,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
               /* Note: When this workaround is removed, also remove variable "jclx_note" from the code section below. */
               let jclx_note = ""
               if (aquaVersion == "3.2" && value == "jclx") {
-                jclx_note = " (Note: the product has dependency on IBM Developer for z/OS V15.0.x)"
+                jclx_note = "(Note: the product has dependency on IBM Developer for z/OS V15.0.x)"
               }
               // <<<<<< JCLx workaround ends here<<<<<<
 
@@ -17083,7 +17093,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                 ? "zod" == value &&
                   productsListArray.includes("cicsexplorer") &&
                   (listHTML += "<li>" + aquaProducts[value].name + "</li>")
-                : (listHTML += "<li>" + aquaProducts[value].name + rtc_technote_link + jclx_note + "</li>");
+                : (listHTML += "<li>" + aquaProducts[value].name + " " + rtc_technote_link + jclx_note + idzUpdateInfo + "</li>");
             });
         }
         "" != listHTML
