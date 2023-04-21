@@ -1153,17 +1153,17 @@
             display: none !important;
           }
         </style>
-        <div id="content" class="site-content">
+        <div id="content" class="site-content" style="padding-bottom: 200px;">
           <div class="ibm-fluid content-area-restricted pnpagepost">
             <header class="pagepost-entry-header">
-              <h1 class="entry-title">IBM Explorer for z/OS Aqua - Product Versions</h1>
+              <h1 class="entry-title">End of Support Announcement for Aqua 3.1</h1>
             </header>
             
             <div class="ibm-fluid">
-                <div class="ibm-col-12-9 ibm-col-small-12-12">
+                <div class="ibm-col-12-8 ibm-col-small-12-12">
                     <div id="primary" class="content-area">
                         <main id="main" class="site-main" role="main" aria-label="">
-                          <div class="entry-content">
+                          <div class="entry-content product-page-container">
                             <!--Because the_content() works only inside a WP Loop -->
                             
                             <div>
@@ -1337,503 +1337,78 @@
                                     /*border-color: #188291 !important;*/
                                   }
                                 </style>
-                                <div
-                                  id="aqua_wrapper"
-                                  class="dataTables_wrapper no-footer"
-                                >
-                                  <!-- Aqua Highlights table starts -->
+                                
+
+                                <h2>Overview</h2>
+                                <p>
+                                  Aqua 3.1 (based on Eclipse V4.6 Neon) has officially announced end of support on April 24th, 2023. However, 
+                                  some of the Aqua 3.1 products have extended support until further notice. Please check out the table below 
+                                  for more information.
+                                </p>
+                                <p>
+                                  Users are encouraged to move to the latest
+                                  <a target="_blank"
+                                    href="./introduce-aqua33.html"
+                                    >Aqua 3.3
+                                  </a>
+                                  platform which is built on Eclipse 
+                                  V4.23 and Java 11, or alternatively, to the Eclipse V4.8 Photon based Aqua 3.2 platform.
+                                </p>
+                                <br>
+                                <h2>Products with extended support for Aqua 3.1</h2>
+                                <div class="entry-content">
                                   <table
-                                      class="ibm-data-table ibm-no-border ibm-no-highlight ibm-padding-small mf-product-table dataTable no-footer dtr-inline" 
-                                      role="grid"
-                                      style="width: 1420px;"
+                                    class="ibm-data-table ibm-no-border ibm-no-highlight ibm-padding-small mf-product-table dataTable no-footer dtr-inline"
                                   >
-                                      <thead>
-                                          <tr role="row">
-                                              <td><span class="ibm-bold">Products / Extensions</span></td>
-                                              <td class="ibm-center" style="width: 25%;"><span class="ibm-bold">Aqua 3.2</span><br><span style="font-size: small;"><i>(Eclipse V4.8 Photon)</i></span><br><br><span style="font-size: smaller;">Updated on<br>April 6th 2023</span></td>
-                                              <td class="ibm-center" style="width: 25%;"><span class="ibm-bold">Aqua 3.3</span><br><span style="font-size: small;"><i>(Eclipse V4.23)</i></span><br><br><span style="font-size: smaller;">Updated on<br>March 17th 2023</span></td>
-                                          </tr>
-                                      </thead>
-                                      
-                                      <tbody>
-                                          <tr role="row" class="odd">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
+                                    <thead>
+                                      <tr>
+                                        <th>Product</th>
+                                        <th>Version</th>
+                                        <th>IM Zip Download</th>
+                                        <th>P2 Zip Download</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>IBM Application Performance Analyzer for z/OS</td>
+                                        <td>14.2.9</td>
+                                        <td>
+                                          <p
+                                            class="ibm-btn-row ibm-ind-link ibm-icononly"
+                                          >
+                                          <a
+                                            data-linktype="download"
+                                            data-eventlabel="IM Repo Zip - ADFZ"
+                                            data-eventpage="Mainframe downloads table"
+                                            class="ibm-download-link"
+                                            href="https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/aqua3.1/direct/apa_im_repo.zip"
+                                            target="_blank"
+                                            >Download</a
+                                          >
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p
+                                            class="ibm-btn-row ibm-ind-link ibm-icononly"
+                                          >
+                                            <a
+                                              data-linktype="download"
+                                              data-eventlabel="IM Repo Zip - ADFZ"
+                                              data-eventpage="Mainframe downloads table"
+                                              class="ibm-download-link"
+                                              href="https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/aqua3.1/direct/apa_update_site.zip"
+                                              target="_blank"
+                                              >Download</a
                                             >
-                                              <a
-                                                href="https://www.ibm.com/products/app-discovery-and-delivery-intelligence"
-                                                >IBM Application Discovery</a
-                                              >
-                                              <span class="ibm-hide keywords">ad</span>
-                                            </td>
-                                            <td class="ibm-center">6.1.1</td>
-                                            <td class="ibm-center">6.1.1</td>
-                                          </tr>
-                                          <tr role="row" class="even">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/us-en/marketplace/application-performance-analyzer"
-                                                >IBM Application Performance Analyzer for
-                                                z/OS</a
-                                              >
-                                              <sup
-                                                class="superscript"
-                                                title="Shell-share compatibility information"
-                                                >[1]</sup
-                                              >
-                                              <span class="ibm-hide keywords">apa adfz</span>
-                                            </td>
-                                            <td class="ibm-center">14.2.9</td>
-                                            <td class="ibm-center">15.1.0</td>
-                                          </tr>
-                                          <tr role="row" class="odd">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/us-en/marketplace/cics-configuration-management-tool"
-                                                >IBM CICS Configuration Manager</a
-                                              >
-                                              <span class="ibm-hide keywords">cm</span>
-                                            </td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">5.4.0.12</td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">5.4.0.12</td>
-                                          </tr>
-                                          <tr role="row" class="even">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/support/knowledgecenter/SSCLNZ/welcome.html"
-                                                >IBM CICS Deployment Assistant</a
-                                              >
-                                              <span class="ibm-hide keywords">da</span>
-                                            </td>
-                                            <td class="ibm-center">5.3.0.9</td>
-                                            <td class="ibm-center">N/A</td>
-                                          </tr>
-                                          <tr role="row" class="odd">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/support/knowledgecenter/en/SSSQ3W_5.5.0/com.ibm.cics.core.help/kc-welcomepage/WelcomePage.html"
-                                                >IBM CICS Explorer</a
-                                              >
-                                              <span class="ibm-hide heywords"
-                                                >cicsexplorer</span
-                                              >
-                                            </td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">5.5.27 (zip file 32.0.2)</td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">5.5.28 (zip file 33.0.3)</td>
-                                          </tr>
-                                          <tr role="row" class="even">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/us-en/marketplace/cics-interdependency-analyzer"
-                                                >IBM CICS Interdependency Analyzer</a
-                                              >
-                                              <span class="ibm-hide keywords">ia</span>
-                                            </td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">5.5.0.9</td>
-                                            <td class="ibm-center">N/A</td>
-                                          </tr>
-                                          <tr role="row" class="odd">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/uk-en/marketplace/cics-performance-analysis-tool"
-                                                >IBM CICS Performance Analyzer</a
-                                              >
-                                              <span class="ibm-hide keywords">pa</span>
-                                            </td>
-                                            <td class="ibm-center">5.4.0.10</td>
-                                            <td class="ibm-center">N/A</td>
-                                          </tr>
-                                          <tr role="row" class="even">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/us-en/marketplace/cics-transaction-gateway"
-                                                >IBM CICS Transaction Gateway</a
-                                              >
-                                              <span class="ibm-hide keywords">tg</span>
-                                            </td>
-                                            <td class="ibm-center">3.0.0.3</td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">3.1.0.0</td>
-                                          </tr>
-                                          <tr role="row" class="odd">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                target="_blank"
-                                                href="http://www-03.ibm.com/software/products/en/data-studio"
-                                                >IBM Data Studio</a
-                                              >
-                                              <span class="ibm-hide keywords">ds</span>
-                                            </td>
-                                            <!-- <td class="ibm-center"><p><span class="ibm-collapse-link" title="Unavailable">Unavailable</span></p></td> -->
-                                            <td class="ibm-center ibm-bgcolor-blue-10">4.1.4.3</td>
-                                            <td class="ibm-center">N/A</td>
-                                          </tr>
-                                          <tr role="row" class="even">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/products/debug-for-zos"
-                                                >IBM Debug for z/OS</a
-                                              >
-                                              <span class="ibm-hide keywords"
-                                                >debugger adfz</span
-                                              >
-                                            </td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">15.0.6</td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">16.0.1</td>
-                                          </tr>
-                                          <tr role="row" class="odd">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/products/developer-for-zos"
-                                                >IBM Developer for z/OS
-                                              </a>
-                                              <span class="ibm-hide keywords">rdz idz</span>
-                                            </td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">15.0.6</td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">16.0.1</td>
-                                          </tr>
-                                          <!-- <tr role="row" class="even">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/products/developer-for-zos"
-                                                >IBM Developer for z/OS Enterprise Edition</a
-                                              >
-                                              <sup
-                                                class="superscript"
-                                                title="See note regarding RPP compatibility"
-                                                >[1]</sup
-                                              >
-              
-                                              <span class="ibm-hide keywords"
-                                                >rdz adfz idz ee</span
-                                              >
-                                            </td>
-                                            <td class="ibm-center"></td>
-                                            <td class="ibm-center"></td>
-                                            <td class="ibm-center"></td>
-                                          </tr> -->
-                                          <tr role="row" class="odd">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/us-en/marketplace/explorer-for-z-systems"
-                                                >IBM Explorer for z/OS</a
-                                              >
-                                              <span class="ibm-hide keywords"
-                                                >zosexplorer explorer aqua</span
-                                              >
-                                            </td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">3.2.0.22</td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">3.3.1</td>
-                                          </tr>
-                                          <tr role="row" class="even">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/products/fault-analyzer-for-zos"
-                                                >IBM Fault Analyzer for z/OS</a
-                                              >
-                                              <span class="ibm-hide keywords">fa adfz</span>
-                                            </td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">14.1.19.1</td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">15.1.1</td>
-                                          </tr>
-                                          <tr role="row" class="odd">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/us-en/marketplace/file-manager-for-zsystems"
-                                                >IBM File Manager for z/OS</a
-                                              >
-                                              <span class="ibm-hide keywords">fm adfz</span>
-                                            </td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">14.1.19.1</td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">15.1.1</td>
-                                          </tr>
-                                          <tr role="row" class="even">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/us-en/marketplace/ims-configuration-manager-for-zos"
-                                                >IBM IMS Configuration Manager</a
-                                              >
-                                              <!--<sup class="superscript" title="Only supported on Eclipse Neon V4.6">[1]</sup>-->
-                                              <span class="ibm-hide keywords">cm</span>
-                                            </td>
-                                            <td class="ibm-center">2.3.0</td>
-                                            <td class="ibm-center">N/A</td>
-                                          </tr>
-                                          <tr role="row" class="odd">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/us-en/marketplace/ims-connect-extensions-for-zos"
-                                                >IBM IMS Connect Extensions for z/OS</a
-                                              >
-                                              <!--<sup class="superscript" title="Only supported on Eclipse Neon V4.6">[1]</sup>-->
-                                              <span class="ibm-hide keywords">ce</span>
-                                            </td>
-                                            <td class="ibm-center">3.1.0</td>
-                                            <td class="ibm-center">N/A</td>
-                                          </tr>
-                                          <tr role="row" class="even">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/products/ims-enterprise-suite"
-                                                >IBM IMS Explorer for Development </a
-                                              >(<span
-                                                data-widget="tooltip"
-                                                class="tipso_style ibm-widget-processed"
-                                                >V3.2</span
-                                              >/<span
-                                                data-widget="tooltip"
-                                                class="tipso_style ibm-widget-processed"
-                                                >V3.3</span
-                                              >)
-                                            </td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">3.3.2.2</td>
-                                            <td class="ibm-center">N/A</td>
-                                          </tr>
-                                          <tr role="row" class="odd">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/support/knowledgecenter/en/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/homepage/plugin-homepage-hc.html"
-                                                >IBM Monitoring and Diagnostic Tools - Health
-                                                Center</a
-                                              >
-                                              <!-- <sup class="superscript" title="Only supported on Eclipse Neon V4.6">[1]</sup>-->
-                                              <span class="ibm-hide keywords">jhc</span>
-                                            </td>
-                                            <td class="ibm-center">3.0.14</td>
-                                            <td class="ibm-center">N/A</td>
-                                          </tr>
-                                          <tr role="row" class="even">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_8.0.0/com.ibm.mq.explorer.doc/help_home_wmq.htm"
-                                                >IBM MQ Explorer</a
-                                              >
-                                            </td>
-                                            <td class="ibm-center">9.3.1</td>
-                                            <td class="ibm-center">N/A</td>
-                                          </tr>
-                                          <tr role="row" class="odd">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/products/rational-programming-patterns"
-                                                >IBM Rational Programming Patterns</a
-                                              >
-                                              <span class="ibm-hide keywords">rpp</span>
-                                            </td>
-                                            <td class="ibm-center">9.7.2</td>
-                                            <td class="ibm-center">N/A</td>
-                                          </tr>
-                                          <tr role="row" class="even">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://jazz.net/products/rational-team-concert/"
-                                                target="_blank"
-                                                >IBM Engineering Workflow Management (Formerly RTC)</a
-                                              >
-                                            </td>
-                                            <td class="ibm-center">7.0.2 iFix 15</td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">7.0.2 iFix 20</td>
-                                          </tr>
-                                          <tr role="row" class="odd">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://jazz.net/products/rational-team-concert/"
-                                                target="_blank"
-                                                >IBM Engineering Workflow Management Integration for z/OS</a
-                                              >
-                                              <!-- <sup class="superscript" title="See note regarding IBM ZOD compatibility">[2]</sup> -->
-              
-                                              <span class="ibm-hide keywords">rtcz</span>
-                                            </td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">15.0.6</td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">16.0.1</td>
-                                          </tr>
-                                          <!-- <tr role="row" class="even">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/products/z-open-development"
-                                                >IBM Z Open Development</a
-                                              >
-                                              <span class="ibm-hide keywords">zod</span>
-                                            </td>
-                                            <td class="ibm-center"></td>
-                                            <td class="ibm-center"></td>
-                                            <td class="ibm-center"></td>
-                                          </tr>
-                                          <tr role="row" class="odd">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/products/z-open-unit-test"
-                                                >IBM Z Open Unit Test</a
-                                              >
-                                              <sup
-                                                class="superscript"
-                                                title="See note regarding OS compatibility"
-                                                >[2]</sup
-                                              >
-                                              <span class="ibm-hide keywords">zot zout</span>
-                                            </td>
-                                            <td class="ibm-center"></td>
-                                            <td class="ibm-center"></td>
-                                            <td class="ibm-center"></td>
-                                          </tr> -->
-                                          <tr role="row" class="even">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/products/zos-connect-enterprise-edition"
-                                                >IBM Z JCL Expert</a
-                                              >
-                                              <span class="ibm-hide keywords"
-                                                >enterprise edition zos</span
-                                              >
-                                            </td>
-                                            <td class="ibm-center">1.0.2</td>
-                                            <td class="ibm-center">1.1.0</td>
-                                          </tr>
-                                          <tr role="row" class="even">
-                                            <td
-                                              class="col-product-name sorting_1"
-                                              tabindex="0"
-                                            >
-                                              <a
-                                                href="https://www.ibm.com/products/zos-connect-enterprise-edition"
-                                                >IBM z/OS Connect EE</a
-                                              >
-                                              (<span
-                                                data-widget="tooltip"
-                                                class="tipso_style ibm-widget-processed"
-                                                >V2</span
-                                              >/<span
-                                                data-widget="tooltip"
-                                                class="tipso_style ibm-widget-processed"
-                                                >V3</span
-                                              >)
-                                              <span class="ibm-hide keywords"
-                                                >enterprise edition zos</span
-                                              >
-                                            </td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">3.2.9.11</td>
-                                            <td class="ibm-center ibm-bgcolor-blue-10">3.3.0.0</td>
-                                          </tr>
-                                        </tbody>
-                                      
+                                          </p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
                                   </table>
-                                  <!-- Aqua Highlights table ends -->
-                                  <br>
-                                  <ul>
-                                    <li>
-                                      <span style="color:#4178be;">[1]</span>
-                                      See 
-                                      <strong>
-                                        <a
-                                          href="./aqua31-end-of-support.html"
-                                          target="_blank"
-                                          >here</a
-                                        >
-                                      </strong>
-                                      for products with extended support for Aqua 3.1.
-                                    </li>
-                                    <li>
-                                      The most recently updated products/extensions are hightlighted in the table.
-                                    </li>
-                                  </ul>
-          
-                                  <script>
-                                    $(document).ready(function() {
-                                      $("#languagestable").DataTable({
-                                        paging: false,
-                                        language: {
-                                          searchPlaceholder: "eg. Node.js",
-                                          zeroRecords: "Nothing found",
-                                          infoEmpty: "Nothing found",
-                                          infoFiltered:
-                                            "(filtered from _MAX_ total records)",
-                                          search: "Filter:",
-                                        },
-                                        initComplete: function() {
-                                          $(
-                                            ".dataTables_filter input[type=search]"
-                                          ).addClass("ibm-styled-input");
-                                        },
-                                      });
-                                    });
-                                  </script>
                                 </div>
+
+                                <br>
+                                <br>
                               </div>
                               <!-- Page Content -->
                             </div>
@@ -1841,7 +1416,8 @@
                         </main>
                         <!-- #main -->
                     </div>
-                </div> <!-- End: version table -->
+                </div>
+
                 <div class="ibm-col-12-3 ibm-col-small-12-12">
                     <div class="ibm-card dl-card">
                         <div class="ibm-card__content">
