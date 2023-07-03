@@ -76,7 +76,7 @@
         },
       };
     </script>
-    <title>Introducing Aqua 3.3 - Mainframe DEV</title>
+    <title>Aqua 3.1 EOS - Mainframe DEV</title>
 
     <!-- This site is optimized with the Yoast SEO plugin v9.0.2 - https://yoast.com/wordpress/plugins/seo/ -->
     <meta
@@ -1156,7 +1156,7 @@
         <div id="content" class="site-content">
           <div class="ibm-fluid content-area-restricted pnpagepost">
             <header class="pagepost-entry-header">
-              <h1 class="entry-title">Introducing IBM Explorer for z/OS Aqua 3.3 - built on Eclipse V4.23 and Java 11</h1>
+              <h1 class="entry-title">End of Support Announcement for Aqua 3.1</h1>
             </header>
             
             <div class="ibm-fluid">
@@ -1341,74 +1341,150 @@
 
                                 <h2>Overview</h2>
                                 <p>
-                                  We are pleased to announce that a new version of IBM Explorer for z/OS Aqua (V3.3) is available for 
-                                  public downloading starting October 14th, 2022. Aqua 3.3 is based on 
-                                  <a target="_blank"
-                                    href="https://www.eclipse.org/eclipse/news/4.23/"
-                                  >
-                                  Eclipse V4.23
-                                  </a>
-                                  platform and Java 11 (
-                                  <a target="_blank"
-                                    href="https://www.ibm.com/support/pages/semeru-runtimes-getting-started/"
-                                  >
-                                  IBM Semeru Java 11 for z/OS
-                                  </a>
-                                  ). To know what  
-                                  products/extensions are currently supported on Aqua 3.3, check out the 
-                                  <a
-                                    target="_blank"
-                                    href="./product-versions.html"
-                                    >product versions
-                                  </a>
-                                  page.
-                                  For more information about Aqua 3.3, please read the blogs below.
+                                  Aqua 3.1 (based on Eclipse V4.6 Neon) has officially announced end of support on April 24th, 2023. However, 
+                                  some of the Aqua 3.1 products have extended support until further notice. Please check out the table below 
+                                  for more information.
                                 </p>
-                                <h2>Blogs</h2>
-                                <ul>
-                                  <li>
-                                    <a target="_blank"
-                                      href="https://community.ibm.com/community/user/ibmz-and-linuxone/blogs/gerald-mitchell/2022/10/04/oh-look-idz-1600-announce"
-                                      >Oh look! IDz 16.0.0 and IDz EE 16.0.0 and ADFz 4.0.0 announcements!
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a target="_blank"
-                                      href="https://community.ibm.com/community/user/ibmz-and-linuxone/blogs/gerald-mitchell/2022/10/14/idz1600available"
-                                      >IBM Developer for z/OS 16.0.0 is now available!
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a target="_blank"
-                                      href="https://community.ibm.com/community/user/ibmz-and-linuxone/blogs/violaine-batthish1/2022/10/13/whats-new-in-ibm-zos-debugger-160?CommunityKey=f461c55d-159c-4a94-b708-9f7fe11d972b"
-                                      >What's new in IBM z/OS Debugger 16.0
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a target="_blank"
-                                      href="https://community.ibm.com/community/user/ibmz-and-linuxone/blogs/satoko-yoshida/2022/10/12/usability-improvements-in-zunit-with-idz-160"
-                                      >Usability Improvements in ZUnit with IDz 16.0
-                                    </a>
-                                  </li>
-                                </ul>
-                                <h2>Downloads</h2>
-                                <ul>
-                                  <li>Download Aqua 3.3 
-                                      <a href="./eclipse-tools.html">Eclipse Tools</a>
-                                  </li>
-                                  <li>Download Aqua 3.3 
-                                      <a href="./host-components.html">Host Components</a>
-                                  </li>
-                                  <li>
-                                    To find out the latest product versions, check out the 
-                                    <a
-                                      target="_blank"
-                                      href="./product-versions.html"
-                                      >product versions
-                                    </a>
-                                    page.
-                                  </li>
-                                </ul>
+                                <p>
+                                  Users are encouraged to move to the latest
+                                  <a target="_blank"
+                                    href="./introduce-aqua33.html"
+                                    >Aqua 3.3
+                                  </a>
+                                  platform which is built on Eclipse 
+                                  V4.23 and Java 11, or alternatively, to the Eclipse V4.8 Photon based Aqua 3.2 platform.
+                                </p>
+                                <br>
+                                <h2>Products with extended support for Aqua 3.1</h2>
+                                <br>
+                                <div class="entry-content">
+                                  <h4>Offline installation packages:</h4>
+                                  <table
+                                    class="ibm-data-table ibm-no-border ibm-no-highlight ibm-padding-small mf-product-table dataTable no-footer dtr-inline"
+                                  >
+                                    <thead>
+                                      <tr>
+                                        <th>Product</th>
+                                        <th>Version</th>
+                                        <th>IM Zip Download</th>
+                                        <th>P2 Zip Download</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>IBM Application Performance Analyzer for z/OS</td>
+                                        <td>14.2.9</td>
+                                        <td>
+                                          <p
+                                            class="ibm-btn-row ibm-ind-link ibm-icononly"
+                                          >
+                                          <a
+                                            data-linktype="download"
+                                            data-eventlabel="IM Repo Zip - ADFZ"
+                                            data-eventpage="Mainframe downloads table"
+                                            class="ibm-download-link"
+                                            href="https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/aqua3.1/direct/apa_im_repo.zip"
+                                            target="_blank"
+                                            >Download</a
+                                          >
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p
+                                            class="ibm-btn-row ibm-ind-link ibm-icononly"
+                                          >
+                                            <a
+                                              data-linktype="download"
+                                              data-eventlabel="IM Repo Zip - ADFZ"
+                                              data-eventpage="Mainframe downloads table"
+                                              class="ibm-download-link"
+                                              href="https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/aqua3.1/direct/apa_update_site.zip"
+                                              target="_blank"
+                                              >Download</a
+                                            >
+                                          </p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>IBM IMS Explorer for Development</td>
+                                        <td>3.3.1.27</td>
+                                        <td>
+                                          <p
+                                            class="ibm-btn-row ibm-ind-link ibm-icononly"
+                                          >
+                                          <a
+                                            data-linktype="download"
+                                            data-eventlabel="IM Repo Zip - ADFZ"
+                                            data-eventpage="Mainframe downloads table"
+                                            class="ibm-download-link"
+                                            href="https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/aqua3.1/direct/ims_im_repo.zip"
+                                            target="_blank"
+                                            >Download</a
+                                          >
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p
+                                            class="ibm-btn-row ibm-ind-link ibm-icononly"
+                                          >
+                                            <!-- <a
+                                              data-linktype="download"
+                                              data-eventlabel="IM Repo Zip - ADFZ"
+                                              data-eventpage="Mainframe downloads table"
+                                              class="ibm-download-link"
+                                              href=""
+                                              target="_blank"
+                                              >N/A</a
+                                            > -->
+                                            N/A
+                                          </p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>IBM z/OS Connect EE</td>
+                                        <td>3.0.9.11</td>
+                                        <td>
+                                          <p
+                                            class="ibm-btn-row ibm-ind-link ibm-icononly"
+                                          >
+                                          <a
+                                            data-linktype="download"
+                                            data-eventlabel="IM Repo Zip - ADFZ"
+                                            data-eventpage="Mainframe downloads table"
+                                            class="ibm-download-link"
+                                            href="https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/aqua3.1/direct/zosconnect_im_repo.zip"
+                                            target="_blank"
+                                            >Download</a
+                                          >
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p
+                                            class="ibm-btn-row ibm-ind-link ibm-icononly"
+                                          >
+                                            <a
+                                              data-linktype="download"
+                                              data-eventlabel="IM Repo Zip - ADFZ"
+                                              data-eventpage="Mainframe downloads table"
+                                              class="ibm-download-link"
+                                              href="https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/aqua3.1/direct/zosconnect_update_site.zip"
+                                              target="_blank"
+                                              >Download</a
+                                            >
+                                          </p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+
+                                  <h4>Online repository for IM and P2 installations (for products with extended support only):</h4>
+                                  <span
+                                    style="display:block;"
+                                    class="code"
+                                    >https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/aqua3.1/</span
+                                  >
+                                </div>
+
                                 <br>
                                 <br>
                               </div>
