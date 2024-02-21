@@ -3913,12 +3913,18 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                             Management solutions.
                                           </div>
                                         </td>
-                                        <td>3.2</td>
+                                        <td>3.2, 3.3
+                                          <sup
+                                            class="superscript"
+                                            title=""
+                                            >[4]</sup
+                                          >
+                                        </td>
                                         <!-- <td>N/A</td>-->
                                         <td>
                                           <span
                                             title="Available via IBM Installation Manager"
-                                            >IM</span
+                                            >IM, P2</span
                                           >
                                         </td>
                                         <td>
@@ -4251,7 +4257,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                           >here</a
                                         >
                                       </strong>
-                                      to download IBM Engineering Workflow Management 7.0.2 iFix 22.
+                                      to download IBM Engineering Workflow Management 7.0.2.
                                     </li>
                                     <li>
                                       <span style="color:#4178be;">[3]</span>
@@ -4264,6 +4270,19 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                         >
                                       </strong>
                                       to download IBM Engineering Workflow Management Integration for z/OS 16.0.702.
+                                    </li>
+                                    <li>
+                                      <span style="color:#4178be;">[4]</span>
+                                      Note: IBM Rational Programming Patterns 9.7.3 is only compatible with IBM Engineering Workflow Management 7.0.2. It is not compatible with IBM Engineering Workflow Management 7.0.3.
+                                      Check 
+                                      <strong>
+                                        <a
+                                          href="./aqua33-additional-downloads.html"
+                                          target="_blank"
+                                          >here</a
+                                        >
+                                      </strong>
+                                      to download IBM Engineering Workflow Management 7.0.2.
                                     </li>
                                   </ul>
                                 </div>
@@ -14578,6 +14597,29 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                                   </td>
                                                 </tr>
 
+                                                <tr data-repo-pid="rpp">
+                                                  <td>
+                                                    IBM Rational Programming Patterns
+                                                  </td>
+                                                  <td
+                                                    data-showhide="aquaVersion"
+                                                    data-aqua-version="3.3"
+                                                  >
+                                                    <p
+                                                      class="ibm-ind-link ibm-icononly"
+                                                    >
+                                                      <a
+                                                        target="_blank"
+                                                        data-linktype="download"
+                                                        data-eventpage="Wizard"
+                                                        data-eventlabel="P2 Repo Zip(Wizard) - RPP"
+                                                        class="ibm-download-link"
+                                                        href="https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/aqua3.3/direct/rpp_update_site.zip"
+                                                      ></a>
+                                                    </p>
+                                                  </td>
+                                                </tr>
+
                                                 <tr data-repo-pid="rtc">
                                                   <td>
                                                     IBM Engineering Workflow Management
@@ -15471,8 +15513,8 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_30: !0,
             aqua_31: !1,
             aqua_32: !0,
-            aqua_33: !1,
-            p2: !1,
+            aqua_33: !0,
+            p2: !0,
             im: !0,
             repozip: !0,
             repozip_link: "",
@@ -15745,9 +15787,9 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           },
           rpp: {
             name: "IBM® Rational Programming Patterns",
-            version: "",
+            version: "9.7.3",
             aquastack: "3.3",
-            im_33: !1,
+            im_33: !0,
             path: "",
             pid: "rpp",
           },
@@ -16529,6 +16571,17 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
       }
       function p2MethodEnabled() {
         var canUseP2 = !0;
+
+        // >>>>>>>>>>>>>>> RPP 3.2 P2 workaround starts >>>>>>>>>>>>>>
+        cannotUseP2 = []
+        if (aquaVersion == "3.2") {
+          $.each(selectedArray, function(key, value) {
+            if (value == "rpp") {cannotUseP2.push(value)}
+          })
+          if (cannotUseP2.length != 0) {return false}
+        }
+        // <<<<<<<<<<<<<<< RPP 3.2 P2 workaround ends <<<<<<<<<<<<<<<
+
         return (
           (cannotUseP2.length = 0),
           selectedArray.length &&
