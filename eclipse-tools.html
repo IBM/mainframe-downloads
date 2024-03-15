@@ -17169,6 +17169,12 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                 $(
                   '.selected-products-table tr[data-repo-pid="' + value + '"]'
                 ).show();
+                // IDz does not depending on z/OS Explorer as prereq.
+                if (productsArray.length == 1 && productsArray[0] == "idz") {
+                  $(
+                  '.selected-products-table tr[data-repo-pid="' + value + '"]'
+                  ).hide();
+                }
               }),
               $(".prerequisite-span, .prerequisite-notice").show()),
             DEBUG && console.log(productsListArray),
