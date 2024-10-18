@@ -500,6 +500,9 @@
         }
       }
     </style>
+
+    <link rel="alternate" hreflang="en-us" href="./downloads.html" />
+    <script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/version/v2.8.0/footer.min.js"></script>
   </head>
 
   <body
@@ -1063,7 +1066,7 @@
             display: none !important;
           }
         </style>
-        <div id="content" class="site-content">
+        <div id="content" class="site-content" style="padding-bottom: 100px;">
           <div class="ibm-fluid content-area-restricted pnpagepost">
             <header class="pagepost-entry-header">
               <h1 class="entry-title">IBM Dependency Based Build</h1>
@@ -1107,8 +1110,7 @@
                       </p>
 
                       <p>
-                        IBM Dependency Based Build is included in IBM Developer for z/OS Enterprise Edition 
-                        (IDzEE) and IBM Z and Cloud Modernization Stack. It is also available as a standalone product.
+                        IBM Dependency Based Build is included in IBM Developer for z/OS Enterprise Edition (IDzEE) and is also available as a standalone product.
                       </p>
                       <div class="ibm-left">
                         <iframe
@@ -1224,7 +1226,7 @@
                         </li>
                         
                         <li id="download_standalone_trial">
-                          <h4>As a trial for standalone</h4>
+                          <h4>As a 90-day trial</h4>
                           <p>
                             <a target="_blank"
                               href="https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&li_formnum=L-DGNN-L3MFDK&accepted_url=https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/dbb/toolkit/dbb-ztoolkit-trial-3.0.0.tar"
@@ -1255,61 +1257,6 @@
                           </ol>
                         </li>
                       </ul>
-
-                      <h3 id="download_legacy_webapp">Legacy Web Application</h3>
-                      <p>
-                        The legacy web application was used to store and retrieve DBB build metadata produced
-                        during the build process by DBB v1.0 and DBB v1.1.  Since DBB v2.0, the web application
-                        is no longer used.
-                      </p>
-                      <p>
-                        DBB v1.1 customers can continue to download the latest appropriate web 
-                        application from the table below. The next step is to follow the server setup guide found 
-                        in the IBM Documentation.
-                      </p>
-                      
-                      <table
-                        class="mf-product-table ibm-data-table ibm-no-highlight ibm-margin-bottom-r1"
-                      >
-                        <thead>
-                          <tr>
-                            <th>Version</th>
-                            <th>Download</th>
-                            <th>Server Setup Guide</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>DBB Server v1.1.4</td>
-                            <td>
-                              <p class="ibm-btn-row ibm-ind-link ibm-icononly">
-                                <a
-                                  id="dbb-dl-link-2"
-                                  class="ibm-download-link"
-                                  data-linktype="download"
-                                  data-eventpage="DBB product page"
-                                  data-urlvalidate="true"
-                                  data-eventlabel="DBB WebApp - DBB Page"
-                                  target="_blank"
-                                  href="https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&li_formnum=L-YKVJ-9A5TAC&accepted_url=https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/dbb/server/dbb-server-1.1.4.tar.gz"
-                                  ></a
-                                >
-                              </p>
-                            </td>
-                            <td>
-                              <p class="ibm-btn-row ibm-ind-link ibm-icononly">
-                                <a
-                                  class="ibm-external-link"
-                                  href="https://www.ibm.com/docs/en/dbb/1.1.0?topic=server-installing-configuring-dbb-linux"
-                                  target="_blank"
-                                  ></a
-                                >
-                              </p>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      
                       <!-- Page Content -->
                     </div>
                   </main>
@@ -1333,12 +1280,9 @@
                               <a href="#download_standalone">As a standalone product</a>
                             </li>
                             <li>
-                              <a href="#download_standalone_trial">As a trial for standalone</a>
+                              <a href="#download_standalone_trial">As a 90-day trial</a>
                             </li>
                           </ul>
-                        </li>
-                        <li>
-                          <a href="#download_legacy_webapp">Legacy Web App</a>
                         </li>
                       </ul>
                     </div>
@@ -1414,7 +1358,6 @@
           </div>
           <!-- blog inclusion section -->
           <div class="ibm-clear"></div>
-          <div class="ibm-background-neutral-white-20 ibm-fluid"></div>
           <!-- video inclusion section -->
           <div class="ibm-clear"></div>
 
@@ -1469,6 +1412,13 @@
         <div id="dw-footer" class="ibm-alternate ibm-padding-normal"></div>
       </footer>
     </div>
+
+    <c4d-footer-container size="short"></c4d-footer-container>
+    <script language="JavaScript" type="text/javascript">
+      window.addEventListener("load",function(){
+        document.querySelector('[autoid="Privacy"]').href="https://www.ibm.com/privacy"
+      })
+    </script>
     <!-- #page -->
 
     <div class="gdpr-overlay"></div>
