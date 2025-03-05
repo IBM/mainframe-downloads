@@ -14689,18 +14689,12 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                                     data-showhide="aquaVersion"
                                                     data-aqua-version="3.4"
                                                   >
-                                                    <p
-                                                      class="ibm-ind-link ibm-icononly"
-                                                    >
-                                                      <a
-                                                        target="_blank"
-                                                        data-linktype="download"
-                                                        data-eventpage="Wizard"
-                                                        data-eventlabel="P2 Repo Zip(Wizard) - IDZ 17.0.x"
-                                                        class="ibm-download-link"
-                                                        href="https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&amp;li_formnum=L-LNVG-FMA9WU&amp;accepted_url=https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/aqua3.4/direct/idz-17.0.1_update_site.zip"
-                                                      ></a>
-                                                    </p>
+                                                  <a
+                                                    target="_blank"
+                                                    href="./install-idz-1701.html"
+                                                  >
+                                                    See note
+                                                  </a>
                                                   </td>
                                                 </tr>
                                                 <tr data-repo-pid="fa">
@@ -17610,6 +17604,14 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
               // <<<<<< IDz update install info ends <<<<<<
 
 
+              // >>>>>> IDz 17.0.1 update install info starts >>>>>>
+              let idz17UpdateInfo = ""
+              if (value == "idz" && aquaVersion == "3.4") {
+                idz17UpdateInfo = "(See <a href='./install-idz-1701.html' target='_blank'><strong>note</strong></a> for installation limitation and workaround for version 17.0.1)"
+              }
+              // <<<<<< IDz 17.0.1 update install info ends <<<<<<
+
+
               // >>>>>> RTC 7.0.2 iFix15 workaround starts here >>>>>>
               /*
                 Note: 1. This workaround should be removed when the compatibility issue is fixed.
@@ -17636,7 +17638,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                 ? "zod" == value &&
                   productsListArray.includes("cicsexplorer") &&
                   (listHTML += "<li>" + aquaProducts[value].name + "</li>")
-                : (listHTML += "<li>" + aquaProducts[value].name + " " + rtc_technote_link + jclx_note + idzUpdateInfo + "</li>");
+                : (listHTML += "<li>" + aquaProducts[value].name + " " + rtc_technote_link + jclx_note + idzUpdateInfo + idz17UpdateInfo + "</li>");
             });
         }
         "" != listHTML
