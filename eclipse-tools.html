@@ -4874,23 +4874,6 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                   </div>
 
                                   <div
-                                    id="step3-im-aqua34-notes"
-                                    class="ibm-col-12-12 ibm-col-small-12-12"
-                                    style="display: none;"
-                                  >
-                                    <div class="ibm-card disabled-div">
-                                      <div class="ibm-card__content">
-                                        <h3 class="inline">
-                                          IBM Installation Manager
-                                        </h3>
-                                        <p>
-                                          Installing with IBM Installation Manager is currently not supported by Aqua 3.4 products.
-                                        </p>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div
                                     id="step3-p2"
                                     class="ibm-col-12-12 ibm-col-small-12-12"
                                   >
@@ -17763,30 +17746,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           (canp2 = canUseP2)
         );
       }
-      // function IMMethodEnabled() {
-      //   var canUseIM = !0;
-      //   return (
-      //     (cannotUseIM.length = 0),
-      //     DEBUG && console.log(aquaVersion),
-      //     "3.2" == aquaVersion
-      //       ? $.each(selectedArray, function(key, value) {
-      //           aquaProductVersions_32[value].im_32 ||
-      //             ((canUseIM = !1), cannotUseIM.push(value));
-      //         })
-      //       : ("3.3" == aquaVersion
-      //           ? $.each(selectedArray, function(key, value) {
-      //             aquaProductVersions_33[value].im_33 ||
-      //               ((canUseIM = !1), cannotUseIM.push(value));
-      //           })
-      //         : selectedArray.length &&
-      //           $.each(selectedArray, function(key, value) {
-      //             aquaProducts[value].im ||
-      //               ((canUseIM = !1), cannotUseIM.push(value));
-      //           })
-      //       ),
-      //     (canIM = canUseIM)
-      //   );
-      // }
+      
       function IMMethodEnabled() {
         var canUseIM = !0;
         return (
@@ -17995,12 +17955,6 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             $("#step4-im-repo .cannotuseaqua").hide());
       }
       function showIM(boolean) {
-        // if (aquaVersion == "3.4") {
-        //   $("#step3-im").hide();
-        //   $("#step3-im-aqua34-notes").show();
-        //   return;
-        // }
-        // $("#step3-im-aqua34-notes").hide();
         $("#step3-im").show();
 
         if (boolean)
