@@ -1,0 +1,5 @@
+# This file ensures the calendars directory is tracked by git
+# Place your .ics files here:
+# - americas.ics
+# - apac.ics
+# - emea.ics
