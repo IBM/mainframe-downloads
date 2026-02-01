@@ -105,10 +105,10 @@ LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=Asia/Singapore:20260225T140000
-DTEND;TZID=Asia/Singapore:20260225T150000
+DTSTART;TZID=Asia/Singapore:20260224T140000
+DTEND;TZID=Asia/Singapore:20260224T150000
 DTSTAMP:20260127T000000Z
-UID:idz-apac-2026-02-25@ibm.com
+UID:idz-apac-2026-02-24@ibm.com
 SUMMARY:IDz on VS Code Module 3 - Accessing Remote Source
 DESCRIPTION:Use Zowe Explorer extension to connect to MVS LPARs and navigate libraries and data sets. Locate files in large PDSs\, Search Remote libraries using powerful tools that allow you to access "found" source files with your mouse\, access USS\, Show in Resources table.\n\nMeeting Link: https://ibm.biz/distance-learning-classroom\nMeeting ID: 294 075 380 443 8\nPasscode: Lq3ag6sG
 LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
