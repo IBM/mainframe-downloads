@@ -1,0 +1,157 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//IBM IDz Training//APAC Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:IBM IDz Training - APAC (SGT)
+X-WR-TIMEZONE:Asia/Singapore
+BEGIN:VTIMEZONE
+TZID:Asia/Singapore
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0800
+TZOFFSETTO:+0800
+TZNAME:SGT
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Singapore:20260126T140000
+DTEND;TZID=Asia/Singapore:20260126T150000
+DTSTAMP:20260127T000000Z
+UID:idz-apac-2026-01-26@ibm.com
+SUMMARY:IDz on Eclipse - Module 1 - Navigation
+DESCRIPTION:Class overview\, workbench customization\, IDz on VS Code Terms & Concepts\, Navigation for ISPF Developers\, DevOps Tooling overview\, Use of multi-windowed views\, Overview of recommended extensions\, and more.\n\nMeeting Link: https://ibm.biz/distance-learning-classroom\nMeeting ID: 294 075 380 443 8\nPasscode: Lq3ag6sG
+LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Singapore:20260128T140000
+DTEND;TZID=Asia/Singapore:20260128T150000
+DTSTAMP:20260127T000000Z
+UID:idz-apac-2026-01-28@ibm.com
+SUMMARY:IDz on Eclipse - Module 2 and 3 - IDz Editing and Code Development Tools & Techniques + Program Analysis Tools
+DESCRIPTION:IDz code editors & development productivity techniques\, ISPF emulation: Command line commands/Prefix area commands\, Hot Key definitions\, Editing source with embedded Hex characters\, JCL editing\, IDz's source download and program model\, and Content Assist ("look-ahead typing"). ISPF Search techniques (expanded)\, IDz graphical tools for: Logic Flow and program execution analysis\, Graphical & declarative tools for Data Flow and impact analysis (within a single program)\, Various built in language Filters.\n\nMeeting Link: https://ibm.biz/distance-learning-classroom\nMeeting ID: 294 075 380 443 8\nPasscode: Lq3ag6sG
+LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Singapore:20260203T140000
+DTEND;TZID=Asia/Singapore:20260203T150000
+DTSTAMP:20260127T000000Z
+UID:idz-apac-2026-02-03@ibm.com
+SUMMARY:IDz on Eclipse - Module 4 + 5: Remote Systems 1 + 2
+DESCRIPTION:Connect to your shop's test LPAR and navigate libraries and data sets. Locate files in large PDSs\, Copy files from Mainframe <-> PC <->Mainframe. Search Remote libraries using powerful tools that allow you to access "found" source files with your mouse. Learn to utilize MVS File Filters and Retrieve Data Set for effective organization and access of z/OS resources. Create\, configuring and customize Property Groups for SYSLIB (COPY and INCLUDE search path definitions)\, PROC Search Path and Called Module Search Path definitions. Utilize Property Groups with: Show Dependencies and Remote Syntax Check.\n\nMeeting Link: https://ibm.biz/distance-learning-classroom\nMeeting ID: 294 075 380 443 8\nPasscode: Lq3ag6sG
+LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Singapore:20260204T140000
+DTEND;TZID=Asia/Singapore:20260204T150000
+DTSTAMP:20260127T000000Z
+UID:idz-apac-2026-02-04@ibm.com
+SUMMARY:IDz on Eclipse Module 6 - the ISPF 3.x Data Set Utilities and JES
+DESCRIPTION:This module instructs on the data set utility features of IDz that are available from the ISPF 3.x dialogs: File allocation\, File rename\, File delete\, Library compress\, VSAM File create\, GDG Model and GDG Data Set create. Batch Job management and interactive CLIST/REXX support is also part of Module 6.\n\nMeeting Link: https://ibm.biz/distance-learning-classroom\nMeeting ID: 294 075 380 443 8\nPasscode: Lq3ag6sG
+LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Singapore:20260209T140000
+DTEND;TZID=Asia/Singapore:20260209T150000
+DTSTAMP:20260127T000000Z
+UID:idz-apac-2026-02-09@ibm.com
+SUMMARY:IDz on Eclipse Module 7 - IDz + Git Overview
+DESCRIPTION:Learn how Git integrates in to IDz and basic Git functionality within IDz. Clone a repository\, access working tree files\, push changes\, and more.\n\nMeeting Link: https://ibm.biz/distance-learning-classroom\nMeeting ID: 294 075 380 443 8\nPasscode: Lq3ag6sG
+LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Singapore:20260211T140000
+DTEND;TZID=Asia/Singapore:20260211T150000
+DTSTAMP:20260127T000000Z
+UID:idz-apac-2026-02-11@ibm.com
+SUMMARY:IDz on Eclipse Module 8 - DB2/SQL
+DESCRIPTION:This module is an overview of the new Db2 for z/OS tooling integration for IDz. View SQL files\, run SQL\, look at embedded SQL\, and more.\n\nMeeting Link: https://ibm.biz/distance-learning-classroom\nMeeting ID: 294 075 380 443 8\nPasscode: Lq3ag6sG
+LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Singapore:20260216T140000
+DTEND;TZID=Asia/Singapore:20260216T150000
+DTSTAMP:20260127T000000Z
+UID:idz-apac-2026-02-16@ibm.com
+SUMMARY:IDz on Eclipse Module 9 - Debug
+DESCRIPTION:Batch debugging features and techniques\, including JCL to launch Debug\, program animation features\, break points\, variable monitors/changing variable values dynamically. High-level Online debug is included in this module upon attendee request.\n\nMeeting Link: https://ibm.biz/distance-learning-classroom\nMeeting ID: 294 075 380 443 8\nPasscode: Lq3ag6sG
+LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Singapore:20260218T140000
+DTEND;TZID=Asia/Singapore:20260218T150000
+DTSTAMP:20260127T000000Z
+UID:idz-apac-2026-02-18@ibm.com
+SUMMARY:IDz on VS Code Module 1
+DESCRIPTION:Class overview\, workbench customization\, VS Code Terms & Concepts\, Navigation for ISPF Developers\, DevOps Tooling overview\, Use of multi-windowed views\, Overview of recommended extensions\, and more.\n\nMeeting Link: https://ibm.biz/distance-learning-classroom\nMeeting ID: 294 075 380 443 8\nPasscode: Lq3ag6sG
+LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Singapore:20260223T140000
+DTEND;TZID=Asia/Singapore:20260223T150000
+DTSTAMP:20260127T000000Z
+UID:idz-apac-2026-02-23@ibm.com
+SUMMARY:IDz on VS Code Module 2 - Git Configuration
+DESCRIPTION:Learn how Git integrates in to VS Code and basic Git functionality within VS Code. Clone a repository\, access working tree files\, push changes\, and more.\n\nMeeting Link: https://ibm.biz/distance-learning-classroom\nMeeting ID: 294 075 380 443 8\nPasscode: Lq3ag6sG
+LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Singapore:20260224T140000
+DTEND;TZID=Asia/Singapore:20260224T150000
+DTSTAMP:20260127T000000Z
+UID:idz-apac-2026-02-24@ibm.com
+SUMMARY:IDz on VS Code Module 3 - Accessing Remote Source
+DESCRIPTION:Use Zowe Explorer extension to connect to MVS LPARs and navigate libraries and data sets. Locate files in large PDSs\, Search Remote libraries using powerful tools that allow you to access "found" source files with your mouse\, access USS\, Show in Resources table.\n\nMeeting Link: https://ibm.biz/distance-learning-classroom\nMeeting ID: 294 075 380 443 8\nPasscode: Lq3ag6sG
+LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Singapore:20260302T140000
+DTEND;TZID=Asia/Singapore:20260302T150000
+DTSTAMP:20260127T000000Z
+UID:idz-apac-2026-03-02@ibm.com
+SUMMARY:IDz on VS Code Module 4 - Editing Code
+DESCRIPTION:Edit source files using Zowe Explorer and the VS Code Editor\, Go To Definition\, Refactor\, Format\, use the graphical outline view\, and more.\n\nMeeting Link: https://ibm.biz/distance-learning-classroom\nMeeting ID: 294 075 380 443 8\nPasscode: Lq3ag6sG
+LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Singapore:20260304T140000
+DTEND;TZID=Asia/Singapore:20260304T150000
+DTSTAMP:20260127T000000Z
+UID:idz-apac-2026-03-04@ibm.com
+SUMMARY:IDz on VS Code Module 5 - Analyzing Code
+DESCRIPTION:Use COBOL Language support extensions to analyze logic flow\, peek at data definitions\, find all references.\n\nMeeting Link: https://ibm.biz/distance-learning-classroom\nMeeting ID: 294 075 380 443 8\nPasscode: Lq3ag6sG
+LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Singapore:20260309T140000
+DTEND;TZID=Asia/Singapore:20260309T150000
+DTSTAMP:20260127T000000Z
+UID:idz-apac-2026-03-09@ibm.com
+SUMMARY:IDz on VS Code Module 6 - Compiling and Building Code
+DESCRIPTION:Use VS Code extensions to compile and build code. This session is theoretical demonstration only as build is highly dependent on the environment.\n\nMeeting Link: https://ibm.biz/distance-learning-classroom\nMeeting ID: 294 075 380 443 8\nPasscode: Lq3ag6sG
+LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Singapore:20260311T140000
+DTEND;TZID=Asia/Singapore:20260311T150000
+DTSTAMP:20260127T000000Z
+UID:idz-apac-2026-03-11@ibm.com
+SUMMARY:IDz on VS Code Module 7 - Debug
+DESCRIPTION:Use VS Code extensions and editor features to set up a debug profile and debug COBOL code.\n\nMeeting Link: https://ibm.biz/distance-learning-classroom\nMeeting ID: 294 075 380 443 8\nPasscode: Lq3ag6sG
+LOCATION:Microsoft Teams - https://ibm.biz/distance-learning-classroom
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
