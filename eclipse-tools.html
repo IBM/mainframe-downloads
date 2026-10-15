@@ -4446,9 +4446,9 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                         <div class="ibm-right ibm-fright">
                                           <button
                                             class="aqua-version-btn ibm-btn-blue-50 ibm-btn-pri"
-                                            data-aquaversion="3.4"
+                                            data-aquaversion="3.5"
                                             data-analytics-field-name="aqua-download-wizard-aquaversion-select"
-                                            data-analytics-field-value="3.4"
+                                            data-analytics-field-value="3.5"
                                           >
                                             Select
                                           </button>
@@ -4734,6 +4734,53 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                 </div>
 
                                 <div class="ibm-fluid">
+
+                                  <div
+                                    id="step3-p2"
+                                    class="ibm-col-12-12 ibm-col-small-12-12"
+                                  >
+                                    <div class="ibm-card">
+                                      <div class="ibm-card__content">
+                                        <h3 class="inline">Eclipse p2</h3>
+                                        <div class="ibm-right ibm-fright">
+                                          <button
+                                            class="method-btn ibm-btn-blue-50 ibm-btn-pri"
+                                            data-installmethod="P2"
+                                            data-analytics-field-name="aqua-download-wizard-client-select"
+                                            data-analytics-field-value="p2"
+                                          >
+                                            Select
+                                          </button>
+                                        </div>
+                                        <p>
+                                          Install with the Eclipse p2
+                                          provisioning platform, a technology
+                                          for managing Eclipse- and
+                                          Equinox-based applications and
+                                          plug-ins.
+                                        </p>
+                                        <div id="cannotusep2div"></div>
+                                        <div
+                                          class="idz-142 warning-notice ibm-hide"
+                                        >
+                                          Please note the following products and
+                                          their specific version restriction
+                                          when installing them with Eclipse p2
+                                          for Aqua 3.1:
+                                          <ul>
+                                            <li>
+                                              IBM Developer for z/OS - V14.2.x
+                                              only
+                                            </li>
+                                            <li>
+                                              IBM Debug for z/OS - V14.2.x only
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
                                   <div
                                     id="step3-im"
                                     class="ibm-col-12-12 ibm-col-small-12-12"
@@ -4804,51 +4851,6 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                                     </div>
                                   </div>
 
-                                  <div
-                                    id="step3-p2"
-                                    class="ibm-col-12-12 ibm-col-small-12-12"
-                                  >
-                                    <div class="ibm-card">
-                                      <div class="ibm-card__content">
-                                        <h3 class="inline">Eclipse p2</h3>
-                                        <div class="ibm-right ibm-fright">
-                                          <button
-                                            class="method-btn ibm-btn-blue-50 ibm-btn-pri"
-                                            data-installmethod="P2"
-                                            data-analytics-field-name="aqua-download-wizard-client-select"
-                                            data-analytics-field-value="p2"
-                                          >
-                                            Select
-                                          </button>
-                                        </div>
-                                        <p>
-                                          Install with the Eclipse p2
-                                          provisioning platform, a technology
-                                          for managing Eclipse- and
-                                          Equinox-based applications and
-                                          plug-ins.
-                                        </p>
-                                        <div id="cannotusep2div"></div>
-                                        <div
-                                          class="idz-142 warning-notice ibm-hide"
-                                        >
-                                          Please note the following products and
-                                          their specific version restriction
-                                          when installing them with Eclipse p2
-                                          for Aqua 3.1:
-                                          <ul>
-                                            <li>
-                                              IBM Developer for z/OS - V14.2.x
-                                              only
-                                            </li>
-                                            <li>
-                                              IBM Debug for z/OS - V14.2.x only
-                                            </li>
-                                          </ul>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -16113,6 +16115,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
         productVersions_aqua_32,
         productVersions_aqua_33,
         productVersions_aqua_34,
+        productVersions_aqua_35,
         selectedMethod,
         installationPreference,
         operatingSystem,
@@ -16128,6 +16131,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !0,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16142,6 +16146,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !0,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16156,6 +16161,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !1,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16170,6 +16176,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !1,
+            aqua_35: !1,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16198,6 +16205,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !1,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16212,6 +16220,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !1,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16226,6 +16235,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !1,
+            aqua_35: !1,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16240,6 +16250,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !1,
             aqua_34: !1,
+            aqua_35: !1,
             p2: !1,
             im: !0,
             repozip: !0,
@@ -16254,6 +16265,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !1,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16268,6 +16280,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !0,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16282,6 +16295,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !0,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16296,6 +16310,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !0,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16310,6 +16325,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !1,
             p2: !0,
             im: !0,
             repozip: !1,
@@ -16324,6 +16340,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !0,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16338,6 +16355,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !0,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16352,6 +16370,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !1,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16366,6 +16385,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !0,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16380,6 +16400,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !1,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16394,6 +16415,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !1,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16408,6 +16430,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !1,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16422,6 +16445,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !1,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16436,6 +16460,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !1,
             aqua_33: !1,
             aqua_34: !1,
+            aqua_35: !1,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16450,6 +16475,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !1,
+            aqua_35: !1,
             p2: !0,
             im: !0,
             repozip: !0,
@@ -16503,11 +16529,214 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             aqua_32: !0,
             aqua_33: !0,
             aqua_34: !0,
+            aqua_35: !0,
             p2: !0,
             im: !0,
             repozip: !1,
             repozip_link: "",
             prereq: "",
+          },
+        },
+        aquaProductVersions_35 = {
+          adfz: {
+            name: "IBM Application Delivery Foundation for z/OS",
+            version: "6.0.0",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "",
+          },
+          pa: {
+            name: "IBM® CICS Performance Analyzer®",
+            version: "",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "pa",
+          },
+          ctg: {
+            name: "IBM® CICS Transaction Gateway®",
+            version: "",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "ctg",
+          },
+          idz: {
+            name: "IBM® Developer for z/OS",
+            version: "18.0.0",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "idz",
+          },
+          debug: {
+            name: "IBM® Debug for z/OS",
+            version: "18.0.0",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "debug",
+          },
+          cm: {
+            name: "IBM CICS Configuration Manager",
+            version: "",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "cm",
+          },
+          cicsexplorer: {
+            name: "IBM CICS Explorer",
+            version: "5.5.57 (zip file 35.0.0)",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "cicsexplorer",
+          },
+          zosexplorer: {
+            name: "IBM Explorer for z/OS",
+            version: "3.5.0",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "cm",
+          },
+          "idz-rtc-ext": {
+            name: "IBM Engineering Workflow Management Integration for z/OS",
+            version: "18.0.720",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "idz-rtc-ext",
+          },
+          rtc: {
+            name: "IBM Engineering Workflow Management",
+            version: "7.2.0",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "idz-rtc-ext",
+          },
+          ia: {
+            name: "IBM® CICS Interdependency Analyzer®",
+            version: "",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "ia",
+          },
+          mq: {
+            name: "MQ® Explorer",
+            version: "10.0.1",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "mq",
+          },
+          ez: {
+            name: "IBM Application Discovery",
+            version: "",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "ez",
+          },
+          da: {
+            name: "IBM® CICS Deployment Assistant for z/OS®",
+            version: "",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "da",
+          },
+          ds: {
+            name: "IBM Data Studio client",
+            version: "",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "ds",
+          },
+          rpp: {
+            name: "IBM® Rational Programming Patterns",
+            version: "",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "rpp",
+          },
+          fa: {
+            name: "IBM Fault Analyzer for z/OS",
+            version: "17.1.0",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "fa",
+          },
+          fm: {
+            name: "IBM File Manager for z/OS",
+            version: "17.1.0",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "fm",
+          },
+          zosconnect: {
+            name: "IBM z/OS Connect EE",
+            version: "",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "zosconnect",
+          },
+          apa: {
+            name: "IBM Application Performance Analyzer",
+            version: "17.1.0",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "apa",
+          },
+          jclx: {
+            name: "IBM Z JCL Expert",
+            version: "",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "jclx",
+          },
+          jhc: {
+            name: "IBM Monitoring and Diagnostic Tools",
+            version: "",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "jhc",
+          },
+          "ims-ce": {
+            name: "IMS Connect Extension",
+            version: "",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "ims-ce",
+          },
+          "ims-cm": {
+            name: "IBM® CICS Configuration Manager for z/OS®",
+            version: "",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "cm",
+          },
+          "ims": {
+            name: "IMS Enterprise Suite Explorer for Development",
+            version: "",
+            aquastack: "3.5",
+            im_34: !1,
+            path: "",
+            pid: "ims",
           },
         },
         aquaProductVersions_34 = {
@@ -17474,6 +17703,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
         cannotAqua32 = [],
         cannotAqua33 = [],
         cannotAqua34 = [],
+        cannotAqua35 = [],
         prereqArray = [],
         prereqString = "",
         isOffline = !1,
@@ -17545,6 +17775,9 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           case "3.4":
             productVersions_aqua_34 = aquaProductVersions_34;
             break;
+          case "3.5":
+            productVersions_aqua_35 = aquaProductVersions_35;
+            break;
         }
       }
       function checkVersions(aqua_url, aquaVersion) {
@@ -17568,6 +17801,9 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                 break;
               case "3.4":
                 productVersions_aqua_34 = data;
+                break;
+              case "3.5":
+                productVersions_aqua_35 = data;
                 break;
             }
           },
@@ -17652,7 +17888,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           selectedArray.length &&
             $.each(selectedArray, function(key, value) {
               !aquaVersion || "3.2" == aquaVersion ||
-              "3.1" == aquaVersion || "3.3" == aquaVersion || "3.4" == aquaVersion ||
+              "3.1" == aquaVersion || "3.3" == aquaVersion || "3.4" == aquaVersion || "3.5" == aquaVersion ||
               ("idz" != value && "debug" != value)
                 ? aquaProducts[value].p2 ||
                   ((canUseP2 = !1), cannotUseP2.push(value))
@@ -17702,6 +17938,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           (cannotAqua32.length = 0),
           (cannotAqua33.length = 0),
           (cannotAqua34.length = 0),
+          (cannotAqua35.length = 0),
           selectedProductsArray.length &&
             (selectedProductsArray.includes("jhc")
               ? $("#jhc-windows").show()
@@ -17714,7 +17951,8 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
                 aquaProducts[value].aqua_31 || cannotAqua31.push(value),
                 aquaProducts[value].aqua_32 || cannotAqua32.push(value),
                 aquaProducts[value].aqua_33 || cannotAqua33.push(value),
-                aquaProducts[value].aqua_34 || cannotAqua34.push(value);
+                aquaProducts[value].aqua_34 || cannotAqua34.push(value),
+                aquaProducts[value].aqua_35 || cannotAqua35.push(value);
             })),
           $("#step-2 .cannot-aqua-div").hide(),
           $("#step-2 .aqualist_toggler")
@@ -17760,6 +17998,14 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
               $("#aqua-34-card .aqua-version-btn").show(),
               $("#aqua-34-card .cannotuseaqua").hide(),
               $("#aqua-34-availability").html("")),
+          cannotAqua35.length
+            ? ($("#aqua-35-card").addClass("disabled-div"),
+              $("#aqua-35-card .aqua-version-btn").hide(),
+              $("#aqua-35-card .cannotuseaqua").show())
+            : ($("#aqua-35-card").removeClass("disabled-div"),
+              $("#aqua-35-card .aqua-version-btn").show(),
+              $("#aqua-35-card .cannotuseaqua").hide(),
+              $("#aqua-35-availability").html("")),
           $("#aqua-30-availability").html(
             createAquaVersionChart(selectedProductsArray, "3.0")
           ),
@@ -17774,6 +18020,9 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           ),
           $("#aqua-34-availability").html(
             createAquaVersionChart(selectedProductsArray, "3.4")
+          ),
+          $("#aqua-35-availability").html(
+            createAquaVersionChart(selectedProductsArray, "3.5")
           ),
           DEBUG &&
             (console.log(cannotAqua30),
@@ -17808,6 +18057,10 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           case "3.4":
             (aquaVersionString = "aqua_34"),
               (aquaVersionArray = productVersions_aqua_34);
+            break;
+          case "3.5":
+            (aquaVersionString = "aqua_35"),
+              (aquaVersionArray = productVersions_aqua_35);
             break;
         }
         return (
@@ -17874,6 +18127,12 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
             $("#step4-im-repo .cannotuseaqua").hide());
       }
       function showIM(boolean) {
+        if (aquaVersion == "3.5") {
+          $("#step3-im").hide();
+          // $("#step3-im-aqua35-notes").show();
+          return;
+        }
+
         $("#step3-im").show();
 
         if (boolean)
@@ -17968,8 +18227,8 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
           ? (aquaVersion_string = "Aqua 3.4 (Eclipse V4.31)")
           : "3.1" == aquaVersion
           ? (aquaVersion_string = "Aqua 3.1 (Eclipse Neon V4.6)")
-          : ("3.2" == aquaVersion 
-          ? aquaVersion_string = "Aqua 3.2 (Eclipse Photon V4.8)"
+          : ("3.5" == aquaVersion 
+          ? aquaVersion_string = "Aqua 3.5 (Eclipse Photon V4.39)"
           : aquaVersion_string = "Aqua 3.3 (Eclipse V4.23)"),
           $("#outliner-aqua-version").text(aquaVersion_string);
       }
@@ -18011,6 +18270,9 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
               break;
             case 3.4:
               aquaVersionText = "Aqua 3.4 (Eclipse V4.31)";
+              break;
+            case 3.5:
+              aquaVersionText = "Aqua 3.5 (Eclipse V4.39)";
               break;
             default:
               aquaVersionText = "Aqua Eclipse";
@@ -18060,6 +18322,7 @@ Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
         checkVersionsLocal("3.2"),
         checkVersionsLocal("3.3"),
         checkVersionsLocal("3.4");
+        checkVersionsLocal("3.5");
       }
       function createFinalResults() {
         var finalState,
