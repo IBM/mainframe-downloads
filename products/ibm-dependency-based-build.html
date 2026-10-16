@@ -1096,60 +1096,75 @@
                       <p>
                         <a
                           href="https://www.ibm.com/products/dependency-based-build"
-                          >IBM Dependency Based Build</a
+                          >IBM Dependency Based Build for z/OS (DBB) </a
                         >
-                        (DBB) provides the capabilities to build traditional
+                        provides the capabilities to build traditional
                         <a href="https://www.ibm.com/it-infrastructure/z/zos"
                           >z/OS</a
                         >
-                        applications such as COBOL and PL/I. The goal of DBB is
-                        to provide some automation capabilities based on a
-                        modern scripting language that can be used on z/OS. DBB
-                        is built as a stand-alone product that does not require
-                        a specific source code manager or pipeline automation
-                        tool.
+                        applications such as COBOL and PL/I. The goal of DBB is to provide automation 
+                        capabilities based on a modern scripting language that can be used on z/OS. DBB integrates 
+                        best with Git-based source code managers and various pipeline automation tools.
                       </p>
 
                       <p>
-                        IBM Dependency Based Build is included in IBM Developer for z/OS Enterprise Edition (IDzEE) and is also available as a standalone product.
+                        DBB 4.0.0 is available only as a component of IBM Developer for z/OS Enterprise Edition (IDzEE).
                       </p>
+                      <p>
+                        DBB 3.0.x is available as an IBM Developer for z/OS Enterprise Edition component or an IBM Pipeline Automation 
+                        for Z bundled product. It is also available as a stand-alone product.
+                      </p>
+
                       <dds-video-player-container video-id="1_eyruodfh">
                         <iframe src="https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_eyruodfh" title="IDz User Build using the DBB zBuilder" style="width: 100%; aspect-ratio: 16/9; border: 0" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-same-origin allow-scripts allow-top-navigation allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation allow-downloads" referrerpolicy="origin-when-cross-origin" frameborder="0" ></iframe>
                       </dds-video-player-container>
+
+                      <p>
+                        For more information about DBB, open the
+                        <a href="https://www.ibm.com/docs/en"
+                          >IBM Documentation</a
+                        >
+                        website and search for the appropriate product.
+                      </p>
                       <hr />
 
                       <h2>Features</h2>
                       <h3>Toolkit</h3>
                       <p>
-                        The toolkit provides a set of Java APIs that can be used
-                        to define an intelligent build script. The toolkit
-                        contains a Groovy configured to use with the APIs to
-                        simplify the process of creating the intelligent build
-                        script. The APIs can be used with any other language,
-                        the samples provided will use Groovy. The APIs include
-                        capability such as:
+                        The DBB Toolkit provides a set of Java APIs that can be used to define an intelligent build 
+                        script. The toolkit also contains Apache Groovy, configured for use with DBB APIs to simplify 
+                        the process of creating and running build scripts. The APIs can be used with Java or Groovy, 
+                        the samples provided use Groovy. The APIs include capability such as:
                       </p>
                       <ul>
                         <li>Run MVS commands</li>
                         <li>Run TSO/ISPF commands</li>
+                        <li>Submit JCL jobs</li>
                         <li>Store and retrieve dependency information</li>
                         <li>
                           Utility capabilities such as copying to PDSE from z/OS
                         </li>
-                        <li>zImport capability for migration to git</li>
+                        <li>zImport capability for migration to Git</li>
                         <li>Ability to create and store the build report</li>
                       </ul>
-                      <p id="download_webapp">
-                        The toolkit is included in IBM Developer for z/OS 
-                        Enterprise Edition and is
-                        also available as a standalone product. Please refer to
-                        the "Downloads" tab on this page for more details.
+                      
+                      <h3>zBuilder</h3>
+                      <p>
+                        The zBuilder is available in DBB 3.0.x and 4.0.x.
+                      </p>
+                      <p>
+                        This optional integrated build framework reduces adoption time by enabling users 
+                        to create configuration-driven builds instead of scripted builds. Build configuration 
+                        is defined in YAML files under the control of the build engineering team.
+                      </p>
+                      <p>
+                        The underlying implementation consists of DBB-provided Java tasks that use the existing DBB toolkit APIs.
                       </p>
                       
-                      <h3>Download instructions for toolkit</h3>
+                      <h3>Download instructions</h3>
                       <ul>
                         <li id="download_idzee">
-                          <h4>As a part of IBM IDzEE</h4>
+                          <h4>As an IBM IDzEE component</h4>
                           <p>
                             <a
                               href="https://www-03.ibm.com/software/shopzseries/ShopzSeries_public.wss?action=prodcat"
@@ -1158,22 +1173,55 @@
                           </p>
                           <p>
                             To search for IBM Developer for z/OS Enterprise Edition in Shopz, select <b>z/OS-ServerPac</b> as the 
-                            <b>Package type</b> and <b>MVS - Application Development</b> as the <b>Group</b>. Then, type 5755-AC5 
-                            in the <b>Product ID</b> field or <b>IBM Dev for z/OS Ent Ed</b>. in the <b>Product description</b> field.
+                            <b>Package type</b> and <b>MVS - Application Development</b> as the <b>Group</b>.
+                          </p>
+                          <p>
+                            Then, type the DBB product number (5755-AB5 for DBB 3.0.x or 5755-AD5 for DBB 4.0.0) in the 
+                            <b>Product ID</b> field or <b>IBM Dev for z/OS Ent Ed</b>. in the <b>Product description</b> field.
                           </p>
                           <p>
                             You download an SMP/E installable component. To install it, follow the instructions in the
                             <a
-                              href="https://www.ibm.com/docs/en/dbb/3.0?topic=dbb-program-directory"
+                              href="https://www.ibm.com/docs/en/SSQ2R2_17.0/ProgramDirectory/hbgz300.pdf"
+                              >Program Directory for IBM Dependency Based Build 3.0.x</a
+                            >
+                            or in the
+                            <a
+                              href="https://www.ibm.com/docs/en/SSTRMM_18.0.0/ProgramDirectory/hbgz400.pdf"
                               rel="noopener"
                               target="_blank"
-                              >Program Directory for IBM Dependency Based Build</a
+                              >Program Directory for IBM Dependency Based Build 4.0.x</a
+                            >.
+                          </p>
+                        </li>
+
+                        <li id="download_idzee">
+                          <h4>As a IBM Pipeline Automation for Z bundled product (for DBB 3.0.x)</h4>
+                          <p>
+                            <a
+                              href="https://www.ibm.com/docs/en/SSVID1_1.0.0/install.html"
+                              >Download via Shopz</a
+                            >
+                          </p>
+                          <p>
+                            To search for IBM Pipeline Automation for Z in Shopz, select <b>z/OS-ServerPac</b> as the <b>Package type</b> and <b>MVS - Application Development</b> as the <b>Group</b>.
+                          </p>
+                          <p>
+                            Then, type the DBB product number (5755-PAZ) in the <b>Product ID</b> field or <b>IBM Pipeline Automation for Z</b> in the <b>Product description</b> field.
+                          </p>
+                          <p>
+                            You download an SMP/E installable component. To install it, follow the instructions in
+                            <a
+                              href="https://www.ibm.com/docs/en/paz/1.1.0?topic=installing-configuring"
+                              rel="noopener"
+                              target="_blank"
+                              >Installing and configuring</a
                             >.
                           </p>
                         </li>
                         
                         <li id="download_standalone">
-                          <h4>As a standalone product</h4>
+                          <h4>As a standalone product (for DBB 3.0.x)</h4>
                           <p>
                             <a
                               href="https://www.ibm.com/software/passportadvantage/"
@@ -1189,11 +1237,8 @@
                             </li>
                             <li>
                               In the <b>Download software</b> tab, select the DBB toolkit version to download. 
-                              To find the DBB toolkit version, you have the following two options:
-                              <br>* Enter the DBB part number in the <b>Part number</b> field. This number is 
-                              version specific (CC83BEN for DBB V1.1.0 for example).  
-                              <br>* Enter <b>Dependency Based Build</b> in the <b>Part description</b> field. All the 
-                              versions of the DBB toolkit will be displayed. Select the appropriate version.                             
+                              To find the DBB toolkit version, enter <b>Dependency Based Build</b> in the <b>Part description</b> 
+                              field. All the versions of the DBB toolkit will be displayed. Select the appropriate version.                        
                             </li>
                             <li>
                               Optionally, you can click the alphabetical order list to display and view the product by name.
@@ -1206,10 +1251,10 @@
                           <p>
                             You download an SMP/E installable component. To install it, follow the instructions in the 
                             <a
-                              href="https://www.ibm.com/docs/en/dbb/3.0?topic=dbb-program-directory"
+                              href="https://www.ibm.com/docs/en/SS6T76_3.0.0/program_directory/hbgz300.pdf"
                               rel="noopener"
                               target="_blank"
-                              >Program Directory for IBM Dependency Based Build</a
+                              >Program Directory for IBM Dependency Based Build 3.0.x</a
                             >.
                           </p>
                         </li>
@@ -1218,7 +1263,7 @@
                           <h4>As a 90-day trial</h4>
                           <p>
                             <a target="_blank"
-                              href="https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&li_formnum=L-WSJX-QRECHC&accepted_url=https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/dbb/toolkit/dbb-ztoolkit-trial-3.0.5.tar"
+                              href="https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&li_formnum=L-WSJX-QRECHC&accepted_url=https://public.dhe.ibm.com/ibmdl/export/pub/software/htp/zos/tools/dbb/toolkit/dbb-ztoolkit-trial-4.0.0.tar"
                               >Download</a
                             >
                           </p>
@@ -1228,22 +1273,87 @@
                           </p>
                           <ol>
                             <li>
-                              Create a directory for the DBB toolkit, such as
-                              <code>/var/dbb</code>.
+                              <p>Make sure you can access the z/OS UNIX system. The recommended access is through SSH. Recent versions of 
+                              MacOS and Windows both ship preinstalled with OpenSSH, which contains the <code>ssh</code> and <code>scp</code> 
+                              tools that are used in these installation instructions.</p>
+                              <p>To access the command-line interface, use the 
+                              `Terminal` application on MacOS, or `PowerShell` on Windows. To check that OpenSSH is available in Terminal 
+                              or PowerShell, run <code>ssh -V</code>. It should return an OpenSSH version.</p>
                             </li>
                             <li>
-                              Upload <code>dbb-ztoolkit-trial-x.x.x.tar</code> to UNIX
-                              System Services.
-                            </li>
-                            <li>
-                              Extract the toolkit to <code>/var/dbb</code> by
-                              using a command such as:
+                              <p>Create a directory for the DBB toolkit, such as <code>/var/dbb</code>.</p>
+                              <p>Open MacOS Terminal or Windows PowerShell.</p>
+                              <p>Log into the z/OS UNIX shell, substituting <code>USER</code> and <code>HOSTNAME</code> with your z/OS UNIX user and hostname:
+                              <br><code>ssh USER@HOSTNAME</code></p>
+                              <p>If prompted, enter your password.</p>
+                              <p>Create the directory for your DBB Toolkit (<code>/var/dbb</code> for example):
+                              <br><code>mkdir /var/dbb</code></p>
+                              <p>You can now exit back to your personal device's shell:
                               <br>
-                              <code
-                                >tar -C /var/dbb -xpovf dbb-ztoolkit-trial-x.x.x.tar</code
-                              >
+                              <code>exit</code></p>
+                            </li>
+                            <li>
+                              <p>Upload <code>dbb-ztoolkit-trial-x.x.x.tar</code> to z/OS UNIX.</p>
+                              <p>Ensure you have downloaded the DBB Toolkit trial tar file from the Download link.</p>
+                              <p>In your command line, navigate to the location where you downloaded the file:
+                              <br>  
+                              <code>cd ~/Downloads</code></p>
+                              <p>Upload the file by using <code>scp</code>, again substituting <code>USER</code> and <code>HOSTNAME</code> with your z/OS user 
+                                and host. If prompted, enter your password, and wait for the file to finish uploading:
+                              <br>
+                              <code>scp dbb-ztoolkit-trial-x.x.x.tar USER@HOSTNAME:/var/dbb/</code></p>
+                            </li>
+                            <li>
+                              <p>Extract the toolkit to <code>/var/dbb</code></p>
+                              <p>Navigate back into z/OS UNIX through SSH:
+                              <br>
+                              <code>ssh USER@HOSTNAME</code>
+                              </p>
+                              <p>Extract the toolkit to <code>/var/dbb</code> by using the <code>tar</code> command:
+                              <br>
+                              <code>tar -C /var/dbb -xpovf dbb-ztoolkit-trial-x.x.x.tar</code>
+                              </p>
                             </li>
                           </ol>
+                          <p>
+                            DBB is now installed. For configuration and next steps, see
+                            <a
+                              href="https://www.ibm.com/docs/en/SSTRMM_18.0.0/com.ibm.dbb.doc/install_overview.html"
+                              rel="noopener"
+                              target="_blank"
+                              >Installing and configuring DBB 4.0.x in IDz 18</a
+                            >
+                            ,
+                            <a
+                              href="https://www.ibm.com/docs/en/SS6T76_3.0.0/install_overview.html"
+                              rel="noopener"
+                              target="_blank"
+                              >Installing and configuring DBB 3.0.x stand-alone</a
+                            >
+                            ,
+                            or 
+                            <a
+                              href="https://www.ibm.com/docs/en/SSVID1_1.0.0/install.html"
+                              rel="noopener"
+                              target="_blank"
+                              >Installing and configuring DBB 3.0.x in IBM Pipeline Automation for Z</a
+                            >
+                            . For instructions on how to use the zBuilder, see
+                            <a
+                              href="https://www.ibm.com/docs/en/SSTRMM_18.0.0/com.ibm.dbb.doc/zbuild_intro.html"
+                              rel="noopener"
+                              target="_blank"
+                              >zBuilder in DBB 4.0.x</a
+                            >
+                            or
+                            <a
+                              href="https://www.ibm.com/docs/en/SS6T76_3.0.0/zbuild_intro.html"
+                              rel="noopener"
+                              target="_blank"
+                              >zBuilder in DBB 3.0.x</a
+                            >
+                            .
+                          </p>
                         </li>
                       </ul>
                       <!-- Page Content -->
